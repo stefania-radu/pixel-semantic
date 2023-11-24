@@ -46,7 +46,8 @@ python scripts/training/run_ner.py \
 
 python scripts/training/run_qa.py \
     --model_name_or_path="Team-PIXEL/pixel-base-finetuned-squadv1" \
-    --dataset_name="squad"  --remove_unused_columns=False  \
+    --dataset_name="squad"  \
+    --remove_unused_columns=False  \
     --output_dir="sanity_check_qa"  \
     --do_eval  \
-    --max_seq_length=256 
+    --max_seq_length=256 cd .

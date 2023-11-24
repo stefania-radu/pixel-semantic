@@ -17,7 +17,7 @@ export MODEL="Team-PIXEL/pixel-base" # also works with "bert-base-cased", "rober
 export RENDERING_BACKEND="pangocairo"  # Consider trying out both "pygame" and "pangocairo" to see which one works best
 export POOLING_MODE="mean" # Can be "mean", "max", "cls", or "pma1" to "pma8"
 export SEQ_LEN=256
-export BSZ=32 # it was 64 but it does not run on my machine
+export BSZ=64 # it was 64 but it does not run on my machine
 export GRAD_ACCUM=4  # We found that higher batch sizes can sometimes make training more stable
 export LR=3e-5
 export SEED=42
@@ -60,6 +60,6 @@ python scripts/training/run_glue.py \
   --log_predictions \
   --load_best_model_at_end=True \
   --metric_for_best_model="eval_accuracy" \
-  --fp16 \
   --half_precision_backend=apex \
   --seed=${SEED}
+    #--fp16 \
