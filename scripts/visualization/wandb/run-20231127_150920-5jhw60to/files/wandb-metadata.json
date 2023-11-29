@@ -1,0 +1,134 @@
+{
+    "os": "Linux-6.2.0-36-generic-x86_64-with-glibc2.35",
+    "python": "3.9.18",
+    "heartbeatAt": "2023-11-27T14:09:21.362693",
+    "startedAt": "2023-11-27T14:09:20.737936",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--input_str=Cats conserve energy by sleeping more than most animals, especially as they grow older.",
+        "--model_name_or_path=Team-PIXEL/pixel-base",
+        "--span_mask",
+        "--mask_ratio=0.25",
+        "--max_seq_length=256"
+    ],
+    "state": "running",
+    "program": "/media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/visualize_pixel_uncertainty.py",
+    "codePathLocal": "visualize_pixel_uncertainty.py",
+    "codePath": "scripts/visualization/visualize_pixel_uncertainty.py",
+    "git": {
+        "remote": "https://github.com/stefania-radu/pixel-semantic.git",
+        "commit": "90526c816bdd42d3ca3efddda8a138c4cfbb71c4"
+    },
+    "email": "stefania.m.radu@gmail.com",
+    "root": "/media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic",
+    "host": "ubuntu-desktop",
+    "username": "stefania",
+    "executable": "/home/stefania/anaconda3/envs/pixel-env/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3813.0535625000007,
+        "min": 2200.0,
+        "max": 3400.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3719.766,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3944.022,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4295.608,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3719.986,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3769.733,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4649.981,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3740.849,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3719.48,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4287.656,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3748.434,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3964.336,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4649.418,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4253.629,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4145.959,
+            "min": 2200.0,
+            "max": 3400.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 246.66341018676758,
+            "used": 135.08920669555664
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.218509674072266
+    }
+}

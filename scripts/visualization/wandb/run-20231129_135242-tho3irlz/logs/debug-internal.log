@@ -1,0 +1,280 @@
+2023-11-29 13:52:42,087 INFO    StreamThr :19483 [internal.py:wandb_internal():86] W&B internal server running at pid: 19483, started at: 2023-11-29 13:52:42.087500
+2023-11-29 13:52:42,088 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: status
+2023-11-29 13:52:42,090 INFO    WriterThread:19483 [datastore.py:open_for_write():85] open: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/run-tho3irlz.wandb
+2023-11-29 13:52:42,090 DEBUG   SenderThread:19483 [sender.py:send():380] send: header
+2023-11-29 13:52:42,114 DEBUG   SenderThread:19483 [sender.py:send():380] send: run
+2023-11-29 13:52:42,738 INFO    SenderThread:19483 [dir_watcher.py:__init__():211] watching files in: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files
+2023-11-29 13:52:42,738 INFO    SenderThread:19483 [sender.py:_start_run_threads():1122] run started: tho3irlz with start time 1701262362.087576
+2023-11-29 13:52:42,745 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: check_version
+2023-11-29 13:52:42,745 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: check_version
+2023-11-29 13:52:42,832 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: run_start
+2023-11-29 13:52:42,841 DEBUG   HandlerThread:19483 [system_info.py:__init__():32] System info init
+2023-11-29 13:52:42,841 DEBUG   HandlerThread:19483 [system_info.py:__init__():47] System info init done
+2023-11-29 13:52:42,841 INFO    HandlerThread:19483 [system_monitor.py:start():194] Starting system monitor
+2023-11-29 13:52:42,842 INFO    SystemMonitor:19483 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-29 13:52:42,842 INFO    HandlerThread:19483 [system_monitor.py:probe():214] Collecting system info
+2023-11-29 13:52:42,842 INFO    SystemMonitor:19483 [interfaces.py:start():190] Started cpu monitoring
+2023-11-29 13:52:42,843 INFO    SystemMonitor:19483 [interfaces.py:start():190] Started disk monitoring
+2023-11-29 13:52:42,843 INFO    SystemMonitor:19483 [interfaces.py:start():190] Started gpu monitoring
+2023-11-29 13:52:42,844 INFO    SystemMonitor:19483 [interfaces.py:start():190] Started memory monitoring
+2023-11-29 13:52:42,844 INFO    SystemMonitor:19483 [interfaces.py:start():190] Started network monitoring
+2023-11-29 13:52:42,851 DEBUG   HandlerThread:19483 [system_info.py:probe():196] Probing system
+2023-11-29 13:52:42,852 DEBUG   HandlerThread:19483 [system_info.py:_probe_git():181] Probing git
+2023-11-29 13:52:42,864 DEBUG   HandlerThread:19483 [system_info.py:_probe_git():189] Probing git done
+2023-11-29 13:52:42,864 DEBUG   HandlerThread:19483 [system_info.py:probe():244] Probing system done
+2023-11-29 13:52:42,865 DEBUG   HandlerThread:19483 [system_monitor.py:probe():223] {'os': 'Linux-6.2.0-37-generic-x86_64-with-glibc2.35', 'python': '3.9.18', 'heartbeatAt': '2023-11-29T12:52:42.852003', 'startedAt': '2023-11-29T12:52:42.076251', 'docker': None, 'cuda': None, 'args': ('--input_str=After the release of ChatGPT in 2022, the number of papers published every day about Large Language\nModels (LLMs) has increased more than 20-fold (Zhao et al., 2023). The number of parameters in these\nLLMs jumped from 340 millions in implementations such as BERT (Devlin, Chang, Lee, & Toutanova,\n2018) to billions of parameters in models like GPT-3 (Brown et al., 2020) or LLaMA (Touvron et al.,\n2023). A large part of these parameters come from the word-embedding layers which are used to repre-\nsent a finite vocabulary of characters, sets of characters or words. Apart from increasing model complex-\nity, a fixed vocabulary is also responsible for brittle models, which cannot deal with out-of-vocabulary\ninputs and cannot cannot generalise to new languages. As a consequence, the performance in downstream\ntasks is also affected.', '--model_name_or_path=Team-PIXEL/pixel-base', '--span_mask', '--mask_ratio=0.25', '--max_seq_length=256'), 'state': 'running', 'program': '/media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/visualize_pixel_uncertainty.py', 'codePathLocal': 'visualize_pixel_uncertainty.py', 'codePath': 'scripts/visualization/visualize_pixel_uncertainty.py', 'git': {'remote': 'https://github.com/stefania-radu/pixel-semantic.git', 'commit': '90526c816bdd42d3ca3efddda8a138c4cfbb71c4'}, 'email': 'stefania.m.radu@gmail.com', 'root': '/media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic', 'host': 'ubuntu-desktop', 'username': 'stefania', 'executable': '/home/stefania/anaconda3/envs/pixel-env/bin/python', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3695.8815000000004, 'min': 2200.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 2200.0, 'min': 2200.0, 'max': 3400.0}, {'current': 3739.78, 'min': 2200.0, 'max': 3400.0}, {'current': 4031.533, 'min': 2200.0, 'max': 3400.0}, {'current': 3300.081, 'min': 2200.0, 'max': 3400.0}, {'current': 3754.624, 'min': 2200.0, 'max': 3400.0}, {'current': 4299.96, 'min': 2200.0, 'max': 3400.0}, {'current': 4276.601, 'min': 2200.0, 'max': 3400.0}, {'current': 3723.481, 'min': 2200.0, 'max': 3400.0}, {'current': 4002.792, 'min': 2200.0, 'max': 3400.0}, {'current': 3502.351, 'min': 2200.0, 'max': 3400.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3400.0}, {'current': 3512.745, 'min': 2200.0, 'max': 3400.0}, {'current': 4009.6, 'min': 2200.0, 'max': 3400.0}, {'current': 3896.328, 'min': 2200.0, 'max': 3400.0}, {'current': 4076.326, 'min': 2200.0, 'max': 3400.0}, {'current': 4607.902, 'min': 2200.0, 'max': 3400.0}], 'disk': {'/': {'total': 246.66341018676758, 'used': 136.10487365722656}}, 'gpu': 'NVIDIA GeForce RTX 3060', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3060', 'memory_total': 12884901888}], 'memory': {'total': 31.218521118164062}}
+2023-11-29 13:52:42,865 INFO    HandlerThread:19483 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-29 13:52:42,865 INFO    HandlerThread:19483 [system_monitor.py:probe():227] Publishing system info
+2023-11-29 13:52:42,865 DEBUG   HandlerThread:19483 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-29 13:52:42,865 DEBUG   HandlerThread:19483 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-29 13:52:42,865 DEBUG   HandlerThread:19483 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-11-29 13:52:43,740 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/conda-environment.yaml
+2023-11-29 13:52:43,740 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/requirements.txt
+2023-11-29 13:52:44,435 DEBUG   HandlerThread:19483 [system_info.py:_save_conda():87] Saving conda packages done
+2023-11-29 13:52:44,442 INFO    HandlerThread:19483 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-29 13:52:44,444 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:44,444 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-11-29 13:52:44,448 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-29 13:52:44,448 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: stop_status
+2023-11-29 13:52:44,449 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-29 13:52:44,694 DEBUG   SenderThread:19483 [sender.py:send():380] send: telemetry
+2023-11-29 13:52:44,739 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/conda-environment.yaml
+2023-11-29 13:52:44,739 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/wandb-metadata.json
+2023-11-29 13:52:44,739 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/output.log
+2023-11-29 13:52:45,206 INFO    wandb-upload_0:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/jy5cslar-wandb-metadata.json
+2023-11-29 13:52:46,739 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/output.log
+2023-11-29 13:52:47,833 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: status_report
+2023-11-29 13:52:52,834 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: status_report
+2023-11-29 13:52:54,741 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/output.log
+2023-11-29 13:52:57,473 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,474 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/mask_0_4c776e0ad40eb72d2a9e.png with policy now
+2023-11-29 13:52:57,474 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,475 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,478 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,479 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,480 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,480 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,480 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/attention_mask_1_3b93f26267630963185e.png with policy now
+2023-11-29 13:52:57,481 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,481 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,481 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,489 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,489 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/original_2_21bd91ad0074e518b2bb.png with policy now
+2023-11-29 13:52:57,489 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,490 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,490 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,490 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,521 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,521 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,521 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/masked_3_f57bd0534b4a1c512a22.png with policy now
+2023-11-29 13:52:57,522 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,522 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,522 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,538 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,538 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,538 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/mean_predictions_4_45ce6f962f6015833077.png with policy now
+2023-11-29 13:52:57,539 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,539 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,539 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,554 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,554 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,555 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/var_predictions_5_4cfdcf5b99d9124823fe.png with policy now
+2023-11-29 13:52:57,555 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,555 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,555 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,570 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,570 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,570 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/mean_minus_std_predictions_6_4c4559fa44339f9772c1.png with policy now
+2023-11-29 13:52:57,570 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,570 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,571 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,585 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,585 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,586 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/mean_plus_std_predictions_7_03bed02c5b66d34d771f.png with policy now
+2023-11-29 13:52:57,586 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,586 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,586 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,593 DEBUG   SenderThread:19483 [sender.py:send():380] send: files
+2023-11-29 13:52:57,593 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file media/images/masked_predictions_8_ed6e2086535a3ae61268.png with policy now
+2023-11-29 13:52:57,593 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-29 13:52:57,593 DEBUG   SenderThread:19483 [sender.py:send():380] send: history
+2023-11-29 13:52:57,594 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: summary_record
+2023-11-29 13:52:57,594 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,742 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/wandb-summary.json
+2023-11-29 13:52:57,742 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/masked_3_f57bd0534b4a1c512a22.png
+2023-11-29 13:52:57,742 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/mean_minus_std_predictions_6_4c4559fa44339f9772c1.png
+2023-11-29 13:52:57,743 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/mean_predictions_4_45ce6f962f6015833077.png
+2023-11-29 13:52:57,743 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/mask_0_4c776e0ad40eb72d2a9e.png
+2023-11-29 13:52:57,743 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/original_2_21bd91ad0074e518b2bb.png
+2023-11-29 13:52:57,743 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/mean_plus_std_predictions_7_03bed02c5b66d34d771f.png
+2023-11-29 13:52:57,743 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/attention_mask_1_3b93f26267630963185e.png
+2023-11-29 13:52:57,743 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/var_predictions_5_4cfdcf5b99d9124823fe.png
+2023-11-29 13:52:57,744 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/masked_predictions_8_ed6e2086535a3ae61268.png
+2023-11-29 13:52:57,744 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images
+2023-11-29 13:52:57,744 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_created():271] file/dir created: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media
+2023-11-29 13:52:57,768 DEBUG   SenderThread:19483 [sender.py:send():380] send: exit
+2023-11-29 13:52:57,768 INFO    SenderThread:19483 [sender.py:send_exit():585] handling exit code: 1
+2023-11-29 13:52:57,768 INFO    SenderThread:19483 [sender.py:send_exit():587] handling runtime: 14
+2023-11-29 13:52:57,768 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,768 INFO    SenderThread:19483 [sender.py:send_exit():593] send defer
+2023-11-29 13:52:57,768 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:57,768 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-29 13:52:57,768 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:57,768 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-29 13:52:57,768 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 1
+2023-11-29 13:52:57,769 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:57,769 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-29 13:52:57,769 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:57,769 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-29 13:52:57,769 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 2
+2023-11-29 13:52:57,769 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:57,769 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-29 13:52:57,769 INFO    HandlerThread:19483 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-29 13:52:57,769 DEBUG   SystemMonitor:19483 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-29 13:52:57,769 INFO    HandlerThread:19483 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-29 13:52:57,769 DEBUG   SystemMonitor:19483 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-29 13:52:57,769 INFO    HandlerThread:19483 [interfaces.py:finish():202] Joined disk monitor
+2023-11-29 13:52:57,769 DEBUG   SystemMonitor:19483 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-29 13:52:57,821 INFO    HandlerThread:19483 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-29 13:52:57,821 INFO    HandlerThread:19483 [interfaces.py:finish():202] Joined memory monitor
+2023-11-29 13:52:57,821 INFO    HandlerThread:19483 [interfaces.py:finish():202] Joined network monitor
+2023-11-29 13:52:57,822 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:57,822 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-29 13:52:57,822 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 3
+2023-11-29 13:52:57,822 DEBUG   SenderThread:19483 [sender.py:send():380] send: stats
+2023-11-29 13:52:57,822 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:57,822 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-29 13:52:57,822 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:57,822 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-29 13:52:57,822 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 4
+2023-11-29 13:52:57,822 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:57,822 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-29 13:52:57,822 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:57,822 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-29 13:52:57,822 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 5
+2023-11-29 13:52:57,822 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:57,822 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-29 13:52:57,823 DEBUG   SenderThread:19483 [sender.py:send():380] send: summary
+2023-11-29 13:52:57,823 INFO    SenderThread:19483 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-11-29 13:52:57,823 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:57,823 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-29 13:52:57,823 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 6
+2023-11-29 13:52:57,823 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:57,823 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-29 13:52:57,823 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:57,823 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-29 13:52:57,826 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: status_report
+2023-11-29 13:52:57,868 INFO    wandb-upload_0:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/y2b54vyb-media/images/mask_0_4c776e0ad40eb72d2a9e.png
+2023-11-29 13:52:57,942 INFO    wandb-upload_1:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/tqb5c3cu-media/images/attention_mask_1_3b93f26267630963185e.png
+2023-11-29 13:52:58,057 INFO    wandb-upload_2:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/ei1uvhny-media/images/original_2_21bd91ad0074e518b2bb.png
+2023-11-29 13:52:58,068 INFO    wandb-upload_3:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/4iqwteed-media/images/masked_3_f57bd0534b4a1c512a22.png
+2023-11-29 13:52:58,091 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 7
+2023-11-29 13:52:58,092 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:58,092 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-29 13:52:58,092 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:58,092 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-29 13:52:58,179 INFO    wandb-upload_8:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/kaskba4h-media/images/masked_predictions_8_ed6e2086535a3ae61268.png
+2023-11-29 13:52:58,198 INFO    wandb-upload_5:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/6rrbrfn7-media/images/var_predictions_5_4cfdcf5b99d9124823fe.png
+2023-11-29 13:52:58,223 INFO    wandb-upload_4:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/l5sf1ijj-media/images/mean_predictions_4_45ce6f962f6015833077.png
+2023-11-29 13:52:58,242 INFO    wandb-upload_6:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/g9ixz9e2-media/images/mean_minus_std_predictions_6_4c4559fa44339f9772c1.png
+2023-11-29 13:52:58,276 INFO    wandb-upload_7:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/w0e42gcp-media/images/mean_plus_std_predictions_7_03bed02c5b66d34d771f.png
+2023-11-29 13:52:58,527 INFO    wandb-upload_0:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/atcmqw7e-media/images/mask_0_4c776e0ad40eb72d2a9e.png
+2023-11-29 13:52:58,681 INFO    wandb-upload_1:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/cc7sbkt0-media/images/attention_mask_1_3b93f26267630963185e.png
+2023-11-29 13:52:58,742 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/config.yaml
+2023-11-29 13:52:58,743 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/wandb-summary.json
+2023-11-29 13:52:58,743 INFO    wandb-upload_2:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/irc0lwoj-media/images/original_2_21bd91ad0074e518b2bb.png
+2023-11-29 13:52:58,768 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-29 13:52:58,828 INFO    wandb-upload_3:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/tjkr2efe-media/images/var_predictions_5_4cfdcf5b99d9124823fe.png
+2023-11-29 13:52:58,853 INFO    wandb-upload_4:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/tmhy15yk-media/images/masked_predictions_8_ed6e2086535a3ae61268.png
+2023-11-29 13:52:59,051 INFO    wandb-upload_6:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/ecp5sewo-media/images/masked_3_f57bd0534b4a1c512a22.png
+2023-11-29 13:52:59,342 INFO    wandb-upload_7:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/av61uost-media/images/mean_minus_std_predictions_6_4c4559fa44339f9772c1.png
+2023-11-29 13:52:59,424 INFO    wandb-upload_0:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/2b1i6tzc-media/images/mean_predictions_4_45ce6f962f6015833077.png
+2023-11-29 13:52:59,521 INFO    wandb-upload_1:19483 [upload_job.py:push():131] Uploaded file /tmp/tmpousiw0hpwandb/v5jfudcq-media/images/mean_plus_std_predictions_7_03bed02c5b66d34d771f.png
+2023-11-29 13:52:59,769 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 8
+2023-11-29 13:52:59,769 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: poll_exit
+2023-11-29 13:52:59,769 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:59,770 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-29 13:52:59,770 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:52:59,770 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-29 13:52:59,770 INFO    SenderThread:19483 [job_builder.py:build():281] Attempting to build job artifact
+2023-11-29 13:52:59,770 INFO    SenderThread:19483 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-11-29 13:52:59,771 INFO    SenderThread:19483 [job_builder.py:build():369] adding wandb-job metadata file
+2023-11-29 13:52:59,807 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 9
+2023-11-29 13:52:59,807 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:52:59,807 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-29 13:52:59,807 DEBUG   SenderThread:19483 [sender.py:send():380] send: artifact
+2023-11-29 13:53:00,743 INFO    Thread-12 :19483 [dir_watcher.py:_on_file_modified():288] file/dir modified: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/output.log
+2023-11-29 13:53:01,166 INFO    SenderThread:19483 [sender.py:send_artifact():1456] sent artifact job-https___github.com_stefania-radu_pixel-semantic.git_scripts_visualization_visualize_pixel_uncertainty.py - {'id': 'QXJ0aWZhY3Q6NjUyNTU5NDE5', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjExOTExMzkwMw==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjUyNTcyMDY1', 'versionIndex': 3}}}
+2023-11-29 13:53:01,166 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:53:01,166 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-29 13:53:01,166 INFO    SenderThread:19483 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-29 13:53:01,744 INFO    SenderThread:19483 [dir_watcher.py:finish():388] scan: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files
+2023-11-29 13:53:01,744 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/conda-environment.yaml conda-environment.yaml
+2023-11-29 13:53:01,744 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/config.yaml config.yaml
+2023-11-29 13:53:01,744 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/output.log output.log
+2023-11-29 13:53:01,745 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/requirements.txt requirements.txt
+2023-11-29 13:53:01,745 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/wandb-metadata.json wandb-metadata.json
+2023-11-29 13:53:01,745 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/wandb-summary.json wandb-summary.json
+2023-11-29 13:53:01,754 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/attention_mask_1_3b93f26267630963185e.png media/images/attention_mask_1_3b93f26267630963185e.png
+2023-11-29 13:53:01,754 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/masked_3_f57bd0534b4a1c512a22.png media/images/masked_3_f57bd0534b4a1c512a22.png
+2023-11-29 13:53:01,754 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/masked_predictions_8_ed6e2086535a3ae61268.png media/images/masked_predictions_8_ed6e2086535a3ae61268.png
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/mask_0_4c776e0ad40eb72d2a9e.png media/images/mask_0_4c776e0ad40eb72d2a9e.png
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/mean_minus_std_predictions_6_4c4559fa44339f9772c1.png media/images/mean_minus_std_predictions_6_4c4559fa44339f9772c1.png
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/mean_plus_std_predictions_7_03bed02c5b66d34d771f.png media/images/mean_plus_std_predictions_7_03bed02c5b66d34d771f.png
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/mean_predictions_4_45ce6f962f6015833077.png media/images/mean_predictions_4_45ce6f962f6015833077.png
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/original_2_21bd91ad0074e518b2bb.png media/images/original_2_21bd91ad0074e518b2bb.png
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [dir_watcher.py:finish():402] scan save: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/media/images/var_predictions_5_4cfdcf5b99d9124823fe.png media/images/var_predictions_5_4cfdcf5b99d9124823fe.png
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 10
+2023-11-29 13:53:01,755 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:53:01,755 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-29 13:53:01,755 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-29 13:53:01,755 INFO    SenderThread:19483 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-29 13:53:02,142 INFO    wandb-upload_3:19483 [upload_job.py:push():131] Uploaded file /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/output.log
+2023-11-29 13:53:02,146 INFO    wandb-upload_2:19483 [upload_job.py:push():131] Uploaded file /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/conda-environment.yaml
+2023-11-29 13:53:02,151 INFO    wandb-upload_4:19483 [upload_job.py:push():131] Uploaded file /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/wandb-summary.json
+2023-11-29 13:53:02,156 INFO    wandb-upload_8:19483 [upload_job.py:push():131] Uploaded file /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/requirements.txt
+2023-11-29 13:53:02,166 INFO    wandb-upload_5:19483 [upload_job.py:push():131] Uploaded file /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/files/config.yaml
+2023-11-29 13:53:02,367 INFO    Thread-11 :19483 [sender.py:transition_state():613] send defer: 11
+2023-11-29 13:53:02,367 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:53:02,367 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-29 13:53:02,367 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:53:02,367 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-29 13:53:02,367 INFO    SenderThread:19483 [file_pusher.py:join():181] waiting for file pusher
+2023-11-29 13:53:02,367 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 12
+2023-11-29 13:53:02,367 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:53:02,368 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-29 13:53:02,368 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:53:02,368 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-29 13:53:02,368 INFO    SenderThread:19483 [file_stream.py:finish():595] file stream finish called
+2023-11-29 13:53:02,623 INFO    SenderThread:19483 [file_stream.py:finish():599] file stream finish is done
+2023-11-29 13:53:02,623 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 13
+2023-11-29 13:53:02,623 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:53:02,623 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-29 13:53:02,623 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:53:02,623 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-29 13:53:02,623 INFO    SenderThread:19483 [sender.py:transition_state():613] send defer: 14
+2023-11-29 13:53:02,623 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: defer
+2023-11-29 13:53:02,624 INFO    HandlerThread:19483 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-29 13:53:02,624 DEBUG   SenderThread:19483 [sender.py:send():380] send: final
+2023-11-29 13:53:02,624 DEBUG   SenderThread:19483 [sender.py:send():380] send: footer
+2023-11-29 13:53:02,624 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: defer
+2023-11-29 13:53:02,624 INFO    SenderThread:19483 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-29 13:53:02,624 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-29 13:53:02,624 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: poll_exit
+2023-11-29 13:53:02,624 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: server_info
+2023-11-29 13:53:02,625 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: server_info
+2023-11-29 13:53:02,626 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-29 13:53:02,626 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-29 13:53:02,626 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-29 13:53:02,627 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: job_info
+2023-11-29 13:53:02,783 DEBUG   SenderThread:19483 [sender.py:send_request():407] send_request: job_info
+2023-11-29 13:53:02,783 INFO    MainThread:19483 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2023-11-29 13:53:02,783 INFO    MainThread:19483 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2023-11-29 13:53:02,783 INFO    MainThread:19483 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2023-11-29 13:53:02,783 DEBUG   HandlerThread:19483 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-29 13:53:02,783 INFO    HandlerThread:19483 [handler.py:finish():866] shutting down handler
+2023-11-29 13:53:03,627 INFO    WriterThread:19483 [datastore.py:close():294] close: /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231129_135242-tho3irlz/run-tho3irlz.wandb
+2023-11-29 13:53:03,783 INFO    SenderThread:19483 [sender.py:finish():1534] shutting down sender
+2023-11-29 13:53:03,783 INFO    SenderThread:19483 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-29 13:53:03,783 INFO    SenderThread:19483 [file_pusher.py:join():181] waiting for file pusher
