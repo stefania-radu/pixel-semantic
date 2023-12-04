@@ -24,6 +24,7 @@ import argparse
 import logging
 import math
 import sys
+import numpy as np
 
 import torch
 import wandb
@@ -56,6 +57,58 @@ def log_image(img: torch.Tensor, img_name: str, do_clip: bool = True):
     wandb.log({img_name: wandb.Image(img)})
 
 
+def create_mean_variance_map(variance_image, mask, patch_size):
+    """
+    Create a map where each value in a patch equals the mean of values in that patch,
+    only for patches where the mask is 1. Other patches are set to black.
+
+    Parameters:
+    variance_image (torch.Tensor): The original 3-channel variance image.
+    mask (np.array or torch.Tensor): A binary mask indicating which patches to process.
+    patch_size (int): The size of each square patch.
+
+    Returns:
+    np.array: Mean variance map.
+    """
+    # Average across channels
+    if len(variance_image.shape) == 3 and variance_image.shape[0] == 3:
+        variance_image = variance_image.mean(dim=0)
+
+    # Convert to numpy if they are tensors
+    if isinstance(variance_image, torch.Tensor):
+        variance_image = variance_image.numpy()
+    if isinstance(mask, torch.Tensor):
+        mask = mask.numpy()
+
+    height, width = variance_image.shape
+
+    # Initialize the mean variance map
+    mean_variance_map = np.zeros_like(variance_image)
+
+    # Calculate the number of patches in each dimension
+    num_patches_x = width // patch_size
+    num_patches_y = height // patch_size
+
+    # Iterate over each patch
+    for i in range(num_patches_y):
+        for j in range(num_patches_x):
+            # Check the corresponding value in the mask
+            if mask[0][i*patch_size, j*patch_size] != 0:
+                # Extract the patch
+                patch = variance_image[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size]
+                
+                # Calculate the mean variance of the patch
+                mean_variance = np.mean(patch)
+
+                # Assign this mean variance to all pixels in the patch
+                mean_variance_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = mean_variance
+            else:
+                # Set the patch to black if mask is 0
+                mean_variance_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = 0
+
+    return mean_variance_map
+
+
 def main(args: argparse.Namespace):
     # Setup logging
     log_level = logging.INFO
@@ -71,6 +124,8 @@ def main(args: argparse.Namespace):
 
     wandb.init()
     # wandb.run.name = args.revision
+
+    experiments_table = wandb.Table(columns=["MC_samples", "mean_variance", "masked_ratio","masked_count", "max_span_length", "cumulative_span_weights"])
 
     config_kwargs = {
         "use_auth_token": args.auth_token if args.auth_token else None,
@@ -147,6 +202,7 @@ def main(args: argparse.Namespace):
         logger.info(f"Masked count: {math.ceil(mask_ratio * text_renderer.max_seq_length)}, ratio = {mask_ratio:0.2f}")
 
     num_samples = 100  # Number of Monte Carlo samples
+    logger.info(f"Monte Carlos samples: {num_samples}")
     all_predictions = []
 
     model.train()  # Activate dropout
@@ -173,6 +229,8 @@ def main(args: argparse.Namespace):
     mask = model.unpatchify(mask).squeeze()  # 1 is removing, 0 is keeping
     log_image(mask, "mask")
 
+    logger.info(torch.unique(mask))
+
     # Log attention mask
     attention_mask = attention_mask.unsqueeze(-1).repeat(1, 1, text_renderer.pixels_per_patch ** 2 * 3)
     attention_mask = model.unpatchify(attention_mask).squeeze()
@@ -188,46 +246,29 @@ def main(args: argparse.Namespace):
 
     # Logging for Monte Carlo Dropout-based uncertainty
     log_image(mean_predictions, "mean_predictions", do_clip=False)
+    log_image(mean_predictions - 2* std_predictions, "mean_minus_2std_predictions", do_clip=False)
+    log_image(mean_predictions + 2* std_predictions, "mean_plus_2std_predictions", do_clip=False)
+
+    mean_variance_value = np.round(var_predictions.mean(dim=0).mean(), 3)
+    logger.info(f"Mean variance for whole image: {mean_variance_value}")
+    wandb.log({"mean_variance_value": mean_variance_value})
+    
+    var_predictions_log = torch.log(var_predictions + 1e-9)  # Adding a small constant to avoid log(0)
+    mean_variance = create_mean_variance_map(var_predictions_log, mask, text_renderer.pixels_per_patch) # black is 0, 
+    var_predictions = original_img * (1 - mean_variance)
     log_image(var_predictions, "var_predictions", do_clip=False)
-    log_image(mean_predictions - std_predictions, "mean_minus_std_predictions", do_clip=False)
-    log_image(mean_predictions + std_predictions, "mean_plus_std_predictions", do_clip=False)
 
+    var_reconstruction = mean_predictions * (1 - mean_variance)
+    log_image(var_reconstruction, "var_reconstruction", do_clip=False)
+
+    experiments_table.add_data(num_samples, mean_variance_value, mask_ratio, masked_count, args.masking_max_span_length, args.masking_cumulative_span_weights)
+    wandb.log({"experiments_table": experiments_table})
     # Generate and log a confidence map (inverse of std)
-    confidence_map = 1 / (std_predictions + 1e-6)  # Adding a small value to avoid division by zero
+    confidence_map = 1 / torch.log((std_predictions + 1e-6))  # Adding a small value to avoid division by zero
 
-    logger.info(confidence_map)
-    logger.info(confidence_map.shape)
     logger.info(original_img.shape)
     logger.info(mean_predictions.shape)
-    
-    import matplotlib.pyplot as plt
-
-    # Plot the confidence map with the defined colormap
-    plt.imshow(confidence_map.mean(dim=0), vmin=0, vmax=255, cmap="Greens")
-    plt.colorbar()
-    plt.savefig('confidence_map.png')
-    log_image("confidence_map.png", "confidence_map", do_clip=False)
-    
-    # masked_predictions = mean_predictions * mask * confidence_map
-    # log_image(masked_predictions, "masked_predictions", do_clip=False)
-
-    # # Assuming confidence_map is a 2D tensor
-    # confidence_map_normalized = (confidence_map - confidence_map.min()) / (confidence_map.max() - confidence_map.min())
-    # # Convert masked_predictions to RGB if it's single-channel
-    # if masked_predictions.dim() == 2 or (masked_predictions.dim() == 3 and masked_predictions.shape[0] == 1):
-    #     masked_predictions_rgb = torch.stack([masked_predictions] * 3, dim=0)  # Stack along the channel dimension
-    # else:
-    #     masked_predictions_rgb = masked_predictions
-
-    # # Create a green overlay
-    # confidence_map_normalized = confidence_map_normalized.unsqueeze(0) 
-    # green_overlay = torch.zeros_like(masked_predictions_rgb)
-    # green_overlay[1] = confidence_map_normalized[0]  # Modulate the green channel
-
-    # alpha = 0.5  # Transparency factor for the overlay
-    # combined_image = (1 - alpha) * masked_predictions_rgb + alpha * green_overlay
-
-    # log_image(combined_image, "masked_predictions_with_confidence", do_clip=False)
+       
 
 
 if __name__ == "__main__":

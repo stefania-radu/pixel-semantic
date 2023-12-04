@@ -1,0 +1,1 @@
+{"columns": ["MC_samples", "mean_variance", "masked_ratio", "masked_count", "max_span_length", "cumulative_span_weights"], "data": [[100, 0.0010000000474974513, 1.0, 133, 6, [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]]]}
