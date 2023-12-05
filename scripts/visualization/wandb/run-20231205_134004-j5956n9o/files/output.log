@@ -1,0 +1,45 @@
+12/05/2023 13:40:09 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/text_renderer_config.json from cache at /home/stefania/.cache/huggingface/transformers/892d6a02d7c441000de399de59ed70d943a81f7b0f536523b4af1111677a8508.e332b34c9c05756dd4aa51d8fa33461dbd79604752296d185f03f8004db30700
+12/05/2023 13:40:09 - INFO - pixel.data.rendering.rendering_utils - loading font file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/GoNotoCurrent.ttf from cache at /home/stefania/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+12/05/2023 13:40:09 - INFO - pixel.data.rendering.pygame_renderer - Loading font from /home/stefania/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+12/05/2023 13:40:09 - INFO - pixel.data.rendering.rendering_utils - Text renderer PyGameTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58",
+  "font_size": 8,
+  "max_seq_length": 256,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "text_renderer_type": "PyGameTextRenderer"
+}
+12/05/2023 13:40:14 - INFO - __main__ - PIXELConfig {
+  "_name_or_path": "Team-PIXEL/pixel-base",
+  "architectures": [
+    "PIXELForPreTraining"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "decoder_hidden_size": 512,
+  "decoder_intermediate_size": 2048,
+  "decoder_num_attention_heads": 16,
+  "decoder_num_hidden_layers": 8,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "image_size": [
+    16,
+    8464
+  ],
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "layer_norm_eps": 1e-12,
+  "mask_ratio": 0.25,
+  "model_type": "pixel",
+  "norm_pix_loss": true,
+  "num_attention_heads": 12,
+  "num_channels": 3,
+  "num_hidden_layers": 12,
+  "patch_size": 16,
+  "qkv_bias": true,
+  "torch_dtype": "float32",
+  "transformers_version": "4.17.0"
+}

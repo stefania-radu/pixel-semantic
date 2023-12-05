@@ -147,6 +147,11 @@ def main(args: argparse.Namespace):
 
     model = PIXELForPreTraining.from_pretrained(args.model_name_or_path, config=config, **config_kwargs)
 
+    dict_config = model.config.to_dict()
+
+    hyperparams_table = wandb.Table(columns=list(dict_config.keys()), data=[list(dict_config.values())])
+    wandb.log({"hyperparams_table": hyperparams_table})
+
     # Resize position embeddings in case we use shorter sequence lengths
     resize_model_embeddings(model, text_renderer.max_seq_length)
     truncate_decoder_pos_embeddings(model, text_renderer.max_seq_length)

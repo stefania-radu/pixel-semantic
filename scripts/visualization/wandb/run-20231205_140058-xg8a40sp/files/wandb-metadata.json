@@ -1,0 +1,134 @@
+{
+    "os": "Linux-6.2.0-37-generic-x86_64-with-glibc2.35",
+    "python": "3.9.18",
+    "heartbeatAt": "2023-12-05T13:00:58.586573",
+    "startedAt": "2023-12-05T13:00:58.023781",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--input_str=After the release of ChatGPT in 2022, the number of papers published every day about Large Language\nModels (LLMs) has increased more than 20-fold (Zhao et al., 2023). The number of parameters in these\nLLMs jumped from 340 millions in implementations such as BERT (Devlin, Chang, Lee, & Toutanova,\n2018) to billions of parameters in models like GPT-3 (Brown et al., 2020) or LLaMA (Touvron et al.,\n2023). A large part of these parameters come from the word-embedding layers which are used to repre-\nsent a finite vocabulary of characters, sets of characters or words. Apart from increasing model complex-\nity, a fixed vocabulary is also responsible for brittle models, which cannot deal with out-of-vocabulary\ninputs and cannot cannot generalise to new languages. As a consequence, the performance in downstream\ntasks is also affected.",
+        "--model_name_or_path=Team-PIXEL/pixel-base",
+        "--span_mask",
+        "--mask_ratio=0.25",
+        "--max_seq_length=256"
+    ],
+    "state": "running",
+    "program": "/media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/visualize_pixel_uncertainty.py",
+    "codePathLocal": "visualize_pixel_uncertainty.py",
+    "codePath": "scripts/visualization/visualize_pixel_uncertainty.py",
+    "git": {
+        "remote": "https://github.com/stefania-radu/pixel-semantic.git",
+        "commit": "e88a566bf0e6b7e5ce178283ef384f244e65bc0c"
+    },
+    "email": "stefania.m.radu@gmail.com",
+    "root": "/media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic",
+    "host": "ubuntu-desktop",
+    "username": "stefania",
+    "executable": "/home/stefania/anaconda3/envs/pixel-env/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3276.981875,
+        "min": 2200.0,
+        "max": 3400.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 4056.304,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3793.264,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3732.391,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3291.291,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3641.976,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3382.716,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3400.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4262.347,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3082.852,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3662.735,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 3792.318,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2200.0,
+            "min": 2200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 4307.203,
+            "min": 2200.0,
+            "max": 3400.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 246.66341018676758,
+            "used": 127.41255187988281
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060",
+            "memory_total": 12884901888
+        }
+    ],
+    "memory": {
+        "total": 31.21851348876953
+    }
+}
