@@ -18,6 +18,7 @@ import argparse
 import logging
 import os
 import sys
+import json
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple, Union
 
@@ -456,7 +457,7 @@ def main():
     if training_args.do_predict:
         outputs = trainer.predict(test_dataset)
         print(outputs.predictions)
-        preds_list, _ = align_predictions(outputs.predictions, outputs.label_ids)
+        preds_list, out_label_list = align_predictions(outputs.predictions, outputs.label_ids)
         metrics = outputs.metrics
         metrics["test_samples"] = len(test_dataset)
 
@@ -491,11 +492,11 @@ def main():
 
         logger.info("New prediction running...")
         
-        predictions, label_ids, _ = temp_scaler.forward(test_dataset)
-        print(predictions)
-        new_preds = EvalPrediction(predictions, label_ids)
+        predictions_calib, label_ids, _ = temp_scaler.forward(test_dataset)
+        print(predictions_calib)
+        new_preds = EvalPrediction(predictions_calib, label_ids)
         new_metrics = compute_metrics(new_preds)
-        preds_list, out_label_list = align_predictions(predictions, label_ids)
+        preds_list_calib, out_label_list_calib = align_predictions(predictions_calib, label_ids)
         # metrics = outputs.metrics
         new_metrics["test_samples"] = len(test_dataset)
 
@@ -510,11 +511,15 @@ def main():
         if trainer.is_world_process_zero():
             with open(output_test_predictions_file, "w") as writer:
                 with open(os.path.join(data_args.data_dir, "test.txt"), "r") as f:
-                    write_ner_predictions_to_file(writer, f, preds_list)        
+                    write_ner_predictions_to_file(writer, f, preds_list_calib) 
 
+        # Save calib info
+        output_metrics_calib_file = os.path.join(training_args.output_dir, "calib_info.json")
+        with open(output_metrics_calib_file, "w") as writer:
+            json.dump({"temperature": new_temp, "metrics": metrics_calib}, writer)
+                      
         # save the model
         
-      
     return results
 
 def _mp_fn(index):

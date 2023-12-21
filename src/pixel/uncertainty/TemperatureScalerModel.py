@@ -2,6 +2,8 @@ import os
 import torch
 from torch import nn, optim
 from torch.nn import functional as F
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 # source: https://github.com/gpleiss/temperature_scaling/blob/master/temperature_scaling.py
@@ -39,7 +41,7 @@ class TemperatureScalerModel(nn.Module):
         # logits = outputs.predictions
         logits = torch.tensor(outputs.predictions).cuda()
         logits = logits.view(-1, 9)
-        predictions = self.temperature_scale(logits).view(-1, 256, 9).cpu().detach().numpy()
+        predictions = self.temperature_scale(logits).view(-1, 196, 9).cpu().detach().numpy()
         label_ids = outputs.label_ids
         
         return predictions, label_ids, outputs.metrics
