@@ -18,6 +18,7 @@ import argparse
 import logging
 import os
 import sys
+import json
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple, Union
 
@@ -35,6 +36,7 @@ from pixel import (
     PIXELTrainingArguments,
     Split,
     PyGameTextRenderer,
+    TemperatureScalerModel,
     get_transforms,
     resize_model_embeddings,
 )
@@ -109,7 +111,10 @@ class ModelArguments:
     dropout_prob: float = field(
         default=0.1, metadata={"help": "Dropout probability for attention blocks and classification head"}
     )
-
+    do_calibrate: Optional[bool] = field(
+        default=False, metadata={"help": "Whether to post-calibrate the model using temperature scaling"}
+    )
+    
     def __post_init__(self):
         if not self.rendering_backend.lower() in ["pygame", "pangocairo"]:
             raise ValueError("Invalid rendering backend. Supported backends are 'pygame' and 'pangocairo'.")
@@ -192,6 +197,7 @@ def get_dataset(
     modality: Modality,
     split: Split,
     labels: List[str],
+    do_calibrate=False
 ):
     kwargs = {}
     if modality == Modality.IMAGE:
@@ -209,8 +215,11 @@ def get_dataset(
             "pad_token": processor.convert_tokens_to_ids([processor.pad_token])[0]
         })
 
+
+    data_dir_to_use = "data/masakhane-ner/data/zul" if do_calibrate else data_args.data_dir
+        
     return NERDataset(
-        data_dir=data_args.data_dir,
+        data_dir=data_dir_to_use,
         processor=processor,
         transforms=transforms,
         modality=modality,
@@ -362,7 +371,10 @@ def main():
         get_dataset(config, data_args, processor, modality, Split.DEV, labels) if training_args.do_eval else None
     )
     test_dataset = (
-        get_dataset(config, data_args, processor, modality, Split.TEST, labels) if training_args.do_predict else None
+        get_dataset(config, data_args, processor, modality, Split.TEST, labels) if training_args.do_predict or model_args.do_calibrate else None
+    )    
+    calibration_dataset = (
+        get_dataset(config, data_args, processor, modality, Split.TRAIN, labels, model_args.do_calibrate) if model_args.do_calibrate else None
     )
 
     def align_predictions(predictions: np.ndarray, label_ids: np.ndarray) -> Tuple[List[int], List[int]]:
@@ -444,7 +456,8 @@ def main():
     # Predict
     if training_args.do_predict:
         outputs = trainer.predict(test_dataset)
-        preds_list, _ = align_predictions(outputs.predictions, outputs.label_ids)
+        print(outputs.predictions)
+        preds_list, out_label_list = align_predictions(outputs.predictions, outputs.label_ids)
         metrics = outputs.metrics
         metrics["test_samples"] = len(test_dataset)
 
@@ -461,8 +474,53 @@ def main():
                 with open(os.path.join(data_args.data_dir, "test.txt"), "r") as f:
                     write_ner_predictions_to_file(writer, f, preds_list)
 
-    return results
 
+    # Calibrate model
+    if model_args.do_calibrate:
+
+        logger.info("Calibration running...")
+        
+        temp_scaler = TemperatureScalerModel(trainer)
+        temp_scaler.set_temperature(calibration_dataset)
+        new_temp = temp_scaler.get_temperature().item()
+        metrics_calib = temp_scaler.get_metrics()
+
+        logger.info(f"Done!\nCalibration metrics: {metrics_calib}")
+        logger.info(f"The temperature after calibration is: {new_temp}")
+
+        # predict with new model
+
+        logger.info("New prediction running...")
+        
+        predictions_calib, label_ids, _ = temp_scaler.forward(test_dataset)
+        print(predictions_calib)
+        new_preds = EvalPrediction(predictions_calib, label_ids)
+        new_metrics = compute_metrics(new_preds)
+        preds_list_calib, out_label_list_calib = align_predictions(predictions_calib, label_ids)
+        # metrics = outputs.metrics
+        new_metrics["test_samples"] = len(test_dataset)
+
+        trainer.log_metrics("test_calib", new_metrics)
+        trainer.save_metrics("test_calib", new_metrics)
+
+        if training_args.log_predictions:
+            log_predictions(args=training_args, eval_dataset=test_dataset, outputs=outputs, prefix="test_calib")
+
+        # Save predictions
+        output_test_predictions_file = os.path.join(training_args.output_dir, "test_calib_predictions.txt")
+        if trainer.is_world_process_zero():
+            with open(output_test_predictions_file, "w") as writer:
+                with open(os.path.join(data_args.data_dir, "test.txt"), "r") as f:
+                    write_ner_predictions_to_file(writer, f, preds_list_calib) 
+
+        # Save calib info
+        output_metrics_calib_file = os.path.join(training_args.output_dir, "calib_info.json")
+        with open(output_metrics_calib_file, "w") as writer:
+            json.dump({"temperature": new_temp, "metrics": metrics_calib}, writer)
+                      
+        # save the model
+        
+    return results
 
 def _mp_fn(index):
     # For xla_spawn (TPUs)

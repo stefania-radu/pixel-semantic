@@ -1,4 +1,4 @@
-# PIXEL
+ # PIXEL
 
 This repository contains code for **PIXEL**, the **Pix**el-based **E**ncoder of **L**anguage. PIXEL is a language model that operates on text rendered as images, fully removing the need for a fixed vocabulary. This effectively allows for transfer to any language and script that can be typeset on your computer screen.
 

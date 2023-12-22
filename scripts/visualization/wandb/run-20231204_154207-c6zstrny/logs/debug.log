@@ -1,0 +1,28 @@
+2023-12-04 15:42:07,649 INFO    MainThread:22194 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-12-04 15:42:07,649 INFO    MainThread:22194 [wandb_setup.py:_flush():76] Configure stats pid to 22194
+2023-12-04 15:42:07,649 INFO    MainThread:22194 [wandb_setup.py:_flush():76] Loading settings from /home/stefania/.config/wandb/settings
+2023-12-04 15:42:07,649 INFO    MainThread:22194 [wandb_setup.py:_flush():76] Loading settings from /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/settings
+2023-12-04 15:42:07,649 INFO    MainThread:22194 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-12-04 15:42:07,649 INFO    MainThread:22194 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-12-04 15:42:07,649 INFO    MainThread:22194 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'scripts/visualization/visualize_pixel_uncertainty.py', 'program_abspath': '/media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/visualize_pixel_uncertainty.py', 'program': '/media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/visualize_pixel_uncertainty.py'}
+2023-12-04 15:42:07,650 INFO    MainThread:22194 [wandb_init.py:_log_setup():528] Logging user logs to /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231204_154207-c6zstrny/logs/debug.log
+2023-12-04 15:42:07,650 INFO    MainThread:22194 [wandb_init.py:_log_setup():529] Logging internal logs to /media/stefania/A650A6F450A6C9FF/Work/RUG/Master/MA Thesis/pixel-semantic/scripts/visualization/wandb/run-20231204_154207-c6zstrny/logs/debug-internal.log
+2023-12-04 15:42:07,650 INFO    MainThread:22194 [wandb_init.py:init():568] calling init triggers
+2023-12-04 15:42:07,650 INFO    MainThread:22194 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {}
+2023-12-04 15:42:07,650 INFO    MainThread:22194 [wandb_init.py:init():618] starting backend
+2023-12-04 15:42:07,650 INFO    MainThread:22194 [wandb_init.py:init():622] setting up manager
+2023-12-04 15:42:07,654 INFO    MainThread:22194 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-12-04 15:42:07,655 INFO    MainThread:22194 [wandb_init.py:init():628] backend started and connected
+2023-12-04 15:42:07,661 INFO    MainThread:22194 [wandb_init.py:init():720] updated telemetry
+2023-12-04 15:42:07,690 INFO    MainThread:22194 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-12-04 15:42:08,338 INFO    MainThread:22194 [wandb_run.py:_on_init():2220] communicating current version
+2023-12-04 15:42:08,414 INFO    MainThread:22194 [wandb_run.py:_on_init():2229] got version response upgrade_message: "wandb version 0.16.0 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-12-04 15:42:08,415 INFO    MainThread:22194 [wandb_init.py:init():804] starting run threads in backend
+2023-12-04 15:42:10,039 INFO    MainThread:22194 [wandb_run.py:_console_start():2199] atexit reg
+2023-12-04 15:42:10,039 INFO    MainThread:22194 [wandb_run.py:_redirect():2054] redirect: wrap_raw
+2023-12-04 15:42:10,040 INFO    MainThread:22194 [wandb_run.py:_redirect():2119] Wrapping output streams.
+2023-12-04 15:42:10,040 INFO    MainThread:22194 [wandb_run.py:_redirect():2144] Redirects installed.
+2023-12-04 15:42:10,040 INFO    MainThread:22194 [wandb_init.py:init():845] run started, returning control to user process
+2023-12-04 15:42:32,326 WARNING MsgRouterThr:22194 [router.py:message_loop():77] message_loop has been closed

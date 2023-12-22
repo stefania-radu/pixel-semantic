@@ -31,11 +31,12 @@ python scripts/training/run_glue.py   \
 # evaluation the model on CoNLL2003
 # change the model/data based on the language (conll_2003_en)
 python scripts/training/run_ner.py \
-    --model_name_or_path="Team-PIXEL/pixel-base-finetuned-conll2003-en" \
-    --data_dir data/masakhane-ner/data/conll_2003_en \
+    --model_name_or_path="Team-PIXEL/pixel-base-finetuned-masakhaner-amh" \
+    --data_dir data/masakhane-ner/data/amh \
     --remove_unused_columns=False \
     --output_dir="sanity_check_ner" \
-    --do_eval \
+    --do_predict \
+    --do_calibrate \
     --max_seq_length=256 
 
 # Questions Answering - SQuAD (there is also tydiqa, korquad and jaquad)
