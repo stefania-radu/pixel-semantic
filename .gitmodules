@@ -2,3 +2,7 @@
 	path = datasets
 	url = https://github.com/xplip/datasets.git
 	branch = pve
+
+[submodule "apex"]
+	path = apex
+	url = https://github.com/NVIDIA/apex

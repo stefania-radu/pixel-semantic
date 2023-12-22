@@ -1,7 +1,0 @@
-Habrok site
-https://wiki.hpc.rug.nl/habrok/examples/python
-
-Habrok portal
-https://portal.hb.hpc.rug.nl/pun/sys/dashboard/files/fs//home2/s3919609
-
-token github: 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
