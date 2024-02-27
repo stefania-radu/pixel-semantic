@@ -13,20 +13,24 @@ export STRIDE=160
 export QUESTION_MAX_LEN=128
 export BSZ=32
 export GRAD_ACCUM=1
-export LR=7e-6
-export SEED=104
+export LR=7e-5
+export SEED=103
 export NUM_STEPS=20000
   
 export RUN_NAME="${DATASET_NAME}-$(basename ${MODEL})-${SEQ_LEN}-${BSZ}-${GRAD_ACCUM}-${LR}-${NUM_STEPS}-${SEED}"
+
+
+TYDIQA_GOLDP_DIR="${HOME}/tydiqa_goldp"
+VERSION="1.1"
 
 python scripts/training/run_qa.py \
   --model_name_or_path=${MODEL} \
   --dataset_name=${DATASET_NAME} \
   --dataset_config_name=${DATASET_CONFIG_NAME} \
+  --do_predict \
   --remove_unused_columns=False \
-  --do_train \
-  --do_eval \
-  --dropout_prob=0.1 \
+  --test_file="/scratch/s3919609/Pixel-stuff/tydiqa_goldp/tydiqa-goldp-v1.1-dev.json" \
+  --dropout_prob=0.15 \
   --max_seq_length=${SEQ_LEN} \
   --question_max_length=${QUESTION_MAX_LEN} \
   --doc_stride=${STRIDE} \
@@ -57,4 +61,3 @@ python scripts/training/run_qa.py \
   --half_precision_backend=apex \
   --fallback_fonts_dir=${FALLBACK_FONTS_DIR} \
   --seed=${SEED}
-    # --do_predict \

@@ -3,6 +3,11 @@
 # Optional wandb environment vars
 export WANDB_PROJECT="pixel-experiments"
 
+# change the cache so that we dont run out of space
+export HF_HOME="/scratch/.cache/huggingface"
+export HF_DATASETS_CACHE="/scratch/.cache/huggingface/datasets"
+export TRANSFORMERS_CACHE="/scratch/.cache/huggingface/models"
+
 # Settings
 export LANG="hau"
 export DATA_DIR="data/masakhane-ner/data/${LANG}"

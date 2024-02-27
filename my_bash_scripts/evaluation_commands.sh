@@ -1,5 +1,10 @@
 # My semantic tasks
 
+# change the cache so that we dont run out of space
+export HF_HOME="/scratch/.cache/huggingface"
+export HF_DATASETS_CACHE="/scratch/.cache/huggingface/datasets"
+export TRANSFORMERS_CACHE="/scratch/.cache/huggingface/models"
+
 # sequence classification - GLUE
 
 # evaluation the model on COLA

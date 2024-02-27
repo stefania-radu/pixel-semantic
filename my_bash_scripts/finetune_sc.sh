@@ -9,19 +9,24 @@
 # the recipes used in the paper may not be the best ones out there
 
 # Optional wandb environment vars
-export WANDB_PROJECT="pixel-experiments"
+export WANDB_PROJECT="pixel-experiments-SC"
+
+# change the cache so that we dont run out of space
+export HF_HOME="/scratch/.cache/huggingface"
+export HF_DATASETS_CACHE="/scratch/.cache/huggingface/datasets"
+export TRANSFORMERS_CACHE="/scratch/.cache/huggingface/models"
 
 # Settings
-export TASK="sst2"
+export TASK="cola"
 export MODEL="Team-PIXEL/pixel-base" # also works with "bert-base-cased", "roberta-base", etc.
-export RENDERING_BACKEND="pangocairo"  # Consider trying out both "pygame" and "pangocairo" to see which one works best
-export POOLING_MODE="mean" # Can be "mean", "max", "cls", or "pma1" to "pma8"
+export RENDERING_BACKEND="pygame"  # Consider trying out both "pygame" and "pangocairo" to see which one works best
+export POOLING_MODE="pma8" # Can be "mean", "max", "cls", or "pma1" to "pma8"
 export SEQ_LEN=256
 export BSZ=64 # it was 64 but it does not run on my machine
-export GRAD_ACCUM=4  # We found that higher batch sizes can sometimes make training more stable
-export LR=3e-5
-export SEED=42
-export NUM_STEPS=15000
+export GRAD_ACCUM=8  # We found that higher batch sizes can sometimes make training more stable
+export LR=5e-5
+export SEED=104
+export NUM_STEPS=10000
   
 export RUN_NAME="${TASK}-$(basename ${MODEL})-${POOLING_MODE}-${RENDERING_BACKEND}-${SEQ_LEN}-${BSZ}-${GRAD_ACCUM}-${LR}-${NUM_STEPS}-${SEED}"
 
@@ -59,7 +64,9 @@ python scripts/training/run_glue.py \
   --report_to=wandb \
   --log_predictions \
   --load_best_model_at_end=True \
-  --metric_for_best_model="eval_accuracy" \
+  --metric_for_best_model="eval_matthews_correlation" \
   --half_precision_backend=apex \
-  --seed=${SEED}
-    #--fp16 \
+  --seed=${SEED} \
+  --fp16
+   
+    

@@ -31,6 +31,7 @@ from ..biaffine import Biaffine
 from ..pooling import PoolingForSequenceClassificationHead, PoolingMode
 from ..vit import ViTModel
 from .configuration_pixel import PIXELConfig
+from .hash_embedding import HashEmbedding
 
 logger = logging.getLogger(__name__)
 
@@ -536,6 +537,107 @@ class PIXELPatchEmbeddings(nn.Module):
             )
         x = self.projection(pixel_values).flatten(2).transpose(1, 2)
         return x
+    
+
+class PIXELNgramPatchEmbeddings(nn.Module):
+    def __init__(self, image_size=224, patch_size=16, num_channels=3, embed_dim=768, ngram_size=2, aggregation_mode='average'):
+        super().__init__()
+        self.ngram_size = ngram_size
+        self.combiner = torch.nn.Linear(embed_dim*ngram_size, embed_dim)
+        self.projection = nn.Conv2d(num_channels, embed_dim, kernel_size=patch_size, stride=patch_size)
+        self.aggregation_mode = aggregation_mode
+        self.embed_dim = embed_dim
+
+        # Calculate the number of patches and n-grams
+        image_size = to_2tuple(image_size)
+        patch_size = to_2tuple(patch_size)
+        self.num_patches = (image_size[1] // patch_size[1]) * (image_size[0] // patch_size[0])
+        self.num_ngrams = self.num_patches - (ngram_size - 1) 
+
+
+    def forward(self, pixel_values):
+        
+        batch_size, num_channels, height, width = pixel_values.shape
+        if height != self.image_size[0] or width != self.image_size[1]:
+            raise ValueError(
+                f"Input image size ({height}*{width}) doesn't match model ({self.image_size[0]}*{self.image_size[1]})."
+            )
+
+        logging.info(f"pixel_values.shape: {pixel_values.shape}")
+            
+        # Get initial patch embeddings
+        patch_embeddings = self.projection(pixel_values).flatten(2).transpose(1, 2)  # shape: [num_patches=529, embed_dim=768]
+        logging.info(f"patch_embeddings.shape: {patch_embeddings.shape}")
+
+        # Create n-gram embeddings
+        ngram_embeddings = []
+
+        # shape: [batch_size, num_ngrams=529 - (ngram_size - 1), embed_dim=768*ngram_size]
+        if self.aggregation_mode == "concatenate":
+            for i in range(self.num_ngrams):
+                # concatenate 'ngram_size' consecutive patch embeddings to create the ngram_patch
+                ngram_patch = torch.cat((patch_embeddings[i, :], patch_embeddings[i + self.ngram_size - 1, :]), dim=-1) # assumes: shape=[num_patches=529, embed_dim=768]
+                logging.info(f"ngram_patch.shape: {ngram_patch.shape}")
+                ngram_embeddings.append(ngram_patch)
+                _, ngram_embed_dim = ngram_patch.shape
+                if ngram_embed_dim != self.embed_dim * self.ngram_size:
+                    raise ValueError(
+                        f"Dimension of embedding with concatenation is {ngram_embed_dim} but according to the config, the dimesnion is {self.embed_dim}. When using \
+                            aggregation_mode == 'concatenate', the dimension of the embedding should be the original dimension * ngram_size"
+                    )
+
+        # shape: [batch_size, num_ngrams=529 - (ngram_size - 1), embed_dim=768]
+        elif self.aggregation_mode == "linear_layer":
+            for i in range(self.num_ngrams):
+                ngram_patch = torch.cat((patch_embeddings[i, :], patch_embeddings[i + self.ngram_size - 1, :]), dim=-1)
+                logging.info(f"ngram_patch.shape: {ngram_patch.shape}")
+                # use linear layer to project from embed_dim*ngram_size to embed_dim
+                ngram_patch_linear = self.combiner(ngram_patch)
+                logging.info(f"ngram_patch_linear.shape: {ngram_patch_linear.shape}")
+                ngram_embeddings.append(ngram_patch_linear)
+
+        # shape: [batch_size, num_ngrams=529 - (ngram_size - 1), embed_dim=768]
+        elif self.aggregation_mode == "average":
+            for i in range(self.num_ngrams):
+                # averaging consecutive patches to create the ngram_patch
+                ngram_patch_averaged = torch.mean(patch_embeddings[i:i + self.ngram_size, :], dim=0)
+                ngram_embeddings.append(ngram_patch_averaged)
+
+        else:
+            raise ValueError('unknown aggregation function {}'.format(self.aggregation_mode))
+
+
+        return torch.stack(ngram_embeddings)  
+
+
+# I don't think this works because we need discrete inputs for the hash embeddings, but the output of conv2D is continuous
+class HashPatchEmbeddings(nn.Module):
+    """
+    Hash-Embeddings, based on https://github.com/YannDubs/Hash-Embeddings, 
+    and the paper: Hash Embeddings for Efficient Word Representations by Dan Svenstrup, Jonas Meinertz Hansen, Ole Winther
+    """
+    def __init__(self, image_size=224, patch_size=16, num_channels=3, embed_dim=768):
+        super().__init__()
+        image_size = to_2tuple(image_size)
+        patch_size = to_2tuple(patch_size)
+        num_patches = (image_size[1] // patch_size[1]) * (image_size[0] // patch_size[0])
+        self.image_size = image_size
+        self.patch_size = patch_size
+        self.num_patches = num_patches
+
+        self.projection = nn.Conv2d(num_channels, embed_dim, kernel_size=patch_size, stride=patch_size)
+        self.hash_embedding = HashEmbedding(self.num_patches, embed_dim, num_hashes=2, aggregation_mode='sum')
+
+    def forward(self, pixel_values):
+        batch_size, num_channels, height, width = pixel_values.shape
+        if height != self.image_size[0] or width != self.image_size[1]:
+            raise ValueError(
+                f"Input image size ({height}*{width}) doesn't match model ({self.image_size[0]}*{self.image_size[1]})."
+            )
+        # I dont know if the dimenstions of pixel_values match here, I might need to flatten it for the hash_embedding
+        # x = self.projection(pixel_values).flatten(2).transpose(1, 2)
+        x = self.hash_embedding(pixel_values)
+        return x
 
 
 class PIXELEmbeddings(nn.Module):
@@ -547,12 +649,25 @@ class PIXELEmbeddings(nn.Module):
         super().__init__()
 
         self.cls_token = nn.Parameter(torch.zeros(1, 1, config.hidden_size))
+        # should change these normal patch ambeddings with n-gram patch embeddings
+
+        # this is the original code
         self.patch_embeddings = PIXELPatchEmbeddings(
             image_size=config.image_size,
             patch_size=config.patch_size,
             num_channels=config.num_channels,
             embed_dim=config.hidden_size,
         )
+
+        # self.patch_embeddings = PIXELNgramPatchEmbeddings(
+        #     image_size=config.image_size,
+        #     patch_size=config.patch_size,
+        #     num_channels=config.num_channels,
+        #     embed_dim=config.hidden_size,
+        #     ngram_size=config.ngram_size,
+        #     aggregation_mode='average'
+        # )
+        
         self.num_patches = self.patch_embeddings.num_patches
         # fixed sin-cos embedding
         self.position_embeddings = nn.Parameter(
@@ -1005,6 +1120,7 @@ class PIXELModel(PIXELPreTrainedModel):
             attention_mask, embedding_output.shape, self.device
         )
 
+        # shape = [(1+ R*N)xD]
         encoder_outputs = self.encoder(
             embedding_output,
             attention_mask=extended_attention_mask,
@@ -1031,7 +1147,7 @@ class PIXELModel(PIXELPreTrainedModel):
 class PIXELDecoder(nn.Module):
     def __init__(self, config, num_patches, dtype):
         super().__init__()
-        self.decoder_embed = nn.Linear(config.hidden_size, config.decoder_hidden_size, bias=True)
+        self.decoder_embed = nn.Linear(config.hidden_size, config.decoder_hidden_size, bias=True) # from 768 nto 512
         self.mask_token = nn.Parameter(torch.zeros(1, 1, config.decoder_hidden_size))
         self.decoder_pos_embed = nn.Parameter(
             torch.zeros(1, num_patches + 1, config.decoder_hidden_size), requires_grad=False
@@ -1120,7 +1236,7 @@ class PIXELDecoder(nn.Module):
         return_dict=True,
     ):
         # embed tokens
-        x = self.decoder_embed(hidden_states)
+        x = self.decoder_embed(hidden_states) # shape: (1+R·N)×Ddec, where Ddec=512, N=nr patches, R=masking rate
 
         batch_size = hidden_states.shape[0]
 
