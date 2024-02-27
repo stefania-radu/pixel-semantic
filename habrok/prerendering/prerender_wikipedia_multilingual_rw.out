@@ -1,0 +1,160 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+/home2/s3919609/pixel-semantic/scripts/data/prerendering/prerender_wikipedia_multilingual.py:24: PyGIWarning: PangoCairo was imported without specifying a version first. Use gi.require_version('PangoCairo', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import PangoCairo
+02/05/2024 17:29:29 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file configs/renderers/noto_renderer/text_renderer_config.json
+02/05/2024 17:29:29 - INFO - pixel.data.rendering.rendering_utils - loading font file configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 17:29:29 - INFO - pixel.data.rendering.pangocairo_renderer - Loading font from configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 17:29:29 - INFO - pixel.data.rendering.rendering_utils - Text renderer PangoCairoTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "GoNotoCurrent.ttf",
+  "font_size": 8,
+  "fonts_list": [
+    "C059",
+    "Cantarell",
+    "D050000L",
+    "DejaVu Sans",
+    "DejaVu Sans Mono",
+    "Droid Sans",
+    "Droid Sans Arabic",
+    "Droid Sans Armenian",
+    "Droid Sans Devanagari",
+    "Droid Sans Ethiopic",
+    "Droid Sans Fallback",
+    "Droid Sans Georgian",
+    "Droid Sans Hebrew",
+    "Droid Sans Japanese",
+    "Droid Sans Tamil",
+    "Droid Sans Thai",
+    "Go Noto Current",
+    "Inconsolata",
+    "MathJax_AMS",
+    "MathJax_Caligraphic",
+    "MathJax_Fraktur",
+    "MathJax_Main",
+    "MathJax_Math",
+    "MathJax_SansSerif",
+    "MathJax_Script",
+    "MathJax_Size1",
+    "MathJax_Size2",
+    "MathJax_Size3",
+    "MathJax_Size4",
+    "MathJax_Typewriter",
+    "MathJax_Vector",
+    "MathJax_Vector-Bold",
+    "MathJax_WinChrome",
+    "MathJax_WinIE6",
+    "Monospace",
+    "Nimbus Mono PS",
+    "Nimbus Roman",
+    "Nimbus Sans",
+    "Nimbus Sans Narrow",
+    "P052",
+    "STIX MathJax Alphabets",
+    "STIX MathJax Arrows",
+    "STIX MathJax DoubleStruck",
+    "STIX MathJax Fraktur",
+    "STIX MathJax Latin",
+    "STIX MathJax Main",
+    "STIX MathJax Marks",
+    "STIX MathJax Misc",
+    "STIX MathJax Monospace",
+    "STIX MathJax Normal",
+    "STIX MathJax Operators",
+    "STIX MathJax SansSerif",
+    "STIX MathJax Script",
+    "STIX MathJax Shapes",
+    "STIX MathJax Size1",
+    "STIX MathJax Size2",
+    "STIX MathJax Size3",
+    "STIX MathJax Size4",
+    "STIX MathJax Size5",
+    "STIX MathJax Symbols",
+    "STIX MathJax Variants",
+    "Sans",
+    "Serif",
+    "Source Code Pro",
+    "System-ui",
+    "URW Bookman",
+    "URW Gothic",
+    "Ubuntu",
+    "Ubuntu Condensed",
+    "Ubuntu Mono",
+    "Z003"
+  ],
+  "max_seq_length": 529,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "rgb": false,
+  "text_renderer_type": "PangoCairoTextRenderer"
+}
+
+IterableDataset({
+    features: ['id', 'url', 'title', 'text'],
+    n_shards: 1
+})
+02/05/2024 17:29:39 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 2 unknown glyphs in sentence: Inama y’igihugu y’amajyambere cyangwa se Inteko yatowe ku itariki ya 26 Ukuboza 1983 igatangira imirimo yayo ku itariki ya 8 Mutarama 1984, yo yarimo abadepite 70. Icyo gihe Itegeko Nshinga ryagennye manda y’imyaka 5 ari nayo yagendeweho n’Inteko yatowe ku 26 Ukuboza 1988 igatangira imirimo yayo ku 8 Mutarama 1989. Icyo twabibutsa ni uko abari bagize CND (Inama y’igihugu y’amajyambere) bose baturukaga mu ishyaka rimwe rukumbi rya MRND.  Itegeko Nshinga rya mbere ry’u Rwanda ryashyizweho ku itariki ya 28 Mutarama 1961, ryaje gusimbuzwa ku itariki ya 24 Ugushyingo 1962. Kuva ryashyirwaho, Itegeko Nshinga ry’u Rwanda ryagiye rihindurwa inshuro nyinshi ku mpamvu zitandukanye. Kugeza mu 1978 ryari rimaze guhindurwa inshuro zigera kuri eshanu: nko ku itariki ya 12 Kamena 1962, ku itariki ya 18 Gicurasi 1973 no ku itariki ya 20 Ukuboza 1978.  Inteko Ishinga Amategeko y’Inzibacyuho  Ni imwe mu nzego nkuru z’igihugu zateganyijwe n’amasezerano y’Arusha yashyizweho umukono ku itariki ya 4 Kanama 1993 hagati ya Guverinoma y’u Rwanda n’ishyaka rya FPR- Inkotanyi.  Ayo masezerano akaba yarahaye iyo Nteko Ishinga Amategeko inshingano zikurikira:  	Gushyiraho amategeko  	Kumenya no kungenzura ibikorwa bya Guverinoma . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:29:39 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 5 unknown glyphs in sentence: Naho ibirebana no kumenya no kugenzura ibikorwa bya guverinoma, ibyo bikorwa byatangiye mu 1997 cyane cyane ko n’amategeko abigenga yagoranye gushyirwaho. Bikaba byarasabye ko abahagarariye Inteko Ishinga Amategeko n’abahagarariye guverinoma bahura kenshi kugira ngo bashobore kumvikana ku ngingo zimwe na zimwe batabonaga kimwe.  Itegeko ngenga rigena uburyo Inteko Ishinga Amategeko igomba kumenya ikanagenzura imikorere ya guverinoma ryatangajwe ku itariki ya 14 Mata 1997 na Prezida w’Inteko Ishinga Amategeko, ashingiye ku bubasha ahabwa n’Itegeko Nshinga mu ngingo yaryo ya 6-d y’amasezerano y’Arusha, mu gice cyerekeye igabana ry’ubutegetsi.  Inteko Ishinga Amategeko y’inzibacyuho kandi yari ifite inshingano zo gutora bamwe mu bayobozi bo mu nzego z’imirimo ya Leta. Ni muri urwo rwego batoye Perezida Paul Kagame bafatanije n’abagize guverinoma ku itariki ya 17 Mata 2000, banatora abandi bayobozi banyuranye barimo Perezida na visi Perezida b’urukiko rw’ikirenga, abakomiseri mu makomisiyo y’igihugu n’abandi.  Ku birebana n’imiterere y’Inteko Ishinga Amategeko y’inzibacyuho, icyo gihe yari igizwe n’inzego 5 z’ingenzi, arizo:  	Inteko rusange   	Biro y’inteko  	Inama y’abaperezida b’amakomisiyo  	Amakomisiyo ahoraho  	Urwego rw’abakozi . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:29:40 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 20 unknown glyphs in sentence: Ikinyadeneta (izina mu kinyadeneta : Dene Dháh ; izina mu cyongereza : Dene Tha, Dene Dháa, South Slavey) ni ururimi rwa Northwest Territories, Alberta na British Columbia muri Kanada. Itegekongenga ISO 639-3 xls.  Alfabeti y’Ikinyadeneta  ᐊ ᐁ ᐃ ᐅ ᐊ́ ᐁ́ ᐃ́ ᐅ́ ᐊᐠ ᐁᐠ ᐃᐠ ᐅᐠ ᐥᐊ ᐥᐁ ᐥᐃ ᐥᐅ ᐊᐥ ᐊᑊ ᐁᑊ ᐃᑊ ᐅᑊ ᐊᐧ ᐤ²ᐊ ᐤ²ᐁ ᐤ²ᐃ ᐤ²ᐅ ᐊᐤ ᐸ ᐯ ᐱ ᐳ ᐊᑉ ᑕ ᑌ ᑎ ᑐ ᐊᐨ ᖍ ᖊ ᖋ ᖌ ᐊᙆ ᕦ ᕞ ᕠ ᕤ ᐊᒡ ᑕᑊ ᑌᑊ ᑎᑊ ᑐᑊ ᗃ ᗀ ᗁ ᗂ ᐊᐦ ᑲ ᑫ ᑭ ᑯ ᐊᐠ ᑲᑊ ᑫᑊ ᑭᑊ ᑯᑊ ᒼᗃ ᒼᗀ ᒼᗁ ᒼᗂ ᐊᑊ ᒼᐊ ᒼᐁ ᒼᐃ ᒼᐅ ᐊᕁ ᕍ ᕃ ᕄ ᕊ ᐊᔆ ᒼᕍ ᒼᕃ ᒼᕄ ᒼᕊ ᐊᐟ ᐨᖉ ᐨᖆ ᐨᖇ ᐨᖈ ᖉ ᖆ ᖇ ᖈ ᖉᑊ ᖆᑊ ᖇᑊ ᖈᑊ ᒪ ᒣ ᒥ ᒧ ᐊᒼ  ᓇ ᓀ ᓂ ᓄ ᐊᐣ  Amagambo n’interuro mu kinyadeneta   dene  – umuntu  deneke – abantu  denezhu – umugabo    godelé  – amaraso  gotthʼené  – igufwa  gondaa  – ijisho  gokée  – ikirenge  tu theʔǫ  – ikiyaga  shíh  – umusozi  ke  – ikirato  tʼéh  – ikara  datłeh  – isabune  chǫ  – imvura  nıhtsʼı  – umuyaga  sa  – izuba  ǫdzı̨za  – ukwezi  thę́  – inyenyeri  Imibare     łíé – rimwe  ǫkı – kabiri  taı – gatatu  dı̨ı̨ – kane  sųláı – gatanu  etsʼę́taı – gatandatu  łą́hdı̨ı̨ – karindwi  etsʼę́dı̨ı̨ – umunani  łáúlı – icyenda  honéno – icumi  honéno ndaa łíé – cumi na rimwe  Imiyoboro  South Slavey Topical Dictionary Kátłʼodehche Dialect (2009)  Indimi. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:29:41 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 7 unknown glyphs in sentence: Umusebeya (izina ry’ubumenyi mu kilatini  *Albizia gummifera*) ni ubwoko bw’igiti.       [[  ✅inkomoko Muri Afurika yegereye umurongo wa koma.  ✅Aho iterwa mu  Rwanda Hose mu gihugu uretse muBugarama, mu misozi miremire ya cyangugu, ✅Umubare w’imbuto mu kiro 1 - - ✅Ibyo zikenera ubutaka buhitisha  amazi neza ,  buhehereye bwo  hejuru, mu mabanga  y’imisozi no mu  mibande.; -Ubutumburuke buri  hagati ya m 1500  kugeza kuri m 2200  ✅Uko zitegurwa, uko ziterwa n’uko zikorerwa Kwinaza umurama ukimara gusarurwa ni ngombwa kugirango uzamere.  Imbuto zayo  zirimeza hasi mu murima. ✅Akamaro Amasanduku, imihini, inkwi  n’amakara. kuribwa n’amatungo, isaso, igicucu, indabo zitanga ubuki. ,gifata  ubutaka, igiti cy’umutako ✅Indwara  n’ibyonnyi. Umusebeya ugira igiti kidakomera  cyane iyo gihuye n’itaka cyangwa amazi kandi cyangizwa n’udusimba  n’uduhumyo.  Ibimera Ibiti. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:29:53 - INFO - pixel.utils.prerendering - Pushing batch 0 to HuggingFace
+02/05/2024 17:29:53 - INFO - pixel.utils.prerendering - Current uploaded size = 0
+02/05/2024 17:29:53 - INFO - pixel.utils.prerendering - Current dataset nbytes = 0
+02/05/2024 17:29:53 - INFO - pixel.utils.prerendering - Current shards = 0
+02/05/2024 17:29:53 - INFO - pixel.utils.prerendering - Current num examples = 13957
+02/05/2024 17:29:53 - INFO - pixel.utils.prerendering - Current num words = 1637699
+
+/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/datasets/arrow_dataset.py:5352: FutureWarning: 'branch' was deprecated in favor of 'revision' in version 2.15.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'revision=main' instead.
+  warnings.warn(
+Uploading the dataset shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Map:   0%|          | 0/13957 [00:00<?, ? examples/s][A
+Map:  72%|███████▏  | 10000/13957 [00:00<00:00, 90507.62 examples/s][AMap: 100%|██████████| 13957/13957 [00:00<00:00, 92852.24 examples/s]
+
+Creating parquet from Arrow format:   0%|          | 0/140 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 140/140 [00:00<00:00, 1823.98ba/s]
+Uploading the dataset shards: 100%|██████████| 1/1 [00:08<00:00,  8.79s/it]Uploading the dataset shards: 100%|██████████| 1/1 [00:08<00:00,  8.79s/it]
+02/05/2024 17:30:39 - INFO - __main__ - Total num words in wikipedia: 1637699
+
+###############################################################################
+Hábrók Cluster
+Job 7121598 for user s3919609
+Finished at: Mon Feb  5 17:30:40 CET 2024
+
+Job details:
+============
+
+Job ID              : 7121598
+Name                : prerender_wikipedia_multilingual_rw
+User                : s3919609
+Partition           : regularshort
+Nodes               : node104
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : COMPLETED
+Submit              : 2024-02-05T17:29:18
+Start               : 2024-02-05T17:29:19
+End                 : 2024-02-05T17:30:39
+Reserved walltime   : 05:00:00
+Used walltime       : 00:01:20
+Used CPU time       : 00:00:56 (efficiency: 71.20%)
+% User (Computation): 95.03%
+% System (I/O)      :  4.97%
+Mem reserved        : 100G
+Max Mem (Node/step) : 2.29G (node104, per node)
+Full Max Mem usage  : 2.29G
+Total Disk Read     : 116.36M
+Total Disk Write    : 758.85K
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

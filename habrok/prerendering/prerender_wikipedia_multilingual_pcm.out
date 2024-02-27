@@ -1,0 +1,155 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+/home2/s3919609/pixel-semantic/scripts/data/prerendering/prerender_wikipedia_multilingual.py:24: PyGIWarning: PangoCairo was imported without specifying a version first. Use gi.require_version('PangoCairo', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import PangoCairo
+02/05/2024 17:33:27 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file configs/renderers/noto_renderer/text_renderer_config.json
+02/05/2024 17:33:27 - INFO - pixel.data.rendering.rendering_utils - loading font file configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 17:33:27 - INFO - pixel.data.rendering.pangocairo_renderer - Loading font from configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 17:33:27 - INFO - pixel.data.rendering.rendering_utils - Text renderer PangoCairoTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "GoNotoCurrent.ttf",
+  "font_size": 8,
+  "fonts_list": [
+    "C059",
+    "Cantarell",
+    "D050000L",
+    "DejaVu Sans",
+    "DejaVu Sans Mono",
+    "Droid Sans",
+    "Droid Sans Arabic",
+    "Droid Sans Armenian",
+    "Droid Sans Devanagari",
+    "Droid Sans Ethiopic",
+    "Droid Sans Fallback",
+    "Droid Sans Georgian",
+    "Droid Sans Hebrew",
+    "Droid Sans Japanese",
+    "Droid Sans Tamil",
+    "Droid Sans Thai",
+    "Go Noto Current",
+    "Inconsolata",
+    "MathJax_AMS",
+    "MathJax_Caligraphic",
+    "MathJax_Fraktur",
+    "MathJax_Main",
+    "MathJax_Math",
+    "MathJax_SansSerif",
+    "MathJax_Script",
+    "MathJax_Size1",
+    "MathJax_Size2",
+    "MathJax_Size3",
+    "MathJax_Size4",
+    "MathJax_Typewriter",
+    "MathJax_Vector",
+    "MathJax_Vector-Bold",
+    "MathJax_WinChrome",
+    "MathJax_WinIE6",
+    "Monospace",
+    "Nimbus Mono PS",
+    "Nimbus Roman",
+    "Nimbus Sans",
+    "Nimbus Sans Narrow",
+    "P052",
+    "STIX MathJax Alphabets",
+    "STIX MathJax Arrows",
+    "STIX MathJax DoubleStruck",
+    "STIX MathJax Fraktur",
+    "STIX MathJax Latin",
+    "STIX MathJax Main",
+    "STIX MathJax Marks",
+    "STIX MathJax Misc",
+    "STIX MathJax Monospace",
+    "STIX MathJax Normal",
+    "STIX MathJax Operators",
+    "STIX MathJax SansSerif",
+    "STIX MathJax Script",
+    "STIX MathJax Shapes",
+    "STIX MathJax Size1",
+    "STIX MathJax Size2",
+    "STIX MathJax Size3",
+    "STIX MathJax Size4",
+    "STIX MathJax Size5",
+    "STIX MathJax Symbols",
+    "STIX MathJax Variants",
+    "Sans",
+    "Serif",
+    "Source Code Pro",
+    "System-ui",
+    "URW Bookman",
+    "URW Gothic",
+    "Ubuntu",
+    "Ubuntu Condensed",
+    "Ubuntu Mono",
+    "Z003"
+  ],
+  "max_seq_length": 529,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "rgb": false,
+  "text_renderer_type": "PangoCairoTextRenderer"
+}
+
+IterableDataset({
+    features: ['id', 'url', 'title', 'text'],
+    n_shards: 1
+})
+02/05/2024 17:33:34 - INFO - pixel.utils.prerendering - Pushing batch 0 to HuggingFace
+02/05/2024 17:33:34 - INFO - pixel.utils.prerendering - Current uploaded size = 0
+02/05/2024 17:33:34 - INFO - pixel.utils.prerendering - Current dataset nbytes = 0
+02/05/2024 17:33:34 - INFO - pixel.utils.prerendering - Current shards = 0
+02/05/2024 17:33:34 - INFO - pixel.utils.prerendering - Current num examples = 2135
+02/05/2024 17:33:34 - INFO - pixel.utils.prerendering - Current num words = 342510
+
+/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/datasets/arrow_dataset.py:5352: FutureWarning: 'branch' was deprecated in favor of 'revision' in version 2.15.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'revision=main' instead.
+  warnings.warn(
+Uploading the dataset shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Map:   0%|          | 0/2135 [00:00<?, ? examples/s][AMap: 100%|██████████| 2135/2135 [00:00<00:00, 90473.02 examples/s]
+
+Creating parquet from Arrow format:   0%|          | 0/22 [00:00<?, ?ba/s][ACreating parquet from Arrow format: 100%|██████████| 22/22 [00:00<00:00, 1698.47ba/s]
+Uploading the dataset shards: 100%|██████████| 1/1 [00:02<00:00,  2.92s/it]Uploading the dataset shards: 100%|██████████| 1/1 [00:02<00:00,  2.92s/it]
+02/05/2024 17:33:45 - INFO - __main__ - Total num words in wikipedia: 342510
+
+###############################################################################
+Hábrók Cluster
+Job 7121626 for user s3919609
+Finished at: Mon Feb  5 17:33:46 CET 2024
+
+Job details:
+============
+
+Job ID              : 7121626
+Name                : prerender_wikipedia_multilingual_pcm
+User                : s3919609
+Partition           : regularshort
+Nodes               : node104
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : COMPLETED
+Submit              : 2024-02-05T17:33:16
+Start               : 2024-02-05T17:33:17
+End                 : 2024-02-05T17:33:46
+Reserved walltime   : 05:00:00
+Used walltime       : 00:00:29
+Used CPU time       : 00:00:15 (efficiency: 53.53%)
+% User (Computation): 87.84%
+% System (I/O)      : 12.16%
+Mem reserved        : 100G
+Max Mem (Node/step) : 76.00K (node104, per node)
+Full Max Mem usage  : 76.00K
+Total Disk Read     : 2.28K
+Total Disk Write    : 1.00 
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

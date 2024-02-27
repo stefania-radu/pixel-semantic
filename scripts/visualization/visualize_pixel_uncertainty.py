@@ -3,7 +3,7 @@ Script that takes in an input string, renders it, masks out patches, and let's P
 Adapted from ViT-MAE demo: https://github.com/facebookresearch/mae/blob/main/demo/mae_visualize.ipynb
 
 Example usage:
-python visualize_pixel_uncertainty.py \
+python scripts/visualization/visualize_pixel_uncertainty.py\
   --input_str="After the release of ChatGPT in 2022, the number of papers published every day about Large Language
 Models (LLMs) has increased more than 20-fold (Zhao et al., 2023). The number of parameters in these
 LLMs jumped from 340 millions in implementations such as BERT (Devlin, Chang, Lee, & Toutanova,
@@ -16,7 +16,7 @@ tasks is also affected." \
   --model_name_or_path="Team-PIXEL/pixel-base" \
   --span_mask \
   --mask_ratio=0.25 \
-  --max_seq_length=256
+  --max_seq_length=256 \
 
 """
 
@@ -40,6 +40,9 @@ from pixel import (
     truncate_decoder_pos_embeddings,
 )
 from transformers import set_seed
+from pdf2image import convert_from_path
+import torchvision.utils as vutils
+import matplotlib.pyplot as plt
 
 logger = logging.getLogger(__name__)
 
@@ -51,19 +54,29 @@ def clip(x: torch.Tensor):
     return x
 
 
-def log_image(img: torch.Tensor, img_name: str, do_clip: bool = True):
+def log_image(img: torch.Tensor, img_name: str, do_clip: bool = True, mode=None):
     if do_clip:
         img = clip(img)
     wandb.log({img_name: wandb.Image(img)})
 
 
-def create_mean_variance_map(variance_image, mask, patch_size):
+def log_image_from_path(img_path: str, img_name: str):
+    if img_path.endswith('.pdf'):
+        images = convert_from_path(img_path)
+        img = images[0]  # Assuming there is only one page in the PDF
+    else:
+        img = Image.open(img_path)
+
+    wandb.log({img_name: wandb.Image(img)})
+
+
+def create_mean_map(variance_image, mask, patch_size):
     """
     Create a map where each value in a patch equals the mean of values in that patch,
     only for patches where the mask is 1. Other patches are set to black.
 
     Parameters:
-    variance_image (torch.Tensor): The original 3-channel variance image.
+    variance_image (torch.Tensor): The original 3-channel variance image. It can also be the std image
     mask (np.array or torch.Tensor): A binary mask indicating which patches to process.
     patch_size (int): The size of each square patch.
 
@@ -71,8 +84,8 @@ def create_mean_variance_map(variance_image, mask, patch_size):
     np.array: Mean variance map.
     """
     # Average across channels
-    if len(variance_image.shape) == 3 and variance_image.shape[0] == 3:
-        variance_image = variance_image.mean(dim=0)
+    # if len(variance_image.shape) == 3 and variance_image.shape[0] == 3:
+    #     variance_image = variance_image.mean(dim=0)
 
     # Convert to numpy if they are tensors
     if isinstance(variance_image, torch.Tensor):
@@ -80,7 +93,7 @@ def create_mean_variance_map(variance_image, mask, patch_size):
     if isinstance(mask, torch.Tensor):
         mask = mask.numpy()
 
-    height, width = variance_image.shape
+    num_channels, height, width = variance_image.shape
 
     # Initialize the mean variance map
     mean_variance_map = np.zeros_like(variance_image)
@@ -89,24 +102,194 @@ def create_mean_variance_map(variance_image, mask, patch_size):
     num_patches_x = width // patch_size
     num_patches_y = height // patch_size
 
-    # Iterate over each patch
-    for i in range(num_patches_y):
-        for j in range(num_patches_x):
-            # Check the corresponding value in the mask
-            if mask[0][i*patch_size, j*patch_size] != 0:
-                # Extract the patch
-                patch = variance_image[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size]
-                
-                # Calculate the mean variance of the patch
-                mean_variance = np.mean(patch)
+    # iterate over channels
+    for c in range(num_channels):
+        # Iterate over each patch
+        for i in range(num_patches_y):
+            for j in range(num_patches_x):
+                # Check the corresponding value in the mask
+                if mask[0][i*patch_size, j*patch_size] != 0:
+                    # Extract the patch
+                    patch = variance_image[c, i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size]
+                    
+                    # Calculate the mean variance of the patch
+                    mean_variance = np.mean(patch)
 
-                # Assign this mean variance to all pixels in the patch
-                mean_variance_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = mean_variance
-            else:
-                # Set the patch to black if mask is 0
-                mean_variance_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = 0
+                    # Assign this mean variance to all pixels in the patch
+                    mean_variance_map[c, i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = mean_variance
+                else:
+                    # Set the patch to black if mask is 0
+                    mean_variance_map[c, i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = 0
 
     return mean_variance_map
+
+
+def visualize_attention(attentions, mask, patch_size):
+    attentions = attentions.detach().cpu().squeeze()
+
+    nr_heads, _, _ = attentions.shape
+    num_channels, height, width = mask.shape
+    print(f"mask.shape: {mask.shape}")
+    print(f"attentions.shape: {attentions.shape}")
+
+    # Calculate the number of patches in each dimension
+    num_patches_x = width // patch_size
+    num_patches_y = height // patch_size
+
+    # Initialize a tensor to store all attention maps
+    all_heads_attentions = torch.zeros(nr_heads, height, width) # Adding channel dimension
+
+    for head_idx, head in enumerate(attentions):
+        attention_map = torch.zeros(height, width)
+        
+        num_nonzero_elements = (head != 0).sum()
+        # print(f"Number of elements different from 0 in head: {num_nonzero_elements}")
+                
+        for i in range(num_patches_y):
+            for j in range(num_patches_x):
+                if mask[:, i*patch_size, j*patch_size].any() == 0:
+                    attention_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = head[i, j]
+                # else:
+                #     attention_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = 1
+
+        all_heads_attentions[head_idx] = attention_map 
+
+    print(f"all_heads_attentions.shape: {all_heads_attentions.shape}")
+
+    return all_heads_attentions
+
+
+def get_attention_grid(attention_tensor):
+    """
+    Combine all attention maps into a single image grid.
+
+    Parameters:
+    - attention_tensor: A 4D tensor with shape [layers, heads, pixels, pixels].
+
+    Returns:
+    - A single image tensor representing the grid of all attention maps.
+    """
+    # Validate input tensor shape
+    if len(attention_tensor.shape) != 4:
+        raise ValueError("Input tensor must be 4-dimensional [layers, heads, pixels, pixels].")
+
+    layers, heads, pixels, _ = attention_tensor.shape
+
+    # Reshape the tensor to treat layers and heads as separate batches,
+    # this way, each attention map is treated as an individual image
+    # [layers*heads, 1, pixels, pixels] for grayscale images
+    attention_tensor_reshaped = attention_tensor.view(layers*heads, 1, pixels, pixels)
+
+    # Use torchvision's make_grid to combine these images into a grid
+    # Set the number of images in each row to the number of heads
+    # This creates a grid where each row corresponds to a layer
+    grid = vutils.make_grid(attention_tensor_reshaped, nrow=heads, padding=2, normalize=True, scale_each=True)
+
+    return grid
+
+def save_grid(grid, layers, heads):
+    """
+    Save the attention grid with labels for axes to a PDF file without re-normalizing the whole grid.
+
+    Parameters:
+    - grid: The image tensor representing the grid of all attention maps.
+    - layers: The number of layers in the attention tensor.
+    - heads: The number of heads in the attention tensor.
+    """
+    # Convert grid to numpy array
+    np_image = grid.detach().cpu().numpy().transpose(1, 2, 0)
+    if np_image.shape[-1] == 1:  # For grayscale images, if there's a single channel
+        np_image = np_image.squeeze(-1)
+
+    fig, ax = plt.subplots(figsize=(12, 12))
+    im = ax.imshow(np_image, cmap='viridis')
+
+    # Adjusted calculation for ticks based on the single height (H) and width (W) of the grid image
+    xticks_positions = [i * np_image.shape[1] / heads + (np_image.shape[1] / heads / 2) for i in range(heads)]
+    yticks_positions = [i * np_image.shape[0] / layers + (np_image.shape[0] / layers / 2) for i in range(layers)]
+
+    ax.set_xticks(xticks_positions)
+    ax.set_yticks(yticks_positions)
+    ax.set_xlabel("Layers", fontsize=16)
+    ax.set_ylabel("Heads", fontsize=16)
+    ax.set_xticklabels(range(1, heads + 1))
+    ax.set_yticklabels(range(1, layers + 1))
+
+    ax.set_xlabel("Layers", fontsize=20)
+    ax.set_ylabel("Heads", fontsize=20)
+
+    fig.colorbar(im, ax=ax)  # Optional: Adds a colorbar
+
+    img_name = "grid"
+
+    plt.savefig(f"{img_name}.pdf", bbox_inches='tight')
+    log_image_from_path(f"{img_name}.pdf", img_name)
+    
+    plt.close()
+
+
+def normalize_array(np_image):
+    return (np_image - np.min(np_image)) / (np.max(np_image) - np.min(np_image))
+
+
+def save_attention_image(all_layers_attentions, layer_index, head_index):
+    """
+    Save a single attention map image from the specified layer and head with the 'viridis' colormap.
+
+    Parameters:
+    - all_layers_attentions: A 4D tensor of shape [layers, heads, height, width].
+    - layer_index: The index of the layer to visualize.
+    - head_index: The index of the head to visualize.
+    - filename: The name of the file to save the image to.
+    """
+    # Validate indices
+    layers, heads, _, _ = all_layers_attentions.shape
+    if layer_index >= layers or head_index >= heads:
+        raise ValueError("Layer index or head index is out of bounds.")
+    
+    # Extract the specific attention map
+    attention_map = all_layers_attentions[layer_index, head_index, :, :].detach().cpu().numpy()
+
+    # Normalize attention map between 0 and 1
+    attention_map = normalize_array(attention_map)
+    
+    # Plotting
+    plt.figure(figsize=(10, 10))
+    img = plt.imshow(attention_map, cmap='viridis')
+    plt.colorbar(img)
+    plt.title(f'Layer {layer_index + 1}, Head {head_index + 1}', fontsize=20)
+    plt.axis('off')  # Optionally, turn off the axis for a cleaner image
+
+    img_name = f'attention_image_{layer_index+1}_{head_index+1}'
+    # Save the figure
+    plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
+
+    log_image_from_path(f'{img_name}.pdf', img_name)
+    
+    plt.close()
+
+
+def save_image(image_tensor): # shape: (3, 256, 256)
+    image_tensor = image_tensor.mean(dim=0, keepdim=True)
+    np_image = image_tensor.detach().cpu().numpy().transpose(1, 2, 0)
+
+    np_image = normalize_array(np_image)
+
+    # Plotting
+    plt.figure(figsize=(10, 10))
+    img = plt.imshow(np_image, cmap='viridis')
+    plt.colorbar(img)
+    plt.title(f'Per Patch Uncertainty (SD)', fontsize=20)
+    plt.axis('off')  # Optionally, turn off the axis for a cleaner image
+
+    img_name = f'per_patch_SD'
+    # Save the figure
+    plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
+
+    log_image_from_path(f'{img_name}.pdf', img_name)
+    
+    plt.close()
+    
 
 
 def main(args: argparse.Namespace):
@@ -125,7 +308,7 @@ def main(args: argparse.Namespace):
     wandb.init()
     # wandb.run.name = args.revision
 
-    experiments_table = wandb.Table(columns=["MC_samples", "mean_variance", "masked_ratio","masked_count", "max_span_length", "cumulative_span_weights"])
+    experiments_table = wandb.Table(columns=["input_text", "MC_samples", "mean_std", "mean_variance", "patches_count", "masked_ratio", "masked_count", "max_span_length", "cumulative_span_weights"])
 
     config_kwargs = {
         "use_auth_token": args.auth_token if args.auth_token else None,
@@ -209,38 +392,75 @@ def main(args: argparse.Namespace):
     num_samples = 100  # Number of Monte Carlo samples
     logger.info(f"Monte Carlos samples: {num_samples}")
     all_predictions = []
+    all_attentions = []
 
     model.train()  # Activate dropout
     logger.info(f"Training mode: {model.training}") 
     for _ in range(num_samples):
         with torch.inference_mode():  # Disable gradient computation
             outputs = model(**inputs)
-            predictions = model.unpatchify(outputs["logits"]).detach().cpu().squeeze()
+            predictions = model.unpatchify(outputs["logits"]).detach().cpu().squeeze() # (batch_size, patch_size ** 2 * num_channels)
+            attentions = torch.cat(outputs["attentions"])
             all_predictions.append(predictions)
+            all_attentions.append(attentions)
 
     # Convert list of outputs to a tensor
     all_predictions = torch.stack(all_predictions)
+    all_attentions = torch.stack(all_attentions)
+
+    print(f"all_attention (samples, layers, batch_size, num_heads, sequence_length, sequence_length): {all_attentions.shape}")
+
+    all_attentions_mean = all_attentions.mean(dim=0).squeeze(0)
+        
+    print(f"all_attention after mean: {all_attentions_mean.shape}")
 
     # Calculate mean and standard deviation
     mean_predictions = all_predictions.mean(dim=0)
     std_predictions = all_predictions.std(dim=0)
     var_predictions = all_predictions.var(dim=0)
 
-    # visualize the mask
-    mask = outputs["mask"].detach().cpu()
+    logger.info(f"std_predictions shape: {std_predictions.shape}")
 
     # Log mask
+    mask = outputs["mask"].detach().cpu()  
     mask = mask.unsqueeze(-1).repeat(1, 1, text_renderer.pixels_per_patch ** 2 * 3)
     mask = model.unpatchify(mask).squeeze()  # 1 is removing, 0 is keeping
     log_image(mask, "mask")
 
-    logger.info(torch.unique(mask))
 
-    # Log attention mask
+    # make the attention weights grid plot
+    all_layers_attentions = []
+    for layer_idx, layer in enumerate(all_attentions_mean):
+        all_heads_attentions_image = visualize_attention(layer, mask, text_renderer.pixels_per_patch)
+        all_layers_attentions.append(all_heads_attentions_image)
+        print(f"all_heads_attentions_image: {all_heads_attentions_image.shape}")
+
+    all_layers_attentions = torch.stack(all_layers_attentions)
+
+    print(f"all_layers_attentions: {all_layers_attentions.shape}")
+
+    # save example images from the grid at given layer and head
+    save_attention_image(all_layers_attentions, 1, 2)
+    save_attention_image(all_layers_attentions, 10, 4)
+
+    attention_grid = get_attention_grid(all_layers_attentions)
+    print(f"attention_grid: {attention_grid.shape}")
+    print(f"attention_grid 0 : {attention_grid[0]}")
+    print(f"attention_grid 1 : {attention_grid[1]}")
+    are_different = (attention_grid[0] != attention_grid[1]).any()
+    print(f"Are the channels different? {are_different}")
+
+    # save attention weights grid with all layers and heads - all channels are the same
+    save_grid(attention_grid[0:1, :, :], layers=all_layers_attentions.size(0), heads=all_layers_attentions.size(1))
+    log_image(attention_grid, "attention_grid", do_clip=False)
+
+
+    # Log attention mask - where the renderer is looking
     attention_mask = attention_mask.unsqueeze(-1).repeat(1, 1, text_renderer.pixels_per_patch ** 2 * 3)
     attention_mask = model.unpatchify(attention_mask).squeeze()
     log_image(attention_mask, "attention_mask")
-
+    # logger.info(f"attention_mask: {attention_mask}")
+    
     # Log original image
     original_img = model.unpatchify(model.patchify(img)).squeeze()
     log_image(original_img, "original")
@@ -250,26 +470,46 @@ def main(args: argparse.Namespace):
     log_image(im_masked, "masked")
 
     # Logging for Monte Carlo Dropout-based uncertainty
-    log_image(mean_predictions, "mean_predictions", do_clip=False)
-    log_image(mean_predictions - 2* std_predictions, "mean_minus_2std_predictions", do_clip=False)
-    log_image(mean_predictions + 2* std_predictions, "mean_plus_2std_predictions", do_clip=False)
+    # log_image(mean_predictions, "mean_predictions", do_clip=False)
+    # log_image(mean_predictions - 2* std_predictions, "mean_minus_2std_predictions", do_clip=False)
+    # log_image(mean_predictions + 2* std_predictions, "mean_plus_2std_predictions", do_clip=False)
 
-    mean_variance_value = np.round(var_predictions.mean(dim=0).mean(), 3)
+    mean_variance_value = np.round(var_predictions.mean().item(), 3)
+    # mean_variance_value = np.round(var_predictions.mean(dim=0).mean(), 3)
     logger.info(f"Mean variance for whole image: {mean_variance_value}")
     wandb.log({"mean_variance_value": mean_variance_value})
-    
-    var_predictions_log = torch.log(var_predictions + 1e-9)  # Adding a small constant to avoid log(0)
-    mean_variance = create_mean_variance_map(var_predictions_log, mask, text_renderer.pixels_per_patch) # black is 0, 
-    var_predictions = original_img * (1 - mean_variance)
-    log_image(var_predictions, "var_predictions", do_clip=False)
 
-    var_reconstruction = mean_predictions * (1 - mean_variance)
-    log_image(var_reconstruction, "var_reconstruction", do_clip=False)
 
-    experiments_table.add_data(num_samples, mean_variance_value, mask_ratio, masked_count, args.masking_max_span_length, args.masking_cumulative_span_weights)
+    # Compute mean std per whole image
+    mean_std_value = np.round(std_predictions.mean().item(), 3)
+    # mean_std_value = np.round(std_predictions.mean(dim=0).mean(), 3)
+    logger.info(f"Mean std for whole image: {mean_std_value}")
+    wandb.log({"mean_std_value": mean_std_value})
+
+    # compute std per each patch and log the new map
+    std_predictions_per_patch = create_mean_map(std_predictions, mask, text_renderer.pixels_per_patch) # black is 0,  torch.Size([3, 368, 368])
+    logger.info(f"mean_std shape: {std_predictions_per_patch.shape}")
+    std_predictions_per_patch_with_original = original_img * (std_predictions_per_patch) # for var I had 1 - mean_var
+    logger.info(f"std_predictions shape: {std_predictions_per_patch_with_original.shape}")
+    # log_image(std_predictions_per_patch_with_original, "std_predictions_patch", do_clip=False)
+    save_image(std_predictions_per_patch_with_original)
+
+    # Log just the std image, without per patch mean
+    std_predictions_per_pixel = std_predictions
+    std_predictions_per_pixel_with_original = original_img * (std_predictions_per_pixel)
+    log_image(std_predictions_per_pixel_with_original, "std_predictions_pixel", do_clip=False)
+
+    # log reconstructed image with per patch std
+    std_reconstruction_per_patch = mean_predictions * (std_predictions_per_patch)
+    log_image(std_reconstruction_per_patch, "std_reconstruction_patch", do_clip=False)
+
+    # log reconstructed image with per pixel std
+    std_reconstruction_per_pixel = mean_predictions * (std_predictions_per_pixel)
+    log_image(std_reconstruction_per_pixel, "std_reconstruction_pixel", do_clip=False)
+
+
+    experiments_table.add_data(args.input_str, num_samples, mean_std_value, mean_variance_value, std_predictions.shape[1], mask_ratio, masked_count, args.masking_max_span_length, args.masking_cumulative_span_weights)
     wandb.log({"experiments_table": experiments_table})
-    # Generate and log a confidence map (inverse of std)
-    confidence_map = 1 / torch.log((std_predictions + 1e-6))  # Adding a small value to avoid division by zero
 
     logger.info(original_img.shape)
     logger.info(mean_predictions.shape)
@@ -287,6 +527,7 @@ if __name__ == "__main__":
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
     parser.add_argument("--mask_ratio", type=float, default=0.25, help="Percentage of pixels that will be masked")
     parser.add_argument("--span_mask", action="store_true", help="Apply span masking")
+    parser.add_argument("--rgb", action="store_true", help="Apply span masking")
     parser.add_argument(
         "--masking_max_span_length",
         type=int,

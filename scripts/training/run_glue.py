@@ -79,6 +79,11 @@ task_to_keys = {
 logger = logging.getLogger(__name__)
 
 
+import torch
+print(f"torch.cuda.is_available(): {torch.cuda.is_available()}")
+print(f"torch.cuda.device_count(): {torch.cuda.device_count()}")
+
+
 @dataclass
 class DataTrainingArguments:
     """

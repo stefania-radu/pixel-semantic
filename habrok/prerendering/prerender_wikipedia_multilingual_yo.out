@@ -1,0 +1,161 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+/home2/s3919609/pixel-semantic/scripts/data/prerendering/prerender_wikipedia_multilingual.py:24: PyGIWarning: PangoCairo was imported without specifying a version first. Use gi.require_version('PangoCairo', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import PangoCairo
+02/05/2024 17:35:45 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file configs/renderers/noto_renderer/text_renderer_config.json
+02/05/2024 17:35:45 - INFO - pixel.data.rendering.rendering_utils - loading font file configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 17:35:45 - INFO - pixel.data.rendering.pangocairo_renderer - Loading font from configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 17:35:45 - INFO - pixel.data.rendering.rendering_utils - Text renderer PangoCairoTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "GoNotoCurrent.ttf",
+  "font_size": 8,
+  "fonts_list": [
+    "C059",
+    "Cantarell",
+    "D050000L",
+    "DejaVu Sans",
+    "DejaVu Sans Mono",
+    "Droid Sans",
+    "Droid Sans Arabic",
+    "Droid Sans Armenian",
+    "Droid Sans Devanagari",
+    "Droid Sans Ethiopic",
+    "Droid Sans Fallback",
+    "Droid Sans Georgian",
+    "Droid Sans Hebrew",
+    "Droid Sans Japanese",
+    "Droid Sans Tamil",
+    "Droid Sans Thai",
+    "Go Noto Current",
+    "Inconsolata",
+    "MathJax_AMS",
+    "MathJax_Caligraphic",
+    "MathJax_Fraktur",
+    "MathJax_Main",
+    "MathJax_Math",
+    "MathJax_SansSerif",
+    "MathJax_Script",
+    "MathJax_Size1",
+    "MathJax_Size2",
+    "MathJax_Size3",
+    "MathJax_Size4",
+    "MathJax_Typewriter",
+    "MathJax_Vector",
+    "MathJax_Vector-Bold",
+    "MathJax_WinChrome",
+    "MathJax_WinIE6",
+    "Monospace",
+    "Nimbus Mono PS",
+    "Nimbus Roman",
+    "Nimbus Sans",
+    "Nimbus Sans Narrow",
+    "P052",
+    "STIX MathJax Alphabets",
+    "STIX MathJax Arrows",
+    "STIX MathJax DoubleStruck",
+    "STIX MathJax Fraktur",
+    "STIX MathJax Latin",
+    "STIX MathJax Main",
+    "STIX MathJax Marks",
+    "STIX MathJax Misc",
+    "STIX MathJax Monospace",
+    "STIX MathJax Normal",
+    "STIX MathJax Operators",
+    "STIX MathJax SansSerif",
+    "STIX MathJax Script",
+    "STIX MathJax Shapes",
+    "STIX MathJax Size1",
+    "STIX MathJax Size2",
+    "STIX MathJax Size3",
+    "STIX MathJax Size4",
+    "STIX MathJax Size5",
+    "STIX MathJax Symbols",
+    "STIX MathJax Variants",
+    "Sans",
+    "Serif",
+    "Source Code Pro",
+    "System-ui",
+    "URW Bookman",
+    "URW Gothic",
+    "Ubuntu",
+    "Ubuntu Condensed",
+    "Ubuntu Mono",
+    "Z003"
+  ],
+  "max_seq_length": 529,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "rgb": false,
+  "text_renderer_type": "PangoCairoTextRenderer"
+}
+
+IterableDataset({
+    features: ['id', 'url', 'title', 'text'],
+    n_shards: 1
+})
+02/05/2024 17:36:16 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 2 unknown glyphs in sentence: Kọ́ńsónáǹtì Yorùbá ni ìró kọ́ńsónáǹtì ni ìró tí a pè tí ìdíwọ́ wà fún afẹ́fẹ́ tàbi èémí nínú káà-ẹnu. Kọ́ńsónáǹtì méjìdínlógún ló wà lédè Yorùbá.  Àpẹẹrẹ kọ́nsónántì èdè Yorùbá ni: b, d, f, g, gb, h, j, k, l, m, n, p, r, s, ṣ, t, w àti y.  Ìlò kọ́nsónántì Nínú èdè Yorùbá, kọ́nsónántì kìí dá dúró, ba kan náà ni we kìí b parí ọrọ̀ Yorùbá. Amọ́, wọ́n lè bẹ̀rẹ̀ ọ̀rọ̀ kí wọ́n sí wà ní àárín ọrọ̀ tàbí gbólóhùn nítorí àfibọ̀ ni wọ́n ma ń fi kọ́nsónántì àti fáwẹ́lì ṣe nínú èdè Yorùbá.  Àpẹẹrẹ:   Dòdò Tafà-tafà  Yẹ̀rì  Apá  Bàtà ati bbl.  Òfin kọ́nsónántì Àwọn òfin ìsàlẹ̀ yí ni ó de kọ́nsónántì èdè Yorùbá:  1. Kọ́nsónántì kìí da dúró: ofin yí sọ wípé kọ́nsóndntí kìí da dúró àyàfi kí ó fara pẹ́, rọ̀ mọ́ ìró fáwẹ́lì kí wọ́n tó lè wúlò nínú èdè Yorùbá,  amọ́ ó lè da dúró nínú èdè míràn.   2. Kọ́nsónántì kìí tẹ̀lé ara wọn: èyí túnọ̀ sí wípé kọ́nsónántì méjì tàbí mẹ́ta kò lè tẹ̀lé ara wọn nínú ọrọ̀ kan ṣoṣo gegeẹ́ bí a ti ń ri nínú àwọn èdè míràn. Àpẹẹrẹ rẹ̀ ni:   Shittu (t & t) ❌  ayafi kí ó jẹ́    Ṣítù  ✅  3. A gbọ́dọ̀ ṣe àfibọ̀ kọ́nsónántì àti fàyèẹ́lì: òfin túmọ̀ sí wípé bí a bá fẹ́ ṣe afọ̀ tí ó yanrantí, a ní láti ṣe àfibọ̀ kọ̀nsónántì ati fàwẹ́lì papọ̀ kí èdè wa tó lè ní ìtumọ̀ tí ó ja gaara. Àpẹẹrẹ ni:   Ìbẹ̀rẹ̀ ọ̀rọ̀                   Àárín ọ̀rọ̀                     Ìparí ọ̀rọ̀  b = Bàbá  (father)    b = Àbádà (slap)         b = Ẹbẹdí  Àwọn Itọ́kasí  Gírámà èdè Yorùbá. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:36:20 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 2 unknown glyphs in sentence: Bį' Ótiwà nį'Àkosílè🧭🖇. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:36:21 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 5 unknown glyphs in sentence: Èdè Sílóbẹ (Èdè Sílóbẹ: ꠍꠤꠟꠐꠤ) jẹ́ èdè tonal indo-aryan, tí wọ́n ń sọ ní India, Bangladesh àti United Kingdom.   Àwọn èdè. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:36:21 - INFO - pixel.utils.prerendering - Pushing batch 0 to HuggingFace
+02/05/2024 17:36:21 - INFO - pixel.utils.prerendering - Current uploaded size = 0
+02/05/2024 17:36:21 - INFO - pixel.utils.prerendering - Current dataset nbytes = 0
+02/05/2024 17:36:21 - INFO - pixel.utils.prerendering - Current shards = 0
+02/05/2024 17:36:21 - INFO - pixel.utils.prerendering - Current num examples = 38688
+02/05/2024 17:36:21 - INFO - pixel.utils.prerendering - Current num words = 2430262
+
+/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/datasets/arrow_dataset.py:5352: FutureWarning: 'branch' was deprecated in favor of 'revision' in version 2.15.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'revision=main' instead.
+  warnings.warn(
+Uploading the dataset shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Map:   0%|          | 0/38688 [00:00<?, ? examples/s][A
+Map:  34%|███▎      | 13000/38688 [00:00<00:00, 124343.97 examples/s][A
+Map:  83%|████████▎ | 32000/38688 [00:00<00:00, 149211.46 examples/s][AMap: 100%|██████████| 38688/38688 [00:00<00:00, 127463.13 examples/s]
+
+Creating parquet from Arrow format:   0%|          | 0/387 [00:00<?, ?ba/s][A
+Creating parquet from Arrow format:  27%|██▋       | 103/387 [00:00<00:00, 920.50ba/s][ACreating parquet from Arrow format: 100%|██████████| 387/387 [00:00<00:00, 1826.88ba/s]
+Uploading the dataset shards: 100%|██████████| 1/1 [00:09<00:00,  9.22s/it]Uploading the dataset shards: 100%|██████████| 1/1 [00:09<00:00,  9.22s/it]
+02/05/2024 17:37:46 - INFO - __main__ - Total num words in wikipedia: 2430262
+
+###############################################################################
+Hábrók Cluster
+Job 7121640 for user s3919609
+Finished at: Mon Feb  5 17:37:47 CET 2024
+
+Job details:
+============
+
+Job ID              : 7121640
+Name                : prerender_wikipedia_multilingual_yo
+User                : s3919609
+Partition           : regularshort
+Nodes               : node104
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : COMPLETED
+Submit              : 2024-02-05T17:35:34
+Start               : 2024-02-05T17:35:35
+End                 : 2024-02-05T17:37:47
+Reserved walltime   : 05:00:00
+Used walltime       : 00:02:12
+Used CPU time       : 00:01:50 (efficiency: 84.01%)
+% User (Computation): 96.04%
+% System (I/O)      :  3.96%
+Mem reserved        : 100G
+Max Mem (Node/step) : 5.92G (node104, per node)
+Full Max Mem usage  : 5.92G
+Total Disk Read     : 101.08M
+Total Disk Write    : 746.13K
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

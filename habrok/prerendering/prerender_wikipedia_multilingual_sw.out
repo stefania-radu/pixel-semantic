@@ -1,0 +1,188 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+/home2/s3919609/pixel-semantic/scripts/data/prerendering/prerender_wikipedia_multilingual.py:24: PyGIWarning: PangoCairo was imported without specifying a version first. Use gi.require_version('PangoCairo', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import PangoCairo
+02/05/2024 17:02:08 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file configs/renderers/noto_renderer/text_renderer_config.json
+02/05/2024 17:02:08 - INFO - pixel.data.rendering.rendering_utils - loading font file configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 17:02:08 - INFO - pixel.data.rendering.pangocairo_renderer - Loading font from configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 17:02:12 - INFO - pixel.data.rendering.rendering_utils - Text renderer PangoCairoTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "GoNotoCurrent.ttf",
+  "font_size": 8,
+  "fonts_list": [
+    "C059",
+    "Cantarell",
+    "D050000L",
+    "DejaVu Sans",
+    "DejaVu Sans Mono",
+    "Droid Sans",
+    "Droid Sans Arabic",
+    "Droid Sans Armenian",
+    "Droid Sans Devanagari",
+    "Droid Sans Ethiopic",
+    "Droid Sans Fallback",
+    "Droid Sans Georgian",
+    "Droid Sans Hebrew",
+    "Droid Sans Japanese",
+    "Droid Sans Tamil",
+    "Droid Sans Thai",
+    "Go Noto Current",
+    "Inconsolata",
+    "MathJax_AMS",
+    "MathJax_Caligraphic",
+    "MathJax_Fraktur",
+    "MathJax_Main",
+    "MathJax_Math",
+    "MathJax_SansSerif",
+    "MathJax_Script",
+    "MathJax_Size1",
+    "MathJax_Size2",
+    "MathJax_Size3",
+    "MathJax_Size4",
+    "MathJax_Typewriter",
+    "MathJax_Vector",
+    "MathJax_Vector-Bold",
+    "MathJax_WinChrome",
+    "MathJax_WinIE6",
+    "Monospace",
+    "Nimbus Mono PS",
+    "Nimbus Roman",
+    "Nimbus Sans",
+    "Nimbus Sans Narrow",
+    "P052",
+    "STIX MathJax Alphabets",
+    "STIX MathJax Arrows",
+    "STIX MathJax DoubleStruck",
+    "STIX MathJax Fraktur",
+    "STIX MathJax Latin",
+    "STIX MathJax Main",
+    "STIX MathJax Marks",
+    "STIX MathJax Misc",
+    "STIX MathJax Monospace",
+    "STIX MathJax Normal",
+    "STIX MathJax Operators",
+    "STIX MathJax SansSerif",
+    "STIX MathJax Script",
+    "STIX MathJax Shapes",
+    "STIX MathJax Size1",
+    "STIX MathJax Size2",
+    "STIX MathJax Size3",
+    "STIX MathJax Size4",
+    "STIX MathJax Size5",
+    "STIX MathJax Symbols",
+    "STIX MathJax Variants",
+    "Sans",
+    "Serif",
+    "Source Code Pro",
+    "System-ui",
+    "URW Bookman",
+    "URW Gothic",
+    "Ubuntu",
+    "Ubuntu Condensed",
+    "Ubuntu Mono",
+    "Z003"
+  ],
+  "max_seq_length": 529,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "rgb": false,
+  "text_renderer_type": "PangoCairoTextRenderer"
+}
+
+IterableDataset({
+    features: ['id', 'url', 'title', 'text'],
+    n_shards: 1
+})
+02/05/2024 17:03:12 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: Mi au Mu (Μ μ) ni herufi ya 12 katika Alfabeti ya Kigiriki. Inaandikwa kama μ (alama ya kawaida) au Μ (alama kubwa mwanzoni mwa majina).   Zamani za Kigiriki cha Kale ilikuwa pia tarakimu, ikiwa alama ya namba 40.  Asili ya mi ni herufi ya Kifinisia ya mem 𐤔 .  Matamshi yake yalikuwa "m".  Katika alfabeti zinazofuata mfano wa Kigiriki ilipokelewa katika alfabeti ya Kilatini kama "M" na katika alfabeti ya Kikirili kama "M".  Alfabeti ya Kigiriki. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:03:12 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: Id., Przekaz łacińskich rękopisów Vita Sancti Pauli Primi Eremitae św. Hieronima [= Katolicki Uniwersytet Lubelski. Międzywydziałowy Zakład Badań nad Antykiem Chrześcijańskim], Lublin 2000.  Id., życie świętego Pawła Pierwszego Pustelnika w Vita S. Pauli Primi Eremitae św. Hieronima, in «Jasna Góra» 19 (2001), nr 1, pp. 9-11.   Id., Appunti per una ricostruzione dell’influsso della Vita S. Pauli Primi Eremitae sulla Vita S. Mariae Aegyptiacae, in M.F. Wiles – E.J. Yarnold (edd.), Studia Patristica, XXXV, Peeters, Leuven 2001, pp. 65-80.  Id., I manoscritti della Vita Sancti Pauli Primi Eremitae di san Girolamo conservati nella Biblioteca Apostolica Vaticana [= Katolicki Uniwersytet Lubelski. Międzywydziałowy Zakład Badań nad Antykiem Chrześcijaskim], Lublin 2005.  Id., Uno schizzo della tradizione manoscritta della Vita S. Pauli Primi Eremitae di san Girolamo, in «Dissertationes Paulinorum» 14 (2005), pp. 5-25.  Id., La natura del deserto nelle Vitae di san Girolamo, in La cultura scientifico-naturalistica nei Padri della Chiesa (I-V sec.). XXXV Incontro di studiosi dell’antichità cristiana, Roma, 4-6 maggio 2006, Istituto Patristico «Augustinianum» [= Studia Ephemeridis «Augustinianum», 101], Roma 2007, pp. 549-578. . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:03:12 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 7 unknown glyphs in sentence: Id., Els Remete Szent Pál szerzetesrendjének története Bartolomeo Bolesławski Paulina eremus cím mve alapján [= I protoplasti dell’Ordine dei Monaci di S. Paolo Primo Eremita secondo l’opera Paulina Eremus di B. Bolesławski], in Sarbak Gábor (ed.), Decus solitudinis. Pálos évszázadok [= Mveldéstörténeti Mhely. Rendtörténeti konferenciák, 4/1], Budapest 2007, pp. 107-120.   Id., Pavel Fivejskij, in Katoličeskaja Enciklopedija, III, Moskva 2007, coll. 1193-1194 [= Paolo di Tebe, in Enciclopedia Cattolica, III, Mosca 2007, coll. 1193-1994].  Id., I protoplasti paleocristiani dell’Ordine dei Monaci di San Paolo Primo Eremita secondo l’opera Paulina Eremus di Padre Bartolomeo Bolesławski, in VoxP 28 (2008), pp. 123-135.  Id., Anhang I [Edizione critica e traduzione polacca della Vita S. Pauli Primi Eremitae di san Girolamo, contenuta in G. Gyengyes, Decalogus de beato Paulo primo heremita, Cracoviae 1532], in S. widziński (ed.), Archivum Ordinis Sancti Pauli Primi Eremitae. Fontes IX, Coesfeld 2008, pp. 170-187. . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:03:12 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 2 unknown glyphs in sentence: Id., La tecnica di preparazione di un’edizione critica. Un caso esemplativo: la familia «Q» della tradizione manoscritta della Vita S. Pauli Primi Eremitae di san Girolamo, in M.M. Rossi – T. Rossi (edd.), Sanctitatis Causae. Motivi di santità e Cause di canonizzazione di alcuni maestri medioevali. In ricordo di Padre Louis-Jacques Bataillon, O.P. [= Studia Pontificiae Universitatis a S. Thoma Aquinate in Urbe. Studi 2008. Nuova serie, 12], Roma 2009, pp. 11-43.  Id., Anhang II [Edizione critica e traduzione polacca della Vita S. Pauli Primi Eremitae di san Girolamo, contenuta in Vita diui Pauli, Matthias Milcher librarius Budensis, Venetiis 1511], in S. widziński (ed.), Archivum Ordinis Sancti Pauli Primi Eremitae. Fontes X, Coesfeld 2009, pp. 144-157.  Id., I manoscritti della Vita Sancti Pauli Primi Eremitae di San Girolamo conservati nelle biblioteche di Roma (esclusa la Biblioteca Apostolica Vaticana) [= Katolicki Uniwersytet Lubelski Jana Pawła II. Instytut Badań nad Antykiem Chrześcijańskim], Lublin 2010.  Id., Stan badań nad Vita S. Pauli Primi Eremitae św. Hieronima, in S. widziński (ed.), Archivum Ordinis Sancti Pauli Primi Eremitae. Dissertationes V, Coesfeld 2010, pp. 161-222. . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:03:12 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 3 unknown glyphs in sentence: Id., I protoplasti dell’Ordine dei Monaci di S. Paolo Primo Eremita secondo l’opera Paulina Eremus di B. Bolesławski], in G. Sarbak (ed.), Der Paulinerorden. Geschichte – Geist – Kultur [= Mveldéstörténeti Mhely. Rendtörténeti konferenciák / Tagungen zur Ordensgeschichte, 4/2], Budapest 2010, pp. 79-92.  Id., I manoscritti della Vita Sancti Pauli Primi Eremitae di San Girolamo, conservati nelle biblioteche di Roma, che contengono testo incompleto dell’opera geronimiana o che si ispirano ad essa [= Katolicki Uniwersytet Lubelski Jana Pawła II. Ośrodek Badań nad Antykiem Chrześcijańskim], Lublin 2011.  Id., Kodeks Basilicanus A. 6 (alias E) a rodzina „Q” rękopiśmiennego przekazu Vita Sancti Pauli Primi Eremitae św. Hieronima, in VoxP 31 (2011), pp. 485-493.  Id., Paweł Pustelnik, Paweł z Teb, in Encyklopedia Katolicka, XV, Lublin 2011, col. 117.  Id., Dittico simbolico di “Silenzio” e “Parola” nelle Vitae geronimiane di Paolo e Ilarione, in «Angelicum» 89 (2012), pp. 49-64. . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:03:13 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: Ni (Ν ν) ni herufi ya 13 katika Alfabeti ya Kigiriki. Inaandikwa kama ν (alama ya kawaida) au Ν (alama kubwa mwanzoni mwa majina).   Zamani za Kigiriki cha Kale ilikuwa pia tarakimu, ikiwa alama ya namba 50.  Asili ya 'ni' ni herufi ya Kifinisia ya nun 𐤔 .  Matamshi yake yalikuwa "n".  Katika alfabeti zinazofuata mfano wa Kigiriki ilipokelewa katika alfabeti ya Kilatini kama "N" na katika alfabeti ya Kikirili kama "H".  Alfabeti ya Kigiriki. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:03:33 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: Sigma (Σ σ ς) ni herufi ya 18 katika Alfabeti ya Kigiriki. Inaandikwa kama σ (alama ya kawaida) au Σ (alama kubwa mwanzoni mwa majina). Kama iko mwishoni mwa neno huandikwa ς. Mfano jina Ὀδυσσεύς (Odysseus) ambamo kuna σ mbili katikati na ς mwishoni.  Zamani za Kigiriki cha Kale ilikuwa pia tarakimu, ikiwa alama ya namba 200.  Asili ya sigma ni herufi ya Kifinisia ya shin 𐤔 .  Matamshi yake ilikuwa "s".  Katika alfabeti zinazofuata mfano wa Kigiriki ilipokelewa katika alfabeti ya Kilatini kama "S" na katika alfabeti ya Kikirili kama "С".  Alfabeti ya Kigiriki. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:03:33 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: Tau (Τ τ) ni herufi ya 19 katika Alfabeti ya Kigiriki. Inaandikwa kama τ (alama ya kawaida) au Τ (alama kubwa). Zamani za Kigiriki cha Kale ilikuwa pia tarakimu ikiwa alama ya namba 300.  Asili ya tau ni herufi ya Kifinisia "taw"  (𐤕). Herufi zilizotokana nayo katika alfabeti zilizofuata Kigiriki ni T katika alfabeti ya Kilatini na Te (Т, т) katika alfabeti ya Kikirili.   Matamshi yake ilikuwa "t".   Jinsi ilivyo kawaida kwa herufi mbalimbali za Kigiriki, τ inatumiwa kama kifupisho kwa ajili ya dhana mbalimbali katika hisabati na fizikia.  Alfabeti ya Kigiriki. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:03:39 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 2 unknown glyphs in sentence: Waamori (kwa Kisumeri 𒈥𒌅 MAR.TU; kwa Kiakadi Tidnum au Amurrūm; kwa Kimisri Amar; kwa Kiebrania אמורי ʼĔmōrī; kwa Kigiriki Ἀμορραῖοι) walikuwa watu wa jamii ya Wasemiti kutoka Syria walioenea pia katika maeneo makubwa ya Mesopotamia kusini kuanzia karne ya 21 KK hadi mwisho wa karne ya 17 KK, wakianzisha idadi kadhaa ya miji-dola muhimu, hasa Babuloni.  Kisha kufukuzwa kutoka Mesopotamia, huko Syria walitawaliwa kwanza na Wahiti, halafu na Waashuru (tangu 1365).   Baada ya 1200 KK hawaonekani tena: inaonekana walimezwa na Wasemiti wengine, ambao kati yao walijitokea hasa Waaramu.  Miji-dola  Huko Syria na kandokando: Amuru Yamhad Qatna Ebla  Huko Mesopotamia: Babuloni Mari Apum Kurda Andarig Ṭābetu  Katika Biblia  Katika Biblia Waamori ni wakazi wa milima ya Kaanani, ambao kadiri ya kitabu cha Mwanzo 10:16 wametokana na Kanaan, mwana wa Hamu na mjukuu wa Nuhu. Wanaonekana kama sehemu ya Wakaanani.  Wanatajwa kama watu warefu sana kama "mierezi" (Am 2:9) . Mfalme wao Ogu anatajwa kama jitu la mwisho (Kumb 3:11).  Tanbihi  Marejeo  E. Chiera, Sumerian Epics and Myths, Chicago, 1934, Nos.58 and 112;  E. Chiera, Sumerian Texts of Varied Contents, Chicago, 1934, No.3.;  H. Frankfort, AAO, pp. 54–8;   F.R. Fraus, FWH, I (1954);  G. Roux, Ancient Iraq, London, 1980.  Viungo vya nje   Amorites in the Jewish Encyclopedia  Watu wa Biblia. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:04:25 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 5 unknown glyphs in sentence: "All Hail, Liberia, Hail!" ni wimbo wa taifa wa Liberia. Wimbo huo uliandikwa na Daniel Bashiel Warner (1815–1880), ambaye baadae alikuja kuwa rais wa tatu wa nchini Liberia, na muziki ulitungwa na Olmstead Luca (1826–1869).  Ukawa wimbo rasmi wa taifa wakati Liberia ilipopata uhuru mwaka 1847.  Historia  Mwaka 1974 ilipendekeza mabadiliko ya maandishi  Mnamo tarehe 22 Julai 1974, Bunge la Liberia lilipitisha kitendo kilichotoa idhini kwa rais kuunda tume ya kuzingatia mabadiliko yanayowezekana kwa idadi ya alama za kitaifa, ikiwa ni pamoja na "Hail, Liberia, Hail!"  na  bendera.  Rais William Tolbert aliteua wanachama 51 katika Tume ya Umoja wa Kitaifa.    Tume hiyo iliongozwa na McKinley Alfred Deshield Sr., na pia iliitwa Tume ya Deshield.  Tume hiyo ilitaka kuchunguza upya alama hizo na kuondoa vipengele vyenye mgawanyiko.  Tume iliwasilisha ripoti yao tarehe 24 Januari 1978. Ripoti ilipendekeza kubadilisha neno "usiku" katika wimbo wa taifa hadi neno "bila woga".  Mabadiliko yaliyopendekezwa kwa wimbo wa taifa hayakufanywa kamwe.  Maandishi  Salamu, Liberia, salamu!  (Shikamoo!) 𝄇  Nchi hii tukufu ya uhuru  Itakuwa yetu kwa muda mrefu.  𝄆 Ingawa jina lake jipya,  Kijani kuwa umaarufu wake,[a]  Na nguvu zake ziwe na nguvu, 𝄇  𝄆 Na nguvu zake ziwe na nguvu, 𝄇  Katika furaha na furaha  Kwa mioyo yetu iliyounganishwa,  Tutapiga kelele kwa uhuru . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:04:25 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 9 unknown glyphs in sentence: Kwa mbio zilizopigwa usiku,  Uishi Liberia, nchi yenye furaha!  𝄆 Nyumba ya uhuru mtukufu,  Kwa amri ya Mungu!  𝄇  II  𝄆 Salamu, Liberia, Salamu!  (Shikamoo!) 𝄇  Katika umoja wa mafanikio ni hakika  Hatuwezi kushindwa!  𝄆 Mungu akiwa juu  Haki zetu za kuthibitisha  Tutashinda sote, 𝄇  𝄆 Tutashinda sote, 𝄇  Kwa moyo na mkono  Sababu ya nchi yetu kutetea  Tutakutana na adui  Kwa ujasiri wa kutojidai.  Uishi Liberia, nchi yenye furaha!  𝄆 Nyumba ya uhuru mtukufu,  Kwa amri ya Mungu!  Marejeo   Arusha Editathon Muziki Wimbo wa Taifa Nyimbo za Taifa za Afrika Mbegu za muziki wa Afrika. Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:04:31 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: Futa Toro ( Kiwolofu na Kifula   🤆𞤵𞥄𞤼𞤢 𞤚𞤮𞥄𞤪𞤮 ; Kiarabu فوتا تورو  ), mara nyingi hufupishwa Futa, ni eneo la nusujangwa karibu na mkondo wa kati wa Mto Senegali. Eneo hili liko kwenye mpaka wa Senegal na Mauritania . Lina maji mengi yenye rutuba karibu na mto, lakini sehemu za ndani za kanda mbali na mto zina vinyweleo, kavu na zisizo na rutuba.  Eneo hili kihistoria ni muhimu kwa theokrasia za Kiislamu, majimbo ya Fulani, majeshi ya jihad na wahamiaji wa Fouta Djallon walitokea hapa.  Jiografia   Futa Toro ina eneo la takriban kilomita 400, lakini ya upana mwembamba wa hadi kilomita 20 katika kila upande wa Mto Senegali.  Sehemu ya magharibi inaitwa Toro, sehemu ya kati na mashariki inaitwa Futa. Sehemu kuu ni pamoja na majimbo ya Bosea, Yirlabe Hebbyabe, Sheria na Hailabe. Futa ya mashariki inajumuisha majimbo ya Ngenar na Damga. Kanda ya kaskazini na mashariki hadi Futa Toro ni Sahara tasa. Kihistoria, kila jimbo la kijiografia la Futa Toro lilikuwa na ardhi yenye rutuba kutokana na nyanda za mafuriko ya waalo, na udhibiti wa rasilimali hii uliendeshwa na familia za kikoo. Muda mrefu ulimaanisha kuwa eneo lote liligawanywa kati ya familia nyingi, na urithi wa haki za kumiliki mali kutoka kizazi kimoja hadi kingine ulisababisha migogoro mingi ya kifamilia, migogoro ya kisiasa na maslahi binafsi.  Historia . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:04:31 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: Nchini Mali, Burkina Faso na Senegali, kwa mfano, wale walio katika nyanja ya kitamaduni ya Fulɓe, lakini ambao si Wafula kikabila, wanarejelewa kama yimɓe pulaaku ( 𞤴𞤭𞤥𞤩𞤫 𞤆𞤵𞤤𞤢🥄 tamaduni ya Fulɓe "). Kwa hivyo, tamaduni ya Fulani inajumuisha watu ambao wanaweza au wasiwe wa kabila la Fulani.  Ingawa utumwa sasa ni haramu, kumbukumbu za uhusiano wa zamani kati ya Fulɓbe na Rimayɓe bado ziko hai katika vikundi vyote viwili. Paul Riesman, mtaalamu wa ethnografia wa Marekani aliyeishi kati ya Jelgooji Fulɓbe ya Burkina Faso katika miaka ya 1980, anasema kwamba Fulɓe ni warefu, wembamba, na wana ngozi nyepesi; wana pua nyembamba za moja kwa moja, na nywele zao huwa ni ndefu na za kalikiti. Kinyume chake, Rimayɓe ni wanene, inaelekea kwenye utomvu, ngozi nyeusi na pua tambarare 'iliyochunwa', na nywele fupi za kuchanua.  Marejeo  Jisomee   Prof. Biblia ya masomo ya Mark D. DeLancey ya Fulbe , ilifikiwa tarehe 25 Machi 2008.  , sura ya XVI – The Fulani in West African History, ukurasa wa 130 –135; sura ya XVII - Origins of the Fulani, ukurasa wa 136 -152.  Je, Alfabeti Inaweza Kuokoa Wakati Ujao? - Hadithi ya kujitolea kwa miaka 30 kwa ndugu wa Barry kutengeneza hati asili na fonti, kuwapa watu wa Fulani alama ya kidijitali kwa jumuiya ya kimataifa - iliyochapishwa kwenye Microsoft Unlocked  Viungo vya nje . Consider double-checking that the correct fonts are loaded.
+02/05/2024 17:04:34 - INFO - pixel.utils.prerendering - Pushing batch 0 to HuggingFace
+02/05/2024 17:04:34 - INFO - pixel.utils.prerendering - Current uploaded size = 0
+02/05/2024 17:04:34 - INFO - pixel.utils.prerendering - Current dataset nbytes = 0
+02/05/2024 17:04:34 - INFO - pixel.utils.prerendering - Current shards = 0
+02/05/2024 17:04:34 - INFO - pixel.utils.prerendering - Current num examples = 106175
+02/05/2024 17:04:34 - INFO - pixel.utils.prerendering - Current num words = 11069714
+
+/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/datasets/arrow_dataset.py:5352: FutureWarning: 'branch' was deprecated in favor of 'revision' in version 2.15.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'revision=main' instead.
+  warnings.warn(
+Uploading the dataset shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Map:   0%|          | 0/53088 [00:00<?, ? examples/s][A
+Map:  11%|█▏        | 6000/53088 [00:00<00:00, 51567.20 examples/s][A
+Map:  24%|██▍       | 13000/53088 [00:00<00:00, 58663.28 examples/s][A
+Map:  40%|███▉      | 21000/53088 [00:00<00:00, 64353.50 examples/s][A
+Map:  55%|█████▍    | 29000/53088 [00:00<00:00, 66203.24 examples/s][A
+Map:  73%|███████▎  | 39000/53088 [00:00<00:00, 65541.20 examples/s][A
+Map:  92%|█████████▏| 49000/53088 [00:00<00:00, 72471.83 examples/s][AMap: 100%|██████████| 53088/53088 [00:00<00:00, 68082.71 examples/s]
+
+Creating parquet from Arrow format:   0%|          | 0/531 [00:00<?, ?ba/s][A
+Creating parquet from Arrow format:  29%|██▊       | 152/531 [00:00<00:00, 1518.71ba/s][A
+Creating parquet from Arrow format:  60%|█████▉    | 316/531 [00:00<00:00, 1588.22ba/s][A
+Creating parquet from Arrow format:  90%|█████████ | 478/531 [00:00<00:00, 1600.92ba/s][ACreating parquet from Arrow format: 100%|██████████| 531/531 [00:00<00:00, 1604.33ba/s]
+Uploading the dataset shards:  50%|█████     | 1/2 [00:17<00:17, 17.09s/it]
+Map:   0%|          | 0/53087 [00:00<?, ? examples/s][A
+Map:  17%|█▋        | 9000/53087 [00:00<00:00, 73389.43 examples/s][A
+Map:  34%|███▍      | 18000/53087 [00:00<00:00, 78364.28 examples/s][A
+Map:  51%|█████     | 27000/53087 [00:00<00:00, 76292.93 examples/s][A
+Map:  70%|██████▉   | 37000/53087 [00:00<00:00, 78001.40 examples/s][A
+Map:  90%|█████████ | 48000/53087 [00:00<00:00, 69746.39 examples/s][AMap: 100%|██████████| 53087/53087 [00:00<00:00, 72508.55 examples/s]
+
+Creating parquet from Arrow format:   0%|          | 0/531 [00:00<?, ?ba/s][A
+Creating parquet from Arrow format:  33%|███▎      | 176/531 [00:00<00:00, 1757.54ba/s][A
+Creating parquet from Arrow format:  68%|██████▊   | 359/531 [00:00<00:00, 1796.88ba/s][ACreating parquet from Arrow format: 100%|██████████| 531/531 [00:00<00:00, 1773.54ba/s]
+Uploading the dataset shards: 100%|██████████| 2/2 [00:26<00:00, 12.78s/it]Uploading the dataset shards: 100%|██████████| 2/2 [00:26<00:00, 13.42s/it]
+02/05/2024 17:09:17 - INFO - __main__ - Total num words in wikipedia: 11069714
+
+###############################################################################
+Hábrók Cluster
+Job 7121244 for user s3919609
+Finished at: Mon Feb  5 17:09:25 CET 2024
+
+Job details:
+============
+
+Job ID              : 7121244
+Name                : prerender_wikipedia_multilingual_sw
+User                : s3919609
+Partition           : regularshort
+Nodes               : node104
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : COMPLETED
+Submit              : 2024-02-05T16:58:47
+Start               : 2024-02-05T16:58:48
+End                 : 2024-02-05T17:09:25
+Reserved walltime   : 05:00:00
+Used walltime       : 00:10:37
+Used CPU time       : 00:06:01 (efficiency: 56.69%)
+% User (Computation): 96.81%
+% System (I/O)      :  3.19%
+Mem reserved        : 100G
+Max Mem (Node/step) : 16.31G (node104, per node)
+Full Max Mem usage  : 16.31G
+Total Disk Read     : 205.08M
+Total Disk Write    : 714.96M
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

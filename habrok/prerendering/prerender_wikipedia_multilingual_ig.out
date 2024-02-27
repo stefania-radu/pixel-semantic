@@ -1,0 +1,179 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+/home2/s3919609/pixel-semantic/scripts/data/prerendering/prerender_wikipedia_multilingual.py:24: PyGIWarning: PangoCairo was imported without specifying a version first. Use gi.require_version('PangoCairo', '1.0') before import to ensure that the right version gets loaded.
+  from gi.repository import PangoCairo
+02/05/2024 08:19:02 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file configs/renderers/noto_renderer/text_renderer_config.json
+02/05/2024 08:19:02 - INFO - pixel.data.rendering.rendering_utils - loading font file configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 08:19:02 - INFO - pixel.data.rendering.pangocairo_renderer - Loading font from configs/renderers/noto_renderer/GoNotoCurrent.ttf
+02/05/2024 08:19:02 - INFO - pixel.data.rendering.rendering_utils - Text renderer PangoCairoTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "GoNotoCurrent.ttf",
+  "font_size": 8,
+  "fonts_list": [
+    "C059",
+    "Cantarell",
+    "D050000L",
+    "DejaVu Sans",
+    "DejaVu Sans Mono",
+    "Droid Sans",
+    "Droid Sans Arabic",
+    "Droid Sans Armenian",
+    "Droid Sans Devanagari",
+    "Droid Sans Ethiopic",
+    "Droid Sans Fallback",
+    "Droid Sans Georgian",
+    "Droid Sans Hebrew",
+    "Droid Sans Japanese",
+    "Droid Sans Tamil",
+    "Droid Sans Thai",
+    "Go Noto Current",
+    "Inconsolata",
+    "MathJax_AMS",
+    "MathJax_Caligraphic",
+    "MathJax_Fraktur",
+    "MathJax_Main",
+    "MathJax_Math",
+    "MathJax_SansSerif",
+    "MathJax_Script",
+    "MathJax_Size1",
+    "MathJax_Size2",
+    "MathJax_Size3",
+    "MathJax_Size4",
+    "MathJax_Typewriter",
+    "MathJax_Vector",
+    "MathJax_Vector-Bold",
+    "MathJax_WinChrome",
+    "MathJax_WinIE6",
+    "Monospace",
+    "Nimbus Mono PS",
+    "Nimbus Roman",
+    "Nimbus Sans",
+    "Nimbus Sans Narrow",
+    "P052",
+    "STIX MathJax Alphabets",
+    "STIX MathJax Arrows",
+    "STIX MathJax DoubleStruck",
+    "STIX MathJax Fraktur",
+    "STIX MathJax Latin",
+    "STIX MathJax Main",
+    "STIX MathJax Marks",
+    "STIX MathJax Misc",
+    "STIX MathJax Monospace",
+    "STIX MathJax Normal",
+    "STIX MathJax Operators",
+    "STIX MathJax SansSerif",
+    "STIX MathJax Script",
+    "STIX MathJax Shapes",
+    "STIX MathJax Size1",
+    "STIX MathJax Size2",
+    "STIX MathJax Size3",
+    "STIX MathJax Size4",
+    "STIX MathJax Size5",
+    "STIX MathJax Symbols",
+    "STIX MathJax Variants",
+    "Sans",
+    "Serif",
+    "Source Code Pro",
+    "System-ui",
+    "URW Bookman",
+    "URW Gothic",
+    "Ubuntu",
+    "Ubuntu Condensed",
+    "Ubuntu Mono",
+    "Z003"
+  ],
+  "max_seq_length": 529,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "rgb": false,
+  "text_renderer_type": "PangoCairoTextRenderer"
+}
+
+IterableDataset({
+    features: ['id', 'url', 'title', 'text'],
+    n_shards: 1
+})
+02/05/2024 08:19:19 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 3 unknown glyphs in sentence: Sir Chima U N Onyekwere,OON, FNCS  Gaa na: nsoroụzọ, chọọ  Sir Chima U N Onyekwere,OON, FNCS  A mụrụ na May 19, 1961  London, England  🏳️ Nationality  💼 Ọrụ  Technology entrepreneur    👶 Children Emeka,Nwakaego,Dinma, Chioma and Chima (jr).  Bụ Nna nke Internetntanetị Naijiria, Onye Ọrụ nke Order nke Niger (OON)[1]., na onye otu Kọmputa Society of Nigeria (FNCS)[2], .  Onye ọchụnta ego teknụzụ, onye nrụpụta, Onye Kraịst na nwoke ezinụlọ.  Onye isi oche nke otu ndị a: Linkserve Ltd, Saap-Tech Ltd, Internet Exchange Point of Nigeria (IXPN) [3] na onyeisi oche BOT nke Nigeria Internet Association of Nigeria (NiRA)[4]. Agụmakwụkwọ  Chima gara ụlọ akwụkwọ sekọndrị na Federal Government College Kano.  O nwetara nzere na mahadum Ife ugbua Obafemi Awolowo University (Bsc).  Nna-ukwu na teknụzụ ozi- Nkwenye ozi sitere na Mahadum Mahadum Maryland University College, Maryland USA (Msc).  Ọzụzụ njikwa ọkachamara nke gụsịrị akwụkwọ maka ndị isi ndị isi si Lagos Business School Lagos (CEP3) na Harvard Business School (OPM 30), Boston USA.  Alumnus nke Harvard Business School na Lagos Business School.   Ọrụ. Consider double-checking that the correct fonts are loaded.
+02/05/2024 08:19:33 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 2 unknown glyphs in sentence: N'afọ 2007, Ntsoma guzobere Neo Ntsoma Productions, ụlọ ọrụ nkwukọrịta na mmepụta ihe nke ụmụ nwanyị ojii nwere ma na-achịkwa kpamkpam. Ndị otu Ntsoma nwere ndị na-ese foto, ndị na-ahụ banyere teknụzụ vidiyo, ndị nchịkọta akụkọ, ndị na'ahụ màkà nkwurịta okwu anya, ndị edemede, na ndị ndụmọdụ na-arụ ọrụ na ụlọ ọrụ mmepụta ihe na ụlọ ọrụ. Ụlọ ọrụ ahụ na-enyekwa ọmụmụ ihe azụmaahịa na mmemme ntụziaka onwe onye maka ndị na-ese foto.  N'afọ 2018, onye nta akụkọ foto, Neo Ntsoma so na mkparịta ụka, ya na onye otu ibe ya, gbasara mmepe na kọntinent Afrịka - na Yale University Art Gallery.  Onyinye    2005 National Geographic All Roads Photo Program Award  2005 Mondi Shanduka Newspaper Awards (Onye mmeri nke mbụ Photography)  2005 Fuji Southern Africa Press Awards (Picture Story Runner-up)  2005 Fuji South Africa Professional Awards  2005 Fuji South Africa Professional Awards  2005 Fuji South Africa Professional Awards  2005 Fuji South Africa Professional Awards  2004 CNN 〜 Mohammed Amin Award (Nwanyị mbụ natara)  2004 Fuji Southern Africa Press Photographer of the Year (Runner-up)  2004 Fuji Southern Africa Press Awards (Akụkọ Foto Onye mmeri)  2004 Fuji African Press Photo Awards- VISA POUR L'IMAGE (Runner 意 Up)  2004 Fuji African Press Photo Awards- VISA POUR L'IMAGE (News ̊ ̊ Ō ̊ ₹ ̊ ̆ ̊ 👁️ ̊ ‒ ̊ ✨ ̊ ⇒ ̊ ♂ ̊ ♀ ̊ 〜 ̊ ➜. Consider double-checking that the correct fonts are loaded.
+02/05/2024 08:19:52 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 3 unknown glyphs in sentence: Extinct ISO language articles citing sources other than Ethnologue Asụsụ Mesmes bụ asụsụ West Gurage, otu n'ime asụsụ Semitic nke Ethiopia a na-asụ na Ethiopia. A ka nwere ọtụtụ ndị na-azọrọ njirimara agbụrụ Mesmes, mana ọ nweghị onye na-asụ asụsụ ahụ. Ndị otu nyocha asụsụ gbara onye ikpeazụ na-asụ asụsụ a ajụjụ ọnụ mgbe ọ dị ihe dị ka afọ iri asatọ. Ọ                                               enwekwaghi onye ọ ga-ab sr ya kemgbe nwanne ya nwoke  nwuchara.  Ndị Mesmes agbanweela n'ịsụ asụsụ Hadiyya. Otú ọ dị, ha ka na-edobe ụfọdụ ihe dị iche iche omenala, gụnyere ụdị nhazi ụlọ nke ha.  Usoro ntụnyere egosila na asụsụ ahụ nwere njikọ chiri anya na ụdị Inor dị iche iche nke Gurage.  Ihe odide    [Ihe e dere n'ala ala peeji] Ọnwụ asụsụ na Mesmes. Dallas: SIL International na Mahadum Texas na Arlington.  [Ihe e dere n'ala ala peeji] "Mäsmäs, na: Siegbert Uhlig (ed.[Ihe e dere n'ala ala peeji]  Ihe edeturu   All articles with unsourced statements. Consider double-checking that the correct fonts are loaded.
+02/05/2024 08:19:57 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: T, ma ọ bụ t, bụ mkpụrụedemede iri abụọ na mkpụrụedemede Bekee ọgbara ọhụrụ yana mkpụrụedemede Latịn nke ISO.  Aha ya na bekee bụ tee (akpọ /ˈtiː/), ọtụtụ tees.[1]  O sitere na Semitic Taw 𐤕 nke odide Phoenician na Paleo-Hibru (Aramaic na Hebrew Taw ת//￼, Syriac Taw ܬ, na Arabic ت Tāʼ) site na mkpụrụedemede Greek τ (tau).  N'asụsụ bekee, a na-ejikarị ya anọchi anya plosive alveolar na-enweghị olu, ụda ọ na-egosikwa na mkpụrụedemede ụda olu mba ụwa.  Ọ bụ consonant a na-ejikarị na nke abụọ a na-ejikarị eme ihe na ederede Bekee.[2]. Consider double-checking that the correct fonts are loaded.
+02/05/2024 08:20:23 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 1 unknown glyphs in sentence: Anu ( Akkadian </link> ANU, sitere na 💀 an "Eluigwe", "Eluigwe") ma ọ bụ Anum, nke mbụ An ( Sumerian </link> An ), [10] bụ mmiri dị nsasị nke elu-igwe,  eze chi dị iche iche, na nna ochie nke ọtụtụ chi dị iche iche n'okpukpe Mesopotamia oge ochie.  A na-ele ya anya dị ka isi iyi nke ịdị Chineke na nke mmadụ, ma meghee ọnụ ọgụgụ chi dị iche iche n'ọtụtụ ederede Mesopotemia.  N'otu oge ahụ, ọrụ ya bụ nke na-agwụ agwụ, a naghịkwa efe efe ya ofufe.  Mgbe ụfọdụ, a na-atụ aro na ụlọ nsasị Eanna nke dị na Uruk bụ nke ya, kama Inanna, ma ebe a na-agba ngwaọrụ na ọ bụ otu n'ime ndị bi na ya dị nsso, ọ dịghị ihe àmà na-  egosi na chi bụ isi nke ụlọ ndo ahụ agbanweela, na Inanna bụ onye.  eji ekiri ya na ya na anụ ahụ.  Mgbe ọ dachara, ụdị ụdị ọhụrụ n'otu obodo ahụ n'okpuru Seleucid, nke mere ka a kọwapụta Anu dị ka chi na-arụsi ọrụ ike.  N'ihi ya, ndị bi n'obodo fere ya ofufe na na-eje ozi ikpeazụ nke ihe mere eme nke Mesopotamia oge ochie. . Consider double-checking that the correct fonts are loaded.
+02/05/2024 08:20:23 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 2 unknown glyphs in sentence: . [148]Ọ na-adịghịkwa ihe na Eanna, " stra Eluigwe" (Sumerian: e 2 -anna; Cuneiform: 💍💀 E 2 . AN [lower-alpha 1]), bụ́ isi ụlọ nsõ Uruk n'oge ihe mere eme, bụ ebe obibi ihe mere eme, bụ ebe obibi.  nke Anu naanị, dị ka a iya aro mgbe ụfọdụ n'oge gara aga.  [148] Ejikọtala ya na Inanna na ike awụ nke anọ TOA, na ọrụ ya dị ka chi nkuzi nke Uruk nwere ike bụrụ oge ọ na-achọ ala n'oge a.  [148] Julia Krul Aha aro na akwụkwọ na e feelarị Anu ofufe n'oge Uruk, ọ ga- mmekọrịta na ọ ga-eso Inanna kerịta temple Eanna.  [52] Edemede ndị kacha ochie ekwoghị Eanna, ma ama akara ma ọ na ebe nsso a na-akpọkarị "Ean" gbara n'ime ha bụ ụlọ nsso Anu ma ọ na ọ dabara na nhazi ọ ALA ọzọ.  [151] Site na nwa Dynastic, Sargonic na Ur III, Inanna bụ chi bụ isi nke obodo ahụ, a na-ewerekwa Eanna dị ka ụlọ nsso ya nke mbụ.  [151] Ihe odide Bassetki nke Naram-Sin na-akwado nke ọma echiche na Inanna bụ chi mmetụta Uruk nakwa na a na-ahụta na ọ dị mkpa More Anu.  [153] Ọ dịghị ihe e zoro aka na Anu ka a mara site na ihe odide nke ndị Ur nke atọ na-ekwu okwu Eanna, n'agbanyeghị na ọ ahịa n'inye ndepụta.  [153] Otú ọ dị, ihe odide ala eze sitere n'oge ochie nke na-egosi na a na-akpa na Anu bi na Eanna.  [52] Na ndekọ nke nchekwa nke Epic of Gilgamesh, A na Eanna naanị dị ka ebe obibi nke Anu, mana "Standard Babylonian" nke mechara mesịa ya na Ishtar na Anu.  [52] A na-atụ aro na dị ka ihe omume nke Bull of Heaven, ọdịnala mbụ nwere ike igosi na ọ dị adị nke ozi Ishtar n'etiti ndị na-achịkọta ọrụ a.  [154] N'otu oge Anu arụ ọrụ ọ bva dị mkpa na Inanna bụ naanị onye nwe Eanna na mmetụta ifo gbasara Enmerkar na Lugalbanda, ndị eze ndị ọzọ a ma nke Uruk ndị a na-ezokarị aka na akwụkwọ Mesopotemia.  [155] Omenala ozugbo ifo nke Eanna bụ nke Anu na mbụ, mana emechara Inanna weghaara ya site na ọtụtụ ihe odide ederede, [156] mana ọ nwere ike nnwere onwe ifo ntọala na-enwe ka esi guzobe n'ụlọ mbụ mbụ.. Consider double-checking that the correct fonts are loaded.
+02/05/2024 08:20:30 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 4 unknown glyphs in sentence: Banyere Anyị - Dawood Ishaq Company  Nabata na ụlọ ọrụ Dawoud Ishaq, ụlọ ọrụ mgbasa ozi na-eduga nke a na-ewere dị ka etiti nke imepụta ihe na ịdị mma. Anyị bu n'obi ịnye ngwọta mgbasa ozi dị elu, dị elu nke na-egosipụta njirimara ndị ahịa anyị n'ụzọ mara mma na nke pụrụ iche.  🔹Ọhụụ anyị:  Anyị na-achọ ịbụ nhọrọ mbụ maka ndị ahịa mgbe a bịara n'inye ngwọta mgbasa ozi dị irè ma dị irè, dabere na ụkpụrụ nke ihe ọhụrụ, àgwà na ọkachamara.  🔹 Ọrụ anyị:  Inye ọrụ ahịa ahịa dị mkpa nke na-enyere ụlọ ọrụ aka iwulite njirimara siri ike na nke dị iche na ahịa, site n'inye ihe ngwọta okike jikọtara ọnụ dabere na nlezianya nyocha nke ahịa na ụdị ndụ ndị na-azụ ahịa.  🔹Our values:  1-Professionalism: We adhere to the highest standards of quality in everything we offer.  2-Creativity: We embrace new and innovative ideas to achieve better results.  3-Integrity: We operate with complete transparency, ensuring trust and credibility in our dealings.  4-Individual: We build unique solutions to the requirements and aspirations of each client.  🔹Our services:  We provide a wide range of services that include advertising campaigns, design and production of advertising campaigns, new scientific studies, strategic planning and analysis of customer and competitor data.  We invite you to go further and discover the opportunities we can offer you.  https://dawoodishac.net/ . Consider double-checking that the correct fonts are loaded.
+02/05/2024 08:20:30 - WARNING - pixel.data.rendering.pangocairo_renderer - Found 4 unknown glyphs in sentence: Banyere Anyị -Dawood ishac Company  Nabata na ụlọ ọrụ Dawoud Ishaq, ụlọ ọrụ mgbasa ozi na-eduga nke a na-ewere dị ka etiti nke imepụta ihe na ịdị mma. Anyị bu n'obi ịnye ngwọta mgbasa ozi dị elu, dị elu nke na-egosipụta njirimara ndị ahịa anyị n'ụzọ mara mma na nke pụrụ iche.  🔹Ọhụụ anyị:  Anyị na-achọ ịbụ nhọrọ mbụ maka ndị ahịa mgbe a bịara n'inye ngwọta mgbasa ozi dị irè ma dị irè, dabere na ụkpụrụ nke ihe ọhụrụ, àgwà na ọkachamara.  🔹 Ọrụ anyị:  Inye ọrụ ahịa ahịa dị mkpa nke na-enyere ụlọ ọrụ aka iwulite njirimara siri ike na nke dị iche na ahịa, site n'inye ihe ngwọta okike jikọtara ọnụ dabere na nlezianya nyocha nke ahịa na ụdị ndụ ndị na-azụ ahịa.  🔹Our values:  1-Professionalism: We adhere to the highest standards of quality in everything we offer.  2-Creativity: We embrace new and innovative ideas to achieve better results.  3-Integrity: We operate with complete transparency, ensuring trust and credibility in our dealings.  4-Individual: We build unique solutions to the requirements and aspirations of each client.  🔹Our services:  We provide a wide range of services that include advertising campaigns, design and production of advertising campaigns, new scientific studies, strategic planning and analysis of customer and competitor data.  We invite you to go further and discover the opportunities we can offer you.  https://dawoodishac.net/ . Consider double-checking that the correct fonts are loaded.
+02/05/2024 08:20:34 - INFO - pixel.utils.prerendering - Pushing batch 0 to HuggingFace
+02/05/2024 08:20:34 - INFO - pixel.utils.prerendering - Current uploaded size = 0
+02/05/2024 08:20:34 - INFO - pixel.utils.prerendering - Current dataset nbytes = 0
+02/05/2024 08:20:34 - INFO - pixel.utils.prerendering - Current shards = 0
+02/05/2024 08:20:34 - INFO - pixel.utils.prerendering - Current num examples = 59517
+02/05/2024 08:20:34 - INFO - pixel.utils.prerendering - Current num words = 10353343
+
+/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/datasets/arrow_dataset.py:5352: FutureWarning: 'branch' was deprecated in favor of 'revision' in version 2.15.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'revision=main' instead.
+  warnings.warn(
+Uploading the dataset shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Map:   0%|          | 0/29759 [00:00<?, ? examples/s][A
+Map:  20%|██        | 6000/29759 [00:00<00:00, 54060.99 examples/s][A
+Map:  47%|████▋     | 14000/29759 [00:00<00:00, 45859.62 examples/s][A
+Map:  71%|███████   | 21000/29759 [00:00<00:00, 51205.61 examples/s][A
+Map: 100%|██████████| 29759/29759 [00:00<00:00, 47789.09 examples/s][AMap: 100%|██████████| 29759/29759 [00:00<00:00, 48272.01 examples/s]
+
+Creating parquet from Arrow format:   0%|          | 0/298 [00:00<?, ?ba/s][A
+Creating parquet from Arrow format:  38%|███▊      | 112/298 [00:00<00:00, 1118.61ba/s][A
+Creating parquet from Arrow format:  85%|████████▌ | 254/298 [00:00<00:00, 1291.00ba/s][ACreating parquet from Arrow format: 100%|██████████| 298/298 [00:00<00:00, 1295.90ba/s]
+Uploading the dataset shards:  50%|█████     | 1/2 [00:15<00:15, 15.03s/it]
+Map:   0%|          | 0/29758 [00:00<?, ? examples/s][A
+Map:  24%|██▎       | 7000/29758 [00:00<00:00, 52182.89 examples/s][A
+Map:  47%|████▋     | 14000/29758 [00:00<00:00, 45691.20 examples/s][A
+Map:  67%|██████▋   | 20000/29758 [00:00<00:00, 47649.47 examples/s][A
+Map:  87%|████████▋ | 26000/29758 [00:00<00:00, 42605.09 examples/s][AMap: 100%|██████████| 29758/29758 [00:00<00:00, 45919.27 examples/s]
+
+Creating parquet from Arrow format:   0%|          | 0/298 [00:00<?, ?ba/s][A
+Creating parquet from Arrow format:  37%|███▋      | 109/298 [00:00<00:00, 1088.54ba/s][A
+Creating parquet from Arrow format:  78%|███████▊  | 231/298 [00:00<00:00, 1160.13ba/s][ACreating parquet from Arrow format: 100%|██████████| 298/298 [00:00<00:00, 1159.10ba/s]
+Uploading the dataset shards: 100%|██████████| 2/2 [00:28<00:00, 13.85s/it]Uploading the dataset shards: 100%|██████████| 2/2 [00:28<00:00, 14.03s/it]
+02/05/2024 08:23:54 - INFO - __main__ - Total num words in wikipedia: 10353343
+
+###############################################################################
+Hábrók Cluster
+Job 7110862 for user s3919609
+Finished at: Mon Feb  5 08:23:56 CET 2024
+
+Job details:
+============
+
+Job ID              : 7110862
+Name                : prerender_wikipedia_multilingual_ig
+User                : s3919609
+Partition           : regularshort
+Nodes               : node94
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : COMPLETED
+Submit              : 2024-02-05T08:18:49
+Start               : 2024-02-05T08:18:50
+End                 : 2024-02-05T08:23:56
+Reserved walltime   : 03:00:00
+Used walltime       : 00:05:06
+Used CPU time       : 00:04:18 (efficiency: 84.38%)
+% User (Computation): 96.37%
+% System (I/O)      :  3.63%
+Mem reserved        : 20G
+Max Mem (Node/step) : 10.11G (node94, per node)
+Full Max Mem usage  : 10.11G
+Total Disk Read     : 317.73M
+Total Disk Write    : 553.08M
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

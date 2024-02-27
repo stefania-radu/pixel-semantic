@@ -53,6 +53,9 @@ from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version
 from transformers.utils.versions import require_version
 
+import pyarrow
+pyarrow.PyExtensionType.set_auto_load(True) # Fix for ValueError: Arrow type extension<arrow.py_extension_type<pyarrow.lib.UnknownExtensionType>> does not have a datasets dtype equivalent.
+
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.17.0")
 
