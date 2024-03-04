@@ -269,7 +269,7 @@ def save_attention_image(all_layers_attentions, layer_index, head_index):
     plt.close()
 
 
-def save_image(image_tensor): # shape: (3, 256, 256)
+def save_image(image_tensor, title, img_name): # shape: (3, 256, 256)
     image_tensor = image_tensor.mean(dim=0, keepdim=True)
     np_image = image_tensor.detach().cpu().numpy().transpose(1, 2, 0)
 
@@ -278,18 +278,51 @@ def save_image(image_tensor): # shape: (3, 256, 256)
     # Plotting
     plt.figure(figsize=(10, 10))
     img = plt.imshow(np_image, cmap='viridis')
-    plt.colorbar(img)
-    plt.title(f'Per Patch Uncertainty (SD)', fontsize=20)
+    # plt.colorbar(img)
+    # plt.title(title, fontsize=20)
     plt.axis('off')  # Optionally, turn off the axis for a cleaner image
 
-    img_name = f'per_patch_SD'
     # Save the figure
     plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
 
     log_image_from_path(f'{img_name}.pdf', img_name)
     
     plt.close()
+
+
+def save_multi_image(images, titles, final_img_name, mask_rate=0.1):  # shapes: [(3, 256, 256), (3, 256, 256), (3, 256, 256)]
+    assert len(images) == 3 and len(titles) == 3, "There must be exactly 3 images and 3 titles"
+
+    # Create a figure and a set of subplots
+    fig, axs = plt.subplots(1, 3, figsize=(18, 6))  # Adjusted for equal size images including colorbar space
+
+    for i, (image_tensor, title) in enumerate(zip(images, titles)):
+        # Convert the PyTorch tensor to a NumPy array and normalize
+        image_tensor = image_tensor.mean(dim=0, keepdim=True)  # Convert to grayscale for demonstration
+        np_image = image_tensor.detach().cpu().numpy().squeeze()  # Assuming the input is PyTorch tensor
+        np_image = (np_image - np_image.min()) / (np_image.max() - np_image.min())  # Normalize
+
+        # Plotting each image in its subplot
+        im = axs[i].imshow(np_image, cmap='viridis')
+        axs[i].set_title(title, fontsize=24)
+        axs[i].axis('off')  # Optionally, turn off the axis for a cleaner image
+
+    # Adjust layout to be tight and allocate space for colorbar
+    plt.tight_layout(pad=2.0)
+
+    # fig.suptitle(f'Mask Ratio = {int(mask_rate*100)}%', fontsize=26, y=1.1) # for mask ratio experiment
+    fig.suptitle(f'Mask Span = {mask_rate}', fontsize=26, y=1.1) # for mask span experiment
+
+    # Create an axes on the right side of axs[-1]. The width of cax can be controlled by the horizontal size, here set to 0.015
+    cbar_ax = fig.add_axes([axs[-1].get_position().x1 + 0.01, axs[-1].get_position().y0, 0.02, axs[-1].get_position().height])
     
+    # Add colorbar to the newly created axis
+    fig.colorbar(im, cax=cbar_ax)
+
+    # Save the figure
+    plt.savefig(f'{final_img_name}.pdf', bbox_inches='tight')
+    plt.close()
+
 
 
 def main(args: argparse.Namespace):
@@ -327,6 +360,8 @@ def main(args: argparse.Namespace):
 
     mask_ratio = args.mask_ratio if not args.manual_mask else len(args.manual_mask) / text_renderer.max_seq_length
     config.update({"mask_ratio": mask_ratio})
+
+    wandb.log({"mask_ratio": mask_ratio})
 
     model = PIXELForPreTraining.from_pretrained(args.model_name_or_path, config=config, **config_kwargs)
 
@@ -390,7 +425,7 @@ def main(args: argparse.Namespace):
         logger.info(f"Masked count: {math.ceil(mask_ratio * text_renderer.max_seq_length)}, ratio = {mask_ratio:0.2f}")
 
     num_samples = 100  # Number of Monte Carlo samples
-    logger.info(f"Monte Carlos samples: {num_samples}")
+    logger.info(f"Monte Carlo samples: {num_samples}")
     all_predictions = []
     all_attentions = []
 
@@ -463,16 +498,12 @@ def main(args: argparse.Namespace):
     
     # Log original image
     original_img = model.unpatchify(model.patchify(img)).squeeze()
-    log_image(original_img, "original")
+    save_image(original_img, title=f'Original', img_name=f"original")
 
     # Log masked image
     im_masked = original_img * (1 - mask)
     log_image(im_masked, "masked")
 
-    # Logging for Monte Carlo Dropout-based uncertainty
-    # log_image(mean_predictions, "mean_predictions", do_clip=False)
-    # log_image(mean_predictions - 2* std_predictions, "mean_minus_2std_predictions", do_clip=False)
-    # log_image(mean_predictions + 2* std_predictions, "mean_plus_2std_predictions", do_clip=False)
 
     mean_variance_value = np.round(var_predictions.mean().item(), 3)
     # mean_variance_value = np.round(var_predictions.mean(dim=0).mean(), 3)
@@ -488,24 +519,46 @@ def main(args: argparse.Namespace):
 
     # compute std per each patch and log the new map
     std_predictions_per_patch = create_mean_map(std_predictions, mask, text_renderer.pixels_per_patch) # black is 0,  torch.Size([3, 368, 368])
+    logger.info(f"SD image: {std_predictions_per_patch[0]}")
+    mean_std_value_patch_mean = np.round(std_predictions_per_patch.mean().item(), 3)
+    logger.info(f"Mean std for whole image patch mean: {mean_std_value_patch_mean}")
+    wandb.log({"mean_std_value_patch_mean": mean_std_value_patch_mean})
+    
     logger.info(f"mean_std shape: {std_predictions_per_patch.shape}")
     std_predictions_per_patch_with_original = original_img * (std_predictions_per_patch) # for var I had 1 - mean_var
     logger.info(f"std_predictions shape: {std_predictions_per_patch_with_original.shape}")
     # log_image(std_predictions_per_patch_with_original, "std_predictions_patch", do_clip=False)
-    save_image(std_predictions_per_patch_with_original)
+    save_image(std_predictions_per_patch_with_original, title=f'Original + Patch Uncertainty (SD)', img_name=f"original_SD_s{args.masking_max_span_length}")
 
     # Log just the std image, without per patch mean
     std_predictions_per_pixel = std_predictions
     std_predictions_per_pixel_with_original = original_img * (std_predictions_per_pixel)
     log_image(std_predictions_per_pixel_with_original, "std_predictions_pixel", do_clip=False)
 
+
     # log reconstructed image with per patch std
-    std_reconstruction_per_patch = mean_predictions * (std_predictions_per_patch)
-    log_image(std_reconstruction_per_patch, "std_reconstruction_patch", do_clip=False)
+    std_reconstruction_per_patch = clip(mean_predictions * std_predictions_per_patch * mask)
+    log_image(std_reconstruction_per_patch, "std_reconstruction_per_patch", do_clip=False)
+    
+    print(f"mean_predictions: {mean_predictions}")
+    print(f"std_predictions_per_patch: {std_reconstruction_per_patch[0][0]}")
+    print(f"std_reconstruction_per_patch: {std_reconstruction_per_patch[0][0]}")
+    
+    save_image(std_reconstruction_per_patch, title=f'Mean Prediction + SD', img_name=f"predictions_SD_s{args.masking_max_span_length}")
 
     # log reconstructed image with per pixel std
     std_reconstruction_per_pixel = mean_predictions * (std_predictions_per_pixel)
     log_image(std_reconstruction_per_pixel, "std_reconstruction_pixel", do_clip=False)
+
+
+    ##############################
+    #make triplets of images
+    images = [original_img, std_predictions_per_patch_with_original, std_reconstruction_per_patch]
+    titles = ["Original", "Original + SD", "Mean Prediction + SD"]
+    multi_image_name = f"triplet_s{args.masking_max_span_length}"
+
+    save_multi_image(images, titles, multi_image_name, args.masking_max_span_length)
+    ##############################
 
 
     experiments_table.add_data(args.input_str, num_samples, mean_std_value, mean_variance_value, std_predictions.shape[1], mask_ratio, masked_count, args.masking_max_span_length, args.masking_cumulative_span_weights)

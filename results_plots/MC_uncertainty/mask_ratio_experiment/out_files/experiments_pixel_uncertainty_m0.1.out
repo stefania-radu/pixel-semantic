@@ -1,0 +1,250 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+wandb: Currently logged in as: stefania_radu. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.16.3 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.12
+wandb: Run data is saved locally in /home2/s3919609/pixel-semantic/wandb/run-20240304_083750-nbr3rvtv
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run hearty-oath-192
+wandb: ⭐️ View project at https://wandb.ai/stefania_radu/pixel-semantic-scripts_visualization
+wandb: 🚀 View run at https://wandb.ai/stefania_radu/pixel-semantic-scripts_visualization/runs/nbr3rvtv
+03/04/2024 08:37:57 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/text_renderer_config.json from cache at /home2/s3919609/.cache/huggingface/transformers/892d6a02d7c441000de399de59ed70d943a81f7b0f536523b4af1111677a8508.e332b34c9c05756dd4aa51d8fa33461dbd79604752296d185f03f8004db30700
+03/04/2024 08:37:57 - INFO - pixel.data.rendering.rendering_utils - loading font file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/GoNotoCurrent.ttf from cache at /home2/s3919609/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+03/04/2024 08:37:57 - INFO - pixel.data.rendering.pygame_renderer - Loading font from /home2/s3919609/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+03/04/2024 08:37:57 - INFO - pixel.data.rendering.rendering_utils - Text renderer PyGameTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58",
+  "font_size": 8,
+  "max_seq_length": 256,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "text_renderer_type": "PyGameTextRenderer"
+}
+
+03/04/2024 08:38:00 - INFO - pixel.utils.modeling - Truncating position embeddings to 256
+03/04/2024 08:38:00 - INFO - pixel.utils.modeling - Truncating decoder position embeddings to 256
+03/04/2024 08:38:00 - INFO - __main__ - Running PIXEL masked autoencoding with pixel reconstruction
+03/04/2024 08:38:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/04/2024 08:38:00 - INFO - __main__ - Masked count: 26, ratio = 0.1016
+03/04/2024 08:38:00 - INFO - __main__ - Monte Carlo samples: 100
+03/04/2024 08:38:00 - INFO - __main__ - Training mode: True
+all_attention (samples, layers, batch_size, num_heads, sequence_length, sequence_length): torch.Size([100, 12, 12, 231, 231])
+all_attention after mean: torch.Size([12, 12, 231, 231])
+03/04/2024 08:40:36 - INFO - __main__ - std_predictions shape: torch.Size([3, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+mask.shape: torch.Size([3, 256, 256])
+attentions.shape: torch.Size([12, 231, 231])
+all_heads_attentions.shape: torch.Size([12, 256, 256])
+all_heads_attentions_image: torch.Size([12, 256, 256])
+all_layers_attentions: torch.Size([12, 12, 256, 256])
+attention_grid: torch.Size([3, 3098, 3098])
+attention_grid 0 : tensor([[0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0240,  ..., 0.0173, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.8377,  ..., 0.9811, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]])
+attention_grid 1 : tensor([[0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0240,  ..., 0.0173, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.8377,  ..., 0.9811, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]])
+Are the channels different? False
+03/04/2024 08:40:44 - INFO - __main__ - Mean variance for whole image: 0.015
+03/04/2024 08:40:44 - INFO - __main__ - Mean std for whole image: 0.106
+03/04/2024 08:40:44 - INFO - __main__ - mean_std shape: (3, 256, 256)
+03/04/2024 08:40:44 - INFO - __main__ - std_predictions shape: torch.Size([3, 256, 256])
+mean_predictions: tensor([[[ 0.5432,  0.5446,  0.5463,  ...,  0.5278,  0.5293,  0.5298],
+         [ 0.5393,  0.5284,  0.5698,  ...,  0.4816,  0.3684,  0.4623],
+         [ 0.4397,  0.1350, -0.3212,  ...,  0.3394, -0.3220,  0.2799],
+         ...,
+         [ 0.6952,  0.6187,  0.6534,  ...,  0.5848,  0.6077,  0.6493],
+         [ 0.7475,  0.7042,  0.6619,  ...,  0.3189,  0.5313,  0.6216],
+         [ 0.6971,  0.7915,  0.7339,  ...,  0.7629,  0.6494,  0.5925]],
+
+        [[ 0.5432,  0.5446,  0.5463,  ...,  0.5278,  0.5293,  0.5298],
+         [ 0.5393,  0.5284,  0.5698,  ...,  0.4816,  0.3684,  0.4623],
+         [ 0.4397,  0.1349, -0.3212,  ...,  0.3395, -0.3220,  0.2799],
+         ...,
+         [ 0.6952,  0.6186,  0.6534,  ...,  0.5848,  0.6077,  0.6493],
+         [ 0.7475,  0.7042,  0.6620,  ...,  0.3189,  0.5313,  0.6216],
+         [ 0.6971,  0.7915,  0.7339,  ...,  0.7629,  0.6494,  0.5925]],
+
+        [[ 0.5432,  0.5446,  0.5463,  ...,  0.5278,  0.5293,  0.5298],
+         [ 0.5393,  0.5284,  0.5698,  ...,  0.4816,  0.3684,  0.4623],
+         [ 0.4396,  0.1349, -0.3212,  ...,  0.3395, -0.3220,  0.2799],
+         ...,
+         [ 0.6952,  0.6186,  0.6535,  ...,  0.5848,  0.6077,  0.6493],
+         [ 0.7475,  0.7042,  0.6620,  ...,  0.3189,  0.5313,  0.6216],
+         [ 0.6971,  0.7915,  0.7339,  ...,  0.7629,  0.6494,  0.5925]]])
+std_predictions_per_patch: tensor([ 0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         3.0277,  3.0275,  3.0283,  3.0327,  3.0287,  3.0309,  3.0298,  3.0273,
+         3.0285,  3.0264,  3.0251,  3.0300,  3.0249,  3.0276,  3.0265,  3.0297,
+         4.2482,  4.2417,  4.2388,  4.2383,  4.2363,  4.2422,  4.2413,  4.2415,
+         4.2527,  4.2371,  4.2381,  4.2403,  4.2432,  4.2459,  4.2410,  4.2422,
+        23.4908, 23.4556, 23.4591, 23.4555, 23.4608, 23.4583, 23.4384, 23.4340,
+        23.4402, 23.4383, 23.4492, 23.4333, 23.4591, 23.4733, 23.4397, 23.4455,
+        19.3987, 19.3938, 19.4605, 19.4656, 19.4090, 19.4486, 19.4785, 19.4887,
+        19.4291, 19.4015, 19.4110, 19.4265, 19.4742, 19.4293, 19.4111, 19.4496,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000])
+std_reconstruction_per_patch: tensor([ 0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         3.0277,  3.0275,  3.0283,  3.0327,  3.0287,  3.0309,  3.0298,  3.0273,
+         3.0285,  3.0264,  3.0251,  3.0300,  3.0249,  3.0276,  3.0265,  3.0297,
+         4.2482,  4.2417,  4.2388,  4.2383,  4.2363,  4.2422,  4.2413,  4.2415,
+         4.2527,  4.2371,  4.2381,  4.2403,  4.2432,  4.2459,  4.2410,  4.2422,
+        23.4908, 23.4556, 23.4591, 23.4555, 23.4608, 23.4583, 23.4384, 23.4340,
+        23.4402, 23.4383, 23.4492, 23.4333, 23.4591, 23.4733, 23.4397, 23.4455,
+        19.3987, 19.3938, 19.4605, 19.4656, 19.4090, 19.4486, 19.4785, 19.4887,
+        19.4291, 19.4015, 19.4110, 19.4265, 19.4742, 19.4293, 19.4111, 19.4496,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,
+         0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000,  0.0000])
+03/04/2024 08:40:46 - INFO - __main__ - torch.Size([3, 256, 256])
+03/04/2024 08:40:46 - INFO - __main__ - torch.Size([3, 256, 256])
+wandb: Waiting for W&B process to finish... (success).
+wandb: - 1.436 MB of 1.436 MB uploaded (0.000 MB deduped)wandb: \ 1.436 MB of 1.436 MB uploaded (0.000 MB deduped)wandb: | 1.436 MB of 1.462 MB uploaded (0.000 MB deduped)wandb: / 1.462 MB of 1.462 MB uploaded (0.000 MB deduped)wandb: 
+wandb: Run history:
+wandb:      mean_std_value ▁
+wandb: mean_variance_value ▁
+wandb: 
+wandb: Run summary:
+wandb:      mean_std_value 0.106
+wandb: mean_variance_value 0.015
+wandb: 
+wandb: 🚀 View run hearty-oath-192 at: https://wandb.ai/stefania_radu/pixel-semantic-scripts_visualization/runs/nbr3rvtv
+wandb: ️⚡ View job at https://wandb.ai/stefania_radu/pixel-semantic-scripts_visualization/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjExOTExMzkwMw==/version_details/v42
+wandb: Synced 6 W&B file(s), 15 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20240304_083750-nbr3rvtv/logs
+
+###############################################################################
+Hábrók Cluster
+Job 7485306 for user s3919609
+Finished at: Mon Mar  4 08:40:54 CET 2024
+
+Job details:
+============
+
+Job ID              : 7485306
+Name                : experiments_pixel_uncertainty
+User                : s3919609
+Partition           : regularshort
+Nodes               : node103
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : RUNNING
+Submit              : 2024-03-04T08:37:17
+Start               : 2024-03-04T08:37:32
+End                 : --
+Reserved walltime   : 01:00:00
+Used walltime       : 00:03:22
+Used CPU time       : --
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 10G
+Max Mem (Node/step) : 0.00  (Node unknown, N/A)
+Full Max Mem usage  : 0.00  (Until last completed step)
+Total Disk Read     : 0.00  (Until last completed step)
+Total Disk Write    : 0.00  (Until last completed step)
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################
