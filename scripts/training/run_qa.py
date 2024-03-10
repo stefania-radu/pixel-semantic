@@ -16,6 +16,7 @@
 """ Fine-tuning the library models for question-answering."""
 import argparse
 import logging
+import json
 import os
 import string
 import sys
@@ -876,6 +877,32 @@ def main():
             }
 
         references = [{"id": ex["id"], "answers": remove_extra_keys(ex[answer_column_name])} for ex in examples]
+
+        logger.info(f"Loading predictions per example")
+        squad_metric = load_metric("squad_v2" if data_args.version_2_with_negative else "squad")
+        per_example_metrics = []
+        for example in examples:
+            example_id = example["id"]
+            prediction_text = predictions[example_id]["prediction_text"]
+            references = example["answers"]["text"]  # Modify based on your data structure
+
+            # Assuming the metrics are computed and stored in per_example_metrics
+            example_metrics = squad_metric.compute(predictions=[{"id": example_id, "prediction_text": prediction_text}],
+                                                references=[{"id": example_id, "answers": references}])
+
+            per_example_metrics.append({
+                "id": example_id,
+                "EM": example_metrics["exact_match"],
+                "F1": example_metrics["f1"]
+            })
+
+        # Specify your file name
+        file_name = f"{stage}_per_example_metrics.json"
+        logger.info(f"Done! Metric for example 0: {per_example_metrics[0]}")
+        # Writing the metrics to a JSON file
+        with open(file_name, 'w') as f:
+            json.dump(per_example_metrics, f, indent=4)
+                    
         return EvalPrediction(predictions=formatted_predictions, label_ids=references)
 
     metric = load_metric("squad_v2" if data_args.version_2_with_negative else "squad")
