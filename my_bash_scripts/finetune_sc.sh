@@ -12,9 +12,9 @@
 export WANDB_PROJECT="pixel-experiments-SC"
 
 # change the cache so that we dont run out of space
-export HF_HOME="/scratch/.cache/huggingface"
-export HF_DATASETS_CACHE="/scratch/.cache/huggingface/datasets"
-export TRANSFORMERS_CACHE="/scratch/.cache/huggingface/models"
+# export HF_HOME="/scratch/.cache/huggingface"
+# export HF_DATASETS_CACHE="/scratch/.cache/huggingface/datasets"
+# export TRANSFORMERS_CACHE="/scratch/.cache/huggingface/models"
 
 # Settings
 export TASK="cola"

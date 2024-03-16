@@ -29,7 +29,7 @@ for task, keys in task_to_keys.items():
     
     for idx, item in enumerate(dataset):
         # Generate an ID with sequential numbers
-        item_id = f"glue_{task}_en_{idx}"
+        item_id = f"{task}_en_{idx}"
         # Concatenate strings based on specified columns
         concatenated_string = item[keys[0]] if keys[0] in item else ""
         if keys[1] and keys[1] in item:

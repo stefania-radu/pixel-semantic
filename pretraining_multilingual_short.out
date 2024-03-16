@@ -1,0 +1,134 @@
+srun: error: a100gpu6: tasks 0-1: Exited with exit code 1
+srun: Terminating StepId=7682540.0
+
+###############################################################################
+Hábrók Cluster
+Job 7682540 for user s3919609
+Finished at: Fri Mar 15 15:02:42 CET 2024
+
+Job details:
+============
+
+Job ID              : 7682540
+Name                : pretraining_multilingual_short
+User                : s3919609
+Partition           : gpushort
+Nodes               : a100gpu6
+Number of Nodes     : 1
+Cores               : 32
+Number of Tasks     : 2
+State               : RUNNING
+Submit              : 2024-03-15T13:52:35
+Start               : 2024-03-15T15:00:17
+End                 : --
+Reserved walltime   : 00:10:00
+Used walltime       : 00:02:25
+Used CPU time       : --
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 80G
+Max Mem (Node/step) : 0.00  (Node unknown, N/A)
+Full Max Mem usage  : 0.00  (Until last completed step)
+Total Disk Read     : 0.00  (Until last completed step)
+Total Disk Write    : 0.00  (Until last completed step)
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+srun: error: a100gpu6: task 0: Exited with exit code 1
+srun: Terminating StepId=7684805.0
+
+###############################################################################
+Hábrók Cluster
+Job 7684805 for user s3919609
+Finished at: Fri Mar 15 15:40:50 CET 2024
+
+Job details:
+============
+
+Job ID              : 7684805
+Name                : pretraining_multilingual_short
+User                : s3919609
+Partition           : gpushort
+Nodes               : a100gpu6
+Number of Nodes     : 1
+Cores               : 8
+Number of Tasks     : 1
+State               : RUNNING
+Submit              : 2024-03-15T15:27:06
+Start               : 2024-03-15T15:40:25
+End                 : --
+Reserved walltime   : 00:10:00
+Used walltime       : 00:00:25
+Used CPU time       : --
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 80G
+Max Mem (Node/step) : 0.00  (Node unknown, N/A)
+Full Max Mem usage  : 0.00  (Until last completed step)
+Total Disk Read     : 0.00  (Until last completed step)
+Total Disk Write    : 0.00  (Until last completed step)
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+srun: error: a100gpu6: task 0: Exited with exit code 1
+srun: Terminating StepId=7684948.0
+
+###############################################################################
+Hábrók Cluster
+Job 7684948 for user s3919609
+Finished at: Fri Mar 15 16:11:55 CET 2024
+
+Job details:
+============
+
+Job ID              : 7684948
+Name                : pretraining_multilingual_short
+User                : s3919609
+Partition           : gpushort
+Nodes               : a100gpu6
+Number of Nodes     : 1
+Cores               : 8
+Number of Tasks     : 1
+State               : RUNNING
+Submit              : 2024-03-15T16:09:33
+Start               : 2024-03-15T16:11:17
+End                 : --
+Reserved walltime   : 00:10:00
+Used walltime       : 00:00:38
+Used CPU time       : --
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 80G
+Max Mem (Node/step) : 0.00  (Node unknown, N/A)
+Full Max Mem usage  : 0.00  (Until last completed step)
+Total Disk Read     : 0.00  (Until last completed step)
+Total Disk Write    : 0.00  (Until last completed step)
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

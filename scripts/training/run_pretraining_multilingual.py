@@ -301,9 +301,16 @@ def main(config_dict: Dict[str, Any] = None):
             f"sampling probability = {d_sampling_prob:.3f}, cache = {d_cache}"
         )
 
-    validation_dataset = load_dataset(
-        data_args.validation_dataset_name, split=data_args.validation_split, use_auth_token=model_args.use_auth_token
-    )
+    train_test_ratio = 0.9  # 90% for training, which implicitly leaves 10% for validation
+    dataset = train_dataset.train_test_split(train_size=train_test_ratio, seed=training_args.seed)
+
+    # Extract the newly created train and validation datasets
+    train_dataset = dataset['train']
+    validation_dataset = dataset['test']
+
+    # Log the results
+    logger.info(f"New training dataset size: {len(train_dataset)}")
+    logger.info(f"Validation dataset size: {len(validation_dataset)}")
 
     config_kwargs = {
         "cache_dir": model_args.cache_dir,
@@ -454,6 +461,13 @@ def main(config_dict: Dict[str, Any] = None):
             train_dataset = train_dataset.shuffle(training_args.seed, buffer_size=10000)
         # Filter out examples that are less than one row long in the squared input image
         train_dataset = train_dataset.filter(lambda x: (x["num_patches"] >= 22))
+
+        # added by me 
+        if data_args.max_train_samples is not None:
+            train_dataset = train_dataset.shuffle(seed=training_args.seed).select(
+                range(data_args.max_train_samples)
+            )
+        
         # Set training transforms
         if data_args.streaming:
             train_dataset = train_dataset.map(preprocess_images, batched=True, batch_size=10000)
@@ -509,7 +523,7 @@ def main(config_dict: Dict[str, Any] = None):
     # Write model card and (optionally) push to hub
     kwargs = {
         "tasks": "masked-auto-encoding",
-        "dataset": "wikipedia + bookcorpus",
+        "dataset": "wikipedia multilingual",
         "tags": ["masked-auto-encoding"],
     }
     if training_args.push_to_hub:

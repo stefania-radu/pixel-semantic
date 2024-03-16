@@ -1,0 +1,27 @@
+submitit INFO (2024-03-15 16:11:34,049) - Starting with JobEnvironment(job_id=7684948, hostname=a100gpu6, local_rank=0(1), node=0(1), global_rank=0(1))
+submitit INFO (2024-03-15 16:11:34,049) - Loading pickle: /home2/s3919609/pixel-semantic/experiments/7684948/7684948_submitted.pkl
+Process group: 1 tasks, rank: 0
+submitit ERROR (2024-03-15 16:11:52,599) - Submitted job triggered an exception
+submitit ERROR (2024-03-15 16:11:52,599) - Submitted job triggered an exception
+Traceback (most recent call last):
+  File "/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/submitit/core/_submit.py", line 11, in <module>
+    submitit_main()
+  File "/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/submitit/core/submission.py", line 76, in submitit_main
+    process_job(args.folder)
+  File "/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/submitit/core/submission.py", line 69, in process_job
+    raise error
+  File "/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/submitit/core/submission.py", line 55, in process_job
+    result = delayed.result()
+  File "/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/submitit/core/utils.py", line 133, in result
+    self._result = self.function(*self.args, **self.kwargs)
+  File "/home2/s3919609/pixel-semantic/submitit_pretrain_multilingual.py", line 63, in __call__
+    trainer.main(self.config_dict)
+  File "/home2/s3919609/pixel-semantic/scripts/training/run_pretraining_multilingual.py", line 228, in main
+    model_args, data_args, training_args = parser.parse_dict(config_dict)
+  File "/scratch/s3919609/conda/envs/pixel-sem-env2/lib/python3.9/site-packages/transformers/hf_argparser.py", line 242, in parse_dict
+    obj = dtype(**inputs)
+TypeError: __init__() missing 2 required positional arguments: 'validation_dataset_name' and 'validation_split'

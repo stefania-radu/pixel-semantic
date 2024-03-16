@@ -31,7 +31,6 @@ from ..biaffine import Biaffine
 from ..pooling import PoolingForSequenceClassificationHead, PoolingMode
 from ..vit import ViTModel
 from .configuration_pixel import PIXELConfig
-from .hash_embedding import HashEmbedding
 
 logger = logging.getLogger(__name__)
 
@@ -611,33 +610,33 @@ class PIXELNgramPatchEmbeddings(nn.Module):
 
 
 # I don't think this works because we need discrete inputs for the hash embeddings, but the output of conv2D is continuous
-class HashPatchEmbeddings(nn.Module):
-    """
-    Hash-Embeddings, based on https://github.com/YannDubs/Hash-Embeddings, 
-    and the paper: Hash Embeddings for Efficient Word Representations by Dan Svenstrup, Jonas Meinertz Hansen, Ole Winther
-    """
-    def __init__(self, image_size=224, patch_size=16, num_channels=3, embed_dim=768):
-        super().__init__()
-        image_size = to_2tuple(image_size)
-        patch_size = to_2tuple(patch_size)
-        num_patches = (image_size[1] // patch_size[1]) * (image_size[0] // patch_size[0])
-        self.image_size = image_size
-        self.patch_size = patch_size
-        self.num_patches = num_patches
+# class HashPatchEmbeddings(nn.Module):
+#     """
+#     Hash-Embeddings, based on https://github.com/YannDubs/Hash-Embeddings, 
+#     and the paper: Hash Embeddings for Efficient Word Representations by Dan Svenstrup, Jonas Meinertz Hansen, Ole Winther
+#     """
+#     def __init__(self, image_size=224, patch_size=16, num_channels=3, embed_dim=768):
+#         super().__init__()
+#         image_size = to_2tuple(image_size)
+#         patch_size = to_2tuple(patch_size)
+#         num_patches = (image_size[1] // patch_size[1]) * (image_size[0] // patch_size[0])
+#         self.image_size = image_size
+#         self.patch_size = patch_size
+#         self.num_patches = num_patches
 
-        self.projection = nn.Conv2d(num_channels, embed_dim, kernel_size=patch_size, stride=patch_size)
-        self.hash_embedding = HashEmbedding(self.num_patches, embed_dim, num_hashes=2, aggregation_mode='sum')
+#         self.projection = nn.Conv2d(num_channels, embed_dim, kernel_size=patch_size, stride=patch_size)
+#         self.hash_embedding = HashEmbedding(self.num_patches, embed_dim, num_hashes=2, aggregation_mode='sum')
 
-    def forward(self, pixel_values):
-        batch_size, num_channels, height, width = pixel_values.shape
-        if height != self.image_size[0] or width != self.image_size[1]:
-            raise ValueError(
-                f"Input image size ({height}*{width}) doesn't match model ({self.image_size[0]}*{self.image_size[1]})."
-            )
-        # I dont know if the dimenstions of pixel_values match here, I might need to flatten it for the hash_embedding
-        # x = self.projection(pixel_values).flatten(2).transpose(1, 2)
-        x = self.hash_embedding(pixel_values)
-        return x
+#     def forward(self, pixel_values):
+#         batch_size, num_channels, height, width = pixel_values.shape
+#         if height != self.image_size[0] or width != self.image_size[1]:
+#             raise ValueError(
+#                 f"Input image size ({height}*{width}) doesn't match model ({self.image_size[0]}*{self.image_size[1]})."
+#             )
+#         # I dont know if the dimenstions of pixel_values match here, I might need to flatten it for the hash_embedding
+#         # x = self.projection(pixel_values).flatten(2).transpose(1, 2)
+#         x = self.hash_embedding(pixel_values)
+#         return x
 
 
 class PIXELEmbeddings(nn.Module):
@@ -668,7 +667,7 @@ class PIXELEmbeddings(nn.Module):
         #     aggregation_mode='average'
         # )
         
-        self.num_patches = self.patch_embeddings.num_patches
+        self.num_patches = self.patch_embeddings.num_patches # change this to num_engrams
         # fixed sin-cos embedding
         self.position_embeddings = nn.Parameter(
             torch.zeros(1, self.num_patches + 1, config.hidden_size), requires_grad=False

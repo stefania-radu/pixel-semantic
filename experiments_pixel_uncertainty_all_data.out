@@ -1,0 +1,2209 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+03/13/2024 20:30:33 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/text_renderer_config.json from cache at /home2/s3919609/.cache/huggingface/transformers/892d6a02d7c441000de399de59ed70d943a81f7b0f536523b4af1111677a8508.e332b34c9c05756dd4aa51d8fa33461dbd79604752296d185f03f8004db30700
+03/13/2024 20:30:33 - INFO - pixel.data.rendering.rendering_utils - loading font file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/GoNotoCurrent.ttf from cache at /home2/s3919609/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+03/13/2024 20:30:33 - INFO - pixel.data.rendering.pygame_renderer - Loading font from /home2/s3919609/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+03/13/2024 20:30:34 - INFO - pixel.data.rendering.rendering_utils - Text renderer PyGameTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58",
+  "font_size": 8,
+  "max_seq_length": 256,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "text_renderer_type": "PyGameTextRenderer"
+}
+
+03/13/2024 20:30:39 - INFO - pixel.utils.modeling - Truncating position embeddings to 256
+03/13/2024 20:30:40 - INFO - pixel.utils.modeling - Truncating decoder position embeddings to 256
+03/13/2024 20:30:40 - INFO - __main__ - Running PIXEL masked autoencoding with pixel reconstruction
+/home2/s3919609/pixel-semantic/scripts/visualization/visualize_pixel_uncertainty_test_data.py:582: DeprecationWarning: Sampling from a set deprecated
+since Python 3.9 and will be removed in a subsequent version.
+  random_ner = random.sample(input_data_ner.items(), 100)
+/home2/s3919609/pixel-semantic/scripts/visualization/visualize_pixel_uncertainty_test_data.py:583: DeprecationWarning: Sampling from a set deprecated
+since Python 3.9 and will be removed in a subsequent version.
+  random_tydiqa = random.sample(input_data_tydiqa.items(), 100)
+/home2/s3919609/pixel-semantic/scripts/visualization/visualize_pixel_uncertainty_test_data.py:584: DeprecationWarning: Sampling from a set deprecated
+since Python 3.9 and will be removed in a subsequent version.
+  random_glue = random.sample(input_data_glue.items(), 100)
+03/13/2024 20:30:41 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:30:41 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:30:41 - INFO - __main__ - ID text: conll_2003_en_1324
+03/13/2024 20:30:41 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:30:41 - INFO - __main__ - Training mode: True
+03/13/2024 20:31:54 - INFO - __main__ - Mean variance for conll_2003_en_1324: 0.03636704757809639
+03/13/2024 20:31:54 - INFO - __main__ - Mean std for for conll_2003_en_1324: 0.1617226004600525
+03/13/2024 20:31:55 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:31:55 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:31:55 - INFO - __main__ - ID text: amh_409
+03/13/2024 20:31:55 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:31:55 - INFO - __main__ - Training mode: True
+03/13/2024 20:33:01 - INFO - __main__ - Mean variance for amh_409: 0.14654022455215454
+03/13/2024 20:33:01 - INFO - __main__ - Mean std for for amh_409: 0.32784026861190796
+03/13/2024 20:33:02 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:33:02 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:33:02 - INFO - __main__ - ID text: ibo_1
+03/13/2024 20:33:02 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:33:02 - INFO - __main__ - Training mode: True
+03/13/2024 20:34:08 - INFO - __main__ - Mean variance for ibo_1: 0.03727594390511513
+03/13/2024 20:34:08 - INFO - __main__ - Mean std for for ibo_1: 0.14877869188785553
+03/13/2024 20:34:08 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:34:08 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:34:08 - INFO - __main__ - ID text: hau_59
+03/13/2024 20:34:08 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:34:08 - INFO - __main__ - Training mode: True
+03/13/2024 20:35:15 - INFO - __main__ - Mean variance for hau_59: 0.036281343549489975
+03/13/2024 20:35:15 - INFO - __main__ - Mean std for for hau_59: 0.1479339748620987
+03/13/2024 20:35:15 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:35:15 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:35:15 - INFO - __main__ - ID text: conll_2003_en_3157
+03/13/2024 20:35:15 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:35:15 - INFO - __main__ - Training mode: True
+03/13/2024 20:36:21 - INFO - __main__ - Mean variance for conll_2003_en_3157: 0.04686718061566353
+03/13/2024 20:36:21 - INFO - __main__ - Mean std for for conll_2003_en_3157: 0.18336474895477295
+03/13/2024 20:36:21 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:36:21 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:36:21 - INFO - __main__ - ID text: conll_2003_en_1786
+03/13/2024 20:36:21 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:36:21 - INFO - __main__ - Training mode: True
+03/13/2024 20:37:27 - INFO - __main__ - Mean variance for conll_2003_en_1786: 0.06444799154996872
+03/13/2024 20:37:27 - INFO - __main__ - Mean std for for conll_2003_en_1786: 0.22952814400196075
+03/13/2024 20:37:27 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:37:27 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:37:27 - INFO - __main__ - ID text: conll_2003_en_1179
+03/13/2024 20:37:27 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:37:27 - INFO - __main__ - Training mode: True
+03/13/2024 20:38:33 - INFO - __main__ - Mean variance for conll_2003_en_1179: 0.055689308792352676
+03/13/2024 20:38:33 - INFO - __main__ - Mean std for for conll_2003_en_1179: 0.21001845598220825
+03/13/2024 20:38:33 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:38:33 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:38:33 - INFO - __main__ - ID text: zh_206
+03/13/2024 20:38:33 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:38:33 - INFO - __main__ - Training mode: True
+03/13/2024 20:39:40 - INFO - __main__ - Mean variance for zh_206: 0.1500551700592041
+03/13/2024 20:39:40 - INFO - __main__ - Mean std for for zh_206: 0.33921709656715393
+03/13/2024 20:39:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:39:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:39:40 - INFO - __main__ - ID text: conll_2003_en_924
+03/13/2024 20:39:40 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:39:40 - INFO - __main__ - Training mode: True
+03/13/2024 20:40:47 - INFO - __main__ - Mean variance for conll_2003_en_924: 0.03900745511054993
+03/13/2024 20:40:47 - INFO - __main__ - Mean std for for conll_2003_en_924: 0.15347222983837128
+03/13/2024 20:40:47 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:40:47 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:40:47 - INFO - __main__ - ID text: zh_945
+03/13/2024 20:40:47 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:40:47 - INFO - __main__ - Training mode: True
+03/13/2024 20:41:54 - INFO - __main__ - Mean variance for zh_945: 0.16726191341876984
+03/13/2024 20:41:54 - INFO - __main__ - Mean std for for zh_945: 0.36168041825294495
+03/13/2024 20:41:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:41:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:41:54 - INFO - __main__ - ID text: pcm_571
+03/13/2024 20:41:54 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:41:54 - INFO - __main__ - Training mode: True
+03/13/2024 20:43:00 - INFO - __main__ - Mean variance for pcm_571: 0.040375515818595886
+03/13/2024 20:43:00 - INFO - __main__ - Mean std for for pcm_571: 0.16008396446704865
+03/13/2024 20:43:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:43:00 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:43:00 - INFO - __main__ - ID text: conll_2003_en_20
+03/13/2024 20:43:00 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:43:00 - INFO - __main__ - Training mode: True
+03/13/2024 20:44:07 - INFO - __main__ - Mean variance for conll_2003_en_20: 0.031683359295129776
+03/13/2024 20:44:07 - INFO - __main__ - Mean std for for conll_2003_en_20: 0.1456332802772522
+03/13/2024 20:44:07 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:44:07 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:44:07 - INFO - __main__ - ID text: amh_488
+03/13/2024 20:44:07 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:44:07 - INFO - __main__ - Training mode: True
+03/13/2024 20:45:13 - INFO - __main__ - Mean variance for amh_488: 0.14641313254833221
+03/13/2024 20:45:13 - INFO - __main__ - Mean std for for amh_488: 0.3320084810256958
+03/13/2024 20:45:13 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:45:13 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:45:13 - INFO - __main__ - ID text: conll_2003_en_1035
+03/13/2024 20:45:13 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:45:13 - INFO - __main__ - Training mode: True
+03/13/2024 20:46:19 - INFO - __main__ - Mean variance for conll_2003_en_1035: 0.03747958689928055
+03/13/2024 20:46:19 - INFO - __main__ - Mean std for for conll_2003_en_1035: 0.14698712527751923
+03/13/2024 20:46:19 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:46:19 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:46:19 - INFO - __main__ - ID text: conll_2003_en_3082
+03/13/2024 20:46:19 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:46:19 - INFO - __main__ - Training mode: True
+03/13/2024 20:47:25 - INFO - __main__ - Mean variance for conll_2003_en_3082: 0.14397822320461273
+03/13/2024 20:47:25 - INFO - __main__ - Mean std for for conll_2003_en_3082: 0.34104692935943604
+03/13/2024 20:47:25 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:47:25 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:47:25 - INFO - __main__ - ID text: conll_2003_en_3311
+03/13/2024 20:47:25 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:47:25 - INFO - __main__ - Training mode: True
+03/13/2024 20:48:32 - INFO - __main__ - Mean variance for conll_2003_en_3311: 0.14782430231571198
+03/13/2024 20:48:32 - INFO - __main__ - Mean std for for conll_2003_en_3311: 0.3414827287197113
+03/13/2024 20:48:32 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:48:32 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:48:32 - INFO - __main__ - ID text: yor_195
+03/13/2024 20:48:32 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:48:32 - INFO - __main__ - Training mode: True
+03/13/2024 20:49:37 - INFO - __main__ - Mean variance for yor_195: 0.08654244989156723
+03/13/2024 20:49:37 - INFO - __main__ - Mean std for for yor_195: 0.2399984747171402
+03/13/2024 20:49:37 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:49:37 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:49:37 - INFO - __main__ - ID text: zh_1134
+03/13/2024 20:49:37 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:49:37 - INFO - __main__ - Training mode: True
+03/13/2024 20:50:44 - INFO - __main__ - Mean variance for zh_1134: 0.14029547572135925
+03/13/2024 20:50:44 - INFO - __main__ - Mean std for for zh_1134: 0.32095375657081604
+03/13/2024 20:50:44 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:50:44 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:50:44 - INFO - __main__ - ID text: amh_434
+03/13/2024 20:50:44 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:50:44 - INFO - __main__ - Training mode: True
+03/13/2024 20:51:51 - INFO - __main__ - Mean variance for amh_434: 0.15479183197021484
+03/13/2024 20:51:51 - INFO - __main__ - Mean std for for amh_434: 0.34580710530281067
+03/13/2024 20:51:51 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:51:51 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:51:51 - INFO - __main__ - ID text: zh_466
+03/13/2024 20:51:51 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:51:51 - INFO - __main__ - Training mode: True
+03/13/2024 20:52:57 - INFO - __main__ - Mean variance for zh_466: 0.15300284326076508
+03/13/2024 20:52:57 - INFO - __main__ - Mean std for for zh_466: 0.3396758735179901
+03/13/2024 20:52:57 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:52:57 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:52:57 - INFO - __main__ - ID text: conll_2003_en_2757
+03/13/2024 20:52:57 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:52:57 - INFO - __main__ - Training mode: True
+03/13/2024 20:54:03 - INFO - __main__ - Mean variance for conll_2003_en_2757: 0.04043390974402428
+03/13/2024 20:54:03 - INFO - __main__ - Mean std for for conll_2003_en_2757: 0.17691262066364288
+03/13/2024 20:54:03 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:54:03 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:54:03 - INFO - __main__ - ID text: zh_199
+03/13/2024 20:54:03 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:54:03 - INFO - __main__ - Training mode: True
+03/13/2024 20:55:09 - INFO - __main__ - Mean variance for zh_199: 0.11914775520563126
+03/13/2024 20:55:09 - INFO - __main__ - Mean std for for zh_199: 0.2835693061351776
+03/13/2024 20:55:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:55:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:55:09 - INFO - __main__ - ID text: pcm_532
+03/13/2024 20:55:09 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:55:09 - INFO - __main__ - Training mode: True
+03/13/2024 20:56:15 - INFO - __main__ - Mean variance for pcm_532: 0.03611255809664726
+03/13/2024 20:56:15 - INFO - __main__ - Mean std for for pcm_532: 0.15877290070056915
+03/13/2024 20:56:15 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:56:15 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:56:15 - INFO - __main__ - ID text: conll_2003_en_3111
+03/13/2024 20:56:15 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:56:15 - INFO - __main__ - Training mode: True
+03/13/2024 20:57:21 - INFO - __main__ - Mean variance for conll_2003_en_3111: 0.16985243558883667
+03/13/2024 20:57:21 - INFO - __main__ - Mean std for for conll_2003_en_3111: 0.3716146647930145
+03/13/2024 20:57:21 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:57:21 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:57:21 - INFO - __main__ - ID text: swa_418
+03/13/2024 20:57:21 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:57:21 - INFO - __main__ - Training mode: True
+03/13/2024 20:58:28 - INFO - __main__ - Mean variance for swa_418: 0.0273588877171278
+03/13/2024 20:58:28 - INFO - __main__ - Mean std for for swa_418: 0.1263948529958725
+03/13/2024 20:58:28 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:58:28 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:58:28 - INFO - __main__ - ID text: zh_925
+03/13/2024 20:58:28 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:58:28 - INFO - __main__ - Training mode: True
+03/13/2024 20:59:34 - INFO - __main__ - Mean variance for zh_925: 0.13942575454711914
+03/13/2024 20:59:34 - INFO - __main__ - Mean std for for zh_925: 0.32197898626327515
+03/13/2024 20:59:34 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 20:59:34 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 20:59:34 - INFO - __main__ - ID text: ibo_52
+03/13/2024 20:59:34 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 20:59:34 - INFO - __main__ - Training mode: True
+03/13/2024 21:00:40 - INFO - __main__ - Mean variance for ibo_52: 0.046864911913871765
+03/13/2024 21:00:40 - INFO - __main__ - Mean std for for ibo_52: 0.18309907615184784
+03/13/2024 21:00:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:00:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:00:40 - INFO - __main__ - ID text: amh_106
+03/13/2024 21:00:40 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:00:40 - INFO - __main__ - Training mode: True
+03/13/2024 21:01:46 - INFO - __main__ - Mean variance for amh_106: 0.13667188584804535
+03/13/2024 21:01:46 - INFO - __main__ - Mean std for for amh_106: 0.32013389468193054
+03/13/2024 21:01:46 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:01:46 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:01:46 - INFO - __main__ - ID text: conll_2003_en_2115
+03/13/2024 21:01:46 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:01:46 - INFO - __main__ - Training mode: True
+03/13/2024 21:02:52 - INFO - __main__ - Mean variance for conll_2003_en_2115: 0.14493553340435028
+03/13/2024 21:02:52 - INFO - __main__ - Mean std for for conll_2003_en_2115: 0.33688533306121826
+03/13/2024 21:02:52 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:02:52 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:02:52 - INFO - __main__ - ID text: pcm_583
+03/13/2024 21:02:52 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:02:52 - INFO - __main__ - Training mode: True
+03/13/2024 21:03:59 - INFO - __main__ - Mean variance for pcm_583: 0.0356229729950428
+03/13/2024 21:03:59 - INFO - __main__ - Mean std for for pcm_583: 0.15171635150909424
+03/13/2024 21:03:59 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:03:59 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:03:59 - INFO - __main__ - ID text: kin_431
+03/13/2024 21:03:59 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:03:59 - INFO - __main__ - Training mode: True
+03/13/2024 21:05:05 - INFO - __main__ - Mean variance for kin_431: 0.030485639348626137
+03/13/2024 21:05:05 - INFO - __main__ - Mean std for for kin_431: 0.15235893428325653
+03/13/2024 21:05:05 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:05:05 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:05:05 - INFO - __main__ - ID text: ibo_47
+03/13/2024 21:05:05 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:05:05 - INFO - __main__ - Training mode: True
+03/13/2024 21:06:11 - INFO - __main__ - Mean variance for ibo_47: 0.0467107892036438
+03/13/2024 21:06:11 - INFO - __main__ - Mean std for for ibo_47: 0.18984068930149078
+03/13/2024 21:06:11 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:06:11 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:06:11 - INFO - __main__ - ID text: conll_2003_en_2047
+03/13/2024 21:06:11 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:06:11 - INFO - __main__ - Training mode: True
+03/13/2024 21:07:18 - INFO - __main__ - Mean variance for conll_2003_en_2047: 0.03596914932131767
+03/13/2024 21:07:18 - INFO - __main__ - Mean std for for conll_2003_en_2047: 0.1624494045972824
+03/13/2024 21:07:18 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:07:18 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:07:18 - INFO - __main__ - ID text: conll_2003_en_3027
+03/13/2024 21:07:18 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:07:18 - INFO - __main__ - Training mode: True
+03/13/2024 21:08:24 - INFO - __main__ - Mean variance for conll_2003_en_3027: 0.051787734031677246
+03/13/2024 21:08:24 - INFO - __main__ - Mean std for for conll_2003_en_3027: 0.19984762370586395
+03/13/2024 21:08:24 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:08:24 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:08:24 - INFO - __main__ - ID text: kin_371
+03/13/2024 21:08:24 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:08:24 - INFO - __main__ - Training mode: True
+03/13/2024 21:09:31 - INFO - __main__ - Mean variance for kin_371: 0.033186983317136765
+03/13/2024 21:09:31 - INFO - __main__ - Mean std for for kin_371: 0.13667650520801544
+03/13/2024 21:09:31 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:09:31 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:09:31 - INFO - __main__ - ID text: conll_2003_en_1174
+03/13/2024 21:09:31 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:09:31 - INFO - __main__ - Training mode: True
+03/13/2024 21:10:37 - INFO - __main__ - Mean variance for conll_2003_en_1174: 0.040895793586969376
+03/13/2024 21:10:37 - INFO - __main__ - Mean std for for conll_2003_en_1174: 0.16335316002368927
+03/13/2024 21:10:37 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:10:37 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:10:37 - INFO - __main__ - ID text: conll_2003_en_1019
+03/13/2024 21:10:37 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:10:37 - INFO - __main__ - Training mode: True
+03/13/2024 21:11:43 - INFO - __main__ - Mean variance for conll_2003_en_1019: 0.04136628657579422
+03/13/2024 21:11:43 - INFO - __main__ - Mean std for for conll_2003_en_1019: 0.16094104945659637
+03/13/2024 21:11:43 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:11:43 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:11:43 - INFO - __main__ - ID text: luo_69
+03/13/2024 21:11:43 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:11:43 - INFO - __main__ - Training mode: True
+03/13/2024 21:12:49 - INFO - __main__ - Mean variance for luo_69: 0.028899947181344032
+03/13/2024 21:12:49 - INFO - __main__ - Mean std for for luo_69: 0.1300409883260727
+03/13/2024 21:12:49 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:12:49 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:12:49 - INFO - __main__ - ID text: conll_2003_en_1084
+03/13/2024 21:12:49 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:12:49 - INFO - __main__ - Training mode: True
+03/13/2024 21:13:55 - INFO - __main__ - Mean variance for conll_2003_en_1084: 0.03638453781604767
+03/13/2024 21:13:55 - INFO - __main__ - Mean std for for conll_2003_en_1084: 0.1511937528848648
+03/13/2024 21:13:55 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:13:55 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:13:55 - INFO - __main__ - ID text: lug_133
+03/13/2024 21:13:55 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:13:55 - INFO - __main__ - Training mode: True
+03/13/2024 21:15:02 - INFO - __main__ - Mean variance for lug_133: 0.04183339700102806
+03/13/2024 21:15:02 - INFO - __main__ - Mean std for for lug_133: 0.1783696413040161
+03/13/2024 21:15:02 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:15:02 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:15:02 - INFO - __main__ - ID text: kin_492
+03/13/2024 21:15:02 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:15:02 - INFO - __main__ - Training mode: True
+03/13/2024 21:16:09 - INFO - __main__ - Mean variance for kin_492: 0.028892740607261658
+03/13/2024 21:16:09 - INFO - __main__ - Mean std for for kin_492: 0.1303483098745346
+03/13/2024 21:16:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:16:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:16:09 - INFO - __main__ - ID text: zh_1162
+03/13/2024 21:16:09 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:16:09 - INFO - __main__ - Training mode: True
+03/13/2024 21:17:15 - INFO - __main__ - Mean variance for zh_1162: 0.13949930667877197
+03/13/2024 21:17:15 - INFO - __main__ - Mean std for for zh_1162: 0.32145288586616516
+03/13/2024 21:17:15 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:17:15 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:17:15 - INFO - __main__ - ID text: hau_380
+03/13/2024 21:17:15 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:17:15 - INFO - __main__ - Training mode: True
+03/13/2024 21:18:21 - INFO - __main__ - Mean variance for hau_380: 0.038985397666692734
+03/13/2024 21:18:21 - INFO - __main__ - Mean std for for hau_380: 0.16469641029834747
+03/13/2024 21:18:21 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:18:21 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:18:21 - INFO - __main__ - ID text: conll_2003_en_211
+03/13/2024 21:18:21 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:18:21 - INFO - __main__ - Training mode: True
+03/13/2024 21:19:28 - INFO - __main__ - Mean variance for conll_2003_en_211: 0.05340319499373436
+03/13/2024 21:19:28 - INFO - __main__ - Mean std for for conll_2003_en_211: 0.1992187350988388
+03/13/2024 21:19:28 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:19:28 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:19:28 - INFO - __main__ - ID text: swa_586
+03/13/2024 21:19:28 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:19:28 - INFO - __main__ - Training mode: True
+03/13/2024 21:20:35 - INFO - __main__ - Mean variance for swa_586: 0.040796078741550446
+03/13/2024 21:20:35 - INFO - __main__ - Mean std for for swa_586: 0.1587093323469162
+03/13/2024 21:20:35 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:20:35 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:20:35 - INFO - __main__ - ID text: zh_56
+03/13/2024 21:20:35 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:20:35 - INFO - __main__ - Training mode: True
+03/13/2024 21:21:41 - INFO - __main__ - Mean variance for zh_56: 0.13530081510543823
+03/13/2024 21:21:41 - INFO - __main__ - Mean std for for zh_56: 0.3175066411495209
+03/13/2024 21:21:41 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:21:41 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:21:41 - INFO - __main__ - ID text: conll_2003_en_1545
+03/13/2024 21:21:41 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:21:41 - INFO - __main__ - Training mode: True
+03/13/2024 21:22:47 - INFO - __main__ - Mean variance for conll_2003_en_1545: 0.04169232025742531
+03/13/2024 21:22:47 - INFO - __main__ - Mean std for for conll_2003_en_1545: 0.15462808310985565
+03/13/2024 21:22:47 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:22:47 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:22:47 - INFO - __main__ - ID text: luo_46
+03/13/2024 21:22:47 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:22:47 - INFO - __main__ - Training mode: True
+03/13/2024 21:23:53 - INFO - __main__ - Mean variance for luo_46: 0.042549069970846176
+03/13/2024 21:23:53 - INFO - __main__ - Mean std for for luo_46: 0.16674356162548065
+03/13/2024 21:23:53 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:23:53 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:23:53 - INFO - __main__ - ID text: conll_2003_en_791
+03/13/2024 21:23:53 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:23:53 - INFO - __main__ - Training mode: True
+03/13/2024 21:24:59 - INFO - __main__ - Mean variance for conll_2003_en_791: 0.13033266365528107
+03/13/2024 21:24:59 - INFO - __main__ - Mean std for for conll_2003_en_791: 0.31338566541671753
+03/13/2024 21:24:59 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:24:59 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:24:59 - INFO - __main__ - ID text: zh_315
+03/13/2024 21:24:59 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:24:59 - INFO - __main__ - Training mode: True
+03/13/2024 21:26:06 - INFO - __main__ - Mean variance for zh_315: 0.1520475596189499
+03/13/2024 21:26:06 - INFO - __main__ - Mean std for for zh_315: 0.3347179889678955
+03/13/2024 21:26:06 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:26:06 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:26:06 - INFO - __main__ - ID text: ibo_298
+03/13/2024 21:26:06 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:26:06 - INFO - __main__ - Training mode: True
+03/13/2024 21:27:12 - INFO - __main__ - Mean variance for ibo_298: 0.037245266139507294
+03/13/2024 21:27:12 - INFO - __main__ - Mean std for for ibo_298: 0.14898748695850372
+03/13/2024 21:27:12 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:27:12 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:27:12 - INFO - __main__ - ID text: zh_1570
+03/13/2024 21:27:12 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:27:12 - INFO - __main__ - Training mode: True
+03/13/2024 21:28:19 - INFO - __main__ - Mean variance for zh_1570: 0.1366184800863266
+03/13/2024 21:28:19 - INFO - __main__ - Mean std for for zh_1570: 0.3238103687763214
+03/13/2024 21:28:19 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:28:19 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:28:19 - INFO - __main__ - ID text: zh_1404
+03/13/2024 21:28:19 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:28:19 - INFO - __main__ - Training mode: True
+03/13/2024 21:29:26 - INFO - __main__ - Mean variance for zh_1404: 0.12504108250141144
+03/13/2024 21:29:26 - INFO - __main__ - Mean std for for zh_1404: 0.29258784651756287
+03/13/2024 21:29:26 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:29:26 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:29:26 - INFO - __main__ - ID text: lug_177
+03/13/2024 21:29:26 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:29:26 - INFO - __main__ - Training mode: True
+03/13/2024 21:30:33 - INFO - __main__ - Mean variance for lug_177: 0.03247416391968727
+03/13/2024 21:30:33 - INFO - __main__ - Mean std for for lug_177: 0.13810837268829346
+03/13/2024 21:30:33 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:30:33 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:30:33 - INFO - __main__ - ID text: zh_730
+03/13/2024 21:30:33 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:30:33 - INFO - __main__ - Training mode: True
+03/13/2024 21:31:40 - INFO - __main__ - Mean variance for zh_730: 0.13784602284431458
+03/13/2024 21:31:40 - INFO - __main__ - Mean std for for zh_730: 0.32716572284698486
+03/13/2024 21:31:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:31:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:31:40 - INFO - __main__ - ID text: conll_2003_en_2650
+03/13/2024 21:31:40 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:31:40 - INFO - __main__ - Training mode: True
+03/13/2024 21:32:47 - INFO - __main__ - Mean variance for conll_2003_en_2650: 0.1324261724948883
+03/13/2024 21:32:47 - INFO - __main__ - Mean std for for conll_2003_en_2650: 0.31684401631355286
+03/13/2024 21:32:47 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:32:47 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:32:47 - INFO - __main__ - ID text: conll_2003_en_639
+03/13/2024 21:32:47 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:32:47 - INFO - __main__ - Training mode: True
+03/13/2024 21:33:53 - INFO - __main__ - Mean variance for conll_2003_en_639: 0.1554947942495346
+03/13/2024 21:33:53 - INFO - __main__ - Mean std for for conll_2003_en_639: 0.3539516031742096
+03/13/2024 21:33:53 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:33:53 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:33:53 - INFO - __main__ - ID text: conll_2003_en_250
+03/13/2024 21:33:53 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:33:53 - INFO - __main__ - Training mode: True
+03/13/2024 21:34:59 - INFO - __main__ - Mean variance for conll_2003_en_250: 0.15999625623226166
+03/13/2024 21:34:59 - INFO - __main__ - Mean std for for conll_2003_en_250: 0.3577286899089813
+03/13/2024 21:34:59 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:34:59 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:34:59 - INFO - __main__ - ID text: conll_2003_en_3233
+03/13/2024 21:34:59 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:34:59 - INFO - __main__ - Training mode: True
+03/13/2024 21:36:06 - INFO - __main__ - Mean variance for conll_2003_en_3233: 0.048581626266241074
+03/13/2024 21:36:06 - INFO - __main__ - Mean std for for conll_2003_en_3233: 0.18803411722183228
+03/13/2024 21:36:06 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:36:06 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:36:06 - INFO - __main__ - ID text: ibo_236
+03/13/2024 21:36:06 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:36:06 - INFO - __main__ - Training mode: True
+03/13/2024 21:37:12 - INFO - __main__ - Mean variance for ibo_236: 0.03859217092394829
+03/13/2024 21:37:12 - INFO - __main__ - Mean std for for ibo_236: 0.15217964351177216
+03/13/2024 21:37:12 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:37:12 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:37:12 - INFO - __main__ - ID text: conll_2003_en_807
+03/13/2024 21:37:12 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:37:12 - INFO - __main__ - Training mode: True
+03/13/2024 21:38:18 - INFO - __main__ - Mean variance for conll_2003_en_807: 0.0355263352394104
+03/13/2024 21:38:18 - INFO - __main__ - Mean std for for conll_2003_en_807: 0.14947421848773956
+03/13/2024 21:38:18 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:38:18 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:38:18 - INFO - __main__ - ID text: conll_2003_en_3314
+03/13/2024 21:38:18 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:38:18 - INFO - __main__ - Training mode: True
+03/13/2024 21:39:25 - INFO - __main__ - Mean variance for conll_2003_en_3314: 0.16136689484119415
+03/13/2024 21:39:25 - INFO - __main__ - Mean std for for conll_2003_en_3314: 0.36259058117866516
+03/13/2024 21:39:25 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:39:25 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:39:25 - INFO - __main__ - ID text: conll_2003_en_1154
+03/13/2024 21:39:25 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:39:25 - INFO - __main__ - Training mode: True
+03/13/2024 21:40:31 - INFO - __main__ - Mean variance for conll_2003_en_1154: 0.03583403304219246
+03/13/2024 21:40:31 - INFO - __main__ - Mean std for for conll_2003_en_1154: 0.1516718566417694
+03/13/2024 21:40:31 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:40:31 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:40:31 - INFO - __main__ - ID text: luo_72
+03/13/2024 21:40:31 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:40:31 - INFO - __main__ - Training mode: True
+03/13/2024 21:41:37 - INFO - __main__ - Mean variance for luo_72: 0.015119094401597977
+03/13/2024 21:41:37 - INFO - __main__ - Mean std for for luo_72: 0.10035008192062378
+03/13/2024 21:41:37 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:41:37 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:41:37 - INFO - __main__ - ID text: ibo_49
+03/13/2024 21:41:37 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:41:37 - INFO - __main__ - Training mode: True
+03/13/2024 21:42:43 - INFO - __main__ - Mean variance for ibo_49: 0.038236651569604874
+03/13/2024 21:42:43 - INFO - __main__ - Mean std for for ibo_49: 0.15978123247623444
+03/13/2024 21:42:43 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:42:43 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:42:43 - INFO - __main__ - ID text: swa_487
+03/13/2024 21:42:43 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:42:43 - INFO - __main__ - Training mode: True
+03/13/2024 21:43:49 - INFO - __main__ - Mean variance for swa_487: 0.06075847148895264
+03/13/2024 21:43:49 - INFO - __main__ - Mean std for for swa_487: 0.2186204195022583
+03/13/2024 21:43:49 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:43:49 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:43:49 - INFO - __main__ - ID text: zh_1686
+03/13/2024 21:43:49 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:43:49 - INFO - __main__ - Training mode: True
+03/13/2024 21:44:56 - INFO - __main__ - Mean variance for zh_1686: 0.13251616060733795
+03/13/2024 21:44:56 - INFO - __main__ - Mean std for for zh_1686: 0.3152075707912445
+03/13/2024 21:44:56 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:44:56 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:44:56 - INFO - __main__ - ID text: lug_229
+03/13/2024 21:44:56 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:44:56 - INFO - __main__ - Training mode: True
+03/13/2024 21:46:03 - INFO - __main__ - Mean variance for lug_229: 0.039850492030382156
+03/13/2024 21:46:03 - INFO - __main__ - Mean std for for lug_229: 0.16628865897655487
+03/13/2024 21:46:03 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:46:03 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:46:03 - INFO - __main__ - ID text: conll_2003_en_2164
+03/13/2024 21:46:03 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:46:03 - INFO - __main__ - Training mode: True
+03/13/2024 21:47:09 - INFO - __main__ - Mean variance for conll_2003_en_2164: 0.04247698187828064
+03/13/2024 21:47:09 - INFO - __main__ - Mean std for for conll_2003_en_2164: 0.18209807574748993
+03/13/2024 21:47:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:47:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:47:09 - INFO - __main__ - ID text: lug_317
+03/13/2024 21:47:09 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:47:09 - INFO - __main__ - Training mode: True
+03/13/2024 21:48:15 - INFO - __main__ - Mean variance for lug_317: 0.03898908570408821
+03/13/2024 21:48:15 - INFO - __main__ - Mean std for for lug_317: 0.16106168925762177
+03/13/2024 21:48:15 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:48:15 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:48:15 - INFO - __main__ - ID text: lug_72
+03/13/2024 21:48:15 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:48:15 - INFO - __main__ - Training mode: True
+03/13/2024 21:49:21 - INFO - __main__ - Mean variance for lug_72: 0.045231759548187256
+03/13/2024 21:49:21 - INFO - __main__ - Mean std for for lug_72: 0.16729219257831573
+03/13/2024 21:49:21 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:49:21 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:49:21 - INFO - __main__ - ID text: conll_2003_en_2932
+03/13/2024 21:49:21 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:49:21 - INFO - __main__ - Training mode: True
+03/13/2024 21:50:27 - INFO - __main__ - Mean variance for conll_2003_en_2932: 0.16355256736278534
+03/13/2024 21:50:27 - INFO - __main__ - Mean std for for conll_2003_en_2932: 0.36364904046058655
+03/13/2024 21:50:27 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:50:27 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:50:27 - INFO - __main__ - ID text: hau_421
+03/13/2024 21:50:27 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:50:27 - INFO - __main__ - Training mode: True
+03/13/2024 21:51:34 - INFO - __main__ - Mean variance for hau_421: 0.03611312434077263
+03/13/2024 21:51:34 - INFO - __main__ - Mean std for for hau_421: 0.1459122747182846
+03/13/2024 21:51:34 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:51:34 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:51:34 - INFO - __main__ - ID text: conll_2003_en_669
+03/13/2024 21:51:34 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:51:34 - INFO - __main__ - Training mode: True
+03/13/2024 21:52:41 - INFO - __main__ - Mean variance for conll_2003_en_669: 0.032283853739500046
+03/13/2024 21:52:41 - INFO - __main__ - Mean std for for conll_2003_en_669: 0.1598893105983734
+03/13/2024 21:52:41 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:52:41 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:52:41 - INFO - __main__ - ID text: zh_1251
+03/13/2024 21:52:41 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:52:41 - INFO - __main__ - Training mode: True
+03/13/2024 21:53:47 - INFO - __main__ - Mean variance for zh_1251: 0.14995746314525604
+03/13/2024 21:53:47 - INFO - __main__ - Mean std for for zh_1251: 0.3373294174671173
+03/13/2024 21:53:47 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:53:47 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:53:47 - INFO - __main__ - ID text: zh_1674
+03/13/2024 21:53:47 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:53:47 - INFO - __main__ - Training mode: True
+03/13/2024 21:54:54 - INFO - __main__ - Mean variance for zh_1674: 0.11705712229013443
+03/13/2024 21:54:54 - INFO - __main__ - Mean std for for zh_1674: 0.2791856527328491
+03/13/2024 21:54:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:54:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:54:54 - INFO - __main__ - ID text: conll_2003_en_2303
+03/13/2024 21:54:54 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:54:54 - INFO - __main__ - Training mode: True
+03/13/2024 21:56:01 - INFO - __main__ - Mean variance for conll_2003_en_2303: 0.1898610144853592
+03/13/2024 21:56:01 - INFO - __main__ - Mean std for for conll_2003_en_2303: 0.39419832825660706
+03/13/2024 21:56:01 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:56:01 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:56:01 - INFO - __main__ - ID text: zh_22
+03/13/2024 21:56:01 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:56:01 - INFO - __main__ - Training mode: True
+03/13/2024 21:57:07 - INFO - __main__ - Mean variance for zh_22: 0.1434081792831421
+03/13/2024 21:57:07 - INFO - __main__ - Mean std for for zh_22: 0.33610013127326965
+03/13/2024 21:57:07 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:57:07 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:57:07 - INFO - __main__ - ID text: hau_57
+03/13/2024 21:57:07 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:57:07 - INFO - __main__ - Training mode: True
+03/13/2024 21:58:13 - INFO - __main__ - Mean variance for hau_57: 0.026616958901286125
+03/13/2024 21:58:13 - INFO - __main__ - Mean std for for hau_57: 0.1262316256761551
+03/13/2024 21:58:13 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:58:13 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:58:13 - INFO - __main__ - ID text: conll_2003_en_2177
+03/13/2024 21:58:13 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:58:13 - INFO - __main__ - Training mode: True
+03/13/2024 21:59:20 - INFO - __main__ - Mean variance for conll_2003_en_2177: 0.15275490283966064
+03/13/2024 21:59:20 - INFO - __main__ - Mean std for for conll_2003_en_2177: 0.34932854771614075
+03/13/2024 21:59:20 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 21:59:20 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 21:59:20 - INFO - __main__ - ID text: wol_28
+03/13/2024 21:59:20 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 21:59:20 - INFO - __main__ - Training mode: True
+03/13/2024 22:00:26 - INFO - __main__ - Mean variance for wol_28: 0.04190351068973541
+03/13/2024 22:00:26 - INFO - __main__ - Mean std for for wol_28: 0.17803509533405304
+03/13/2024 22:00:26 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:00:26 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:00:26 - INFO - __main__ - ID text: luo_61
+03/13/2024 22:00:26 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:00:26 - INFO - __main__ - Training mode: True
+03/13/2024 22:01:33 - INFO - __main__ - Mean variance for luo_61: 0.033170972019433975
+03/13/2024 22:01:33 - INFO - __main__ - Mean std for for luo_61: 0.14060048758983612
+03/13/2024 22:01:33 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:01:33 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:01:33 - INFO - __main__ - ID text: hau_469
+03/13/2024 22:01:33 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:01:33 - INFO - __main__ - Training mode: True
+03/13/2024 22:02:39 - INFO - __main__ - Mean variance for hau_469: 0.03638027235865593
+03/13/2024 22:02:39 - INFO - __main__ - Mean std for for hau_469: 0.16471907496452332
+03/13/2024 22:02:39 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:02:39 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:02:39 - INFO - __main__ - ID text: zh_396
+03/13/2024 22:02:39 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:02:39 - INFO - __main__ - Training mode: True
+03/13/2024 22:03:45 - INFO - __main__ - Mean variance for zh_396: 0.10648238658905029
+03/13/2024 22:03:45 - INFO - __main__ - Mean std for for zh_396: 0.266171395778656
+03/13/2024 22:03:45 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:03:45 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:03:45 - INFO - __main__ - ID text: conll_2003_en_3098
+03/13/2024 22:03:45 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:03:45 - INFO - __main__ - Training mode: True
+03/13/2024 22:04:52 - INFO - __main__ - Mean variance for conll_2003_en_3098: 0.03950278460979462
+03/13/2024 22:04:52 - INFO - __main__ - Mean std for for conll_2003_en_3098: 0.17864330112934113
+03/13/2024 22:04:52 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:04:52 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:04:52 - INFO - __main__ - ID text: kin_170
+03/13/2024 22:04:52 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:04:52 - INFO - __main__ - Training mode: True
+03/13/2024 22:05:58 - INFO - __main__ - Mean variance for kin_170: 0.03301124647259712
+03/13/2024 22:05:58 - INFO - __main__ - Mean std for for kin_170: 0.14026504755020142
+03/13/2024 22:05:58 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:05:58 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:05:58 - INFO - __main__ - ID text: conll_2003_en_416
+03/13/2024 22:05:58 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:05:58 - INFO - __main__ - Training mode: True
+03/13/2024 22:07:04 - INFO - __main__ - Mean variance for conll_2003_en_416: 0.036942627280950546
+03/13/2024 22:07:04 - INFO - __main__ - Mean std for for conll_2003_en_416: 0.14581845700740814
+03/13/2024 22:07:04 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:07:04 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:07:04 - INFO - __main__ - ID text: conll_2003_en_3252
+03/13/2024 22:07:04 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:07:04 - INFO - __main__ - Training mode: True
+03/13/2024 22:08:11 - INFO - __main__ - Mean variance for conll_2003_en_3252: 0.05269693210721016
+03/13/2024 22:08:11 - INFO - __main__ - Mean std for for conll_2003_en_3252: 0.20502936840057373
+03/13/2024 22:08:11 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:08:11 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:08:11 - INFO - __main__ - ID text: conll_2003_en_25
+03/13/2024 22:08:11 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:08:11 - INFO - __main__ - Training mode: True
+03/13/2024 22:09:17 - INFO - __main__ - Mean variance for conll_2003_en_25: 0.03988924250006676
+03/13/2024 22:09:17 - INFO - __main__ - Mean std for for conll_2003_en_25: 0.15512476861476898
+03/13/2024 22:09:17 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:09:17 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:09:17 - INFO - __main__ - ID text: kin_25
+03/13/2024 22:09:17 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:09:17 - INFO - __main__ - Training mode: True
+03/13/2024 22:10:25 - INFO - __main__ - Mean variance for kin_25: 0.01999094896018505
+03/13/2024 22:10:25 - INFO - __main__ - Mean std for for kin_25: 0.10683276504278183
+03/13/2024 22:10:25 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:10:25 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:10:25 - INFO - __main__ - ID text: pcm_231
+03/13/2024 22:10:25 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:10:25 - INFO - __main__ - Training mode: True
+03/13/2024 22:11:31 - INFO - __main__ - Mean variance for pcm_231: 0.03726282715797424
+03/13/2024 22:11:31 - INFO - __main__ - Mean std for for pcm_231: 0.14794982969760895
+03/13/2024 22:11:31 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:11:31 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:11:31 - INFO - __main__ - ID text: hau_433
+03/13/2024 22:11:31 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:11:31 - INFO - __main__ - Training mode: True
+03/13/2024 22:12:38 - INFO - __main__ - Mean variance for hau_433: 0.038771841675043106
+03/13/2024 22:12:38 - INFO - __main__ - Mean std for for hau_433: 0.15069074928760529
+03/13/2024 22:12:38 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:12:38 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:12:38 - INFO - __main__ - ID text: conll_2003_en_584
+03/13/2024 22:12:38 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:12:38 - INFO - __main__ - Training mode: True
+03/13/2024 22:13:45 - INFO - __main__ - Mean variance for conll_2003_en_584: 0.04772467538714409
+03/13/2024 22:13:45 - INFO - __main__ - Mean std for for conll_2003_en_584: 0.19108755886554718
+03/13/2024 22:13:45 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:13:45 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:13:45 - INFO - __main__ - ID text: conll_2003_en_2956
+03/13/2024 22:13:45 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:13:45 - INFO - __main__ - Training mode: True
+03/13/2024 22:14:51 - INFO - __main__ - Mean variance for conll_2003_en_2956: 0.048558320850133896
+03/13/2024 22:14:51 - INFO - __main__ - Mean std for for conll_2003_en_2956: 0.19112235307693481
+03/13/2024 22:14:51 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:14:51 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:14:51 - INFO - __main__ - ID text: zh_563
+03/13/2024 22:14:51 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:14:51 - INFO - __main__ - Training mode: True
+03/13/2024 22:15:57 - INFO - __main__ - Mean variance for zh_563: 0.12074777483940125
+03/13/2024 22:15:57 - INFO - __main__ - Mean std for for zh_563: 0.2864174544811249
+03/13/2024 22:15:57 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:15:57 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:15:57 - INFO - __main__ - ID text: kin_12
+03/13/2024 22:15:57 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:15:57 - INFO - __main__ - Training mode: True
+03/13/2024 22:17:04 - INFO - __main__ - Mean variance for kin_12: 0.17954842746257782
+03/13/2024 22:17:04 - INFO - __main__ - Mean std for for kin_12: 0.38135239481925964
+03/13/2024 22:17:04 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:17:04 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:17:04 - INFO - __main__ - ID text: conll_2003_en_2983
+03/13/2024 22:17:04 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:17:04 - INFO - __main__ - Training mode: True
+03/13/2024 22:18:10 - INFO - __main__ - Mean variance for conll_2003_en_2983: 0.15268516540527344
+03/13/2024 22:18:10 - INFO - __main__ - Mean std for for conll_2003_en_2983: 0.3504430055618286
+03/13/2024 22:18:10 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:18:10 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:18:10 - INFO - __main__ - ID text: yor_95
+03/13/2024 22:18:10 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:18:10 - INFO - __main__ - Training mode: True
+03/13/2024 22:19:16 - INFO - __main__ - Mean variance for yor_95: 0.14334842562675476
+03/13/2024 22:19:16 - INFO - __main__ - Mean std for for yor_95: 0.32774433493614197
+03/13/2024 22:19:16 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:19:16 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:19:16 - INFO - __main__ - ID text: pcm_141
+03/13/2024 22:19:16 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:19:16 - INFO - __main__ - Training mode: True
+03/13/2024 22:20:22 - INFO - __main__ - Mean variance for pcm_141: 0.03935249149799347
+03/13/2024 22:20:22 - INFO - __main__ - Mean std for for pcm_141: 0.15866629779338837
+03/13/2024 22:20:22 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:20:22 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:20:22 - INFO - __main__ - ID text: swa_576
+03/13/2024 22:20:22 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:20:22 - INFO - __main__ - Training mode: True
+03/13/2024 22:21:28 - INFO - __main__ - Mean variance for swa_576: 0.036967482417821884
+03/13/2024 22:21:28 - INFO - __main__ - Mean std for for swa_576: 0.1587173342704773
+03/13/2024 22:21:28 - INFO - __main__ - DONE Ner
+03/13/2024 22:21:28 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:21:28 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:21:28 - INFO - __main__ - ID text: russian-4249115877470801367-0
+03/13/2024 22:21:28 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:21:28 - INFO - __main__ - Training mode: True
+03/13/2024 22:22:35 - INFO - __main__ - Mean variance for russian-4249115877470801367-0: 0.07154671102762222
+03/13/2024 22:22:35 - INFO - __main__ - Mean std for for russian-4249115877470801367-0: 0.21971184015274048
+03/13/2024 22:22:35 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:22:35 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:22:35 - INFO - __main__ - ID text: telugu--5033932555385277544-0
+03/13/2024 22:22:35 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:22:35 - INFO - __main__ - Training mode: True
+03/13/2024 22:23:41 - INFO - __main__ - Mean variance for telugu--5033932555385277544-0: 0.03172430768609047
+03/13/2024 22:23:41 - INFO - __main__ - Mean std for for telugu--5033932555385277544-0: 0.14046718180179596
+03/13/2024 22:23:42 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:23:42 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:23:42 - INFO - __main__ - ID text: russian-7888398275808515399-1
+03/13/2024 22:23:42 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:23:42 - INFO - __main__ - Training mode: True
+03/13/2024 22:24:48 - INFO - __main__ - Mean variance for russian-7888398275808515399-1: 0.03099975176155567
+03/13/2024 22:24:48 - INFO - __main__ - Mean std for for russian-7888398275808515399-1: 0.13313470780849457
+03/13/2024 22:24:48 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:24:48 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:24:48 - INFO - __main__ - ID text: telugu-713671767070522679-0
+03/13/2024 22:24:48 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:24:48 - INFO - __main__ - Training mode: True
+03/13/2024 22:25:54 - INFO - __main__ - Mean variance for telugu-713671767070522679-0: 0.1036934033036232
+03/13/2024 22:25:54 - INFO - __main__ - Mean std for for telugu-713671767070522679-0: 0.26411762833595276
+03/13/2024 22:25:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:25:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:25:54 - INFO - __main__ - ID text: indonesian--1662117902694110936-0
+03/13/2024 22:25:54 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:25:54 - INFO - __main__ - Training mode: True
+03/13/2024 22:27:00 - INFO - __main__ - Mean variance for indonesian--1662117902694110936-0: 0.03472823277115822
+03/13/2024 22:27:00 - INFO - __main__ - Mean std for for indonesian--1662117902694110936-0: 0.1413060873746872
+03/13/2024 22:27:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:27:00 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:27:00 - INFO - __main__ - ID text: indonesian--6875782319991396106-1
+03/13/2024 22:27:00 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:27:00 - INFO - __main__ - Training mode: True
+03/13/2024 22:28:06 - INFO - __main__ - Mean variance for indonesian--6875782319991396106-1: 0.01946433074772358
+03/13/2024 22:28:06 - INFO - __main__ - Mean std for for indonesian--6875782319991396106-1: 0.1071176752448082
+03/13/2024 22:28:06 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:28:06 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:28:06 - INFO - __main__ - ID text: telugu--7024664909033842374-0
+03/13/2024 22:28:06 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:28:06 - INFO - __main__ - Training mode: True
+03/13/2024 22:29:12 - INFO - __main__ - Mean variance for telugu--7024664909033842374-0: 0.029772793874144554
+03/13/2024 22:29:12 - INFO - __main__ - Mean std for for telugu--7024664909033842374-0: 0.13649798929691315
+03/13/2024 22:29:12 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:29:12 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:29:12 - INFO - __main__ - ID text: english-5478979279845771437-33
+03/13/2024 22:29:12 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:29:12 - INFO - __main__ - Training mode: True
+03/13/2024 22:30:17 - INFO - __main__ - Mean variance for english-5478979279845771437-33: 0.019500143826007843
+03/13/2024 22:30:17 - INFO - __main__ - Mean std for for english-5478979279845771437-33: 0.1086784228682518
+03/13/2024 22:30:17 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:30:17 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:30:17 - INFO - __main__ - ID text: swahili-9114663100990629611-0
+03/13/2024 22:30:17 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:30:17 - INFO - __main__ - Training mode: True
+03/13/2024 22:31:23 - INFO - __main__ - Mean variance for swahili-9114663100990629611-0: 0.015009625814855099
+03/13/2024 22:31:23 - INFO - __main__ - Mean std for for swahili-9114663100990629611-0: 0.09951183944940567
+03/13/2024 22:31:23 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:31:23 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:31:23 - INFO - __main__ - ID text: english-1827422797737592316-10
+03/13/2024 22:31:23 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:31:23 - INFO - __main__ - Training mode: True
+03/13/2024 22:32:28 - INFO - __main__ - Mean variance for english-1827422797737592316-10: 0.017803065478801727
+03/13/2024 22:32:28 - INFO - __main__ - Mean std for for english-1827422797737592316-10: 0.10538852959871292
+03/13/2024 22:32:28 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:32:28 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:32:28 - INFO - __main__ - ID text: finnish-6704466918161185953-92
+03/13/2024 22:32:28 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:32:28 - INFO - __main__ - Training mode: True
+03/13/2024 22:33:34 - INFO - __main__ - Mean variance for finnish-6704466918161185953-92: 0.011768978089094162
+03/13/2024 22:33:34 - INFO - __main__ - Mean std for for finnish-6704466918161185953-92: 0.08899915963411331
+03/13/2024 22:33:34 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:33:34 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:33:34 - INFO - __main__ - ID text: finnish--6369411796461550218-0
+03/13/2024 22:33:34 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:33:34 - INFO - __main__ - Training mode: True
+03/13/2024 22:34:40 - INFO - __main__ - Mean variance for finnish--6369411796461550218-0: 0.01495799794793129
+03/13/2024 22:34:40 - INFO - __main__ - Mean std for for finnish--6369411796461550218-0: 0.09758415073156357
+03/13/2024 22:34:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:34:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:34:40 - INFO - __main__ - ID text: bengali-3279821707062003108-0
+03/13/2024 22:34:40 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:34:40 - INFO - __main__ - Training mode: True
+03/13/2024 22:35:46 - INFO - __main__ - Mean variance for bengali-3279821707062003108-0: 0.09001337736845016
+03/13/2024 22:35:46 - INFO - __main__ - Mean std for for bengali-3279821707062003108-0: 0.2484167069196701
+03/13/2024 22:35:47 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:35:47 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:35:47 - INFO - __main__ - ID text: russian--2436370759445792453-6
+03/13/2024 22:35:47 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:35:47 - INFO - __main__ - Training mode: True
+03/13/2024 22:36:53 - INFO - __main__ - Mean variance for russian--2436370759445792453-6: 0.03806879371404648
+03/13/2024 22:36:53 - INFO - __main__ - Mean std for for russian--2436370759445792453-6: 0.15244048833847046
+03/13/2024 22:36:53 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:36:53 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:36:53 - INFO - __main__ - ID text: indonesian--7212944268145830193-0
+03/13/2024 22:36:53 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:36:53 - INFO - __main__ - Training mode: True
+03/13/2024 22:37:59 - INFO - __main__ - Mean variance for indonesian--7212944268145830193-0: 0.019461199641227722
+03/13/2024 22:37:59 - INFO - __main__ - Mean std for for indonesian--7212944268145830193-0: 0.10778119415044785
+03/13/2024 22:37:59 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:37:59 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:37:59 - INFO - __main__ - ID text: korean--3875848982175501566-0
+03/13/2024 22:37:59 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:37:59 - INFO - __main__ - Training mode: True
+03/13/2024 22:39:05 - INFO - __main__ - Mean variance for korean--3875848982175501566-0: 0.09078049659729004
+03/13/2024 22:39:05 - INFO - __main__ - Mean std for for korean--3875848982175501566-0: 0.24815897643566132
+03/13/2024 22:39:05 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:39:05 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:39:05 - INFO - __main__ - ID text: arabic-2351096349705764915-0
+03/13/2024 22:39:05 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:39:05 - INFO - __main__ - Training mode: True
+03/13/2024 22:40:10 - INFO - __main__ - Mean variance for arabic-2351096349705764915-0: 0.039143290370702744
+03/13/2024 22:40:10 - INFO - __main__ - Mean std for for arabic-2351096349705764915-0: 0.15777041018009186
+03/13/2024 22:40:10 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:40:10 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:40:10 - INFO - __main__ - ID text: arabic-8151877722627129121-0
+03/13/2024 22:40:10 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:40:10 - INFO - __main__ - Training mode: True
+03/13/2024 22:41:17 - INFO - __main__ - Mean variance for arabic-8151877722627129121-0: 0.06223263218998909
+03/13/2024 22:41:17 - INFO - __main__ - Mean std for for arabic-8151877722627129121-0: 0.20297002792358398
+03/13/2024 22:41:17 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:41:17 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:41:17 - INFO - __main__ - ID text: arabic-3207337766581791018-0
+03/13/2024 22:41:17 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:41:17 - INFO - __main__ - Training mode: True
+03/13/2024 22:42:23 - INFO - __main__ - Mean variance for arabic-3207337766581791018-0: 0.03676309064030647
+03/13/2024 22:42:23 - INFO - __main__ - Mean std for for arabic-3207337766581791018-0: 0.15525902807712555
+03/13/2024 22:42:23 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:42:23 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:42:23 - INFO - __main__ - ID text: russian-2382936912420430159-3
+03/13/2024 22:42:23 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:42:23 - INFO - __main__ - Training mode: True
+03/13/2024 22:43:29 - INFO - __main__ - Mean variance for russian-2382936912420430159-3: 0.03495882451534271
+03/13/2024 22:43:29 - INFO - __main__ - Mean std for for russian-2382936912420430159-3: 0.14398100972175598
+03/13/2024 22:43:29 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:43:29 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:43:29 - INFO - __main__ - ID text: russian--7943087334328460999-1
+03/13/2024 22:43:29 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:43:29 - INFO - __main__ - Training mode: True
+03/13/2024 22:44:35 - INFO - __main__ - Mean variance for russian--7943087334328460999-1: 0.018671933561563492
+03/13/2024 22:44:35 - INFO - __main__ - Mean std for for russian--7943087334328460999-1: 0.1095796748995781
+03/13/2024 22:44:35 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:44:35 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:44:35 - INFO - __main__ - ID text: swahili-8747981262437249482-4
+03/13/2024 22:44:35 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:44:35 - INFO - __main__ - Training mode: True
+03/13/2024 22:45:42 - INFO - __main__ - Mean variance for swahili-8747981262437249482-4: 0.03643510118126869
+03/13/2024 22:45:42 - INFO - __main__ - Mean std for for swahili-8747981262437249482-4: 0.1504472941160202
+03/13/2024 22:45:42 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:45:42 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:45:42 - INFO - __main__ - ID text: english-4916306911418053797-0
+03/13/2024 22:45:42 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:45:42 - INFO - __main__ - Training mode: True
+03/13/2024 22:46:48 - INFO - __main__ - Mean variance for english-4916306911418053797-0: 0.017765045166015625
+03/13/2024 22:46:48 - INFO - __main__ - Mean std for for english-4916306911418053797-0: 0.10477199405431747
+03/13/2024 22:46:48 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:46:48 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:46:48 - INFO - __main__ - ID text: arabic--5653854320973774752-0
+03/13/2024 22:46:48 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:46:48 - INFO - __main__ - Training mode: True
+03/13/2024 22:47:54 - INFO - __main__ - Mean variance for arabic--5653854320973774752-0: 0.05405956879258156
+03/13/2024 22:47:54 - INFO - __main__ - Mean std for for arabic--5653854320973774752-0: 0.18623970448970795
+03/13/2024 22:47:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:47:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:47:54 - INFO - __main__ - ID text: finnish--7202747617437731032-0
+03/13/2024 22:47:54 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:47:54 - INFO - __main__ - Training mode: True
+03/13/2024 22:49:00 - INFO - __main__ - Mean variance for finnish--7202747617437731032-0: 0.014778616838157177
+03/13/2024 22:49:00 - INFO - __main__ - Mean std for for finnish--7202747617437731032-0: 0.09734395891427994
+03/13/2024 22:49:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:49:00 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:49:00 - INFO - __main__ - ID text: finnish--5840472413332480849-20
+03/13/2024 22:49:00 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:49:00 - INFO - __main__ - Training mode: True
+03/13/2024 22:50:06 - INFO - __main__ - Mean variance for finnish--5840472413332480849-20: 0.021825334057211876
+03/13/2024 22:50:06 - INFO - __main__ - Mean std for for finnish--5840472413332480849-20: 0.11171877384185791
+03/13/2024 22:50:06 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:50:06 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:50:06 - INFO - __main__ - ID text: english--5706186565576074119-1
+03/13/2024 22:50:06 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:50:06 - INFO - __main__ - Training mode: True
+03/13/2024 22:51:11 - INFO - __main__ - Mean variance for english--5706186565576074119-1: 0.018672624602913857
+03/13/2024 22:51:11 - INFO - __main__ - Mean std for for english--5706186565576074119-1: 0.10619613528251648
+03/13/2024 22:51:11 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:51:11 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:51:11 - INFO - __main__ - ID text: korean--1346754875574800904-1
+03/13/2024 22:51:11 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:51:11 - INFO - __main__ - Training mode: True
+03/13/2024 22:52:18 - INFO - __main__ - Mean variance for korean--1346754875574800904-1: 0.1412384808063507
+03/13/2024 22:52:18 - INFO - __main__ - Mean std for for korean--1346754875574800904-1: 0.31165874004364014
+03/13/2024 22:52:18 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:52:18 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:52:18 - INFO - __main__ - ID text: indonesian-2661823338185246511-0
+03/13/2024 22:52:18 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:52:18 - INFO - __main__ - Training mode: True
+03/13/2024 22:53:23 - INFO - __main__ - Mean variance for indonesian-2661823338185246511-0: 0.013171225786209106
+03/13/2024 22:53:23 - INFO - __main__ - Mean std for for indonesian-2661823338185246511-0: 0.09388723224401474
+03/13/2024 22:53:23 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:53:23 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:53:23 - INFO - __main__ - ID text: telugu-1648490267441309188-0
+03/13/2024 22:53:23 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:53:23 - INFO - __main__ - Training mode: True
+03/13/2024 22:54:29 - INFO - __main__ - Mean variance for telugu-1648490267441309188-0: 0.035443928092718124
+03/13/2024 22:54:29 - INFO - __main__ - Mean std for for telugu-1648490267441309188-0: 0.1481110006570816
+03/13/2024 22:54:29 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:54:29 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:54:29 - INFO - __main__ - ID text: indonesian--3999003506418034446-0
+03/13/2024 22:54:29 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:54:29 - INFO - __main__ - Training mode: True
+03/13/2024 22:55:35 - INFO - __main__ - Mean variance for indonesian--3999003506418034446-0: 0.03325826674699783
+03/13/2024 22:55:35 - INFO - __main__ - Mean std for for indonesian--3999003506418034446-0: 0.13828065991401672
+03/13/2024 22:55:35 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:55:35 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:55:35 - INFO - __main__ - ID text: arabic--8541282488835603445-0
+03/13/2024 22:55:35 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:55:35 - INFO - __main__ - Training mode: True
+03/13/2024 22:56:40 - INFO - __main__ - Mean variance for arabic--8541282488835603445-0: 0.037683483213186264
+03/13/2024 22:56:40 - INFO - __main__ - Mean std for for arabic--8541282488835603445-0: 0.15614895522594452
+03/13/2024 22:56:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:56:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:56:40 - INFO - __main__ - ID text: russian-4329697005017142576-0
+03/13/2024 22:56:40 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:56:40 - INFO - __main__ - Training mode: True
+03/13/2024 22:57:46 - INFO - __main__ - Mean variance for russian-4329697005017142576-0: 0.022221552208065987
+03/13/2024 22:57:46 - INFO - __main__ - Mean std for for russian-4329697005017142576-0: 0.11671116203069687
+03/13/2024 22:57:46 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:57:46 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:57:46 - INFO - __main__ - ID text: indonesian-148348127461563099-9
+03/13/2024 22:57:46 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:57:46 - INFO - __main__ - Training mode: True
+03/13/2024 22:58:53 - INFO - __main__ - Mean variance for indonesian-148348127461563099-9: 0.015182060189545155
+03/13/2024 22:58:53 - INFO - __main__ - Mean std for for indonesian-148348127461563099-9: 0.09999708086252213
+03/13/2024 22:58:53 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:58:53 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:58:53 - INFO - __main__ - ID text: telugu-507719114038632250-0
+03/13/2024 22:58:53 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:58:53 - INFO - __main__ - Training mode: True
+03/13/2024 22:59:59 - INFO - __main__ - Mean variance for telugu-507719114038632250-0: 0.032730117440223694
+03/13/2024 22:59:59 - INFO - __main__ - Mean std for for telugu-507719114038632250-0: 0.14291609823703766
+03/13/2024 22:59:59 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 22:59:59 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 22:59:59 - INFO - __main__ - ID text: finnish-860025919176400946-2
+03/13/2024 22:59:59 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 22:59:59 - INFO - __main__ - Training mode: True
+03/13/2024 23:01:04 - INFO - __main__ - Mean variance for finnish-860025919176400946-2: 0.013276769779622555
+03/13/2024 23:01:04 - INFO - __main__ - Mean std for for finnish-860025919176400946-2: 0.09229013323783875
+03/13/2024 23:01:04 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:01:04 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:01:04 - INFO - __main__ - ID text: arabic-3050050934047809918-0
+03/13/2024 23:01:04 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:01:04 - INFO - __main__ - Training mode: True
+03/13/2024 23:02:11 - INFO - __main__ - Mean variance for arabic-3050050934047809918-0: 0.03567306697368622
+03/13/2024 23:02:11 - INFO - __main__ - Mean std for for arabic-3050050934047809918-0: 0.14656345546245575
+03/13/2024 23:02:11 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:02:11 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:02:11 - INFO - __main__ - ID text: telugu-2013662435830074518-0
+03/13/2024 23:02:11 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:02:11 - INFO - __main__ - Training mode: True
+03/13/2024 23:03:17 - INFO - __main__ - Mean variance for telugu-2013662435830074518-0: 0.03069574199616909
+03/13/2024 23:03:17 - INFO - __main__ - Mean std for for telugu-2013662435830074518-0: 0.13851051032543182
+03/13/2024 23:03:17 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:03:17 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:03:17 - INFO - __main__ - ID text: swahili-3189452844302275181-0
+03/13/2024 23:03:17 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:03:17 - INFO - __main__ - Training mode: True
+03/13/2024 23:04:23 - INFO - __main__ - Mean variance for swahili-3189452844302275181-0: 0.033120568841695786
+03/13/2024 23:04:23 - INFO - __main__ - Mean std for for swahili-3189452844302275181-0: 0.13905473053455353
+03/13/2024 23:04:23 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:04:23 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:04:23 - INFO - __main__ - ID text: russian-4075106104606070541-0
+03/13/2024 23:04:23 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:04:23 - INFO - __main__ - Training mode: True
+03/13/2024 23:05:28 - INFO - __main__ - Mean variance for russian-4075106104606070541-0: 0.04633129760622978
+03/13/2024 23:05:28 - INFO - __main__ - Mean std for for russian-4075106104606070541-0: 0.17331743240356445
+03/13/2024 23:05:28 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:05:28 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:05:28 - INFO - __main__ - ID text: swahili--1166799589568884147-2
+03/13/2024 23:05:28 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:05:28 - INFO - __main__ - Training mode: True
+03/13/2024 23:06:34 - INFO - __main__ - Mean variance for swahili--1166799589568884147-2: 0.03500741347670555
+03/13/2024 23:06:34 - INFO - __main__ - Mean std for for swahili--1166799589568884147-2: 0.14951729774475098
+03/13/2024 23:06:34 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:06:34 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:06:34 - INFO - __main__ - ID text: arabic--4894197851010549328-0
+03/13/2024 23:06:34 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:06:34 - INFO - __main__ - Training mode: True
+03/13/2024 23:07:40 - INFO - __main__ - Mean variance for arabic--4894197851010549328-0: 0.040731851011514664
+03/13/2024 23:07:40 - INFO - __main__ - Mean std for for arabic--4894197851010549328-0: 0.16001906991004944
+03/13/2024 23:07:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:07:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:07:40 - INFO - __main__ - ID text: telugu--9179046176937299698-0
+03/13/2024 23:07:40 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:07:40 - INFO - __main__ - Training mode: True
+03/13/2024 23:08:46 - INFO - __main__ - Mean variance for telugu--9179046176937299698-0: 0.03176989033818245
+03/13/2024 23:08:46 - INFO - __main__ - Mean std for for telugu--9179046176937299698-0: 0.14040879905223846
+03/13/2024 23:08:46 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:08:46 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:08:46 - INFO - __main__ - ID text: indonesian-4872122324683106303-92
+03/13/2024 23:08:46 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:08:46 - INFO - __main__ - Training mode: True
+03/13/2024 23:09:52 - INFO - __main__ - Mean variance for indonesian-4872122324683106303-92: 0.016176478937268257
+03/13/2024 23:09:52 - INFO - __main__ - Mean std for for indonesian-4872122324683106303-92: 0.10105868428945541
+03/13/2024 23:09:52 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:09:52 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:09:52 - INFO - __main__ - ID text: russian--2635479971665322251-3
+03/13/2024 23:09:52 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:09:52 - INFO - __main__ - Training mode: True
+03/13/2024 23:10:58 - INFO - __main__ - Mean variance for russian--2635479971665322251-3: 0.019617067649960518
+03/13/2024 23:10:58 - INFO - __main__ - Mean std for for russian--2635479971665322251-3: 0.11220448464155197
+03/13/2024 23:10:58 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:10:58 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:10:58 - INFO - __main__ - ID text: indonesian-7607882459638268302-0
+03/13/2024 23:10:58 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:10:58 - INFO - __main__ - Training mode: True
+03/13/2024 23:12:04 - INFO - __main__ - Mean variance for indonesian-7607882459638268302-0: 0.030907398089766502
+03/13/2024 23:12:04 - INFO - __main__ - Mean std for for indonesian-7607882459638268302-0: 0.13540175557136536
+03/13/2024 23:12:04 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:12:04 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:12:04 - INFO - __main__ - ID text: arabic--7379494042777342537-3
+03/13/2024 23:12:04 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:12:04 - INFO - __main__ - Training mode: True
+03/13/2024 23:13:10 - INFO - __main__ - Mean variance for arabic--7379494042777342537-3: 0.0405072420835495
+03/13/2024 23:13:10 - INFO - __main__ - Mean std for for arabic--7379494042777342537-3: 0.16155041754245758
+03/13/2024 23:13:10 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:13:10 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:13:10 - INFO - __main__ - ID text: telugu--3285628036396185959-0
+03/13/2024 23:13:10 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:13:10 - INFO - __main__ - Training mode: True
+03/13/2024 23:14:16 - INFO - __main__ - Mean variance for telugu--3285628036396185959-0: 0.033262740820646286
+03/13/2024 23:14:16 - INFO - __main__ - Mean std for for telugu--3285628036396185959-0: 0.1420537233352661
+03/13/2024 23:14:16 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:14:16 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:14:16 - INFO - __main__ - ID text: english--9053478484375274406-1
+03/13/2024 23:14:16 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:14:16 - INFO - __main__ - Training mode: True
+03/13/2024 23:15:22 - INFO - __main__ - Mean variance for english--9053478484375274406-1: 0.044209834188222885
+03/13/2024 23:15:22 - INFO - __main__ - Mean std for for english--9053478484375274406-1: 0.15555335581302643
+03/13/2024 23:15:22 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:15:22 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:15:22 - INFO - __main__ - ID text: russian-8377457426244446718-1
+03/13/2024 23:15:22 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:15:22 - INFO - __main__ - Training mode: True
+03/13/2024 23:16:28 - INFO - __main__ - Mean variance for russian-8377457426244446718-1: 0.021411990746855736
+03/13/2024 23:16:28 - INFO - __main__ - Mean std for for russian-8377457426244446718-1: 0.11647333949804306
+03/13/2024 23:16:28 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:16:28 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:16:28 - INFO - __main__ - ID text: finnish--4202622559859972951-4
+03/13/2024 23:16:28 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:16:28 - INFO - __main__ - Training mode: True
+03/13/2024 23:17:34 - INFO - __main__ - Mean variance for finnish--4202622559859972951-4: 0.013738199137151241
+03/13/2024 23:17:34 - INFO - __main__ - Mean std for for finnish--4202622559859972951-4: 0.09495791792869568
+03/13/2024 23:17:34 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:17:34 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:17:34 - INFO - __main__ - ID text: russian--6154565655687197088-0
+03/13/2024 23:17:34 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:17:34 - INFO - __main__ - Training mode: True
+03/13/2024 23:18:40 - INFO - __main__ - Mean variance for russian--6154565655687197088-0: 0.020118745043873787
+03/13/2024 23:18:40 - INFO - __main__ - Mean std for for russian--6154565655687197088-0: 0.11106765270233154
+03/13/2024 23:18:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:18:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:18:40 - INFO - __main__ - ID text: indonesian--5129871463312724843-8
+03/13/2024 23:18:40 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:18:40 - INFO - __main__ - Training mode: True
+03/13/2024 23:19:45 - INFO - __main__ - Mean variance for indonesian--5129871463312724843-8: 0.015015870332717896
+03/13/2024 23:19:45 - INFO - __main__ - Mean std for for indonesian--5129871463312724843-8: 0.09978114813566208
+03/13/2024 23:19:45 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:19:45 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:19:45 - INFO - __main__ - ID text: indonesian-8542548889842650123-3
+03/13/2024 23:19:45 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:19:45 - INFO - __main__ - Training mode: True
+03/13/2024 23:20:51 - INFO - __main__ - Mean variance for indonesian-8542548889842650123-3: 0.01790132001042366
+03/13/2024 23:20:51 - INFO - __main__ - Mean std for for indonesian-8542548889842650123-3: 0.10512521117925644
+03/13/2024 23:20:51 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:20:51 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:20:51 - INFO - __main__ - ID text: arabic--6656750768356246625-13
+03/13/2024 23:20:51 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:20:51 - INFO - __main__ - Training mode: True
+03/13/2024 23:21:57 - INFO - __main__ - Mean variance for arabic--6656750768356246625-13: 0.04192448779940605
+03/13/2024 23:21:57 - INFO - __main__ - Mean std for for arabic--6656750768356246625-13: 0.16239812970161438
+03/13/2024 23:21:57 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:21:57 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:21:57 - INFO - __main__ - ID text: english-4548443421907062062-4
+03/13/2024 23:21:57 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:21:57 - INFO - __main__ - Training mode: True
+03/13/2024 23:23:03 - INFO - __main__ - Mean variance for english-4548443421907062062-4: 0.01644705794751644
+03/13/2024 23:23:03 - INFO - __main__ - Mean std for for english-4548443421907062062-4: 0.10178470611572266
+03/13/2024 23:23:03 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:23:03 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:23:03 - INFO - __main__ - ID text: finnish--7506034068619965746-0
+03/13/2024 23:23:03 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:23:03 - INFO - __main__ - Training mode: True
+03/13/2024 23:24:09 - INFO - __main__ - Mean variance for finnish--7506034068619965746-0: 0.01629178784787655
+03/13/2024 23:24:09 - INFO - __main__ - Mean std for for finnish--7506034068619965746-0: 0.10190507024526596
+03/13/2024 23:24:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:24:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:24:09 - INFO - __main__ - ID text: korean-4884819928154798502-0
+03/13/2024 23:24:09 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:24:09 - INFO - __main__ - Training mode: True
+03/13/2024 23:25:14 - INFO - __main__ - Mean variance for korean-4884819928154798502-0: 0.08375302702188492
+03/13/2024 23:25:14 - INFO - __main__ - Mean std for for korean-4884819928154798502-0: 0.2368321269750595
+03/13/2024 23:25:15 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:25:15 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:25:15 - INFO - __main__ - ID text: arabic--6050477628304083485-0
+03/13/2024 23:25:15 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:25:15 - INFO - __main__ - Training mode: True
+03/13/2024 23:26:20 - INFO - __main__ - Mean variance for arabic--6050477628304083485-0: 0.03870328143239021
+03/13/2024 23:26:20 - INFO - __main__ - Mean std for for arabic--6050477628304083485-0: 0.15888488292694092
+03/13/2024 23:26:20 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:26:20 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:26:20 - INFO - __main__ - ID text: arabic-3193131618289371308-0
+03/13/2024 23:26:20 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:26:20 - INFO - __main__ - Training mode: True
+03/13/2024 23:27:26 - INFO - __main__ - Mean variance for arabic-3193131618289371308-0: 0.04067542031407356
+03/13/2024 23:27:26 - INFO - __main__ - Mean std for for arabic-3193131618289371308-0: 0.16189755499362946
+03/13/2024 23:27:26 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:27:26 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:27:26 - INFO - __main__ - ID text: finnish-1603959111444132545-0
+03/13/2024 23:27:26 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:27:26 - INFO - __main__ - Training mode: True
+03/13/2024 23:28:32 - INFO - __main__ - Mean variance for finnish-1603959111444132545-0: 0.01740373484790325
+03/13/2024 23:28:32 - INFO - __main__ - Mean std for for finnish-1603959111444132545-0: 0.10532359033823013
+03/13/2024 23:28:32 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:28:32 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:28:32 - INFO - __main__ - ID text: finnish--7573975696933096182-0
+03/13/2024 23:28:32 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:28:32 - INFO - __main__ - Training mode: True
+03/13/2024 23:29:38 - INFO - __main__ - Mean variance for finnish--7573975696933096182-0: 0.020529815927147865
+03/13/2024 23:29:38 - INFO - __main__ - Mean std for for finnish--7573975696933096182-0: 0.11049505323171616
+03/13/2024 23:29:38 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:29:38 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:29:38 - INFO - __main__ - ID text: telugu-1232440739069290030-21
+03/13/2024 23:29:38 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:29:38 - INFO - __main__ - Training mode: True
+03/13/2024 23:30:44 - INFO - __main__ - Mean variance for telugu-1232440739069290030-21: 0.09737855195999146
+03/13/2024 23:30:44 - INFO - __main__ - Mean std for for telugu-1232440739069290030-21: 0.25613638758659363
+03/13/2024 23:30:44 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:30:44 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:30:44 - INFO - __main__ - ID text: arabic-6565837812867020231-1
+03/13/2024 23:30:44 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:30:44 - INFO - __main__ - Training mode: True
+03/13/2024 23:31:49 - INFO - __main__ - Mean variance for arabic-6565837812867020231-1: 0.05594766139984131
+03/13/2024 23:31:49 - INFO - __main__ - Mean std for for arabic-6565837812867020231-1: 0.18984313309192657
+03/13/2024 23:31:49 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:31:49 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:31:49 - INFO - __main__ - ID text: telugu-4617795002680831857-1
+03/13/2024 23:31:49 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:31:49 - INFO - __main__ - Training mode: True
+03/13/2024 23:32:55 - INFO - __main__ - Mean variance for telugu-4617795002680831857-1: 0.09633159637451172
+03/13/2024 23:32:55 - INFO - __main__ - Mean std for for telugu-4617795002680831857-1: 0.25322115421295166
+03/13/2024 23:32:55 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:32:55 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:32:55 - INFO - __main__ - ID text: english-2483641648082790457-0
+03/13/2024 23:32:55 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:32:55 - INFO - __main__ - Training mode: True
+03/13/2024 23:34:00 - INFO - __main__ - Mean variance for english-2483641648082790457-0: 0.01565789431333542
+03/13/2024 23:34:00 - INFO - __main__ - Mean std for for english-2483641648082790457-0: 0.09932362288236618
+03/13/2024 23:34:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:34:00 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:34:00 - INFO - __main__ - ID text: arabic--2476152368093273828-0
+03/13/2024 23:34:00 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:34:00 - INFO - __main__ - Training mode: True
+03/13/2024 23:35:06 - INFO - __main__ - Mean variance for arabic--2476152368093273828-0: 0.03613753989338875
+03/13/2024 23:35:06 - INFO - __main__ - Mean std for for arabic--2476152368093273828-0: 0.152621328830719
+03/13/2024 23:35:06 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:35:06 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:35:06 - INFO - __main__ - ID text: arabic-3009880400254123938-0
+03/13/2024 23:35:06 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:35:06 - INFO - __main__ - Training mode: True
+03/13/2024 23:36:11 - INFO - __main__ - Mean variance for arabic-3009880400254123938-0: 0.036341916769742966
+03/13/2024 23:36:11 - INFO - __main__ - Mean std for for arabic-3009880400254123938-0: 0.15431079268455505
+03/13/2024 23:36:11 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:36:11 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:36:11 - INFO - __main__ - ID text: korean--1715118423211755607-13
+03/13/2024 23:36:11 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:36:11 - INFO - __main__ - Training mode: True
+03/13/2024 23:37:17 - INFO - __main__ - Mean variance for korean--1715118423211755607-13: 0.022624224424362183
+03/13/2024 23:37:17 - INFO - __main__ - Mean std for for korean--1715118423211755607-13: 0.12344249337911606
+03/13/2024 23:37:17 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:37:17 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:37:17 - INFO - __main__ - ID text: arabic--7152940632364291916-0
+03/13/2024 23:37:17 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:37:17 - INFO - __main__ - Training mode: True
+03/13/2024 23:38:23 - INFO - __main__ - Mean variance for arabic--7152940632364291916-0: 0.05516559258103371
+03/13/2024 23:38:23 - INFO - __main__ - Mean std for for arabic--7152940632364291916-0: 0.18953140079975128
+03/13/2024 23:38:23 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:38:23 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:38:23 - INFO - __main__ - ID text: indonesian--7584593302070700915-2
+03/13/2024 23:38:23 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:38:23 - INFO - __main__ - Training mode: True
+03/13/2024 23:39:29 - INFO - __main__ - Mean variance for indonesian--7584593302070700915-2: 0.01622752659022808
+03/13/2024 23:39:29 - INFO - __main__ - Mean std for for indonesian--7584593302070700915-2: 0.10129129886627197
+03/13/2024 23:39:29 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:39:29 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:39:29 - INFO - __main__ - ID text: russian-7713480554395224009-5
+03/13/2024 23:39:29 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:39:29 - INFO - __main__ - Training mode: True
+03/13/2024 23:40:34 - INFO - __main__ - Mean variance for russian-7713480554395224009-5: 0.041735727339982986
+03/13/2024 23:40:34 - INFO - __main__ - Mean std for for russian-7713480554395224009-5: 0.15546457469463348
+03/13/2024 23:40:35 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:40:35 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:40:35 - INFO - __main__ - ID text: russian--1678801928221620289-25
+03/13/2024 23:40:35 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:40:35 - INFO - __main__ - Training mode: True
+03/13/2024 23:41:40 - INFO - __main__ - Mean variance for russian--1678801928221620289-25: 0.018437838181853294
+03/13/2024 23:41:40 - INFO - __main__ - Mean std for for russian--1678801928221620289-25: 0.11014100164175034
+03/13/2024 23:41:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:41:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:41:40 - INFO - __main__ - ID text: korean--3770903224034960234-1
+03/13/2024 23:41:40 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:41:40 - INFO - __main__ - Training mode: True
+03/13/2024 23:42:46 - INFO - __main__ - Mean variance for korean--3770903224034960234-1: 0.026528002694249153
+03/13/2024 23:42:46 - INFO - __main__ - Mean std for for korean--3770903224034960234-1: 0.13075190782546997
+03/13/2024 23:42:46 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:42:46 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:42:46 - INFO - __main__ - ID text: indonesian-4425985708682922187-1
+03/13/2024 23:42:46 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:42:46 - INFO - __main__ - Training mode: True
+03/13/2024 23:43:51 - INFO - __main__ - Mean variance for indonesian-4425985708682922187-1: 0.0191214457154274
+03/13/2024 23:43:51 - INFO - __main__ - Mean std for for indonesian-4425985708682922187-1: 0.10590264946222305
+03/13/2024 23:43:51 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:43:51 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:43:51 - INFO - __main__ - ID text: russian-3237181095912660061-0
+03/13/2024 23:43:51 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:43:51 - INFO - __main__ - Training mode: True
+03/13/2024 23:44:57 - INFO - __main__ - Mean variance for russian-3237181095912660061-0: 0.01944402977824211
+03/13/2024 23:44:57 - INFO - __main__ - Mean std for for russian-3237181095912660061-0: 0.10945843905210495
+03/13/2024 23:44:57 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:44:57 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:44:57 - INFO - __main__ - ID text: telugu--6621674146006300543-0
+03/13/2024 23:44:57 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:44:57 - INFO - __main__ - Training mode: True
+03/13/2024 23:46:03 - INFO - __main__ - Mean variance for telugu--6621674146006300543-0: 0.031516656279563904
+03/13/2024 23:46:03 - INFO - __main__ - Mean std for for telugu--6621674146006300543-0: 0.1407792717218399
+03/13/2024 23:46:03 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:46:03 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:46:03 - INFO - __main__ - ID text: indonesian-2517151464593065213-5
+03/13/2024 23:46:03 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:46:03 - INFO - __main__ - Training mode: True
+03/13/2024 23:47:09 - INFO - __main__ - Mean variance for indonesian-2517151464593065213-5: 0.016055617481470108
+03/13/2024 23:47:09 - INFO - __main__ - Mean std for for indonesian-2517151464593065213-5: 0.10229897499084473
+03/13/2024 23:47:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:47:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:47:09 - INFO - __main__ - ID text: english--1013451500741008318-0
+03/13/2024 23:47:09 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:47:09 - INFO - __main__ - Training mode: True
+03/13/2024 23:48:14 - INFO - __main__ - Mean variance for english--1013451500741008318-0: 0.034528348594903946
+03/13/2024 23:48:14 - INFO - __main__ - Mean std for for english--1013451500741008318-0: 0.14226648211479187
+03/13/2024 23:48:14 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:48:14 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:48:14 - INFO - __main__ - ID text: swahili--7865666212568431271-0
+03/13/2024 23:48:14 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:48:14 - INFO - __main__ - Training mode: True
+03/13/2024 23:49:20 - INFO - __main__ - Mean variance for swahili--7865666212568431271-0: 0.03418964147567749
+03/13/2024 23:49:20 - INFO - __main__ - Mean std for for swahili--7865666212568431271-0: 0.1401931792497635
+03/13/2024 23:49:20 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:49:20 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:49:20 - INFO - __main__ - ID text: bengali--2217820890808407965-4
+03/13/2024 23:49:20 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:49:20 - INFO - __main__ - Training mode: True
+03/13/2024 23:50:26 - INFO - __main__ - Mean variance for bengali--2217820890808407965-4: 0.09226609021425247
+03/13/2024 23:50:26 - INFO - __main__ - Mean std for for bengali--2217820890808407965-4: 0.25165560841560364
+03/13/2024 23:50:26 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:50:26 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:50:26 - INFO - __main__ - ID text: indonesian-8549766724318606626-0
+03/13/2024 23:50:26 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:50:26 - INFO - __main__ - Training mode: True
+03/13/2024 23:51:32 - INFO - __main__ - Mean variance for indonesian-8549766724318606626-0: 0.01540481299161911
+03/13/2024 23:51:32 - INFO - __main__ - Mean std for for indonesian-8549766724318606626-0: 0.09960237890481949
+03/13/2024 23:51:32 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:51:32 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:51:32 - INFO - __main__ - ID text: russian--150569960476779829-2
+03/13/2024 23:51:32 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:51:32 - INFO - __main__ - Training mode: True
+03/13/2024 23:52:38 - INFO - __main__ - Mean variance for russian--150569960476779829-2: 0.031661514192819595
+03/13/2024 23:52:38 - INFO - __main__ - Mean std for for russian--150569960476779829-2: 0.13943029940128326
+03/13/2024 23:52:38 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:52:38 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:52:38 - INFO - __main__ - ID text: finnish-6612298839897332448-9
+03/13/2024 23:52:38 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:52:38 - INFO - __main__ - Training mode: True
+03/13/2024 23:53:43 - INFO - __main__ - Mean variance for finnish-6612298839897332448-9: 0.011369035579264164
+03/13/2024 23:53:43 - INFO - __main__ - Mean std for for finnish-6612298839897332448-9: 0.08822944015264511
+03/13/2024 23:53:43 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:53:43 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:53:43 - INFO - __main__ - ID text: finnish-8197021671981786591-0
+03/13/2024 23:53:43 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:53:43 - INFO - __main__ - Training mode: True
+03/13/2024 23:54:49 - INFO - __main__ - Mean variance for finnish-8197021671981786591-0: 0.025068888440728188
+03/13/2024 23:54:49 - INFO - __main__ - Mean std for for finnish-8197021671981786591-0: 0.11935817450284958
+03/13/2024 23:54:49 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:54:49 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:54:49 - INFO - __main__ - ID text: finnish-6871817609889990351-0
+03/13/2024 23:54:49 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:54:49 - INFO - __main__ - Training mode: True
+03/13/2024 23:55:55 - INFO - __main__ - Mean variance for finnish-6871817609889990351-0: 0.030534589663147926
+03/13/2024 23:55:55 - INFO - __main__ - Mean std for for finnish-6871817609889990351-0: 0.1342431753873825
+03/13/2024 23:55:55 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:55:55 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:55:55 - INFO - __main__ - ID text: swahili-184607953751259718-3
+03/13/2024 23:55:55 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:55:55 - INFO - __main__ - Training mode: True
+03/13/2024 23:57:01 - INFO - __main__ - Mean variance for swahili-184607953751259718-3: 0.013470646925270557
+03/13/2024 23:57:01 - INFO - __main__ - Mean std for for swahili-184607953751259718-3: 0.09491676092147827
+03/13/2024 23:57:01 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:57:01 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:57:01 - INFO - __main__ - ID text: indonesian--3618989136571774106-0
+03/13/2024 23:57:01 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:57:01 - INFO - __main__ - Training mode: True
+03/13/2024 23:58:07 - INFO - __main__ - Mean variance for indonesian--3618989136571774106-0: 0.014264694415032864
+03/13/2024 23:58:07 - INFO - __main__ - Mean std for for indonesian--3618989136571774106-0: 0.09720496088266373
+03/13/2024 23:58:07 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:58:07 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:58:07 - INFO - __main__ - ID text: swahili-1945956083653092268-9
+03/13/2024 23:58:07 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:58:07 - INFO - __main__ - Training mode: True
+03/13/2024 23:59:13 - INFO - __main__ - Mean variance for swahili-1945956083653092268-9: 0.023083075881004333
+03/13/2024 23:59:13 - INFO - __main__ - Mean std for for swahili-1945956083653092268-9: 0.11641039699316025
+03/13/2024 23:59:13 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/13/2024 23:59:13 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/13/2024 23:59:13 - INFO - __main__ - ID text: russian-6440305251115528923-0
+03/13/2024 23:59:13 - INFO - __main__ - Monte Carlo samples: 100
+03/13/2024 23:59:13 - INFO - __main__ - Training mode: True
+03/14/2024 00:00:19 - INFO - __main__ - Mean variance for russian-6440305251115528923-0: 0.02013189159333706
+03/14/2024 00:00:19 - INFO - __main__ - Mean std for for russian-6440305251115528923-0: 0.1118997111916542
+03/14/2024 00:00:19 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:00:19 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:00:19 - INFO - __main__ - ID text: telugu--4438896797565601765-0
+03/14/2024 00:00:19 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:00:19 - INFO - __main__ - Training mode: True
+03/14/2024 00:01:24 - INFO - __main__ - Mean variance for telugu--4438896797565601765-0: 0.048225510865449905
+03/14/2024 00:01:24 - INFO - __main__ - Mean std for for telugu--4438896797565601765-0: 0.17549604177474976
+03/14/2024 00:01:24 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:01:24 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:01:24 - INFO - __main__ - ID text: bengali--1809383448694708090-4
+03/14/2024 00:01:24 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:01:24 - INFO - __main__ - Training mode: True
+03/14/2024 00:02:30 - INFO - __main__ - Mean variance for bengali--1809383448694708090-4: 0.09942559152841568
+03/14/2024 00:02:30 - INFO - __main__ - Mean std for for bengali--1809383448694708090-4: 0.2608341574668884
+03/14/2024 00:02:30 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:02:30 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:02:30 - INFO - __main__ - ID text: arabic-5333131304264178131-0
+03/14/2024 00:02:30 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:02:30 - INFO - __main__ - Training mode: True
+03/14/2024 00:03:36 - INFO - __main__ - Mean variance for arabic-5333131304264178131-0: 0.036741387099027634
+03/14/2024 00:03:36 - INFO - __main__ - Mean std for for arabic-5333131304264178131-0: 0.15429244935512543
+03/14/2024 00:03:36 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:03:36 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:03:36 - INFO - __main__ - ID text: finnish--2478979301374717966-2
+03/14/2024 00:03:36 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:03:36 - INFO - __main__ - Training mode: True
+03/14/2024 00:04:42 - INFO - __main__ - Mean variance for finnish--2478979301374717966-2: 0.01744862087070942
+03/14/2024 00:04:42 - INFO - __main__ - Mean std for for finnish--2478979301374717966-2: 0.10432692617177963
+03/14/2024 00:04:42 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:04:42 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:04:42 - INFO - __main__ - ID text: arabic--7260112446658219580-0
+03/14/2024 00:04:42 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:04:42 - INFO - __main__ - Training mode: True
+03/14/2024 00:05:48 - INFO - __main__ - Mean variance for arabic--7260112446658219580-0: 0.038987815380096436
+03/14/2024 00:05:48 - INFO - __main__ - Mean std for for arabic--7260112446658219580-0: 0.15839125216007233
+03/14/2024 00:05:48 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:05:48 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:05:48 - INFO - __main__ - ID text: english-7719857027067017307-0
+03/14/2024 00:05:48 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:05:48 - INFO - __main__ - Training mode: True
+03/14/2024 00:06:54 - INFO - __main__ - Mean variance for english-7719857027067017307-0: 0.024349749088287354
+03/14/2024 00:06:54 - INFO - __main__ - Mean std for for english-7719857027067017307-0: 0.12031728029251099
+03/14/2024 00:06:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:06:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:06:54 - INFO - __main__ - ID text: indonesian-6642048640433333226-1
+03/14/2024 00:06:54 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:06:54 - INFO - __main__ - Training mode: True
+03/14/2024 00:07:59 - INFO - __main__ - Mean variance for indonesian-6642048640433333226-1: 0.026041580364108086
+03/14/2024 00:07:59 - INFO - __main__ - Mean std for for indonesian-6642048640433333226-1: 0.12278915196657181
+03/14/2024 00:07:59 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:07:59 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:07:59 - INFO - __main__ - ID text: telugu--2702883123634690265-0
+03/14/2024 00:07:59 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:07:59 - INFO - __main__ - Training mode: True
+03/14/2024 00:09:05 - INFO - __main__ - Mean variance for telugu--2702883123634690265-0: 0.036645036190748215
+03/14/2024 00:09:05 - INFO - __main__ - Mean std for for telugu--2702883123634690265-0: 0.15123595297336578
+03/14/2024 00:09:05 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:09:05 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:09:05 - INFO - __main__ - ID text: english-2864275957596155312-7
+03/14/2024 00:09:05 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:09:05 - INFO - __main__ - Training mode: True
+03/14/2024 00:10:10 - INFO - __main__ - Mean variance for english-2864275957596155312-7: 0.02109813690185547
+03/14/2024 00:10:10 - INFO - __main__ - Mean std for for english-2864275957596155312-7: 0.10928181558847427
+03/14/2024 00:10:10 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:10:10 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:10:10 - INFO - __main__ - ID text: bengali--8260793280894408063-14
+03/14/2024 00:10:10 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:10:10 - INFO - __main__ - Training mode: True
+03/14/2024 00:11:16 - INFO - __main__ - Mean variance for bengali--8260793280894408063-14: 0.09532850980758667
+03/14/2024 00:11:16 - INFO - __main__ - Mean std for for bengali--8260793280894408063-14: 0.2552691400051117
+03/14/2024 00:11:16 - INFO - __main__ - DONE tydiqa
+03/14/2024 00:11:16 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:11:16 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:11:16 - INFO - __main__ - ID text: mnli_en_2707
+03/14/2024 00:11:16 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:11:16 - INFO - __main__ - Training mode: True
+03/14/2024 00:12:23 - INFO - __main__ - Mean variance for mnli_en_2707: 0.03809824958443642
+03/14/2024 00:12:23 - INFO - __main__ - Mean std for for mnli_en_2707: 0.15715649724006653
+03/14/2024 00:12:23 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:12:23 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:12:23 - INFO - __main__ - ID text: qqp_en_19173
+03/14/2024 00:12:23 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:12:23 - INFO - __main__ - Training mode: True
+03/14/2024 00:13:29 - INFO - __main__ - Mean variance for qqp_en_19173: 0.049056753516197205
+03/14/2024 00:13:29 - INFO - __main__ - Mean std for for qqp_en_19173: 0.17535851895809174
+03/14/2024 00:13:30 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:13:30 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:13:30 - INFO - __main__ - ID text: qqp_en_353065
+03/14/2024 00:13:30 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:13:30 - INFO - __main__ - Training mode: True
+03/14/2024 00:14:36 - INFO - __main__ - Mean variance for qqp_en_353065: 0.05713561177253723
+03/14/2024 00:14:36 - INFO - __main__ - Mean std for for qqp_en_353065: 0.19010727107524872
+03/14/2024 00:14:36 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:14:36 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:14:36 - INFO - __main__ - ID text: qqp_en_312832
+03/14/2024 00:14:36 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:14:36 - INFO - __main__ - Training mode: True
+03/14/2024 00:15:42 - INFO - __main__ - Mean variance for qqp_en_312832: 0.04370409622788429
+03/14/2024 00:15:42 - INFO - __main__ - Mean std for for qqp_en_312832: 0.17105138301849365
+03/14/2024 00:15:42 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:15:42 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:15:42 - INFO - __main__ - ID text: qqp_en_12819
+03/14/2024 00:15:42 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:15:42 - INFO - __main__ - Training mode: True
+03/14/2024 00:16:48 - INFO - __main__ - Mean variance for qqp_en_12819: 0.05207192525267601
+03/14/2024 00:16:48 - INFO - __main__ - Mean std for for qqp_en_12819: 0.1963150054216385
+03/14/2024 00:16:48 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:16:48 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:16:48 - INFO - __main__ - ID text: qqp_en_101984
+03/14/2024 00:16:48 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:16:48 - INFO - __main__ - Training mode: True
+03/14/2024 00:17:54 - INFO - __main__ - Mean variance for qqp_en_101984: 0.0532640777528286
+03/14/2024 00:17:54 - INFO - __main__ - Mean std for for qqp_en_101984: 0.1974751502275467
+03/14/2024 00:17:55 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:17:55 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:17:55 - INFO - __main__ - ID text: qqp_en_17290
+03/14/2024 00:17:55 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:17:55 - INFO - __main__ - Training mode: True
+03/14/2024 00:19:00 - INFO - __main__ - Mean variance for qqp_en_17290: 0.05106525123119354
+03/14/2024 00:19:00 - INFO - __main__ - Mean std for for qqp_en_17290: 0.17116977274417877
+03/14/2024 00:19:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:19:00 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:19:00 - INFO - __main__ - ID text: qnli_en_3885
+03/14/2024 00:19:00 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:19:00 - INFO - __main__ - Training mode: True
+03/14/2024 00:20:06 - INFO - __main__ - Mean variance for qnli_en_3885: 0.034867171198129654
+03/14/2024 00:20:06 - INFO - __main__ - Mean std for for qnli_en_3885: 0.14019741117954254
+03/14/2024 00:20:06 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:20:06 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:20:06 - INFO - __main__ - ID text: qqp_en_155192
+03/14/2024 00:20:06 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:20:06 - INFO - __main__ - Training mode: True
+03/14/2024 00:21:12 - INFO - __main__ - Mean variance for qqp_en_155192: 0.055265191942453384
+03/14/2024 00:21:12 - INFO - __main__ - Mean std for for qqp_en_155192: 0.1956363469362259
+03/14/2024 00:21:12 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:21:12 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:21:12 - INFO - __main__ - ID text: qqp_en_19102
+03/14/2024 00:21:12 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:21:12 - INFO - __main__ - Training mode: True
+03/14/2024 00:22:18 - INFO - __main__ - Mean variance for qqp_en_19102: 0.04422725737094879
+03/14/2024 00:22:18 - INFO - __main__ - Mean std for for qqp_en_19102: 0.17474758625030518
+03/14/2024 00:22:18 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:22:18 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:22:18 - INFO - __main__ - ID text: qqp_en_251518
+03/14/2024 00:22:18 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:22:18 - INFO - __main__ - Training mode: True
+03/14/2024 00:23:24 - INFO - __main__ - Mean variance for qqp_en_251518: 0.048323679715394974
+03/14/2024 00:23:24 - INFO - __main__ - Mean std for for qqp_en_251518: 0.184182271361351
+03/14/2024 00:23:24 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:23:24 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:23:24 - INFO - __main__ - ID text: qqp_en_106735
+03/14/2024 00:23:24 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:23:24 - INFO - __main__ - Training mode: True
+03/14/2024 00:24:30 - INFO - __main__ - Mean variance for qqp_en_106735: 0.05562669038772583
+03/14/2024 00:24:30 - INFO - __main__ - Mean std for for qqp_en_106735: 0.1995912343263626
+03/14/2024 00:24:30 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:24:30 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:24:30 - INFO - __main__ - ID text: qqp_en_127955
+03/14/2024 00:24:30 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:24:30 - INFO - __main__ - Training mode: True
+03/14/2024 00:25:36 - INFO - __main__ - Mean variance for qqp_en_127955: 0.034693364053964615
+03/14/2024 00:25:36 - INFO - __main__ - Mean std for for qqp_en_127955: 0.13947796821594238
+03/14/2024 00:25:36 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:25:36 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:25:36 - INFO - __main__ - ID text: qqp_en_332690
+03/14/2024 00:25:36 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:25:36 - INFO - __main__ - Training mode: True
+03/14/2024 00:26:42 - INFO - __main__ - Mean variance for qqp_en_332690: 0.038035038858652115
+03/14/2024 00:26:42 - INFO - __main__ - Mean std for for qqp_en_332690: 0.1630299687385559
+03/14/2024 00:26:42 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:26:42 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:26:42 - INFO - __main__ - ID text: qqp_en_236449
+03/14/2024 00:26:42 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:26:42 - INFO - __main__ - Training mode: True
+03/14/2024 00:27:48 - INFO - __main__ - Mean variance for qqp_en_236449: 0.04539594054222107
+03/14/2024 00:27:48 - INFO - __main__ - Mean std for for qqp_en_236449: 0.17406387627124786
+03/14/2024 00:27:48 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:27:48 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:27:48 - INFO - __main__ - ID text: qqp_en_94274
+03/14/2024 00:27:48 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:27:48 - INFO - __main__ - Training mode: True
+03/14/2024 00:28:54 - INFO - __main__ - Mean variance for qqp_en_94274: 0.05028317868709564
+03/14/2024 00:28:54 - INFO - __main__ - Mean std for for qqp_en_94274: 0.18572276830673218
+03/14/2024 00:28:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:28:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:28:54 - INFO - __main__ - ID text: qqp_en_264666
+03/14/2024 00:28:54 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:28:54 - INFO - __main__ - Training mode: True
+03/14/2024 00:30:00 - INFO - __main__ - Mean variance for qqp_en_264666: 0.042981039732694626
+03/14/2024 00:30:00 - INFO - __main__ - Mean std for for qqp_en_264666: 0.1722012609243393
+03/14/2024 00:30:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:30:00 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:30:00 - INFO - __main__ - ID text: qqp_en_51322
+03/14/2024 00:30:00 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:30:00 - INFO - __main__ - Training mode: True
+03/14/2024 00:31:05 - INFO - __main__ - Mean variance for qqp_en_51322: 0.04358841851353645
+03/14/2024 00:31:05 - INFO - __main__ - Mean std for for qqp_en_51322: 0.17033176124095917
+03/14/2024 00:31:05 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:31:05 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:31:05 - INFO - __main__ - ID text: qqp_en_361198
+03/14/2024 00:31:05 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:31:05 - INFO - __main__ - Training mode: True
+03/14/2024 00:32:12 - INFO - __main__ - Mean variance for qqp_en_361198: 0.05065226927399635
+03/14/2024 00:32:12 - INFO - __main__ - Mean std for for qqp_en_361198: 0.18733036518096924
+03/14/2024 00:32:12 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:32:12 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:32:12 - INFO - __main__ - ID text: qqp_en_281344
+03/14/2024 00:32:12 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:32:12 - INFO - __main__ - Training mode: True
+03/14/2024 00:33:18 - INFO - __main__ - Mean variance for qqp_en_281344: 0.05207644775509834
+03/14/2024 00:33:18 - INFO - __main__ - Mean std for for qqp_en_281344: 0.18687467277050018
+03/14/2024 00:33:18 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:33:18 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:33:18 - INFO - __main__ - ID text: qqp_en_284053
+03/14/2024 00:33:18 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:33:18 - INFO - __main__ - Training mode: True
+03/14/2024 00:34:24 - INFO - __main__ - Mean variance for qqp_en_284053: 0.0473281592130661
+03/14/2024 00:34:24 - INFO - __main__ - Mean std for for qqp_en_284053: 0.17741207778453827
+03/14/2024 00:34:24 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:34:24 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:34:24 - INFO - __main__ - ID text: qqp_en_229768
+03/14/2024 00:34:24 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:34:24 - INFO - __main__ - Training mode: True
+03/14/2024 00:35:30 - INFO - __main__ - Mean variance for qqp_en_229768: 0.048842817544937134
+03/14/2024 00:35:30 - INFO - __main__ - Mean std for for qqp_en_229768: 0.17452771961688995
+03/14/2024 00:35:30 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:35:30 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:35:30 - INFO - __main__ - ID text: qqp_en_109353
+03/14/2024 00:35:30 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:35:30 - INFO - __main__ - Training mode: True
+03/14/2024 00:36:36 - INFO - __main__ - Mean variance for qqp_en_109353: 0.05011342465877533
+03/14/2024 00:36:36 - INFO - __main__ - Mean std for for qqp_en_109353: 0.18182672560214996
+03/14/2024 00:36:36 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:36:36 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:36:36 - INFO - __main__ - ID text: rte_en_2354
+03/14/2024 00:36:36 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:36:36 - INFO - __main__ - Training mode: True
+03/14/2024 00:37:42 - INFO - __main__ - Mean variance for rte_en_2354: 0.04642679914832115
+03/14/2024 00:37:42 - INFO - __main__ - Mean std for for rte_en_2354: 0.15977998077869415
+03/14/2024 00:37:42 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:37:42 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:37:42 - INFO - __main__ - ID text: qqp_en_229927
+03/14/2024 00:37:42 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:37:42 - INFO - __main__ - Training mode: True
+03/14/2024 00:38:48 - INFO - __main__ - Mean variance for qqp_en_229927: 0.04853961244225502
+03/14/2024 00:38:48 - INFO - __main__ - Mean std for for qqp_en_229927: 0.18264472484588623
+03/14/2024 00:38:48 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:38:48 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:38:48 - INFO - __main__ - ID text: qqp_en_195369
+03/14/2024 00:38:48 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:38:48 - INFO - __main__ - Training mode: True
+03/14/2024 00:39:54 - INFO - __main__ - Mean variance for qqp_en_195369: 0.03964231535792351
+03/14/2024 00:39:54 - INFO - __main__ - Mean std for for qqp_en_195369: 0.16110022366046906
+03/14/2024 00:39:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:39:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:39:54 - INFO - __main__ - ID text: qqp_en_81782
+03/14/2024 00:39:54 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:39:54 - INFO - __main__ - Training mode: True
+03/14/2024 00:41:00 - INFO - __main__ - Mean variance for qqp_en_81782: 0.04613880813121796
+03/14/2024 00:41:00 - INFO - __main__ - Mean std for for qqp_en_81782: 0.17350198328495026
+03/14/2024 00:41:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:41:00 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:41:00 - INFO - __main__ - ID text: qqp_en_31406
+03/14/2024 00:41:00 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:41:00 - INFO - __main__ - Training mode: True
+03/14/2024 00:42:06 - INFO - __main__ - Mean variance for qqp_en_31406: 0.046121805906295776
+03/14/2024 00:42:06 - INFO - __main__ - Mean std for for qqp_en_31406: 0.18001480400562286
+03/14/2024 00:42:06 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:42:06 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:42:06 - INFO - __main__ - ID text: qqp_en_32772
+03/14/2024 00:42:06 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:42:06 - INFO - __main__ - Training mode: True
+03/14/2024 00:43:12 - INFO - __main__ - Mean variance for qqp_en_32772: 0.05354687198996544
+03/14/2024 00:43:12 - INFO - __main__ - Mean std for for qqp_en_32772: 0.20021647214889526
+03/14/2024 00:43:12 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:43:12 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:43:12 - INFO - __main__ - ID text: qqp_en_327449
+03/14/2024 00:43:12 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:43:12 - INFO - __main__ - Training mode: True
+03/14/2024 00:44:18 - INFO - __main__ - Mean variance for qqp_en_327449: 0.047849390655756
+03/14/2024 00:44:18 - INFO - __main__ - Mean std for for qqp_en_327449: 0.16965417563915253
+03/14/2024 00:44:18 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:44:18 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:44:18 - INFO - __main__ - ID text: qqp_en_207947
+03/14/2024 00:44:18 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:44:18 - INFO - __main__ - Training mode: True
+03/14/2024 00:45:24 - INFO - __main__ - Mean variance for qqp_en_207947: 0.05118543282151222
+03/14/2024 00:45:24 - INFO - __main__ - Mean std for for qqp_en_207947: 0.17562417685985565
+03/14/2024 00:45:24 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:45:24 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:45:24 - INFO - __main__ - ID text: qqp_en_167706
+03/14/2024 00:45:24 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:45:24 - INFO - __main__ - Training mode: True
+03/14/2024 00:46:30 - INFO - __main__ - Mean variance for qqp_en_167706: 0.05075431987643242
+03/14/2024 00:46:30 - INFO - __main__ - Mean std for for qqp_en_167706: 0.18367652595043182
+03/14/2024 00:46:30 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:46:30 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:46:30 - INFO - __main__ - ID text: qqp_en_204030
+03/14/2024 00:46:30 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:46:30 - INFO - __main__ - Training mode: True
+03/14/2024 00:47:36 - INFO - __main__ - Mean variance for qqp_en_204030: 0.057567279785871506
+03/14/2024 00:47:36 - INFO - __main__ - Mean std for for qqp_en_204030: 0.20081448554992676
+03/14/2024 00:47:36 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:47:36 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:47:36 - INFO - __main__ - ID text: qqp_en_197488
+03/14/2024 00:47:36 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:47:36 - INFO - __main__ - Training mode: True
+03/14/2024 00:48:43 - INFO - __main__ - Mean variance for qqp_en_197488: 0.05771927535533905
+03/14/2024 00:48:43 - INFO - __main__ - Mean std for for qqp_en_197488: 0.19054342806339264
+03/14/2024 00:48:43 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:48:43 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:48:43 - INFO - __main__ - ID text: qqp_en_226808
+03/14/2024 00:48:43 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:48:43 - INFO - __main__ - Training mode: True
+03/14/2024 00:49:48 - INFO - __main__ - Mean variance for qqp_en_226808: 0.051817070692777634
+03/14/2024 00:49:48 - INFO - __main__ - Mean std for for qqp_en_226808: 0.1753929704427719
+03/14/2024 00:49:48 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:49:48 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:49:48 - INFO - __main__ - ID text: qqp_en_364198
+03/14/2024 00:49:48 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:49:48 - INFO - __main__ - Training mode: True
+03/14/2024 00:50:54 - INFO - __main__ - Mean variance for qqp_en_364198: 0.04911234974861145
+03/14/2024 00:50:54 - INFO - __main__ - Mean std for for qqp_en_364198: 0.18220750987529755
+03/14/2024 00:50:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:50:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:50:54 - INFO - __main__ - ID text: qqp_en_10354
+03/14/2024 00:50:54 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:50:54 - INFO - __main__ - Training mode: True
+03/14/2024 00:52:00 - INFO - __main__ - Mean variance for qqp_en_10354: 0.0519317202270031
+03/14/2024 00:52:00 - INFO - __main__ - Mean std for for qqp_en_10354: 0.18896597623825073
+03/14/2024 00:52:00 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:52:00 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:52:00 - INFO - __main__ - ID text: qqp_en_334989
+03/14/2024 00:52:00 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:52:00 - INFO - __main__ - Training mode: True
+03/14/2024 00:53:07 - INFO - __main__ - Mean variance for qqp_en_334989: 0.04885333776473999
+03/14/2024 00:53:07 - INFO - __main__ - Mean std for for qqp_en_334989: 0.17092525959014893
+03/14/2024 00:53:07 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:53:07 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:53:07 - INFO - __main__ - ID text: qqp_en_324551
+03/14/2024 00:53:07 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:53:07 - INFO - __main__ - Training mode: True
+03/14/2024 00:54:14 - INFO - __main__ - Mean variance for qqp_en_324551: 0.04776202142238617
+03/14/2024 00:54:14 - INFO - __main__ - Mean std for for qqp_en_324551: 0.1784055233001709
+03/14/2024 00:54:14 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:54:14 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:54:14 - INFO - __main__ - ID text: qqp_en_320737
+03/14/2024 00:54:14 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:54:14 - INFO - __main__ - Training mode: True
+03/14/2024 00:55:20 - INFO - __main__ - Mean variance for qqp_en_320737: 0.05254138633608818
+03/14/2024 00:55:20 - INFO - __main__ - Mean std for for qqp_en_320737: 0.1764192134141922
+03/14/2024 00:55:20 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:55:20 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:55:20 - INFO - __main__ - ID text: qqp_en_33552
+03/14/2024 00:55:20 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:55:20 - INFO - __main__ - Training mode: True
+03/14/2024 00:56:26 - INFO - __main__ - Mean variance for qqp_en_33552: 0.04771900549530983
+03/14/2024 00:56:26 - INFO - __main__ - Mean std for for qqp_en_33552: 0.1707303673028946
+03/14/2024 00:56:26 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:56:26 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:56:26 - INFO - __main__ - ID text: qqp_en_13731
+03/14/2024 00:56:26 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:56:26 - INFO - __main__ - Training mode: True
+03/14/2024 00:57:32 - INFO - __main__ - Mean variance for qqp_en_13731: 0.04872610792517662
+03/14/2024 00:57:32 - INFO - __main__ - Mean std for for qqp_en_13731: 0.18573732674121857
+03/14/2024 00:57:32 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:57:32 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:57:32 - INFO - __main__ - ID text: qqp_en_193042
+03/14/2024 00:57:32 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:57:32 - INFO - __main__ - Training mode: True
+03/14/2024 00:58:38 - INFO - __main__ - Mean variance for qqp_en_193042: 0.04151463881134987
+03/14/2024 00:58:38 - INFO - __main__ - Mean std for for qqp_en_193042: 0.16583384573459625
+03/14/2024 00:58:38 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:58:38 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:58:38 - INFO - __main__ - ID text: qqp_en_363746
+03/14/2024 00:58:38 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:58:38 - INFO - __main__ - Training mode: True
+03/14/2024 00:59:44 - INFO - __main__ - Mean variance for qqp_en_363746: 0.038838546723127365
+03/14/2024 00:59:44 - INFO - __main__ - Mean std for for qqp_en_363746: 0.1614340990781784
+03/14/2024 00:59:44 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 00:59:44 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 00:59:44 - INFO - __main__ - ID text: qqp_en_159845
+03/14/2024 00:59:44 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 00:59:44 - INFO - __main__ - Training mode: True
+03/14/2024 01:00:50 - INFO - __main__ - Mean variance for qqp_en_159845: 0.13926124572753906
+03/14/2024 01:00:50 - INFO - __main__ - Mean std for for qqp_en_159845: 0.32860925793647766
+03/14/2024 01:00:50 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:00:50 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:00:50 - INFO - __main__ - ID text: qqp_en_39241
+03/14/2024 01:00:50 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:00:50 - INFO - __main__ - Training mode: True
+03/14/2024 01:01:57 - INFO - __main__ - Mean variance for qqp_en_39241: 0.0483616404235363
+03/14/2024 01:01:57 - INFO - __main__ - Mean std for for qqp_en_39241: 0.18417948484420776
+03/14/2024 01:01:57 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:01:57 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:01:57 - INFO - __main__ - ID text: qqp_en_112320
+03/14/2024 01:01:57 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:01:57 - INFO - __main__ - Training mode: True
+03/14/2024 01:03:03 - INFO - __main__ - Mean variance for qqp_en_112320: 0.03967362269759178
+03/14/2024 01:03:03 - INFO - __main__ - Mean std for for qqp_en_112320: 0.17123545706272125
+03/14/2024 01:03:03 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:03:03 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:03:03 - INFO - __main__ - ID text: qqp_en_82401
+03/14/2024 01:03:03 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:03:03 - INFO - __main__ - Training mode: True
+03/14/2024 01:04:09 - INFO - __main__ - Mean variance for qqp_en_82401: 0.05907116457819939
+03/14/2024 01:04:09 - INFO - __main__ - Mean std for for qqp_en_82401: 0.208509624004364
+03/14/2024 01:04:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:04:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:04:09 - INFO - __main__ - ID text: qqp_en_81677
+03/14/2024 01:04:09 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:04:09 - INFO - __main__ - Training mode: True
+03/14/2024 01:05:15 - INFO - __main__ - Mean variance for qqp_en_81677: 0.046436067670583725
+03/14/2024 01:05:15 - INFO - __main__ - Mean std for for qqp_en_81677: 0.17479686439037323
+03/14/2024 01:05:15 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:05:15 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:05:15 - INFO - __main__ - ID text: qqp_en_263121
+03/14/2024 01:05:15 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:05:15 - INFO - __main__ - Training mode: True
+03/14/2024 01:06:21 - INFO - __main__ - Mean variance for qqp_en_263121: 0.050257567316293716
+03/14/2024 01:06:21 - INFO - __main__ - Mean std for for qqp_en_263121: 0.17357023060321808
+03/14/2024 01:06:21 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:06:21 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:06:21 - INFO - __main__ - ID text: qqp_en_217155
+03/14/2024 01:06:21 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:06:21 - INFO - __main__ - Training mode: True
+03/14/2024 01:07:27 - INFO - __main__ - Mean variance for qqp_en_217155: 0.14820735156536102
+03/14/2024 01:07:27 - INFO - __main__ - Mean std for for qqp_en_217155: 0.3422584533691406
+03/14/2024 01:07:27 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:07:27 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:07:27 - INFO - __main__ - ID text: qqp_en_55448
+03/14/2024 01:07:27 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:07:27 - INFO - __main__ - Training mode: True
+03/14/2024 01:08:33 - INFO - __main__ - Mean variance for qqp_en_55448: 0.043074849992990494
+03/14/2024 01:08:33 - INFO - __main__ - Mean std for for qqp_en_55448: 0.17138159275054932
+03/14/2024 01:08:33 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:08:33 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:08:33 - INFO - __main__ - ID text: qqp_en_203140
+03/14/2024 01:08:33 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:08:33 - INFO - __main__ - Training mode: True
+03/14/2024 01:09:39 - INFO - __main__ - Mean variance for qqp_en_203140: 0.04827484115958214
+03/14/2024 01:09:39 - INFO - __main__ - Mean std for for qqp_en_203140: 0.18141186237335205
+03/14/2024 01:09:39 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:09:39 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:09:39 - INFO - __main__ - ID text: qqp_en_78153
+03/14/2024 01:09:39 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:09:39 - INFO - __main__ - Training mode: True
+03/14/2024 01:10:45 - INFO - __main__ - Mean variance for qqp_en_78153: 0.05320616438984871
+03/14/2024 01:10:45 - INFO - __main__ - Mean std for for qqp_en_78153: 0.18190132081508636
+03/14/2024 01:10:45 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:10:45 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:10:45 - INFO - __main__ - ID text: qqp_en_127990
+03/14/2024 01:10:45 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:10:45 - INFO - __main__ - Training mode: True
+03/14/2024 01:11:51 - INFO - __main__ - Mean variance for qqp_en_127990: 0.04380083084106445
+03/14/2024 01:11:51 - INFO - __main__ - Mean std for for qqp_en_127990: 0.17401011288166046
+03/14/2024 01:11:51 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:11:51 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:11:51 - INFO - __main__ - ID text: qqp_en_224503
+03/14/2024 01:11:51 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:11:51 - INFO - __main__ - Training mode: True
+03/14/2024 01:12:57 - INFO - __main__ - Mean variance for qqp_en_224503: 0.04203488305211067
+03/14/2024 01:12:57 - INFO - __main__ - Mean std for for qqp_en_224503: 0.16470827162265778
+03/14/2024 01:12:57 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:12:57 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:12:57 - INFO - __main__ - ID text: qqp_en_112923
+03/14/2024 01:12:57 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:12:57 - INFO - __main__ - Training mode: True
+03/14/2024 01:14:03 - INFO - __main__ - Mean variance for qqp_en_112923: 0.04938717186450958
+03/14/2024 01:14:03 - INFO - __main__ - Mean std for for qqp_en_112923: 0.18018662929534912
+03/14/2024 01:14:03 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:14:03 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:14:03 - INFO - __main__ - ID text: qqp_en_21476
+03/14/2024 01:14:03 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:14:03 - INFO - __main__ - Training mode: True
+03/14/2024 01:15:09 - INFO - __main__ - Mean variance for qqp_en_21476: 0.03831655532121658
+03/14/2024 01:15:09 - INFO - __main__ - Mean std for for qqp_en_21476: 0.1615424007177353
+03/14/2024 01:15:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:15:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:15:09 - INFO - __main__ - ID text: qqp_en_214281
+03/14/2024 01:15:09 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:15:09 - INFO - __main__ - Training mode: True
+03/14/2024 01:16:15 - INFO - __main__ - Mean variance for qqp_en_214281: 0.05550813674926758
+03/14/2024 01:16:15 - INFO - __main__ - Mean std for for qqp_en_214281: 0.19799095392227173
+03/14/2024 01:16:15 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:16:15 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:16:15 - INFO - __main__ - ID text: qqp_en_270481
+03/14/2024 01:16:15 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:16:15 - INFO - __main__ - Training mode: True
+03/14/2024 01:17:21 - INFO - __main__ - Mean variance for qqp_en_270481: 0.054496318101882935
+03/14/2024 01:17:21 - INFO - __main__ - Mean std for for qqp_en_270481: 0.1883467435836792
+03/14/2024 01:17:21 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:17:21 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:17:21 - INFO - __main__ - ID text: qqp_en_33285
+03/14/2024 01:17:21 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:17:21 - INFO - __main__ - Training mode: True
+03/14/2024 01:18:28 - INFO - __main__ - Mean variance for qqp_en_33285: 0.04427989944815636
+03/14/2024 01:18:28 - INFO - __main__ - Mean std for for qqp_en_33285: 0.17469967901706696
+03/14/2024 01:18:28 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:18:28 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:18:28 - INFO - __main__ - ID text: qqp_en_8475
+03/14/2024 01:18:28 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:18:28 - INFO - __main__ - Training mode: True
+03/14/2024 01:19:34 - INFO - __main__ - Mean variance for qqp_en_8475: 0.0448022224009037
+03/14/2024 01:19:34 - INFO - __main__ - Mean std for for qqp_en_8475: 0.17886511981487274
+03/14/2024 01:19:34 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:19:34 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:19:34 - INFO - __main__ - ID text: qqp_en_323864
+03/14/2024 01:19:34 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:19:34 - INFO - __main__ - Training mode: True
+03/14/2024 01:20:40 - INFO - __main__ - Mean variance for qqp_en_323864: 0.06007455661892891
+03/14/2024 01:20:40 - INFO - __main__ - Mean std for for qqp_en_323864: 0.20933468639850616
+03/14/2024 01:20:40 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:20:40 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:20:40 - INFO - __main__ - ID text: qqp_en_265376
+03/14/2024 01:20:40 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:20:40 - INFO - __main__ - Training mode: True
+03/14/2024 01:21:46 - INFO - __main__ - Mean variance for qqp_en_265376: 0.020240405574440956
+03/14/2024 01:21:46 - INFO - __main__ - Mean std for for qqp_en_265376: 0.10819146782159805
+03/14/2024 01:21:46 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:21:46 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:21:46 - INFO - __main__ - ID text: mnli_en_6674
+03/14/2024 01:21:46 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:21:46 - INFO - __main__ - Training mode: True
+03/14/2024 01:22:52 - INFO - __main__ - Mean variance for mnli_en_6674: 0.048611562699079514
+03/14/2024 01:22:52 - INFO - __main__ - Mean std for for mnli_en_6674: 0.1656242161989212
+03/14/2024 01:22:52 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:22:52 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:22:52 - INFO - __main__ - ID text: qqp_en_30849
+03/14/2024 01:22:52 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:22:52 - INFO - __main__ - Training mode: True
+03/14/2024 01:23:57 - INFO - __main__ - Mean variance for qqp_en_30849: 0.05163182318210602
+03/14/2024 01:23:57 - INFO - __main__ - Mean std for for qqp_en_30849: 0.19007085263729095
+03/14/2024 01:23:57 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:23:57 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:23:57 - INFO - __main__ - ID text: qqp_en_377038
+03/14/2024 01:23:57 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:23:57 - INFO - __main__ - Training mode: True
+03/14/2024 01:25:03 - INFO - __main__ - Mean variance for qqp_en_377038: 0.051815520972013474
+03/14/2024 01:25:03 - INFO - __main__ - Mean std for for qqp_en_377038: 0.1758865863084793
+03/14/2024 01:25:03 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:25:03 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:25:03 - INFO - __main__ - ID text: qqp_en_105883
+03/14/2024 01:25:03 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:25:03 - INFO - __main__ - Training mode: True
+03/14/2024 01:26:09 - INFO - __main__ - Mean variance for qqp_en_105883: 0.03839346393942833
+03/14/2024 01:26:09 - INFO - __main__ - Mean std for for qqp_en_105883: 0.14871470630168915
+03/14/2024 01:26:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:26:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:26:09 - INFO - __main__ - ID text: qqp_en_69147
+03/14/2024 01:26:09 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:26:09 - INFO - __main__ - Training mode: True
+03/14/2024 01:27:14 - INFO - __main__ - Mean variance for qqp_en_69147: 0.045367538928985596
+03/14/2024 01:27:14 - INFO - __main__ - Mean std for for qqp_en_69147: 0.1771574765443802
+03/14/2024 01:27:14 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:27:14 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:27:14 - INFO - __main__ - ID text: qqp_en_195031
+03/14/2024 01:27:14 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:27:14 - INFO - __main__ - Training mode: True
+03/14/2024 01:28:20 - INFO - __main__ - Mean variance for qqp_en_195031: 0.03905297443270683
+03/14/2024 01:28:20 - INFO - __main__ - Mean std for for qqp_en_195031: 0.16515524685382843
+03/14/2024 01:28:20 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:28:20 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:28:20 - INFO - __main__ - ID text: qqp_en_236568
+03/14/2024 01:28:20 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:28:20 - INFO - __main__ - Training mode: True
+03/14/2024 01:29:26 - INFO - __main__ - Mean variance for qqp_en_236568: 0.04754638671875
+03/14/2024 01:29:26 - INFO - __main__ - Mean std for for qqp_en_236568: 0.16981537640094757
+03/14/2024 01:29:26 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:29:26 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:29:26 - INFO - __main__ - ID text: qqp_en_234323
+03/14/2024 01:29:26 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:29:26 - INFO - __main__ - Training mode: True
+03/14/2024 01:30:32 - INFO - __main__ - Mean variance for qqp_en_234323: 0.046724528074264526
+03/14/2024 01:30:32 - INFO - __main__ - Mean std for for qqp_en_234323: 0.17808955907821655
+03/14/2024 01:30:32 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:30:32 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:30:32 - INFO - __main__ - ID text: qqp_en_94018
+03/14/2024 01:30:32 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:30:32 - INFO - __main__ - Training mode: True
+03/14/2024 01:31:38 - INFO - __main__ - Mean variance for qqp_en_94018: 0.05149342492222786
+03/14/2024 01:31:38 - INFO - __main__ - Mean std for for qqp_en_94018: 0.19506888091564178
+03/14/2024 01:31:38 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:31:38 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:31:38 - INFO - __main__ - ID text: qqp_en_192213
+03/14/2024 01:31:38 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:31:38 - INFO - __main__ - Training mode: True
+03/14/2024 01:32:44 - INFO - __main__ - Mean variance for qqp_en_192213: 0.05239684507250786
+03/14/2024 01:32:44 - INFO - __main__ - Mean std for for qqp_en_192213: 0.17561380565166473
+03/14/2024 01:32:44 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:32:44 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:32:44 - INFO - __main__ - ID text: qqp_en_12694
+03/14/2024 01:32:44 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:32:44 - INFO - __main__ - Training mode: True
+03/14/2024 01:33:49 - INFO - __main__ - Mean variance for qqp_en_12694: 0.05309722200036049
+03/14/2024 01:33:49 - INFO - __main__ - Mean std for for qqp_en_12694: 0.1944456249475479
+03/14/2024 01:33:49 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:33:49 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:33:49 - INFO - __main__ - ID text: qqp_en_68270
+03/14/2024 01:33:49 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:33:49 - INFO - __main__ - Training mode: True
+03/14/2024 01:34:55 - INFO - __main__ - Mean variance for qqp_en_68270: 0.043404918164014816
+03/14/2024 01:34:55 - INFO - __main__ - Mean std for for qqp_en_68270: 0.17435163259506226
+03/14/2024 01:34:55 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:34:55 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:34:55 - INFO - __main__ - ID text: qqp_en_180644
+03/14/2024 01:34:55 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:34:55 - INFO - __main__ - Training mode: True
+03/14/2024 01:36:01 - INFO - __main__ - Mean variance for qqp_en_180644: 0.05731042101979256
+03/14/2024 01:36:01 - INFO - __main__ - Mean std for for qqp_en_180644: 0.2014407366514206
+03/14/2024 01:36:01 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:36:01 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:36:01 - INFO - __main__ - ID text: mnli_en_67
+03/14/2024 01:36:01 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:36:01 - INFO - __main__ - Training mode: True
+03/14/2024 01:37:06 - INFO - __main__ - Mean variance for mnli_en_67: 0.05202162265777588
+03/14/2024 01:37:06 - INFO - __main__ - Mean std for for mnli_en_67: 0.16832536458969116
+03/14/2024 01:37:06 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:37:06 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:37:06 - INFO - __main__ - ID text: qqp_en_186646
+03/14/2024 01:37:06 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:37:06 - INFO - __main__ - Training mode: True
+03/14/2024 01:38:12 - INFO - __main__ - Mean variance for qqp_en_186646: 0.05345333740115166
+03/14/2024 01:38:12 - INFO - __main__ - Mean std for for qqp_en_186646: 0.18657274544239044
+03/14/2024 01:38:12 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:38:12 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:38:12 - INFO - __main__ - ID text: qqp_en_120995
+03/14/2024 01:38:12 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:38:12 - INFO - __main__ - Training mode: True
+03/14/2024 01:39:17 - INFO - __main__ - Mean variance for qqp_en_120995: 0.042748820036649704
+03/14/2024 01:39:17 - INFO - __main__ - Mean std for for qqp_en_120995: 0.17107339203357697
+03/14/2024 01:39:17 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:39:17 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:39:17 - INFO - __main__ - ID text: rte_en_2066
+03/14/2024 01:39:17 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:39:17 - INFO - __main__ - Training mode: True
+03/14/2024 01:40:22 - INFO - __main__ - Mean variance for rte_en_2066: 0.01911526918411255
+03/14/2024 01:40:22 - INFO - __main__ - Mean std for for rte_en_2066: 0.10745495557785034
+03/14/2024 01:40:22 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:40:22 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:40:22 - INFO - __main__ - ID text: rte_en_2621
+03/14/2024 01:40:22 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:40:22 - INFO - __main__ - Training mode: True
+03/14/2024 01:41:28 - INFO - __main__ - Mean variance for rte_en_2621: 0.014638866297900677
+03/14/2024 01:41:28 - INFO - __main__ - Mean std for for rte_en_2621: 0.09802999347448349
+03/14/2024 01:41:28 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:41:28 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:41:28 - INFO - __main__ - ID text: qqp_en_220508
+03/14/2024 01:41:28 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:41:28 - INFO - __main__ - Training mode: True
+03/14/2024 01:42:33 - INFO - __main__ - Mean variance for qqp_en_220508: 0.052438657730817795
+03/14/2024 01:42:33 - INFO - __main__ - Mean std for for qqp_en_220508: 0.19285881519317627
+03/14/2024 01:42:33 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:42:33 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:42:33 - INFO - __main__ - ID text: qqp_en_131505
+03/14/2024 01:42:33 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:42:33 - INFO - __main__ - Training mode: True
+03/14/2024 01:43:38 - INFO - __main__ - Mean variance for qqp_en_131505: 0.04090072214603424
+03/14/2024 01:43:38 - INFO - __main__ - Mean std for for qqp_en_131505: 0.16330720484256744
+03/14/2024 01:43:38 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:43:38 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:43:38 - INFO - __main__ - ID text: qqp_en_203730
+03/14/2024 01:43:38 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:43:38 - INFO - __main__ - Training mode: True
+03/14/2024 01:44:43 - INFO - __main__ - Mean variance for qqp_en_203730: 0.05374748632311821
+03/14/2024 01:44:43 - INFO - __main__ - Mean std for for qqp_en_203730: 0.19301347434520721
+03/14/2024 01:44:43 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:44:43 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:44:43 - INFO - __main__ - ID text: qqp_en_347167
+03/14/2024 01:44:43 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:44:43 - INFO - __main__ - Training mode: True
+03/14/2024 01:45:49 - INFO - __main__ - Mean variance for qqp_en_347167: 0.04860403761267662
+03/14/2024 01:45:49 - INFO - __main__ - Mean std for for qqp_en_347167: 0.16761869192123413
+03/14/2024 01:45:49 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:45:49 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:45:49 - INFO - __main__ - ID text: qqp_en_364948
+03/14/2024 01:45:49 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:45:49 - INFO - __main__ - Training mode: True
+03/14/2024 01:46:54 - INFO - __main__ - Mean variance for qqp_en_364948: 0.04341389238834381
+03/14/2024 01:46:54 - INFO - __main__ - Mean std for for qqp_en_364948: 0.17309080064296722
+03/14/2024 01:46:54 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:46:54 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:46:54 - INFO - __main__ - ID text: rte_en_1695
+03/14/2024 01:46:54 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:46:54 - INFO - __main__ - Training mode: True
+03/14/2024 01:47:59 - INFO - __main__ - Mean variance for rte_en_1695: 0.052425920963287354
+03/14/2024 01:47:59 - INFO - __main__ - Mean std for for rte_en_1695: 0.1809360384941101
+03/14/2024 01:47:59 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:47:59 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:47:59 - INFO - __main__ - ID text: qqp_en_273335
+03/14/2024 01:47:59 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:47:59 - INFO - __main__ - Training mode: True
+03/14/2024 01:49:04 - INFO - __main__ - Mean variance for qqp_en_273335: 0.04854191839694977
+03/14/2024 01:49:04 - INFO - __main__ - Mean std for for qqp_en_273335: 0.17409469187259674
+03/14/2024 01:49:04 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:49:04 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:49:04 - INFO - __main__ - ID text: qqp_en_328964
+03/14/2024 01:49:04 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:49:04 - INFO - __main__ - Training mode: True
+03/14/2024 01:50:09 - INFO - __main__ - Mean variance for qqp_en_328964: 0.050241295248270035
+03/14/2024 01:50:09 - INFO - __main__ - Mean std for for qqp_en_328964: 0.18027223646640778
+03/14/2024 01:50:09 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:50:09 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:50:09 - INFO - __main__ - ID text: qqp_en_358605
+03/14/2024 01:50:09 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:50:09 - INFO - __main__ - Training mode: True
+03/14/2024 01:51:14 - INFO - __main__ - Mean variance for qqp_en_358605: 0.04013388976454735
+03/14/2024 01:51:14 - INFO - __main__ - Mean std for for qqp_en_358605: 0.1697399616241455
+03/14/2024 01:51:14 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:51:14 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:51:14 - INFO - __main__ - ID text: qqp_en_237108
+03/14/2024 01:51:14 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:51:14 - INFO - __main__ - Training mode: True
+03/14/2024 01:52:19 - INFO - __main__ - Mean variance for qqp_en_237108: 0.12965169548988342
+03/14/2024 01:52:19 - INFO - __main__ - Mean std for for qqp_en_237108: 0.3135647475719452
+03/14/2024 01:52:19 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:52:19 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:52:19 - INFO - __main__ - ID text: qqp_en_63111
+03/14/2024 01:52:19 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:52:19 - INFO - __main__ - Training mode: True
+03/14/2024 01:53:25 - INFO - __main__ - Mean variance for qqp_en_63111: 0.0549844391644001
+03/14/2024 01:53:25 - INFO - __main__ - Mean std for for qqp_en_63111: 0.18106316030025482
+03/14/2024 01:53:25 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:53:25 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:53:25 - INFO - __main__ - ID text: qqp_en_81514
+03/14/2024 01:53:25 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:53:25 - INFO - __main__ - Training mode: True
+03/14/2024 01:54:30 - INFO - __main__ - Mean variance for qqp_en_81514: 0.052805546671152115
+03/14/2024 01:54:30 - INFO - __main__ - Mean std for for qqp_en_81514: 0.18322445452213287
+03/14/2024 01:54:30 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:54:30 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:54:30 - INFO - __main__ - ID text: qqp_en_137513
+03/14/2024 01:54:30 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:54:30 - INFO - __main__ - Training mode: True
+03/14/2024 01:55:36 - INFO - __main__ - Mean variance for qqp_en_137513: 0.04474202170968056
+03/14/2024 01:55:36 - INFO - __main__ - Mean std for for qqp_en_137513: 0.1752295047044754
+03/14/2024 01:55:36 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:55:36 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:55:36 - INFO - __main__ - ID text: qqp_en_96090
+03/14/2024 01:55:36 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:55:36 - INFO - __main__ - Training mode: True
+03/14/2024 01:56:41 - INFO - __main__ - Mean variance for qqp_en_96090: 0.049152374267578125
+03/14/2024 01:56:41 - INFO - __main__ - Mean std for for qqp_en_96090: 0.18534953892230988
+03/14/2024 01:56:41 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:56:41 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:56:41 - INFO - __main__ - ID text: qqp_en_12615
+03/14/2024 01:56:41 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:56:41 - INFO - __main__ - Training mode: True
+03/14/2024 01:57:46 - INFO - __main__ - Mean variance for qqp_en_12615: 0.05850932374596596
+03/14/2024 01:57:46 - INFO - __main__ - Mean std for for qqp_en_12615: 0.20071369409561157
+03/14/2024 01:57:46 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:57:46 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:57:46 - INFO - __main__ - ID text: qqp_en_285610
+03/14/2024 01:57:46 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:57:46 - INFO - __main__ - Training mode: True
+03/14/2024 01:58:52 - INFO - __main__ - Mean variance for qqp_en_285610: 0.05945629999041557
+03/14/2024 01:58:52 - INFO - __main__ - Mean std for for qqp_en_285610: 0.20971401035785675
+03/14/2024 01:58:52 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 01:58:52 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 01:58:52 - INFO - __main__ - ID text: qqp_en_367691
+03/14/2024 01:58:52 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 01:58:52 - INFO - __main__ - Training mode: True
+03/14/2024 02:00:03 - INFO - __main__ - Mean variance for qqp_en_367691: 0.05139544978737831
+03/14/2024 02:00:03 - INFO - __main__ - Mean std for for qqp_en_367691: 0.17562110722064972
+03/14/2024 02:00:03 - INFO - __main__ - Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+03/14/2024 02:00:04 - INFO - __main__ - Masked count: 64, ratio = 0.2500
+03/14/2024 02:00:04 - INFO - __main__ - ID text: qqp_en_266219
+03/14/2024 02:00:04 - INFO - __main__ - Monte Carlo samples: 100
+03/14/2024 02:00:04 - INFO - __main__ - Training mode: True
+03/14/2024 02:01:09 - INFO - __main__ - Mean variance for qqp_en_266219: 0.044688254594802856
+03/14/2024 02:01:09 - INFO - __main__ - Mean std for for qqp_en_266219: 0.17779619991779327
+03/14/2024 02:01:09 - INFO - __main__ - DONE glue
+03/14/2024 02:01:09 - INFO - __main__ - Task: ner
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: amh, Mean SD: 0.33144743740558624
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: conll, Mean SD: 0.23206188548833895
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: hau, Mean SD: 0.15003068496783575
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: ibo, Mean SD: 0.1637778033812841
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: kin, Mean SD: 0.17463899279634157
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: lug, Mean SD: 0.1622241109609604
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: luo, Mean SD: 0.1344337798655033
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: pcm, Mean SD: 0.15543786883354188
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: swa, Mean SD: 0.16561048477888107
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: wol, Mean SD: 0.17803509533405304
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: yor, Mean SD: 0.2838714048266411
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: zh, Mean SD: 0.3169293618864483
+03/14/2024 02:01:09 - INFO - __main__ - Task: tydiqa
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: arabic, Mean SD: 0.16521717607975006
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: telugu, Mean SD: 0.17153474917778602
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: swahili, Mean SD: 0.12715021414416178
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: japanese, Mean SD: 0
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: finnish, Mean SD: 0.10359811725524756
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: indonesian, Mean SD: 0.10992663400247693
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: russian, Mean SD: 0.1343343878785769
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: thai, Mean SD: 0
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: korean, Mean SD: 0.2101688489317894
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: bengali, Mean SD: 0.25404390320181847
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: english, Mean SD: 0.1153562344610691
+03/14/2024 02:01:09 - INFO - __main__ - Task: glue
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: cola, Mean SD: 0
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: mnli, Mean SD: 0.16370202600955963
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: mrpc, Mean SD: 0
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: qnli, Mean SD: 0.14019741117954254
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: qqp, Mean SD: 0.1838884339870318
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: rte, Mean SD: 0.13655024208128452
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: sst2, Mean SD: 0
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: stsb, Mean SD: 0
+03/14/2024 02:01:09 - INFO - __main__ - Subcategory: wnli, Mean SD: 0
+
+###############################################################################
+Hábrók Cluster
+Job 7655145 for user s3919609
+Finished at: Thu Mar 14 02:01:52 CET 2024
+
+Job details:
+============
+
+Job ID              : 7655145
+Name                : experiments_pixel_uncertainty_all_data
+User                : s3919609
+Partition           : regularmedium
+Nodes               : node94
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : RUNNING
+Submit              : 2024-03-13T20:27:09
+Start               : 2024-03-13T20:28:00
+End                 : --
+Reserved walltime   : 1-00:00:00
+Used walltime       :   05:33:52
+Used CPU time       : --
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 20G
+Max Mem (Node/step) : 0.00  (Node unknown, N/A)
+Full Max Mem usage  : 0.00  (Until last completed step)
+Total Disk Read     : 0.00  (Until last completed step)
+Total Disk Write    : 0.00  (Until last completed step)
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

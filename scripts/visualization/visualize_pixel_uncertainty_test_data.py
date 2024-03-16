@@ -33,6 +33,7 @@ from pixel import (
     AutoConfig,
     PIXELForPreTraining,
     PyGameTextRenderer,
+    PangoCairoTextRenderer,
     SpanMaskingGenerator,
     get_attention_mask,
     get_transforms,
@@ -41,10 +42,46 @@ from pixel import (
 )
 from transformers import set_seed
 from pdf2image import convert_from_path
+import json
+import random
 import torchvision.utils as vutils
 import matplotlib.pyplot as plt
 
 logger = logging.getLogger(__name__)
+random.seed(42)
+
+dict_tasks = {"ner": {"amh": {}, 
+                      "conll": {}, 
+                      "hau": {}, 
+                      "ibo": {}, 
+                      "kin": {}, 
+                      "lug": {}, 
+                      "luo": {},
+                      "pcm": {}, 
+                      "swa": {}, 
+                      "wol": {}, 
+                      "yor": {},
+                      "zh": {}},
+              "tydiqa": {"arabic": {}, 
+                         "telugu": {}, 
+                         "swahili": {}, 
+                         "japanese": {}, 
+                         "finnish": {},
+                         "indonesian": {}, 
+                         "russian": {}, 
+                         "thai": {}, 
+                         "korean": {}, 
+                         "bengali": {}, 
+                         "english": {}},
+              "glue": {"cola": {}, 
+                       "mnli": {}, 
+                       "mrpc": {}, 
+                       "qnli": {}, 
+                       "qqp": {}, 
+                       "rte": {}, 
+                       "sst2": {}, 
+                       "stsb": {}, 
+                       "wnli": {}}} # make this a dict where the values are tasks
 
 
 def clip(x: torch.Tensor):
@@ -264,7 +301,7 @@ def save_attention_image(all_layers_attentions, layer_index, head_index):
     # Save the figure
     plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
 
-    log_image_from_path(f'{img_name}.pdf', img_name)
+    # log_image_from_path(f'{img_name}.pdf', img_name)
     
     plt.close()
 
@@ -273,7 +310,7 @@ def save_image(image_tensor, title, img_name): # shape: (3, 256, 256)
     image_tensor = image_tensor.mean(dim=0, keepdim=True)
     np_image = image_tensor.detach().cpu().numpy().transpose(1, 2, 0)
 
-    np_image = normalize_array(np_image)
+    # np_image = normalize_array(np_image) # do not normalize
 
     # Plotting
     plt.figure(figsize=(10, 10))
@@ -285,33 +322,37 @@ def save_image(image_tensor, title, img_name): # shape: (3, 256, 256)
     # Save the figure
     plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
 
-    log_image_from_path(f'{img_name}.pdf', img_name)
+    # log_image_from_path(f'{img_name}.pdf', img_name)
     
     plt.close()
 
 
-def save_multi_image(images, titles, final_img_name, mask_rate=0.1):  # shapes: [(3, 256, 256), (3, 256, 256), (3, 256, 256)]
+def save_multi_image(id_text, images, titles, final_img_name, mask_rate=0.1):
     assert len(images) == 3 and len(titles) == 3, "There must be exactly 3 images and 3 titles"
+
+    # Convert all images to NumPy arrays and to grayscale
+    np_images = [img.mean(dim=0).detach().cpu().numpy() for img in images]  # List of grayscale images as NumPy arrays
+
+    # Compute global min and max across all images
+    global_min = min(img.min() for img in np_images)
+    global_max = max(img.max() for img in np_images)
 
     # Create a figure and a set of subplots
     fig, axs = plt.subplots(1, 3, figsize=(18, 6))  # Adjusted for equal size images including colorbar space
 
-    for i, (image_tensor, title) in enumerate(zip(images, titles)):
-        # Convert the PyTorch tensor to a NumPy array and normalize
-        image_tensor = image_tensor.mean(dim=0, keepdim=True)  # Convert to grayscale for demonstration
-        np_image = image_tensor.detach().cpu().numpy().squeeze()  # Assuming the input is PyTorch tensor
-        # np_image = (np_image - np_image.min()) / (np_image.max() - np_image.min())  # Normalize
+    for i, (np_image, title) in enumerate(zip(np_images, titles)):
+        # Normalize current image using global min and max
+        np_image_normalized = (np_image - global_min) / (global_max - global_min)
 
         # Plotting each image in its subplot
-        im = axs[i].imshow(np_image, cmap='viridis')
+        im = axs[i].imshow(np_image_normalized, cmap='viridis')
         axs[i].set_title(title, fontsize=24)
         axs[i].axis('off')  # Optionally, turn off the axis for a cleaner image
 
     # Adjust layout to be tight and allocate space for colorbar
     plt.tight_layout(pad=2.0)
 
-    # fig.suptitle(f'Mask Ratio = {int(mask_rate*100)}%', fontsize=26, y=1.1) # for mask ratio experiment
-    fig.suptitle(f'Mask Span = {mask_rate}', fontsize=26, y=1.1) # for mask span experiment
+    fig.suptitle(f'Mask Span = {mask_rate} - ID: {id_text}', fontsize=26, y=1.1)  # for mask span experiment
 
     # Create an axes on the right side of axs[-1]. The width of cax can be controlled by the horizontal size, here set to 0.015
     cbar_ax = fig.add_axes([axs[-1].get_position().x1 + 0.01, axs[-1].get_position().y0, 0.02, axs[-1].get_position().height])
@@ -323,6 +364,292 @@ def save_multi_image(images, titles, final_img_name, mask_rate=0.1):  # shapes: 
     plt.savefig(f'{final_img_name}.pdf', bbox_inches='tight')
     plt.close()
 
+
+def get_losses(args, data, text_renderer, mask_ratio, model):
+
+    losses_per_task = {"ner": {}, "tydiqa": {}, "glue": {}}
+
+    for task, value in data.items():  # task, {id:text}
+        for id_text, text in value.items():
+            lang = id_text.split("-")[0] if task == "tydiqa" else id_text.split("_")[0]
+
+            if lang not in losses_per_task[task]:
+                losses_per_task[task][lang] = {}  # Initialize if this language is not yet in the dict
+
+            
+            # Get transformations
+            transforms = get_transforms(
+                do_resize=True,
+                size=(text_renderer.pixels_per_patch, text_renderer.pixels_per_patch * text_renderer.max_seq_length),
+            )
+
+            # Render input
+            encoding = text_renderer(text=text)
+            attention_mask = get_attention_mask(
+                num_text_patches=encoding.num_text_patches, seq_length=text_renderer.max_seq_length
+            )
+
+            img = transforms(Image.fromarray(encoding.pixel_values)).unsqueeze(0)
+            attention_mask = attention_mask.unsqueeze(0)
+            inputs = {"pixel_values": img.float(), "attention_mask": attention_mask}
+
+            # attention of renderer
+            attention_mask = attention_mask.unsqueeze(-1).repeat(1, 1, text_renderer.pixels_per_patch ** 2 * 3)
+            attention_mask = model.unpatchify(attention_mask).squeeze()
+
+            # Generate the mask
+            if args.manual_mask:
+                logger.info("Using manual masking")
+                mask = torch.zeros(size=(1, text_renderer.max_seq_length))
+                for idx in args.manual_mask:
+                    mask[0][idx] = 1
+
+            elif args.span_mask:
+                mask_generator = SpanMaskingGenerator(
+                    num_patches=text_renderer.max_seq_length,
+                    num_masking_patches=math.ceil(mask_ratio * text_renderer.max_seq_length),
+                    max_span_length=args.masking_max_span_length,
+                    spacing=args.masking_spacing if args.masking_spacing else "span",
+                    cumulative_span_weights=args.masking_cumulative_span_weights,
+                )
+                logger.info(
+                    f'Applying span masking with "max_span_length = {args.masking_max_span_length}" '
+                    f', "cumulative_span_weights = {args.masking_cumulative_span_weights}" '
+                    f' and "spacing = {args.masking_spacing if args.masking_spacing else "span"}"'
+                )
+                mask = torch.tensor(mask_generator(num_text_patches=(encoding.num_text_patches + 1))).unsqueeze(0)
+            else:
+                logger.info("Using random masking")
+                mask = None
+
+            if mask is not None:
+                masked_count = torch.count_nonzero(mask != 0, dim=1)[0]
+                logger.info(f"Masked count: {masked_count}, ratio = {(masked_count / text_renderer.max_seq_length):0.4f}")
+                inputs.update({"patch_mask": mask})
+            else:
+                logger.info(f"Masked count: {math.ceil(mask_ratio * text_renderer.max_seq_length)}, ratio = {mask_ratio:0.2f}")
+
+
+            logger.info(f"ID text: {id_text}")
+
+            num_samples = 100  # Number of Monte Carlo samples
+            logger.info(f"Monte Carlo samples: {num_samples}")
+            all_losses = []
+
+            model.train()  # Activate dropout
+            logger.info(f"Training mode: {model.training}") 
+            for _ in range(num_samples):
+                with torch.inference_mode():  # Disable gradient computation
+                    outputs = model(**inputs)
+                    loss = outputs["loss"].detach().cpu()
+                    all_losses.append(loss)
+
+            all_losses = torch.stack(all_losses)
+            mean_loss = all_losses.mean(dim=0)
+            logger.info(f"mean loss: {mean_loss.item()}")
+            
+            losses_per_task[task][lang][id_text] = mean_loss.item()
+
+    logger.info(f"losses per task: {losses_per_task}")
+    return losses_per_task
+
+
+def do_monte_carlo(args, id_text, text, text_renderer, model, mask_ratio, save=False):
+
+    # Get transformations
+    transforms = get_transforms(
+        do_resize=True,
+        size=(text_renderer.pixels_per_patch, text_renderer.pixels_per_patch * text_renderer.max_seq_length),
+    )
+
+    # Render input
+    encoding = text_renderer(text=text)
+    attention_mask = get_attention_mask(
+        num_text_patches=encoding.num_text_patches, seq_length=text_renderer.max_seq_length
+    )
+
+    img = transforms(Image.fromarray(encoding.pixel_values)).unsqueeze(0)
+    attention_mask = attention_mask.unsqueeze(0)
+    inputs = {"pixel_values": img.float(), "attention_mask": attention_mask}
+
+    # attention of renderer
+    attention_mask = attention_mask.unsqueeze(-1).repeat(1, 1, text_renderer.pixels_per_patch ** 2 * 3)
+    attention_mask = model.unpatchify(attention_mask).squeeze()
+
+    # Generate the mask
+    if args.manual_mask:
+        logger.info("Using manual masking")
+        mask = torch.zeros(size=(1, text_renderer.max_seq_length))
+        for idx in args.manual_mask:
+            mask[0][idx] = 1
+
+    elif args.span_mask:
+        mask_generator = SpanMaskingGenerator(
+            num_patches=text_renderer.max_seq_length,
+            num_masking_patches=math.ceil(mask_ratio * text_renderer.max_seq_length),
+            max_span_length=args.masking_max_span_length,
+            spacing=args.masking_spacing if args.masking_spacing else "span",
+            cumulative_span_weights=args.masking_cumulative_span_weights,
+        )
+        logger.info(
+            f'Applying span masking with "max_span_length = {args.masking_max_span_length}" '
+            f', "cumulative_span_weights = {args.masking_cumulative_span_weights}" '
+            f' and "spacing = {args.masking_spacing if args.masking_spacing else "span"}"'
+        )
+        mask = torch.tensor(mask_generator(num_text_patches=(encoding.num_text_patches + 1))).unsqueeze(0)
+    else:
+        logger.info("Using random masking")
+        mask = None
+
+    if mask is not None:
+        masked_count = torch.count_nonzero(mask != 0, dim=1)[0]
+        logger.info(f"Masked count: {masked_count}, ratio = {(masked_count / text_renderer.max_seq_length):0.4f}")
+        inputs.update({"patch_mask": mask})
+    else:
+        logger.info(f"Masked count: {math.ceil(mask_ratio * text_renderer.max_seq_length)}, ratio = {mask_ratio:0.2f}")
+
+
+    # examples_to_show = ["glue_cola_en_0", "glue_cola_en_1", "bam_0", "fon_405", "arabic-2387335860751143628-1", "indonesian--7977769598018620690-0"]
+
+    # logger.info(f"Examples to show: {examples_to_show}")
+    logger.info(f"ID text: {id_text}")
+
+    num_samples = 100  # Number of Monte Carlo samples
+    logger.info(f"Monte Carlo samples: {num_samples}")
+    all_predictions = []
+    all_losses = []
+    all_attentions = []
+
+    model.train()  # Activate dropout
+    logger.info(f"Training mode: {model.training}") 
+    for _ in range(num_samples):
+        with torch.inference_mode():  # Disable gradient computation
+            outputs = model(**inputs)
+            predictions = model.unpatchify(outputs["logits"]).detach().cpu().squeeze() # (batch_size, patch_size ** 2 * num_channels)
+            loss = outputs["loss"].detach().cpu()
+            # attentions = torch.cat(outputs["attentions"])
+            all_predictions.append(predictions)
+            all_losses.append(loss)
+            # all_attentions.append(attentions)
+
+    # Convert list of outputs to a tensor
+    all_predictions = torch.stack(all_predictions)
+    all_losses = torch.stack(all_losses)
+    # all_attentions = torch.stack(all_attentions)
+
+    # Calculate mean and standard deviation
+    mean_predictions = all_predictions.mean(dim=0)
+    std_predictions = all_predictions.std(dim=0)
+    var_predictions = all_predictions.var(dim=0)
+
+    mean_loss = all_losses.mean(dim=0)
+
+    # logger.info(f"std_predictions shape: {std_predictions.shape}")
+
+    # Log mask
+    mask = outputs["mask"].detach().cpu()  
+    mask = mask.unsqueeze(-1).repeat(1, 1, text_renderer.pixels_per_patch ** 2 * 3)
+    mask = model.unpatchify(mask).squeeze()  # 1 is removing, 0 is keeping
+    # log_image(mask, "mask")
+
+     # Log original image
+    original_img = model.unpatchify(model.patchify(img)).squeeze()
+
+    # Log masked image
+    im_masked = original_img * mask * attention_mask
+
+    if save:
+        save_image(im_masked, title=f'Original \n {id_text}', img_name=f"original_{id_text}")
+    # log_image(im_masked, "masked")
+
+
+    mean_variance_value = var_predictions.mean().item()
+    # mean_variance_value = np.round(var_predictions.mean(dim=0).mean(), 3)
+    logger.info(f"Mean variance for {id_text}: {mean_variance_value}")
+    # wandb.log({"mean_variance_value": mean_variance_value})
+
+
+    # Compute mean std per whole image
+    mean_std_value = std_predictions.mean().item()
+    # mean_std_value = np.round(std_predictions.mean(dim=0).mean(), 3)
+    logger.info(f"Mean std for for {id_text}: {mean_std_value}")
+    logger.info(f"Loss for {id_text}: {mean_loss}")
+    # wandb.log({"mean_std_value": mean_std_value})
+
+    # compute std per each patch and log the new map
+    std_predictions_per_patch = create_mean_map(std_predictions, mask, text_renderer.pixels_per_patch) # black is 0,  torch.Size([3, 368, 368])
+    # logger.info(f"SD image: {std_predictions_per_patch[0]}")
+    mean_std_value_patch_mean = std_predictions_per_patch.mean().item()
+    # logger.info(f"Mean std for whole image patch mean: {mean_std_value_patch_mean}")
+    # wandb.log({"mean_std_value_patch_mean": mean_std_value_patch_mean})
+    
+    # logger.info(f"mean_std shape: {std_predictions_per_patch.shape}")
+    std_predictions_per_patch_with_original = original_img * (std_predictions_per_patch) * attention_mask# for var I had 1 - mean_var
+    # logger.info(f"std_predictions shape: {std_predictions_per_patch_with_original.shape}")
+    # log_image(std_predictions_per_patch_with_original, "std_predictions_patch", do_clip=False)
+    
+    if save:
+        save_image(std_predictions_per_patch_with_original, title=f'Original + Patch Uncertainty (SD) \n {id_text}', img_name=f"original_SD_m{args.mask_ratio}_{id_text}")
+    
+    # log reconstructed image with per patch std
+    std_reconstruction_per_patch = clip(mean_predictions * std_predictions_per_patch * mask * attention_mask)
+    # log_image(std_reconstruction_per_patch, "std_reconstruction_per_patch", do_clip=False)
+    
+
+    if save:
+        save_image(std_reconstruction_per_patch, title=f'Mean Prediction + SD \n {id_text}', img_name=f"predictions_SD_m{args.mask_ratio}_{id_text}")
+
+    ##############################
+    #make triplets of images
+    images = [im_masked, std_predictions_per_patch_with_original, std_reconstruction_per_patch]
+    titles = [f"Original", "Original + SD", "Mean Prediction + SD"]
+    multi_image_name = f"triplet_m{args.mask_ratio}_{id_text}"
+
+    if save:
+        save_multi_image(id_text, images, titles, multi_image_name, args.mask_ratio)
+    ##############################
+
+    return mean_std_value, mean_loss
+
+def calculate_mean(scores):
+    return sum(scores) / len(scores) if scores else 0
+
+
+def find_extreme_loss_ids(losses_per_task, value=5):
+    # Flatten the losses_per_task to a list of (id_text, loss) tuples
+    all_losses = []
+    for task, langs in losses_per_task.items():
+        for lang, id_losses in langs.items():
+            all_losses.extend(id_losses.items())
+    
+    # Sort by loss value
+    sorted_losses = sorted(all_losses, key=lambda x: x[1])
+
+    # Get the IDs with the lowest losses and convert to dictionary
+    lowest_losses_tuples = sorted_losses[:value]
+    lowest_losses_dict = {id_text: loss for id_text, loss in lowest_losses_tuples}
+    
+    # Get the IDs with the highest losses and convert to dictionary
+    highest_losses_tuples = sorted_losses[-value:]
+    highest_losses_dict = {id_text: loss for id_text, loss in highest_losses_tuples}
+    
+    return lowest_losses_dict, highest_losses_dict
+
+
+def compute_means_per_task(losses_per_task):
+    mean_losses_per_task = {}
+
+    for task, langs in losses_per_task.items():
+        mean_losses_per_task[task] = {}
+        for lang, id_losses in langs.items():
+            # Extract all losses for the current language as a list
+            losses = torch.tensor(list(id_losses.values()))
+            # Compute the mean loss for the current language
+            mean_loss = losses.mean().item()
+            # Assign the mean loss to the corresponding language under the current task
+            mean_losses_per_task[task][lang] = mean_loss
+            
+    return mean_losses_per_task
 
 
 def main(args: argparse.Namespace):
@@ -376,205 +703,87 @@ def main(args: argparse.Namespace):
 
     logger.info("Running PIXEL masked autoencoding with pixel reconstruction")
 
-    # Get transformations
-    transforms = get_transforms(
-        do_resize=True,
-        size=(text_renderer.pixels_per_patch, text_renderer.pixels_per_patch * text_renderer.max_seq_length),
-    )
+    std_scores = dict_tasks.copy()
+    # loss_scores = dict_tasks.copy()
 
-    # Render input
-    encoding = text_renderer(text=args.input_str)
-    attention_mask = get_attention_mask(
-        num_text_patches=encoding.num_text_patches, seq_length=text_renderer.max_seq_length
-    )
+    input_data = {}
+    with open('data/test_data_semantic_tasks/test_data_for_rendering_masakhaner.json') as f:
+        input_data["ner"] = json.load(f)
 
-    img = transforms(Image.fromarray(encoding.pixel_values)).unsqueeze(0)
-    attention_mask = attention_mask.unsqueeze(0)
-    inputs = {"pixel_values": img.float(), "attention_mask": attention_mask}
-
-    # Generate the mask
-    if args.manual_mask:
-        logger.info("Using manual masking")
-        mask = torch.zeros(size=(1, text_renderer.max_seq_length))
-        for idx in args.manual_mask:
-            mask[0][idx] = 1
-
-    elif args.span_mask:
-        mask_generator = SpanMaskingGenerator(
-            num_patches=text_renderer.max_seq_length,
-            num_masking_patches=math.ceil(mask_ratio * text_renderer.max_seq_length),
-            max_span_length=args.masking_max_span_length,
-            spacing=args.masking_spacing if args.masking_spacing else "span",
-            cumulative_span_weights=args.masking_cumulative_span_weights,
-        )
-        logger.info(
-            f'Applying span masking with "max_span_length = {args.masking_max_span_length}" '
-            f', "cumulative_span_weights = {args.masking_cumulative_span_weights}" '
-            f' and "spacing = {args.masking_spacing if args.masking_spacing else "span"}"'
-        )
-        mask = torch.tensor(mask_generator(num_text_patches=(encoding.num_text_patches + 1))).unsqueeze(0)
-    else:
-        logger.info("Using random masking")
-        mask = None
-
-    if mask is not None:
-        masked_count = torch.count_nonzero(mask != 0, dim=1)[0]
-        logger.info(f"Masked count: {masked_count}, ratio = {(masked_count / text_renderer.max_seq_length):0.4f}")
-        inputs.update({"patch_mask": mask})
-    else:
-        logger.info(f"Masked count: {math.ceil(mask_ratio * text_renderer.max_seq_length)}, ratio = {mask_ratio:0.2f}")
-
-    num_samples = 100  # Number of Monte Carlo samples
-    logger.info(f"Monte Carlo samples: {num_samples}")
-    all_predictions = []
-    all_attentions = []
-
-    model.train()  # Activate dropout
-    logger.info(f"Training mode: {model.training}") 
-    for _ in range(num_samples):
-        with torch.inference_mode():  # Disable gradient computation
-            outputs = model(**inputs)
-            predictions = model.unpatchify(outputs["logits"]).detach().cpu().squeeze() # (batch_size, patch_size ** 2 * num_channels)
-            # attentions = torch.cat(outputs["attentions"])
-            all_predictions.append(predictions)
-            # all_attentions.append(attentions)
-
-    # Convert list of outputs to a tensor
-    all_predictions = torch.stack(all_predictions)
-    # all_attentions = torch.stack(all_attentions)
-
-    # print(f"all_attention (samples, layers, batch_size, num_heads, sequence_length, sequence_length): {all_attentions.shape}")
-
-    # all_attentions_mean = all_attentions.mean(dim=0).squeeze(0)
+    with open('data/test_data_semantic_tasks/test_data_for_rendering_tydiqa.json') as f:
+        input_data["tydiqa"] = json.load(f)
         
-    # print(f"all_attention after mean: {all_attentions_mean.shape}")
+    with open('data/test_data_semantic_tasks/test_data_for_rendering_glue.json') as f:
+        input_data["glue"] = json.load(f)
 
-    # Calculate mean and standard deviation
-    mean_predictions = all_predictions.mean(dim=0)
-    std_predictions = all_predictions.std(dim=0)
-    var_predictions = all_predictions.var(dim=0)
+    random_data = {}
+    random_data["ner"] = {k: v for k, v in random.sample(input_data["ner"].items(), 100)}
+    random_data["tydiqa"] = {k: v for k, v in random.sample(input_data["tydiqa"].items(), 100)}
+    random_data["glue"] = {k: v for k, v in random.sample(input_data["glue"].items(), 100)}
 
-    logger.info(f"std_predictions shape: {std_predictions.shape}")
+    losses = get_losses(args, random_data, text_renderer, mask_ratio, model)
 
-    # Log mask
-    mask = outputs["mask"].detach().cpu()  
-    mask = mask.unsqueeze(-1).repeat(1, 1, text_renderer.pixels_per_patch ** 2 * 3)
-    mask = model.unpatchify(mask).squeeze()  # 1 is removing, 0 is keeping
-    # log_image(mask, "mask")
+    with open(f'losses_per_task_m{mask_ratio}.json', 'w') as f:
+            json.dump(losses, f, ensure_ascii=False, indent=4)
 
-    ########## ATTENTION STUFF #################
+    logger.info("\n LOSS \n")
 
-    # make the attention weights grid plot
-    # all_layers_attentions = []
-    # for layer_idx, layer in enumerate(all_attentions_mean):
-    #     all_heads_attentions_image = visualize_attention(layer, mask, text_renderer.pixels_per_patch)
-    #     all_layers_attentions.append(all_heads_attentions_image)
-    #     print(f"all_heads_attentions_image: {all_heads_attentions_image.shape}")
+    means_loss_per_task = compute_means_per_task(losses)
+    logger.info(means_loss_per_task)
 
-    # all_layers_attentions = torch.stack(all_layers_attentions)
+    lowest_losses_dict, highest_losses_dict = find_extreme_loss_ids(losses)
 
-    # print(f"all_layers_attentions: {all_layers_attentions.shape}")
+    logger.info("lowest_losses:")
+    for id_text, loss in lowest_losses_dict.items():
+        logger.info(f"ID: {id_text}, Loss: {loss}")
 
-    # # save example images from the grid at given layer and head
-    # save_attention_image(all_layers_attentions, 1, 2)
-    # save_attention_image(all_layers_attentions, 10, 4)
-
-    # attention_grid = get_attention_grid(all_layers_attentions)
-    # print(f"attention_grid: {attention_grid.shape}")
-    # print(f"attention_grid 0 : {attention_grid[0]}")
-    # print(f"attention_grid 1 : {attention_grid[1]}")
-    # are_different = (attention_grid[0] != attention_grid[1]).any()
-    # print(f"Are the channels different? {are_different}")
-
-    # # save attention weights grid with all layers and heads - all channels are the same
-    # save_grid(attention_grid[0:1, :, :], layers=all_layers_attentions.size(0), heads=all_layers_attentions.size(1))
-    # log_image(attention_grid, "attention_grid", do_clip=False)
-
-    ########## ATTENTION STUFF #################
-    
-
-    # Log attention mask - where the renderer is looking
-    attention_mask = attention_mask.unsqueeze(-1).repeat(1, 1, text_renderer.pixels_per_patch ** 2 * 3)
-    attention_mask = model.unpatchify(attention_mask).squeeze()
-    # log_image(attention_mask, "attention_mask")
-    # logger.info(f"attention_mask: {attention_mask}")
-    
-    # Log original image
-    original_img = model.unpatchify(model.patchify(img)).squeeze()
-    # save_image(original_img, title=f'Original', img_name=f"original")
-
-    # Log masked image
-    im_masked = original_img * (1 - mask)
-    # log_image(im_masked, "masked")
+    logger.info("highest_losses:")
+    for id_text, loss in highest_losses_dict.items():
+        logger.info(f"ID: {id_text}, Loss: {loss}")
 
 
-    mean_variance_value = np.round(var_predictions.mean().item(), 3)
-    # mean_variance_value = np.round(var_predictions.mean(dim=0).mean(), 3)
-    logger.info(f"Mean variance for whole image: {mean_variance_value}")
-    # wandb.log({"mean_variance_value": mean_variance_value})
+    highest_losses_dict = lowest_losses_dict.update(highest_losses_dict)
+    # exit()
 
+    for idx, (id_text, text) in enumerate(random_data["ner"].items()):
+        save = True if idx in [0, 1] else False # save = True if idx in highest_losses_dict.keys() else False
+        lang = id_text.split("_")[0]
+        std_score = do_monte_carlo(args, id_text, text, text_renderer, model, mask_ratio, save=save)
+        std_scores["ner"][lang][id_text] = std_score
 
-    # Compute mean std per whole image
-    mean_std_value = np.round(std_predictions.mean().item(), 3)
-    # mean_std_value = np.round(std_predictions.mean(dim=0).mean(), 3)
-    logger.info(f"Mean std for whole image: {mean_std_value}")
-    # wandb.log({"mean_std_value": mean_std_value})
+    logger.info("DONE Ner")
 
-    # compute std per each patch and log the new map
-    std_predictions_per_patch = create_mean_map(std_predictions, mask, text_renderer.pixels_per_patch) # black is 0,  torch.Size([3, 368, 368])
-    logger.info(f"SD image: {std_predictions_per_patch[0]}")
-    mean_std_value_patch_mean = np.round(std_predictions_per_patch.mean().item(), 3)
-    logger.info(f"Mean std for whole image patch mean: {mean_std_value_patch_mean}")
-    # wandb.log({"mean_std_value_patch_mean": mean_std_value_patch_mean})
-    
-    logger.info(f"mean_std shape: {std_predictions_per_patch.shape}")
-    std_predictions_per_patch_with_original = original_img * (std_predictions_per_patch) # for var I had 1 - mean_var
-    logger.info(f"std_predictions shape: {std_predictions_per_patch_with_original.shape}")
-    # log_image(std_predictions_per_patch_with_original, "std_predictions_patch", do_clip=False)
-    save_image(std_predictions_per_patch_with_original, title=f'Original + Patch Uncertainty (SD)', img_name=f"original_SD_s{args.masking_max_span_length}")
+    for idx, (id_text, text) in enumerate(random_data["tydiqa"].items()):
+        save = True if idx in [0, 1] else False # # save = True if idx in highest_losses_dict.keys() else False
+        lang = id_text.split("-")[0]
+        std_score = do_monte_carlo(args, id_text, text, text_renderer, model, mask_ratio, save=save)
+        std_scores["tydiqa"][lang][id_text] = std_score
 
-    # Log just the std image, without per patch mean
-    # std_predictions_per_pixel = std_predictions
-    # std_predictions_per_pixel_with_original = original_img * (std_predictions_per_pixel)
-    # log_image(std_predictions_per_pixel_with_original, "std_predictions_pixel", do_clip=False)
+    logger.info("DONE tydiqa")
 
+    for idx, (id_text, text) in enumerate(random_data["glue"].items()):
+        save = True if idx in [0, 1] else False # save = True if idx in highest_losses_dict.keys() else False
+        task = id_text.split("_")[0]
+        std_score = do_monte_carlo(args, id_text, text, text_renderer, model, mask_ratio, save=save)
+        std_scores["glue"][lang][id_text] = std_score
 
-    # log reconstructed image with per patch std
-    std_reconstruction_per_patch = clip(mean_predictions * std_predictions_per_patch * mask)
-    log_image(std_reconstruction_per_patch, "std_reconstruction_per_patch", do_clip=False)
-    
-    print(f"mean_predictions: {mean_predictions}")
-    print(f"std_predictions_per_patch: {std_reconstruction_per_patch[0][0]}")
-    print(f"std_reconstruction_per_patch: {std_reconstruction_per_patch[0][0]}")
-    
-    save_image(std_reconstruction_per_patch, title=f'Mean Prediction + SD', img_name=f"predictions_SD_s{args.masking_max_span_length}")
+    logger.info("DONE glue")
 
-    # log reconstructed image with per pixel std
-    # std_reconstruction_per_pixel = mean_predictions * (std_predictions_per_pixel)
-    # log_image(std_reconstruction_per_pixel, "std_reconstruction_pixel", do_clip=False)
+    logger.info("\n RESULTS \n")
 
+    with open(f'std_scores_m{mask_ratio}.json', 'w') as f:
+            json.dump(std_scores, f, ensure_ascii=False, indent=4)
 
-    ##############################
-    #make triplets of images
-    images = [im_masked, std_predictions_per_patch_with_original, std_reconstruction_per_patch]
-    titles = ["Original", "Original + SD", "Mean Prediction + SD"]
-    multi_image_name = f"triplet_s{args.masking_max_span_length}"
+    logger.info("\n SD \n")
 
-    save_multi_image(images, titles, multi_image_name, args.masking_max_span_length)
-    ##############################
+    means_sd_per_task = compute_means_per_task(std_scores)
+    logger.info(means_sd_per_task)
 
-
-    # experiments_table.add_data(args.input_str, num_samples, mean_std_value, mean_variance_value, std_predictions.shape[1], mask_ratio, masked_count, args.masking_max_span_length, args.masking_cumulative_span_weights)
-    # wandb.log({"experiments_table": experiments_table})
-
-    logger.info(original_img.shape)
-    logger.info(mean_predictions.shape)
-       
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input_str", type=str, help="Path to already-rendered img or the raw string to encode")
+    # parser.add_argument("--input_str", type=str, help="Path to already-rendered img or the raw string to encode")
     parser.add_argument("--model_name_or_path", type=str, help="Path to pretrained model")
     parser.add_argument("--renderer_name_or_path", type=str, default=None, help="Path to pretrained renderer")
     parser.add_argument("--auth_token", type=str, default="", help="HuggingFace auth token")

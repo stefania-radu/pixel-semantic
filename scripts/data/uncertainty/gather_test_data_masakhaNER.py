@@ -2,7 +2,7 @@ import os
 import json
 
 # Base path to MasakhaNER2.0 data
-base_path = 'data/masakhane-ner/MasakhaNER2.0/data'
+base_path = 'data/masakhane-ner/data'
 
 # Initialize an empty dictionary
 elements_dict = {}
