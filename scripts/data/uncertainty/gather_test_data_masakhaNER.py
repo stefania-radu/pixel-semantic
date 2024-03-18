@@ -35,40 +35,38 @@
 
 
 ############## Save only N examples per language ################
-# python process_masakhane.py 10
+# python scripts\data\uncertainty\gather_test_data_masakhaNER.py 10
 
 import os
 import json
 import argparse
 import random
 
-# Parse command line arguments
+random.seed(42)
+
 parser = argparse.ArgumentParser(description='Process MasakhaNER data.')
 parser.add_argument('N', type=int, help='Number of random examples per language')
 args = parser.parse_args()
 
-N = args.N  # Number of examples to select
+N = args.N 
 
-# Base path to MasakhaNER2.0 data
 base_path = 'data/masakhane-ner/data'
 
-# Initialize an empty dictionary
 elements_dict = {}
 
-# Function to process each test.txt file
 def process_file(file_path, language_key, N):
     with open(file_path, 'r', encoding='utf-8') as file:
         content = file.read().strip()
-        elements = content.split('\n\n')  # Split by empty line between elements
+        elements = content.split('\n\n')
         # Select N random examples
         selected_elements = random.sample(elements, min(N, len(elements)))
+        elements_dict[language_key] = {} 
         for idx, element in enumerate(selected_elements):
-            key = f"{language_key}_{idx}"
+            key = f"{language_key}_{idx}" 
             lines = element.split('\n')
             cleaned_lines = [line.split()[0] for line in lines if len(line.split()) == 2]  # Exclude labels
-            elements_dict[key] = '\n'.join(cleaned_lines)
+            elements_dict[language_key][key] = '\n'.join(cleaned_lines)  # Nested dict entry
 
-# Iterate through directories within the base path
 for language_dir in os.listdir(base_path):
     language_path = os.path.join(base_path, language_dir)
     if os.path.isdir(language_path):
@@ -76,9 +74,7 @@ for language_dir in os.listdir(base_path):
         if os.path.exists(test_file_path):
             process_file(test_file_path, language_dir, N)
 
-# Save the dictionary to a JSON file
-with open('masakhaner_test_data_for_rendering.json', 'w', encoding='utf-8') as json_file:
+with open('test_data_for_rendering_masakhaner.json', 'w', encoding='utf-8') as json_file:
     json.dump(elements_dict, json_file, ensure_ascii=False, indent=4)
 
-print(f"Dictionary created with {len(elements_dict)} elements.")
-
+print(f"Data saved to masakhaner_test_data_for_rendering.json")

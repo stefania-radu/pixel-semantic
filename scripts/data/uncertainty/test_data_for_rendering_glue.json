@@ -1,0 +1,110 @@
+{
+    "cola": {
+        "cola_228": "I am anxious you to study English grammar hard.",
+        "cola_51": "Mary claimed that eat cabbage, Holly wouldn't.",
+        "cola_563": "She found out, and I wonder what.",
+        "cola_501": "I swore that never again would I drink absinthe.",
+        "cola_457": "they are waiting at the restaurant.",
+        "cola_285": "I found myself should needing sleep.",
+        "cola_209": "Cornelia lodged in the new boarding house.",
+        "cola_178": "Linda taped the picture on the wall.",
+        "cola_864": "Susan told herself a story.",
+        "cola_65": "Old pictures of themselves usually strike the children as amusing."
+    },
+    "mnli": {
+        "mnli_488": "GAO's reports have also convinced some states to improve their oversight of nursing homes.\nGAO's reports had no effect on convincing states to provide more oversight in nursing homes.",
+        "mnli_1535": "A more detailed approach would confront major uncertainties concerning the actual course of world economic development, exchange rates, and rates of return.\nMajor uncertainties would be confronted.",
+        "mnli_3582": "The following is a preview of some of the answers for \nThe answers can only be read in full.",
+        "mnli_3811": "19 \"You insist on misjudging me,\" said Tuppence, and sighed gently.\nTuppence seemed fed up of being misjudged by him.",
+        "mnli_8279": " Actual historical data shown through 2000\nFake historical data shown in",
+        "mnli_434": "Volunteers offer advice on legal questions, provide self-help materials, and make referrals to legal aid offices and pro bono or reduced-fee private lawyers.\nVolunteers offer legal advice, provide materials, and make referrals to pro bono and reduced fee lawyers who can see these cases out to the end.",
+        "mnli_9195": "it seems yeah\nSeems like it",
+        "mnli_3257": "How can these people have the balls to walk the streets? I dunno.'\nThe streets were scary and littered with bugs.",
+        "mnli_8928": "As in any capital city, Kingston's sites and attractions show the visitor how the island evolved both as a colony and as an independent country.\nKingston has a giant roller coaster that speaks volumes about the city.",
+        "mnli_6873": "Xerxes suffered a further humiliating defeat in 479 b.c. , when his army was beaten at Plataea on the same day that his fleet lost to the Greeks at Mycale.\nThe humiliating defeat completely crushed Xerxes' chances of victory."
+    },
+    "mrpc": {
+        "mrpc_451": "The company will be able to start recording profits from HPS immediately , Perot Systems spokeswoman Mindy Brown said .\nThe company will begin adding to Perot Systems ' profits immediately , the company said .",
+        "mrpc_919": "When the bomb exploded at the Casa de España , customers were eating dinner and playing bingo .\nAt the Casa de Espaa , customers were eating dinner and playing bingo when a bomb went off .",
+        "mrpc_1206": "Peace Rules defeated Funny Cide in the Louisiana Derby .\nBut neither he nor Peace Rules could keep Funny Cide from drawing away .",
+        "mrpc_569": "Senate Minority Leader Tom Daschle , D-S.D. , is leading the opposition .\n\" I think it will pass , \" Senate Minority Leader Tom Daschle , D-S.D. , said in Washington .",
+        "mrpc_1657": "SUVs parked on residential streets in Monrovia were tagged with \" ELF \" and other slogans , and another was set ablaze in front of a house , Sgt. Tom Wright said .\nSeveral SUVs parked on residential streets in Monrovia were tagged with ``ELF ' ' and other slogans , said Sgt. Tom Wright .",
+        "mrpc_13": "Hong Kong was flat , Australia , Singapore and South Korea lost 0.2-0.4 percent .\nAustralia was flat , Singapore was down 0.3 percent by midday and South Korea added 0.2 percent .",
+        "mrpc_1554": "\" I 've stopped looters , run political parties out of abandoned buildings , caught people with large amounts of cash and weapons , \" Williams said .\n\" I 've stopped looters , run political parties out of abandoned buildings , caught people with large amounts of cash and weapons , \" said U.S. Army 2nd Lt. Cody Williams .",
+        "mrpc_1650": "The council includes 13 Shiites , five Kurds , five Sunnis , one Christian and one Turkoman .\nThere are five ethnic Kurds , five Sunni Muslims , a Christian and a Turkoman .",
+        "mrpc_326": "It is for that reason that legal scholars said the Denver ruling is at least plausible .\nIt is for that reason that legal scholars said Judge Nottingham 's decision was at least plausible .",
+        "mrpc_1429": "For legal purposes , J.P. Morgan and Citigroup neither admit nor deny the SEC charges under the settlements .\nThe banks did not admit or deny the SEC charges under the settlements ."
+    },
+    "qnli": {
+        "qnli_3462": "What is the public library seen as to Kenyans?\nOther than the curriculum led learning, there are also National and Public Library Services led by the Kenya National Library Service (KNLS).",
+        "qnli_2787": "How many cylinders does the Energiprojekt AB engine have?\nAlthough the reciprocating steam engine is no longer in widespread commercial use, various companies are exploring or exploiting the potential of the engine as an alternative to internal combustion engines.",
+        "qnli_2276": "What type of teacher is required in the Western Europe model of discipline?\nPositive reinforcement is balanced with immediate and fair punishment for misbehavior and firm, clear boundaries define what is appropriate and inappropriate behavior.",
+        "qnli_1273": "What was the purpose of the Turks in Luther's mind?\nHe saw the Turks as a scourge sent to punish Christians by God, as agents of the Biblical apocalypse that would destroy the antichrist, whom Luther believed to be the papacy, and the Roman Church.",
+        "qnli_1763": "Why did Confucians like the medical field?\nConfucian scholars were attracted to the medical profession because it ensured a high income and medical ethics were compatible with Confucian virtues.",
+        "qnli_2757": "How many people work for Kunskapsskolan schools?\nFor instance, the biggest school chain, Kunskapsskolan (“The Knowledge School”), offers 30 schools and a web-based environment, has 700 employees and teaches nearly 10,000 pupils.",
+        "qnli_837": "Who else did Tesla make the acquaintance of in 1886?\nIn late 1886 Tesla met Alfred S. Brown, a Western Union superintendent, and New York attorney Charles F. Peck.",
+        "qnli_759": "How many graduate students does Harvard have?\nThe color was unofficially adopted (in preference to magenta) by an 1875 vote of the student body, although the association with some form of red can be traced back to 1858, when Charles William Eliot, a young graduate student who would later become Harvard's 21st and longest-serving president (1869–1909), bought red bandanas for his crew so they could more easily be distinguished by spectators at a regatta.",
+        "qnli_3112": "What attracts the tourists to Kenya?\nTourism has seen a substantial revival over the past several years and is the major contributor to the pick-up in the country's economic growth.",
+        "qnli_792": "What are the two different types of immunity?\nTo function properly, an immune system must detect a wide variety of agents, known as pathogens, from viruses to parasitic worms, and distinguish them from the organism's own healthy tissue."
+    },
+    "qqp": {
+        "qqp_188208": "How do I help my sister who is afraid of flying?\nHow can I stop being afraid of flying?",
+        "qqp_180331": "How do I keep a woman happy in her periods?\nHow much blood does a woman menstruate during her period?",
+        "qqp_316526": "How did the Ancient Persian Empire trade? How did trade impact their economy?\nHow should college football players be held accountable for violence off the field?",
+        "qqp_138685": "What do Sweden, Norway, Denmark and Finland think of each other?\nWhy do Denmark, Norway and Sweden not share the same currency and make a form of their language so all three countries can understand each other? What divides them? I know Yugoslavia was divided on religious grounds",
+        "qqp_22780": "How do I unlock my vape?\nIs vaping okay if you have COPD?",
+        "qqp_382589": "Which IIT and branch should you opt for with JEE advanced rank 978?\nMy JEE Advance rank is 5298. Which IIT and branch are available for me?",
+        "qqp_240870": "How can I attract a guy and make friends?\nHow can a person be friendly and make friends?",
+        "qqp_281137": "What are they singing in the very beginning of Frozen, while the Disney logo is playing? What language is it?\nPolo gt tsi or i20 elite?",
+        "qqp_65444": "Will Pakistan share its nuclear technology with Bangladesh if asked?\nDos and donts for burning man?",
+        "qqp_198461": "Where can I read colored manga of naruto, onepiece and bleach?\nWhat is the bracelet Luffy wears on his arm in One Piece? How did he get it?"
+    },
+    "rte": {
+        "rte_322": "Every year, roughly a hundred people die in avalanche accidents in the European Alps and many more are injured or badly frightened.\nHumans die in avalanches.",
+        "rte_2261": "AOL has more than 33 million paying customers.\n33 million customers pay to use AOL.",
+        "rte_1200": "It marked the first official visit of Iran's President Mahmoud Ahmadinejad to Saudi Arabia as he spoke with its leader, King Abdullah. Both leaders have expressed concern over sectarian tensions in Iraq, fearing they could spread through the Middle East.\nThe President of Iran is Mahmoud Ahmadinejad.",
+        "rte_2574": "Jefferson County Deputy Coroner Jim Wesley said Page had slid from his hospital-type bed, as Wesley said he would occasionally, sometime between 3 a.m. and 5 a.m. ET, when his wife found him, and that his death was consistent with positional asphyxia. Page was found sitting on the floor with his head lodged between the bed and the rail, Wesley said. Patricia Page immediately moved him to try to resuscitate him, Wesley said. Page told The Associated Press her husband \"is in a better place now.\" The March 9, 2001, fight left Page in a coma for nearly a week. He then had a stroke during post-fight surgery. He was paralyzed on his left side and received intensive physical therapy.\nGreg Page was a World Boxing Association champion.",
+        "rte_2533": "VATICAN CITY - When Pope Benedict XVI embarks on his first trip to Africa as pontiff on Tuesday, traveling to Cameroon and Angola, he will be visiting the future of the Roman Catholic Church, if not its present. With one of the world's largest Catholic populations, estimated at 158 million, Africa is the continent where the church is at once strong - in terms of sheer numbers and devotional vitality - and weak, inevitably touched by the poverty, corruption, conflict and disease afflicting the larger society.\nAfrica is estimated to have a 158-million Catholic population.",
+        "rte_1481": "The World Court, or International Court of Justice (ICJ), located in The Hague, is made up of fifteen permanent judges plus two judges nominated by the parties involved in the dispute under consideration.\nThere may be up to 15 judges in the ICJ.",
+        "rte_2364": "Four Venezuelan firefighters who were traveling to a training course in Texas were killed when their sport utility vehicle drifted onto the shoulder of a highway and struck a parked truck.\nFour firefighters were killed while saving a man stuck in a burning building.",
+        "rte_787": "Growth in the vast U.S. services sector slowed in August although managers seemed more willing to hire new workers, according to an industry survey published Friday.\nA report showed that growth in the vast service sector slowed in August.",
+        "rte_2885": "2,000 charges had been laid province-wide in Ontario for highway traffic act offences over the Labour Day weekend. More than 100 charges for people not wearing seatbelts. 17 drivers have been charged with impaired driving, 17 others received 12-hour suspensions. Remnants of tropical storm Ernesto in southern Ontario could have caused accidents. OPP Sgt. Cam Woolley said on Sunday that about 130 crashes could be attributed to \"people going too fast in the rain and hydroplaning.\"\nErnesto is the name given to a tropical storm.",
+        "rte_284": "Mansfield attempted to list every vessel that ever sailed the Lakes before 1899, as well as every shipwreck.\nShipwreck salvaging was attempted."
+    },
+    "sst2": {
+        "sst2_93": "the movie is full of fine performances , led by josef bierbichler as brecht and monica bleibtreu as helene weigel , his wife .",
+        "sst2_1354": "disturbing and brilliant documentary .",
+        "sst2_466": "some studio pizazz might have helped .",
+        "sst2_1583": "the film delivers not just the full assault of reno 's immense wit and insight , but a time travel back to what it felt like during those unforgettably uncertain days .",
+        "sst2_592": "oft-described as the antidote to american pie-type sex comedies , it actually has a bundle in common with them , as the film diffuses every opportunity for a breakthrough",
+        "sst2_163": "not even the hanson brothers can save it",
+        "sst2_1751": "but here 's the real damn : it is n't funny , either .",
+        "sst2_476": "a gob of drivel so sickly sweet , even the eager consumers of moore 's pasteurized ditties will retch it up like rancid crème brûlée .",
+        "sst2_1774": "the movie is a blast of educational energy , as bouncy animation and catchy songs escort you through the entire 85 minutes .",
+        "sst2_206": "a historical epic with the courage of its convictions about both scope and detail ."
+    },
+    "stsb": {
+        "stsb_778": "I think you've pretty much done your review.\nYou've pretty much answered your own question.",
+        "stsb_569": "The woman is wearing yellow.\nThe woman is wearing red.",
+        "stsb_928": "The transaction will grant Handspring stockholders 0.09 of a share of Palm--and no shares of PalmSource--for each share of Handspring common stock.\nUnder the proposed terms of the transaction, and following the spinoff of PalmSource, Palm will exchange 0.09 shares for each share of Handspring.",
+        "stsb_1301": "Saudi Arabia gets a seat at the UN Security Council\nSaudi Arabia rejects seat on UN Security Council",
+        "stsb_747": "This answer is based on my experience teaching undergraduate math in the US.\nThis answer is based on experience I did not researched for references.",
+        "stsb_333": "A man and woman sit at a table in a restaurant.\nFour women and two men sit at a long table in a restaurant.",
+        "stsb_758": "You just have to base your answer on what you do know, which is what you want.\nRemember this is your degree we are talking about, its up to you what you want to do.",
+        "stsb_727": "You answered your own question.\nYou've answered your own question already.",
+        "stsb_429": "A man and a dog on rocks on a beach.\nA man and dog on a rocky seashore.",
+        "stsb_1372": "US Senate votes to advance Iran nuclear review bill\nUS scientists praise Iran nuclear deal"
+    },
+    "wnli": {
+        "wnli_68": "The Harbor folks said Grandma kept her house so clean that you could wipe her floor with a clean handkerchief without getting any dirt on it.\nYou could wipe her floor with a clean handkerchief without getting any dirt on the dirt.",
+        "wnli_18": "After a somewhat lengthy conversation, Nancy convinced the housekeeper that there was no immediate cause for alarm. She did not mention the incident at the Hamilton bus station, knowing it would only add to Mrs. Gruen's uneasiness.\nThe incident would only add to Mrs. Gruen's uneasiness.",
+        "wnli_43": "When Maude got to school, Nell Raleigh was already there. She tucked her mittened hand under Maude's arm and squeezed it.\nShe tucked her mittened hand under Maude's arm and squeezed the school.",
+        "wnli_136": "Muriel has in her living room a famous painting of a ballerina. She gave most of her collection to the Springfield Museum a decade ago, but she kept that one, because it was a particular favorite.\nThe collection was a particular favorite.",
+        "wnli_62": "Not since the British army come to Boston had Mark removed his hat when the British flag went by except once when it was knocked off by a soldier.\nThe flag was knocked off by a soldier.",
+        "wnli_41": "When Maude got to school, Nell Raleigh was already there. She tucked her mittened hand under Maude's arm and squeezed it.\nShe tucker Maude's mittened hand under Maude's arm and squeezed it.",
+        "wnli_118": "People kept going through the traffic light because the light was in the middle of a holiday display. It was too inconspicuous.\nThe display was too inconspicuous.",
+        "wnli_97": "Mat advanced at once to the bureau, starting involuntarily when he bumped into Mr. Blyth's mannequin with the Spanish hat and Roman toga; and cursing it under his breath for standing in his way as if it had been a living creature.\nHe cursed it under his breath for standing in his way, as if the bureau had been a living creature.",
+        "wnli_69": "Grandma had set a place for Mary; and once Mrs. Wyman was seated, she pulled her, protesting, to it.\nGrandma pulled her.",
+        "wnli_142": "Muriel has in her living room a famous painting of the ballerina Theresa Rubio by Cecile d'Arblay. It is very characteristic of her later work --- impetuous, almost crude, rather than realistic.\nIt is very characteristic of Theresa Rubio's later work --- impetuous, almost crude, rather than realistic."
+    }
+}

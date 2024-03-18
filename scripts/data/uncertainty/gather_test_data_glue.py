@@ -45,12 +45,14 @@
 
 
 ########## Save N examples for each GLUE task #############
-# python process_glue.py 10
+# python scripts\data\uncertainty\gather_test_data_glue.py 10
 
 import json
 import argparse
 from datasets import load_dataset
 import random
+
+random.seed(42)
 
 parser = argparse.ArgumentParser(description='Process GLUE tasks data.')
 parser.add_argument('N', type=int, help='Number of random examples per task')
@@ -70,7 +72,8 @@ task_to_keys = {
     "wnli": ("sentence1", "sentence2"),
 }
 
-concatenated_strings = {}
+# Initialize concatenated_strings with a nested structure
+concatenated_strings = {task: {} for task in task_to_keys}
 
 for task, keys in task_to_keys.items():
     # Use the test_matched split for mnli and test for other tasks
@@ -85,13 +88,14 @@ for task, keys in task_to_keys.items():
     
     for idx in selected_indices:
         item = dataset[idx]
-        item_id = f"{task}_en_{idx}"
+        item_id = f"{task}_{idx}"  # Use idx as the key for simplicity
         concatenated_string = item[keys[0]] if keys[0] in item else ""
         if keys[1] and keys[1] in item:
             concatenated_string += f"\n{item[keys[1]]}" if concatenated_string else item[keys[1]]
-        concatenated_strings[item_id] = concatenated_string
+        concatenated_strings[task][item_id] = concatenated_string  # Place under task-specific dictionary
 
 with open('test_data_for_rendering_glue.json', 'w', encoding='utf-8') as f:
     json.dump(concatenated_strings, f, ensure_ascii=False, indent=4)
 
-print(f"Data saved to test_data_for_rendering_glue.json with {len(concatenated_strings)} entries.")
+print(f"Data saved to test_data_for_rendering_glue.json")
+

@@ -46,19 +46,20 @@
 
 
 ########### Save only N random examples #############
-# python gather_test_data_tydiqa.py 10
+# python scripts\data\uncertainty\gather_test_data_tydiqa.py 10
 
 import json
 import argparse
 from datasets import load_dataset
 import random
 
-# Parse command line arguments
+random.seed(42)
+
 parser = argparse.ArgumentParser(description='Process TyDi QA data.')
 parser.add_argument('N', type=int, help='Number of random examples per language')
 args = parser.parse_args()
 
-N = args.N  # Number of examples to select per language
+N = args.N
 
 dataset_name = "tydiqa"
 dataset_config_name = "secondary_task"
@@ -66,8 +67,7 @@ dataset_config_name = "secondary_task"
 raw_datasets = load_dataset(
             dataset_name,
             dataset_config_name,
-            use_auth_token=None,
-            ignore_verifications=True,
+            trust_remote_code=True
         )
 
 column_names = raw_datasets["validation"].column_names
@@ -75,10 +75,8 @@ column_names = raw_datasets["validation"].column_names
 question_column_name = "question" if "question" in column_names else column_names[0]
 context_column_name = "context" if "context" in column_names else column_names[1]
 
-# Initialize an empty dictionary to hold concatenated texts organized by language
 concatenated_texts_by_language = {}
 
-# Iterate through the validation dataset
 for example in raw_datasets["validation"]:
     # Extract language from the example ID
     language = example['id'].split("-")[0]
@@ -89,18 +87,18 @@ for example in raw_datasets["validation"]:
         concatenated_texts_by_language[language] = []
     concatenated_texts_by_language[language].append((example['id'], concatenated_text))
 
-# Initialize an empty dictionary for the final selection
 final_selection = {}
 
-# Select N random examples for each language
+
 for language, texts in concatenated_texts_by_language.items():
     selected_texts = random.sample(texts, min(len(texts), N))
+    final_selection[language] = {}
     for id, text in selected_texts:
-        final_selection[id] = text
+        final_selection[language][id] = text
 
-# Saving the dictionary to a JSON file
-file_name = f"{dataset_name}_test_data_for_rendering.json"
+file_name = f"test_data_for_rendering_{dataset_name}.json"
 with open(file_name, 'w', encoding='utf-8') as f:
     json.dump(final_selection, f, ensure_ascii=False, indent=4)
 
-print(f"Dictionary saved to {file_name} with {len(final_selection)} entries.")
+print(f"Data saved to {file_name}.")
+
