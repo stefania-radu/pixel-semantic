@@ -81,7 +81,7 @@ concatenated_texts_by_language = {}
 # Iterate through the validation dataset
 for example in raw_datasets["validation"]:
     # Extract language from the example ID
-    language = example['id'].split("--")[0]
+    language = example['id'].split("-")[0]
     # Concatenate question and context
     concatenated_text = example[question_column_name] + '\n' + example[context_column_name]
     # Organize concatenated texts by language
