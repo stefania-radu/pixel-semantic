@@ -1,10 +1,22 @@
 """
+To run this, I had to remove references to the pangocairo rederer because the installation did \
+not work on Windows. I had to comment the lines:
+- # from .datasets import * from src\pixel\data\__init__.py
+- # from .question_answering import * : src\pixel\utils\__init__.py
+- # from .pangocairo_renderer import * : src\pixel\data\rendering\__init__.py
+
 Example usage:
-python scripts\monte_carlo\monte_carlo_experiments.py\
-  --model_name_or_path="Team-PIXEL/pixel-base" \
-  --span_mask \
-  --mask_ratio=0.25 \
-  --max_seq_length=256 \
+python scripts\monte_carlo\monte_carlo_experiments.py \
+    --model_name_or_path="Team-PIXEL/pixel-base"\
+    --experiment_type="mask_ratio" \
+    --do_loss \
+    --do_std \
+    --do_attention \
+    --mask_ratio=0.25 \
+    --masking_max_span_length=6 \
+    --masking_cumulative_span_weights="0.2,0.4,0.6,0.8,0.9,1"\
+    --span_mask\
+    --max_seq_length=256
 
 """
 
@@ -21,7 +33,6 @@ from pixel import (
     AutoConfig,
     PIXELForPreTraining,
     PyGameTextRenderer,
-    PangoCairoTextRenderer,
     SpanMaskingGenerator,
     get_attention_mask,
     get_transforms,
@@ -36,6 +47,9 @@ import torchvision.utils as vutils
 import matplotlib.pyplot as plt
 
 logger = logging.getLogger(__name__)
+file_handler = logging.FileHandler('std_outputs.txt')
+logger.addHandler(file_handler)
+
 random.seed(42)
 
 
@@ -275,13 +289,13 @@ def dump_data(args, data_dict, name_start):
 def load_loss(args):
 
     if args.experiment_type == "mask_ratio":
-        name = f"loss_per_task_mask_{args.mask_ratio}"
+        name = f"loss_per_task_mask_{args.mask_ratio}.json"
     elif args.experiment_type == "span":
-        name = f"loss_per_task_span_{args.masking_max_span_length}"
+        name = f"loss_per_task_span_{args.masking_max_span_length}.json"
 
     logger.info(f"Loading data from {name}")
     
-    with open(name, 'w') as f:
+    with open(name, 'r', encoding='utf-8') as f:
         loss_scores = json.load(f)
 
     return loss_scores
@@ -327,10 +341,10 @@ def monte_carlo_loss(args, data, model, text_renderer):
     losses_per_task = data.copy()
 
     for task, lang_dict in data.items():
-        logger.info(f"Computing Loss for task: {task}")
+        logger.info(f"\n######## Computing Loss for task: {task} ########")
         
         for lang, id_dict in lang_dict.items():
-            logger.info(f"Language: {lang}")
+            logger.info(f"\n######## Language: {lang} ######## \n")
             
             for id_text, text in id_dict.items():
                 
@@ -387,7 +401,7 @@ def monte_carlo_loss(args, data, model, text_renderer):
                     logger.info(f"Masked count: {math.ceil(args.mask_ratio * text_renderer.max_seq_length)}, ratio = {args.mask_ratio:0.2f}")
 
 
-                logger.info(f"ID text: {id_text}")
+                logger.info(f"\nID text: {id_text}")
                 all_losses = []
 
                 for _ in range(num_samples):
@@ -410,7 +424,7 @@ def monte_carlo_loss(args, data, model, text_renderer):
     return losses_per_task
 
 
-def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, ids_to_save):
+def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict):
 
     num_samples = 100  # Number of Monte Carlo samples
     logger.info(f"Monte Carlo samples: {num_samples}")
@@ -419,17 +433,20 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, ids_to_sa
     logger.info(f"Training mode: {model.training}") 
 
     SDs_per_task = input_data.copy()
+    var_per_task = input_data.copy()
 
-    lowest_id = next(iter(ids_to_save["lowest"]), None)
-    highest_id = next(iter(ids_to_save["highest"]), None)
+    lowest_id = next(iter(extreme_losses_dict["lowest"]), None)
+    highest_id = next(iter(extreme_losses_dict["highest"]), None)
 
     for task, lang_dict in input_data.items():
-        logger.info(f"Computing SDs for task: {task}")
+        logger.info(f"\n######## Computing SDs for task: {task} ########\n")
         
         for lang, id_dict in lang_dict.items():
-            logger.info(f"Language: {lang}")
+            logger.info(f"\n######## Language: {lang}\n######## ")
             
             for id_text, text in id_dict.items():
+
+                in_attention = (id_text == lowest_id or id_text == highest_id)
 
                 # Get transformations
                 transforms = get_transforms(
@@ -496,14 +513,15 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, ids_to_sa
                         predictions = model.unpatchify(outputs["logits"]).detach().cpu().squeeze() # (batch_size, patch_size ** 2 * num_channels)
                         all_predictions.append(predictions)
 
-                        if id_text == lowest_id or id_text == highest_id:
+                        if in_attention:
                             id_text_attention = id_text
                             attentions = torch.cat(outputs["attentions"])
                             all_attentions.append(attentions)
 
                 # Convert list of outputs to a tensor
                 all_predictions = torch.stack(all_predictions)
-                all_attentions = torch.stack(all_attentions)
+                if all_attentions:
+                    all_attentions = torch.stack(all_attentions)
 
                 # Calculate mean, variance and standard deviation, dim0 = 100
                 mean_predictions = all_predictions.mean(dim=0)
@@ -530,6 +548,7 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, ids_to_sa
                 logger.info(f"Mean std for for {id_text}: {mean_std_value}")
 
                 SDs_per_task[task][lang][id_text] = mean_std_value
+                var_per_task[task][lang][id_text] = mean_variance_value
 
                 # compute std per each patch
                 std_predictions_per_patch = create_mean_map(std_predictions, mask, text_renderer.pixels_per_patch) # black is 0,  torch.Size([3, 368, 368])
@@ -540,11 +559,11 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, ids_to_sa
                 # Mean predictions with SD-per-patch on top
                 std_reconstruction_per_patch = clip(mean_predictions * std_predictions_per_patch * mask * attention_mask)
 
-                if args.do_attention:
+                if args.do_attention and in_attention:
                     compute_attention(all_attentions, id_text_attention, mask, text_renderer, rows_to_save=[1, 10], cols_to_save=[2, 4])
 
                 # save plots for the 5 images with the lowest and highest losses
-                if id_text in ids_to_save["low"] or id_text in ids_to_save["high"]:
+                if id_text in extreme_losses_dict["low"] or id_text in extreme_losses_dict["high"]:
     
                     # save individual images: original, original+SD, predicitons+SD
                     save_image(im_masked, title=f'Original \n {id_text}', img_name=f"{id_text}_original")
@@ -563,6 +582,7 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, ids_to_sa
 
     # Save SD 
     dump_data(args, SDs_per_task, "SD_per_task")
+    dump_data(args, mean_variance_value, "var_per_task")
         
     return SDs_per_task
 
@@ -653,13 +673,13 @@ def main(args: argparse.Namespace):
     logger.info(f"Running MONTE CARLO experiment: {args.experiment_type}")
 
     # get small dataset with 10 examples per language/subtask
-    with open('scripts\data\uncertainty\\test_data_ner_tydiqa_glue_small.json') as f:
+    with open(r'scripts\data\uncertainty\test_data_ner_tydiqa_glue_small.json', 'r', encoding='utf-8') as f:
         input_data = json.load(f)
 
-    if args.load_loss:
-        loss_scores = load_loss(args)
-    else:
+    if args.do_loss:
         loss_scores = monte_carlo_loss(args, input_data, model, text_renderer)
+    else:
+        loss_scores = load_loss(args)
 
     logger.info("\nLOSS\n")
     compute_means_per_task(loss_scores)
@@ -667,10 +687,11 @@ def main(args: argparse.Namespace):
     # find the 5 entries with the lowest loss and 5 with highest
     extreme_losses_dict = find_extreme_loss_ids(loss_scores, 5) # keys: low, high, lowest, highest
 
-    SD_scores = monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict)
+    if args.do_std:
+        SD_scores = monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict)
 
-    logger.info("\nUNCERTAINTY (SD)\n")
-    compute_means_per_task(SD_scores)
+        logger.info("\nUNCERTAINTY (SD)\n")
+        compute_means_per_task(SD_scores)
 
 
 
@@ -686,7 +707,8 @@ if __name__ == "__main__":
     parser.add_argument("--mask_ratio", type=float, default=0.25, help="Percentage of pixels that will be masked")
     parser.add_argument("--span_mask", action="store_true", help="Apply span masking")
     parser.add_argument("--rgb", action="store_true", help="Apply span masking")
-    parser.add_argument("--load_loss", action="store_true", help="Load the loss scores from the file instead of computing them")
+    parser.add_argument("--do_loss", action="store_true", help="Compute and save the loss scores for all examples. When false, loss scores are loaded.")
+    parser.add_argument("--do_std", action="store_true", help="Compute and save the SD scores usign Monte Carlo.")
     parser.add_argument("--do_attention", action="store_true", help="Compute and save attention grid for the input")
     parser.add_argument("--experiment_type", type=str, default="mask_ratio", help="Set type of experiment: 'mask_ratio' or 'span'")
     parser.add_argument(
