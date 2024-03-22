@@ -1,10 +1,4 @@
 """
-To run this, I had to remove references to the pangocairo rederer because the installation did \
-not work on Windows. I had to comment the lines:
-- # from .datasets import * from src\pixel\data\__init__.py
-- # from .question_answering import * : src\pixel\utils\__init__.py
-- # from .pangocairo_renderer import * : src\pixel\data\rendering\__init__.py
-
 Example usage:
 python scripts\monte_carlo\monte_carlo_experiments.py \
     --model_name_or_path="Team-PIXEL/pixel-base"\
@@ -120,8 +114,6 @@ def visualize_attention(attentions, mask, patch_size):
 
     nr_heads, _, _ = attentions.shape
     num_channels, height, width = mask.shape
-    print(f"mask.shape: {mask.shape}")
-    print(f"attentions.shape: {attentions.shape}")
 
     num_patches_x = width // patch_size
     num_patches_y = height // patch_size
@@ -140,7 +132,7 @@ def visualize_attention(attentions, mask, patch_size):
 
         all_heads_attentions[head_idx] = attention_map 
 
-    logger.info(f"all_heads_attentions.shape: {all_heads_attentions.shape}")
+    # logger.info(f"all_heads_attentions.shape: {all_heads_attentions.shape}")
 
     return all_heads_attentions
 
@@ -318,7 +310,9 @@ def compute_attention(all_attentions, id_text_attention, mask, text_renderer, ro
     logger.info(f"all_layers_attentions: {all_layers_attentions.shape}")
 
     attention_grid = get_attention_grid(all_layers_attentions)
-    attention_grid = torch.mean(attention_grid, dim=0)
+    attention_grid = torch.mean(attention_grid, dim=0, keepdim=True)
+
+    logger.info(f"attention_grid: {attention_grid.shape}")
 
     # save attention weights grid with all layers and heads - all channels are the same
     # save_grid(attention_grid[0:1, :, :], layers=all_layers_attentions.size(0), heads=all_layers_attentions.size(1))
@@ -442,7 +436,7 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
         logger.info(f"\n######## Computing SDs for task: {task} ########\n")
         
         for lang, id_dict in lang_dict.items():
-            logger.info(f"\n######## Language: {lang}\n######## ")
+            logger.info(f"\n######## Language: {lang} ######## \n")
             
             for id_text, text in id_dict.items():
 
@@ -672,8 +666,11 @@ def main(args: argparse.Namespace):
 
     logger.info(f"Running MONTE CARLO experiment: {args.experiment_type}")
 
+    input_data_path = r"scripts\data\uncertainty\test_data_try.json"
+    # input_data_path = r"scripts\data\uncertainty\test_data_ner_tydiqa_glue_small.json"
+
     # get small dataset with 10 examples per language/subtask
-    with open(r'scripts\data\uncertainty\test_data_ner_tydiqa_glue_small.json', 'r', encoding='utf-8') as f:
+    with open(input_data_path, 'r', encoding='utf-8') as f:
         input_data = json.load(f)
 
     if args.do_loss:

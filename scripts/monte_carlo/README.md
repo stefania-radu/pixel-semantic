@@ -4,6 +4,13 @@
 
 mask ratio = 0.25
 
+To run this, I had to remove references to the pangocairo rederer because the installation did \
+not work on Windows. I had to comment the lines:
+- from .datasets import * from src\pixel\data\__init__.py
+- from .question_answering import * : src\pixel\utils\__init__.py
+- from .pangocairo_renderer import * : src\pixel\data\\rendering\__init__.py
+
+
 Run:
 
 ```bash
