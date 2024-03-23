@@ -11,7 +11,7 @@ not work on Windows. I had to comment the lines:
 - from .pangocairo_renderer import * : src\pixel\data\\rendering\__init__.py
 
 
-Run:
+To get json files:
 
 ```bash
 python scripts\monte_carlo\monte_carlo_experiments.py \
@@ -27,13 +27,24 @@ python scripts\monte_carlo\monte_carlo_experiments.py \
   --max_seq_length=256 \
 ```
 
+To get the lowest, highest plots:
+
+```bash
+python scripts/monte_carlo/plot_monte_carlo.py
+```
+
 Inputs:
-- .json file containing the text data per id, per language, per task
+- [.json file](scripts/data/uncertainty/test_data_ner_tydiqa_glue_small.json) containing the 290 examples of text data per id, per language, per task. There are 10 examples per language (in the case of GLUE, this is done per subtask)
 
 Outputs:
-- .json file with the mean loss after Monte Carlo (per id, language, task)
-- .json file with the mean uncertainty (SD) after Monte Carlo (per id, language, task)
-- plots with the original, original + SD and predictions + SD for the examples with the lowest and highest loss values (5 for each)
+- [loss_per_task_mask_0.25](scripts/monte_carlo/results/base_experiment/loss_per_task_mask_0.25.json) .json file with the mean loss after Monte Carlo (per id, language, task)
+- [SD_per_task_mask_0.25](scripts/monte_carlo/results/base_experiment/SD_per_task_mask_0.25.json) .json file with the mean uncertainty (SD) after Monte Carlo (per id, language, task)
+- [plots](scripts/monte_carlo/results/base_experiment/images) with the original, original + SD and predictions + SD for the examples with the lowest and highest loss values (5 for each)
+
+<!-- <p align="middle">
+ <iframe src="scripts/monte_carlo/results/base_experiment/images/highest_losses_plot.pdf" width="600" height="400"></iframe>
+</p> -->
+
 
 ## Experiment 2: The Attention mechanism in the PIXEL model
 

@@ -3,8 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 from pdf2image import convert_from_path
+from matplotlib.cm import ScalarMappable
+from matplotlib.colors import Normalize
 
-# Function to parse the loss info file and return lists of IDs for lowest and highest losses
 def parse_loss_file(filepath):
     with open(filepath, 'r') as file:
         content = file.read()
@@ -17,15 +18,14 @@ def parse_loss_file(filepath):
     
     return lowest_ids, highest_ids
 
-# Helper function to convert PDF to image
 def convert_pdf_to_img(pdf_path):
     images = convert_from_path(pdf_path)
     return images[0]
 
-# Function to fetch and plot images for given IDs
-def plot_images_for_ids(ids, folders, output_file):
+def plot_images_for_ids(ids, folders, output_file, plot_title, languages):
     images_per_id = []
-    titles = ['Original', 'Original + SD', 'Predictions + SD']  # Column titles
+    titles = ['Original', 'Original + SD', 'Predictions + SD']
+    
     for id_ in ids:
         id_images = []
         for folder in folders:
@@ -33,44 +33,55 @@ def plot_images_for_ids(ids, folders, output_file):
                 if id_ in file:
                     img_path = os.path.join(folder, file)
                     if img_path.lower().endswith('.pdf'):
-                        # Convert PDF to image if it's a PDF file
                         img = convert_pdf_to_img(img_path)
                     else:
-                        # This is a fallback for non-PDF files, not expected in this use case
                         img = Image.open(img_path)
                     id_images.append(img)
-                    break  # Assumes only one relevant image per folder
+                    break
         images_per_id.append(id_images)
     
-    # Normalize images
     all_images = [np.array(img) for sublist in images_per_id for img in sublist]
     min_val = min([img.min() for img in all_images])
     max_val = max([img.max() for img in all_images])
     
-    fig, axs = plt.subplots(len(ids), 3, figsize=(10, len(ids)*3.3))
-    for i, ax in enumerate(axs[0]):
-        ax.set_title(titles[i])
-    for ax_row, id_images in zip(axs, images_per_id):
-        for ax, img in zip(ax_row, id_images):
-            ax.imshow(np.array(img), cmap='viridis', vmin=min_val, vmax=max_val)
-            ax.axis('off')
+    fig, axs = plt.subplots(len(ids), 4, figsize=(8, 2.5 * len(ids)), gridspec_kw={'width_ratios': [0.5, 4.8, 4.8, 6]})
+    fig.suptitle(plot_title, fontsize=14)
     
-    plt.tight_layout()
+    for ax in axs.flat:
+        ax.axis('off')
+
+    for i, title in enumerate(titles):
+        axs[0, i+1].set_title(title, fontsize=13)
+
+    for row, (lang, id_images) in enumerate(zip(languages, images_per_id)):
+        axs[row, 0].text(1, 0.5, lang, va='center', ha='center', rotation=90, fontsize=13)
+        for col, img in enumerate(id_images, start=1):
+            im = axs[row, col].imshow(np.array(img), cmap='viridis', vmin=min_val, vmax=max_val)
+    
+    plt.tight_layout(rect=[0, 0.03, 0.95, 0.97])  # Adjust layout to make room for colorbar
+
+    # Create a fake ScalarMappable for the colorbar
+    sm = ScalarMappable(cmap='viridis', norm=Normalize(vmin=min_val / 250, vmax=max_val / 250))
+    sm.set_array([])
+    # Add colorbar to the right side of the plot
+    cbar = fig.colorbar(sm, ax=axs[:, -1], location='right', aspect=50)
+
     plt.savefig(output_file, format='pdf')
 
+
 # Define your paths and file
-loss_info_file = 'scripts/monte_carlo/results/base experiment/lowest_highest_loss_info.txt'
+loss_info_file = 'scripts/monte_carlo/results/base_experiment/lowest_highest_loss_info.txt'
 folders = [
-    'scripts/monte_carlo/results/base experiment/images/original',
-    'scripts/monte_carlo/results/base experiment/images/original_SD',
-    'scripts/monte_carlo/results/base experiment/images/predictions_SD'
+    'scripts/monte_carlo/results/base_experiment/images/original',
+    'scripts/monte_carlo/results/base_experiment/images/original_SD',
+    'scripts/monte_carlo/results/base_experiment/images/predictions_SD'
 ]
 
-# Parse the loss info file
 lowest_ids, highest_ids = parse_loss_file(loss_info_file)
 
-# Plot images for the IDs with the lowest losses
-plot_images_for_ids(lowest_ids, folders, 'lowest_losses_plot.pdf')
+lowest_losses_languages = ["English", "English", "English", "English", "English"]
+highest_losses_languages = ["Korean", "Korean", "English", "Chinese", "Korean"]
 
-# Plot images for the IDs with the highest losses
-plot_images_for_ids(highest_ids, folders, 'highest_losses_plot.pdf')
+plot_images_for_ids(lowest_ids, folders, 'lowest_losses_plot.pdf', "Top 5 Performers", lowest_losses_languages)
+plot_images_for_ids(highest_ids, folders, 'highest_losses_plot.pdf', "Top 5 Challenges", highest_losses_languages)
+
