@@ -1,0 +1,1696 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+03/25/2024 12:01:10 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/text_renderer_config.json from cache at /home2/s3919609/.cache/huggingface/transformers/892d6a02d7c441000de399de59ed70d943a81f7b0f536523b4af1111677a8508.e332b34c9c05756dd4aa51d8fa33461dbd79604752296d185f03f8004db30700
+03/25/2024 12:01:10 - INFO - pixel.data.rendering.rendering_utils - loading font file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/GoNotoCurrent.ttf from cache at /home2/s3919609/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+03/25/2024 12:01:10 - INFO - pixel.data.rendering.pygame_renderer - Loading font from /home2/s3919609/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+03/25/2024 12:01:10 - INFO - pixel.data.rendering.rendering_utils - Text renderer PyGameTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58",
+  "font_size": 8,
+  "max_seq_length": 256,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "text_renderer_type": "PyGameTextRenderer"
+}
+
+03/25/2024 12:01:11 - INFO - pixel.utils.modeling - Truncating position embeddings to 256
+03/25/2024 12:01:11 - INFO - pixel.utils.modeling - Truncating decoder position embeddings to 256
+03/25/2024 12:01:11 - INFO - __main__ - Running MONTE CARLO experiment: span
+03/25/2024 12:01:11 - INFO - __main__ - Monte Carlo samples: 100
+03/25/2024 12:01:11 - INFO - __main__ - Training mode: True
+03/25/2024 12:01:11 - INFO - __main__ - 
+######## Computing Loss for task: ner ########
+03/25/2024 12:01:11 - INFO - __main__ - 
+######## Language: amh ######## 
+
+03/25/2024 12:01:11 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:01:11 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:01:11 - INFO - __main__ - 
+ID text: amh_0
+03/25/2024 12:02:22 - INFO - __main__ - mean loss: 0.877295732498169
+03/25/2024 12:02:22 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:02:22 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:02:22 - INFO - __main__ - 
+ID text: amh_1
+03/25/2024 12:03:34 - INFO - __main__ - mean loss: 0.8478333950042725
+03/25/2024 12:03:34 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:03:34 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:03:34 - INFO - __main__ - 
+ID text: amh_2
+03/25/2024 12:04:46 - INFO - __main__ - mean loss: 0.8709550499916077
+03/25/2024 12:04:46 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:04:46 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:04:46 - INFO - __main__ - 
+ID text: amh_3
+03/25/2024 12:05:57 - INFO - __main__ - mean loss: 0.7841366529464722
+03/25/2024 12:05:57 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:05:57 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:05:57 - INFO - __main__ - 
+ID text: amh_4
+03/25/2024 12:07:07 - INFO - __main__ - mean loss: 0.8182365298271179
+03/25/2024 12:07:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:07:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:07:07 - INFO - __main__ - 
+ID text: amh_5
+03/25/2024 12:08:21 - INFO - __main__ - mean loss: 0.8595674633979797
+03/25/2024 12:08:21 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:08:21 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:08:21 - INFO - __main__ - 
+ID text: amh_6
+03/25/2024 12:09:35 - INFO - __main__ - mean loss: 0.848160982131958
+03/25/2024 12:09:35 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:09:35 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:09:35 - INFO - __main__ - 
+ID text: amh_7
+03/25/2024 12:10:49 - INFO - __main__ - mean loss: 0.8607710003852844
+03/25/2024 12:10:49 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:10:49 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:10:49 - INFO - __main__ - 
+ID text: amh_8
+03/25/2024 12:12:04 - INFO - __main__ - mean loss: 0.8557544946670532
+03/25/2024 12:12:04 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:12:04 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:12:04 - INFO - __main__ - 
+ID text: amh_9
+03/25/2024 12:13:18 - INFO - __main__ - mean loss: 0.8638675808906555
+03/25/2024 12:13:18 - INFO - __main__ - 
+######## Language: conll_2003_en ######## 
+
+03/25/2024 12:13:18 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:13:18 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:13:18 - INFO - __main__ - 
+ID text: conll_2003_en_0
+03/25/2024 12:14:33 - INFO - __main__ - mean loss: 0.6602458357810974
+03/25/2024 12:14:33 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:14:33 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:14:33 - INFO - __main__ - 
+ID text: conll_2003_en_1
+03/25/2024 12:15:47 - INFO - __main__ - mean loss: 0.6351239085197449
+03/25/2024 12:15:47 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:15:47 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:15:47 - INFO - __main__ - 
+ID text: conll_2003_en_2
+03/25/2024 12:17:01 - INFO - __main__ - mean loss: 0.5358602404594421
+03/25/2024 12:17:01 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:17:01 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:17:01 - INFO - __main__ - 
+ID text: conll_2003_en_3
+03/25/2024 12:18:15 - INFO - __main__ - mean loss: 0.5703359842300415
+03/25/2024 12:18:15 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:18:15 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:18:15 - INFO - __main__ - 
+ID text: conll_2003_en_4
+03/25/2024 12:19:29 - INFO - __main__ - mean loss: 0.5382273197174072
+03/25/2024 12:19:29 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:19:29 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:19:29 - INFO - __main__ - 
+ID text: conll_2003_en_5
+03/25/2024 12:20:43 - INFO - __main__ - mean loss: 0.729566216468811
+03/25/2024 12:20:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:20:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:20:43 - INFO - __main__ - 
+ID text: conll_2003_en_6
+03/25/2024 12:21:57 - INFO - __main__ - mean loss: 1.0130867958068848
+03/25/2024 12:21:57 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:21:57 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:21:57 - INFO - __main__ - 
+ID text: conll_2003_en_7
+03/25/2024 12:23:10 - INFO - __main__ - mean loss: 0.6327115893363953
+03/25/2024 12:23:10 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:23:10 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:23:10 - INFO - __main__ - 
+ID text: conll_2003_en_8
+03/25/2024 12:24:24 - INFO - __main__ - mean loss: 0.7827881574630737
+03/25/2024 12:24:24 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:24:24 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:24:24 - INFO - __main__ - 
+ID text: conll_2003_en_9
+03/25/2024 12:25:38 - INFO - __main__ - mean loss: 0.4756868779659271
+03/25/2024 12:25:38 - INFO - __main__ - 
+######## Language: hau ######## 
+
+03/25/2024 12:25:38 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:25:38 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:25:38 - INFO - __main__ - 
+ID text: hau_0
+03/25/2024 12:26:51 - INFO - __main__ - mean loss: 0.6129855513572693
+03/25/2024 12:26:51 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:26:51 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:26:51 - INFO - __main__ - 
+ID text: hau_1
+03/25/2024 12:28:05 - INFO - __main__ - mean loss: 0.6390781402587891
+03/25/2024 12:28:05 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:28:05 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:28:05 - INFO - __main__ - 
+ID text: hau_2
+03/25/2024 12:29:18 - INFO - __main__ - mean loss: 0.7424508929252625
+03/25/2024 12:29:18 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:29:18 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:29:18 - INFO - __main__ - 
+ID text: hau_3
+03/25/2024 12:30:31 - INFO - __main__ - mean loss: 0.5716868042945862
+03/25/2024 12:30:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:30:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:30:31 - INFO - __main__ - 
+ID text: hau_4
+03/25/2024 12:31:44 - INFO - __main__ - mean loss: 0.5630388855934143
+03/25/2024 12:31:44 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:31:44 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:31:44 - INFO - __main__ - 
+ID text: hau_5
+03/25/2024 12:32:57 - INFO - __main__ - mean loss: 0.6014540791511536
+03/25/2024 12:32:57 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:32:57 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:32:57 - INFO - __main__ - 
+ID text: hau_6
+03/25/2024 12:34:10 - INFO - __main__ - mean loss: 0.6409668922424316
+03/25/2024 12:34:10 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:34:10 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:34:10 - INFO - __main__ - 
+ID text: hau_7
+03/25/2024 12:35:23 - INFO - __main__ - mean loss: 0.6071845293045044
+03/25/2024 12:35:23 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:35:23 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:35:23 - INFO - __main__ - 
+ID text: hau_8
+03/25/2024 12:36:36 - INFO - __main__ - mean loss: 0.577182948589325
+03/25/2024 12:36:36 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:36:36 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:36:36 - INFO - __main__ - 
+ID text: hau_9
+03/25/2024 12:37:50 - INFO - __main__ - mean loss: 0.5400131940841675
+03/25/2024 12:37:50 - INFO - __main__ - 
+######## Language: ibo ######## 
+
+03/25/2024 12:37:50 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:37:50 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:37:50 - INFO - __main__ - 
+ID text: ibo_0
+03/25/2024 12:39:03 - INFO - __main__ - mean loss: 0.6275440454483032
+03/25/2024 12:39:03 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:39:03 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:39:03 - INFO - __main__ - 
+ID text: ibo_1
+03/25/2024 12:40:16 - INFO - __main__ - mean loss: 0.6682066321372986
+03/25/2024 12:40:16 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:40:16 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:40:16 - INFO - __main__ - 
+ID text: ibo_2
+03/25/2024 12:41:29 - INFO - __main__ - mean loss: 0.6502017378807068
+03/25/2024 12:41:29 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:41:29 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:41:29 - INFO - __main__ - 
+ID text: ibo_3
+03/25/2024 12:42:42 - INFO - __main__ - mean loss: 0.5925619006156921
+03/25/2024 12:42:42 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:42:42 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:42:42 - INFO - __main__ - 
+ID text: ibo_4
+03/25/2024 12:43:55 - INFO - __main__ - mean loss: 0.6559674143791199
+03/25/2024 12:43:55 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:43:55 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:43:55 - INFO - __main__ - 
+ID text: ibo_5
+03/25/2024 12:45:08 - INFO - __main__ - mean loss: 0.604142963886261
+03/25/2024 12:45:08 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:45:08 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:45:08 - INFO - __main__ - 
+ID text: ibo_6
+03/25/2024 12:46:21 - INFO - __main__ - mean loss: 0.609627366065979
+03/25/2024 12:46:21 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:46:21 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:46:21 - INFO - __main__ - 
+ID text: ibo_7
+03/25/2024 12:47:35 - INFO - __main__ - mean loss: 0.6356592178344727
+03/25/2024 12:47:35 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:47:35 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:47:35 - INFO - __main__ - 
+ID text: ibo_8
+03/25/2024 12:48:48 - INFO - __main__ - mean loss: 0.4848884642124176
+03/25/2024 12:48:48 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:48:48 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:48:48 - INFO - __main__ - 
+ID text: ibo_9
+03/25/2024 12:50:01 - INFO - __main__ - mean loss: 0.5664726495742798
+03/25/2024 12:50:01 - INFO - __main__ - 
+######## Language: kin ######## 
+
+03/25/2024 12:50:01 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:50:01 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:50:01 - INFO - __main__ - 
+ID text: kin_0
+03/25/2024 12:51:14 - INFO - __main__ - mean loss: 0.647967517375946
+03/25/2024 12:51:14 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:51:14 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:51:14 - INFO - __main__ - 
+ID text: kin_1
+03/25/2024 12:52:27 - INFO - __main__ - mean loss: 0.7617633938789368
+03/25/2024 12:52:27 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:52:27 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:52:27 - INFO - __main__ - 
+ID text: kin_2
+03/25/2024 12:53:42 - INFO - __main__ - mean loss: 0.5984299182891846
+03/25/2024 12:53:42 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:53:42 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:53:42 - INFO - __main__ - 
+ID text: kin_3
+03/25/2024 12:55:00 - INFO - __main__ - mean loss: 0.5979453325271606
+03/25/2024 12:55:00 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:55:00 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:55:00 - INFO - __main__ - 
+ID text: kin_4
+03/25/2024 12:56:18 - INFO - __main__ - mean loss: 0.6311178803443909
+03/25/2024 12:56:18 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:56:18 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:56:18 - INFO - __main__ - 
+ID text: kin_5
+03/25/2024 12:57:36 - INFO - __main__ - mean loss: 0.5324861407279968
+03/25/2024 12:57:36 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:57:36 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:57:36 - INFO - __main__ - 
+ID text: kin_6
+03/25/2024 12:58:54 - INFO - __main__ - mean loss: 0.6549481749534607
+03/25/2024 12:58:54 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 12:58:54 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 12:58:54 - INFO - __main__ - 
+ID text: kin_7
+03/25/2024 13:00:11 - INFO - __main__ - mean loss: 0.6193723678588867
+03/25/2024 13:00:11 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:00:11 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:00:11 - INFO - __main__ - 
+ID text: kin_8
+03/25/2024 13:01:29 - INFO - __main__ - mean loss: 0.6702947020530701
+03/25/2024 13:01:29 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:01:29 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:01:29 - INFO - __main__ - 
+ID text: kin_9
+03/25/2024 13:02:47 - INFO - __main__ - mean loss: 0.759570837020874
+03/25/2024 13:02:47 - INFO - __main__ - 
+######## Language: lug ######## 
+
+03/25/2024 13:02:47 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:02:47 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:02:47 - INFO - __main__ - 
+ID text: lug_0
+03/25/2024 13:04:05 - INFO - __main__ - mean loss: 0.525240421295166
+03/25/2024 13:04:05 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:04:05 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:04:05 - INFO - __main__ - 
+ID text: lug_1
+03/25/2024 13:05:23 - INFO - __main__ - mean loss: 0.6712373495101929
+03/25/2024 13:05:23 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:05:23 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:05:23 - INFO - __main__ - 
+ID text: lug_2
+03/25/2024 13:06:40 - INFO - __main__ - mean loss: 0.533450186252594
+03/25/2024 13:06:40 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:06:40 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:06:40 - INFO - __main__ - 
+ID text: lug_3
+03/25/2024 13:07:58 - INFO - __main__ - mean loss: 0.5938951373100281
+03/25/2024 13:07:58 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:07:58 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:07:58 - INFO - __main__ - 
+ID text: lug_4
+03/25/2024 13:09:16 - INFO - __main__ - mean loss: 0.5478406548500061
+03/25/2024 13:09:16 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:09:16 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:09:16 - INFO - __main__ - 
+ID text: lug_5
+03/25/2024 13:10:34 - INFO - __main__ - mean loss: 0.6696845293045044
+03/25/2024 13:10:34 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:10:34 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:10:34 - INFO - __main__ - 
+ID text: lug_6
+03/25/2024 13:11:52 - INFO - __main__ - mean loss: 0.5901511907577515
+03/25/2024 13:11:52 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:11:52 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:11:52 - INFO - __main__ - 
+ID text: lug_7
+03/25/2024 13:13:10 - INFO - __main__ - mean loss: 0.6539783477783203
+03/25/2024 13:13:10 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:13:10 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:13:10 - INFO - __main__ - 
+ID text: lug_8
+03/25/2024 13:14:27 - INFO - __main__ - mean loss: 0.5711100101470947
+03/25/2024 13:14:27 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:14:27 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:14:27 - INFO - __main__ - 
+ID text: lug_9
+03/25/2024 13:15:44 - INFO - __main__ - mean loss: 0.622097373008728
+03/25/2024 13:15:44 - INFO - __main__ - 
+######## Language: luo ######## 
+
+03/25/2024 13:15:44 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:15:44 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:15:44 - INFO - __main__ - 
+ID text: luo_0
+03/25/2024 13:17:01 - INFO - __main__ - mean loss: 0.5557202100753784
+03/25/2024 13:17:02 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:17:02 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:17:02 - INFO - __main__ - 
+ID text: luo_1
+03/25/2024 13:18:19 - INFO - __main__ - mean loss: 0.6514571905136108
+03/25/2024 13:18:19 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:18:19 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:18:19 - INFO - __main__ - 
+ID text: luo_2
+03/25/2024 13:19:37 - INFO - __main__ - mean loss: 0.5804240703582764
+03/25/2024 13:19:37 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:19:37 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:19:37 - INFO - __main__ - 
+ID text: luo_3
+03/25/2024 13:20:55 - INFO - __main__ - mean loss: 0.6726558208465576
+03/25/2024 13:20:55 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:20:55 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:20:55 - INFO - __main__ - 
+ID text: luo_4
+03/25/2024 13:22:13 - INFO - __main__ - mean loss: 0.6729668974876404
+03/25/2024 13:22:13 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:22:14 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:22:14 - INFO - __main__ - 
+ID text: luo_5
+03/25/2024 13:23:32 - INFO - __main__ - mean loss: 0.6205430030822754
+03/25/2024 13:23:32 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:23:32 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:23:32 - INFO - __main__ - 
+ID text: luo_6
+03/25/2024 13:24:49 - INFO - __main__ - mean loss: 0.5985038876533508
+03/25/2024 13:24:49 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:24:49 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:24:49 - INFO - __main__ - 
+ID text: luo_7
+03/25/2024 13:26:06 - INFO - __main__ - mean loss: 0.6941770911216736
+03/25/2024 13:26:06 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:26:06 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:26:06 - INFO - __main__ - 
+ID text: luo_8
+03/25/2024 13:27:23 - INFO - __main__ - mean loss: 0.5935196280479431
+03/25/2024 13:27:23 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:27:23 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:27:23 - INFO - __main__ - 
+ID text: luo_9
+03/25/2024 13:28:39 - INFO - __main__ - mean loss: 0.5896395444869995
+03/25/2024 13:28:39 - INFO - __main__ - 
+######## Language: pcm ######## 
+
+03/25/2024 13:28:39 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:28:39 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:28:39 - INFO - __main__ - 
+ID text: pcm_0
+03/25/2024 13:29:54 - INFO - __main__ - mean loss: 0.609218955039978
+03/25/2024 13:29:54 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:29:54 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:29:54 - INFO - __main__ - 
+ID text: pcm_1
+03/25/2024 13:31:07 - INFO - __main__ - mean loss: 0.6484439373016357
+03/25/2024 13:31:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:31:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:31:07 - INFO - __main__ - 
+ID text: pcm_2
+03/25/2024 13:32:21 - INFO - __main__ - mean loss: 0.6350249648094177
+03/25/2024 13:32:21 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:32:21 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:32:21 - INFO - __main__ - 
+ID text: pcm_3
+03/25/2024 13:33:34 - INFO - __main__ - mean loss: 0.6036173105239868
+03/25/2024 13:33:34 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:33:34 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:33:34 - INFO - __main__ - 
+ID text: pcm_4
+03/25/2024 13:34:50 - INFO - __main__ - mean loss: 0.6111702919006348
+03/25/2024 13:34:50 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:34:50 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:34:50 - INFO - __main__ - 
+ID text: pcm_5
+03/25/2024 13:36:06 - INFO - __main__ - mean loss: 0.5793118476867676
+03/25/2024 13:36:06 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:36:06 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:36:06 - INFO - __main__ - 
+ID text: pcm_6
+03/25/2024 13:37:22 - INFO - __main__ - mean loss: 0.6366443037986755
+03/25/2024 13:37:22 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:37:22 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:37:22 - INFO - __main__ - 
+ID text: pcm_7
+03/25/2024 13:38:39 - INFO - __main__ - mean loss: 0.6247087121009827
+03/25/2024 13:38:39 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:38:39 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:38:39 - INFO - __main__ - 
+ID text: pcm_8
+03/25/2024 13:39:55 - INFO - __main__ - mean loss: 0.6898203492164612
+03/25/2024 13:39:55 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:39:55 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:39:55 - INFO - __main__ - 
+ID text: pcm_9
+03/25/2024 13:41:11 - INFO - __main__ - mean loss: 0.6371749043464661
+03/25/2024 13:41:11 - INFO - __main__ - 
+######## Language: swa ######## 
+
+03/25/2024 13:41:11 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:41:11 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:41:11 - INFO - __main__ - 
+ID text: swa_0
+03/25/2024 13:42:25 - INFO - __main__ - mean loss: 0.5545634627342224
+03/25/2024 13:42:25 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:42:25 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:42:25 - INFO - __main__ - 
+ID text: swa_1
+03/25/2024 13:43:39 - INFO - __main__ - mean loss: 0.7180601358413696
+03/25/2024 13:43:39 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:43:39 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:43:39 - INFO - __main__ - 
+ID text: swa_2
+03/25/2024 13:44:52 - INFO - __main__ - mean loss: 0.6243101358413696
+03/25/2024 13:44:52 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:44:52 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:44:52 - INFO - __main__ - 
+ID text: swa_3
+03/25/2024 13:46:05 - INFO - __main__ - mean loss: 0.4980441927909851
+03/25/2024 13:46:06 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:46:06 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:46:06 - INFO - __main__ - 
+ID text: swa_4
+03/25/2024 13:47:19 - INFO - __main__ - mean loss: 0.5843241214752197
+03/25/2024 13:47:19 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:47:19 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:47:19 - INFO - __main__ - 
+ID text: swa_5
+03/25/2024 13:48:31 - INFO - __main__ - mean loss: 0.6159920692443848
+03/25/2024 13:48:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:48:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:48:31 - INFO - __main__ - 
+ID text: swa_6
+03/25/2024 13:49:43 - INFO - __main__ - mean loss: 0.6649854183197021
+03/25/2024 13:49:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:49:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:49:43 - INFO - __main__ - 
+ID text: swa_7
+03/25/2024 13:50:55 - INFO - __main__ - mean loss: 0.8021247386932373
+03/25/2024 13:50:55 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:50:55 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:50:55 - INFO - __main__ - 
+ID text: swa_8
+03/25/2024 13:52:07 - INFO - __main__ - mean loss: 0.6430205702781677
+03/25/2024 13:52:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:52:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:52:07 - INFO - __main__ - 
+ID text: swa_9
+03/25/2024 13:53:18 - INFO - __main__ - mean loss: 0.5694773197174072
+03/25/2024 13:53:18 - INFO - __main__ - 
+######## Language: wol ######## 
+
+03/25/2024 13:53:18 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:53:18 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:53:18 - INFO - __main__ - 
+ID text: wol_0
+03/25/2024 13:54:31 - INFO - __main__ - mean loss: 0.6469178199768066
+03/25/2024 13:54:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:54:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:54:31 - INFO - __main__ - 
+ID text: wol_1
+03/25/2024 13:55:43 - INFO - __main__ - mean loss: 0.6933112144470215
+03/25/2024 13:55:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:55:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:55:43 - INFO - __main__ - 
+ID text: wol_2
+03/25/2024 13:56:55 - INFO - __main__ - mean loss: 0.5604663491249084
+03/25/2024 13:56:55 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:56:55 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:56:55 - INFO - __main__ - 
+ID text: wol_3
+03/25/2024 13:58:07 - INFO - __main__ - mean loss: 0.770119309425354
+03/25/2024 13:58:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:58:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:58:07 - INFO - __main__ - 
+ID text: wol_4
+03/25/2024 13:59:19 - INFO - __main__ - mean loss: 0.7261146306991577
+03/25/2024 13:59:19 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 13:59:19 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 13:59:19 - INFO - __main__ - 
+ID text: wol_5
+03/25/2024 14:00:32 - INFO - __main__ - mean loss: 0.689738929271698
+03/25/2024 14:00:32 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:00:32 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:00:32 - INFO - __main__ - 
+ID text: wol_6
+03/25/2024 14:01:44 - INFO - __main__ - mean loss: 0.7787843942642212
+03/25/2024 14:01:44 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:01:44 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:01:44 - INFO - __main__ - 
+ID text: wol_7
+03/25/2024 14:02:57 - INFO - __main__ - mean loss: 0.6413407325744629
+03/25/2024 14:02:57 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:02:57 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:02:57 - INFO - __main__ - 
+ID text: wol_8
+03/25/2024 14:04:11 - INFO - __main__ - mean loss: 0.7081230282783508
+03/25/2024 14:04:11 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:04:11 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:04:11 - INFO - __main__ - 
+ID text: wol_9
+03/25/2024 14:05:25 - INFO - __main__ - mean loss: 0.4884292483329773
+03/25/2024 14:05:25 - INFO - __main__ - 
+######## Language: yor ######## 
+
+03/25/2024 14:05:25 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:05:25 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:05:25 - INFO - __main__ - 
+ID text: yor_0
+03/25/2024 14:06:38 - INFO - __main__ - mean loss: 0.6941531300544739
+03/25/2024 14:06:38 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:06:38 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:06:38 - INFO - __main__ - 
+ID text: yor_1
+03/25/2024 14:07:59 - INFO - __main__ - mean loss: 0.6686294674873352
+03/25/2024 14:07:59 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:07:59 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:07:59 - INFO - __main__ - 
+ID text: yor_2
+03/25/2024 14:09:18 - INFO - __main__ - mean loss: 0.7666175961494446
+03/25/2024 14:09:18 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:09:18 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:09:18 - INFO - __main__ - 
+ID text: yor_3
+03/25/2024 14:10:37 - INFO - __main__ - mean loss: 0.6491499543190002
+03/25/2024 14:10:37 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:10:37 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:10:37 - INFO - __main__ - 
+ID text: yor_4
+03/25/2024 14:11:59 - INFO - __main__ - mean loss: 0.6731624603271484
+03/25/2024 14:11:59 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:11:59 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:11:59 - INFO - __main__ - 
+ID text: yor_5
+03/25/2024 14:13:19 - INFO - __main__ - mean loss: 0.6297205090522766
+03/25/2024 14:13:19 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:13:19 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:13:19 - INFO - __main__ - 
+ID text: yor_6
+03/25/2024 14:14:40 - INFO - __main__ - mean loss: 0.6114900708198547
+03/25/2024 14:14:40 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:14:40 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:14:40 - INFO - __main__ - 
+ID text: yor_7
+03/25/2024 14:16:01 - INFO - __main__ - mean loss: 0.7132560014724731
+03/25/2024 14:16:01 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:16:01 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:16:01 - INFO - __main__ - 
+ID text: yor_8
+03/25/2024 14:17:22 - INFO - __main__ - mean loss: 0.5797324180603027
+03/25/2024 14:17:22 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:17:22 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:17:22 - INFO - __main__ - 
+ID text: yor_9
+03/25/2024 14:18:43 - INFO - __main__ - mean loss: 0.7648565769195557
+03/25/2024 14:18:43 - INFO - __main__ - 
+######## Language: zh ######## 
+
+03/25/2024 14:18:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:18:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:18:43 - INFO - __main__ - 
+ID text: zh_0
+03/25/2024 14:20:04 - INFO - __main__ - mean loss: 0.8935188055038452
+03/25/2024 14:20:04 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:20:04 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:20:04 - INFO - __main__ - 
+ID text: zh_1
+03/25/2024 14:21:25 - INFO - __main__ - mean loss: 0.8451666235923767
+03/25/2024 14:21:25 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:21:25 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:21:25 - INFO - __main__ - 
+ID text: zh_2
+03/25/2024 14:22:45 - INFO - __main__ - mean loss: 0.8440682291984558
+03/25/2024 14:22:45 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:22:45 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:22:45 - INFO - __main__ - 
+ID text: zh_3
+03/25/2024 14:24:05 - INFO - __main__ - mean loss: 0.8404281735420227
+03/25/2024 14:24:05 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:24:05 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:24:05 - INFO - __main__ - 
+ID text: zh_4
+03/25/2024 14:25:25 - INFO - __main__ - mean loss: 0.9010740518569946
+03/25/2024 14:25:25 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:25:25 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:25:25 - INFO - __main__ - 
+ID text: zh_5
+03/25/2024 14:26:47 - INFO - __main__ - mean loss: 0.8697220683097839
+03/25/2024 14:26:47 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:26:47 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:26:47 - INFO - __main__ - 
+ID text: zh_6
+03/25/2024 14:28:09 - INFO - __main__ - mean loss: 0.8404216766357422
+03/25/2024 14:28:09 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:28:09 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:28:09 - INFO - __main__ - 
+ID text: zh_7
+03/25/2024 14:29:33 - INFO - __main__ - mean loss: 0.776867151260376
+03/25/2024 14:29:33 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:29:33 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:29:33 - INFO - __main__ - 
+ID text: zh_8
+03/25/2024 14:30:59 - INFO - __main__ - mean loss: 0.8622567653656006
+03/25/2024 14:30:59 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:30:59 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:30:59 - INFO - __main__ - 
+ID text: zh_9
+03/25/2024 14:32:24 - INFO - __main__ - mean loss: 0.8800640106201172
+03/25/2024 14:32:24 - INFO - __main__ - 
+######## Computing Loss for task: tydiqa ########
+03/25/2024 14:32:24 - INFO - __main__ - 
+######## Language: arabic ######## 
+
+03/25/2024 14:32:24 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:32:24 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:32:24 - INFO - __main__ - 
+ID text: arabic-4449832350126320768-0
+03/25/2024 14:33:49 - INFO - __main__ - mean loss: 0.8034071922302246
+03/25/2024 14:33:49 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:33:49 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:33:49 - INFO - __main__ - 
+ID text: arabic--3340323169760881569-0
+03/25/2024 14:35:13 - INFO - __main__ - mean loss: 0.8074585795402527
+03/25/2024 14:35:13 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:35:13 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:35:13 - INFO - __main__ - 
+ID text: arabic-4544770624843559444-1
+03/25/2024 14:36:37 - INFO - __main__ - mean loss: 0.8131231665611267
+03/25/2024 14:36:37 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:36:37 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:36:37 - INFO - __main__ - 
+ID text: arabic-891952409566422966-0
+03/25/2024 14:38:02 - INFO - __main__ - mean loss: 0.8035662174224854
+03/25/2024 14:38:02 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:38:02 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:38:02 - INFO - __main__ - 
+ID text: arabic-3659291834714572527-0
+03/25/2024 14:39:26 - INFO - __main__ - mean loss: 0.8794702887535095
+03/25/2024 14:39:26 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:39:26 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:39:26 - INFO - __main__ - 
+ID text: arabic-9215226117011890166-0
+03/25/2024 14:40:51 - INFO - __main__ - mean loss: 0.8172659873962402
+03/25/2024 14:40:51 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:40:51 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:40:51 - INFO - __main__ - 
+ID text: arabic-6300896128538259469-0
+03/25/2024 14:42:15 - INFO - __main__ - mean loss: 0.8435365557670593
+03/25/2024 14:42:15 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:42:15 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:42:15 - INFO - __main__ - 
+ID text: arabic-2382507508588518905-0
+03/25/2024 14:43:38 - INFO - __main__ - mean loss: 0.8660553097724915
+03/25/2024 14:43:38 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:43:38 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:43:38 - INFO - __main__ - 
+ID text: arabic-1871632801094859741-1
+03/25/2024 14:45:02 - INFO - __main__ - mean loss: 0.8484588861465454
+03/25/2024 14:45:02 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:45:02 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:45:02 - INFO - __main__ - 
+ID text: arabic--7365809756232083807-0
+03/25/2024 14:46:25 - INFO - __main__ - mean loss: 0.8213110566139221
+03/25/2024 14:46:25 - INFO - __main__ - 
+######## Language: russian ######## 
+
+03/25/2024 14:46:25 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:46:25 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:46:25 - INFO - __main__ - 
+ID text: russian-3457655197371763238-61
+03/25/2024 14:47:47 - INFO - __main__ - mean loss: 0.5994622111320496
+03/25/2024 14:47:47 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:47:47 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:47:47 - INFO - __main__ - 
+ID text: russian--1914807805318993335-49
+03/25/2024 14:49:10 - INFO - __main__ - mean loss: 0.642666220664978
+03/25/2024 14:49:10 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:49:10 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:49:10 - INFO - __main__ - 
+ID text: russian--3307989180606173904-1
+03/25/2024 14:50:33 - INFO - __main__ - mean loss: 0.6257509589195251
+03/25/2024 14:50:33 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:50:33 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:50:33 - INFO - __main__ - 
+ID text: russian--2219512001175315660-0
+03/25/2024 14:51:56 - INFO - __main__ - mean loss: 0.6072207689285278
+03/25/2024 14:51:56 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:51:56 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:51:56 - INFO - __main__ - 
+ID text: russian--7076080992904718941-0
+03/25/2024 14:53:20 - INFO - __main__ - mean loss: 0.6295907497406006
+03/25/2024 14:53:20 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:53:20 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:53:20 - INFO - __main__ - 
+ID text: russian--6565862953558739013-1
+03/25/2024 14:54:43 - INFO - __main__ - mean loss: 0.6303241848945618
+03/25/2024 14:54:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:54:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:54:43 - INFO - __main__ - 
+ID text: russian--5098374684590548031-42
+03/25/2024 14:56:07 - INFO - __main__ - mean loss: 0.591062605381012
+03/25/2024 14:56:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:56:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:56:07 - INFO - __main__ - 
+ID text: russian-3573734219967447693-1
+03/25/2024 14:57:31 - INFO - __main__ - mean loss: 0.6137557625770569
+03/25/2024 14:57:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:57:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:57:31 - INFO - __main__ - 
+ID text: russian--4521001374120505750-6
+03/25/2024 14:58:54 - INFO - __main__ - mean loss: 0.6115943193435669
+03/25/2024 14:58:54 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 14:58:54 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 14:58:54 - INFO - __main__ - 
+ID text: russian--1308382244018658424-9
+03/25/2024 15:00:17 - INFO - __main__ - mean loss: 0.6399630904197693
+03/25/2024 15:00:17 - INFO - __main__ - 
+######## Language: bengali ######## 
+
+03/25/2024 15:00:17 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:00:17 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:00:17 - INFO - __main__ - 
+ID text: bengali--1199493965132146131-3
+03/25/2024 15:01:41 - INFO - __main__ - mean loss: 0.6895402669906616
+03/25/2024 15:01:41 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:01:41 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:01:41 - INFO - __main__ - 
+ID text: bengali-1807801556888134437-2
+03/25/2024 15:03:06 - INFO - __main__ - mean loss: 0.6569199562072754
+03/25/2024 15:03:06 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:03:06 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:03:06 - INFO - __main__ - 
+ID text: bengali-2113189855114052041-2
+03/25/2024 15:04:31 - INFO - __main__ - mean loss: 0.6862033009529114
+03/25/2024 15:04:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:04:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:04:31 - INFO - __main__ - 
+ID text: bengali--2527914488250041207-0
+03/25/2024 15:05:57 - INFO - __main__ - mean loss: 0.6918964385986328
+03/25/2024 15:05:57 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:05:57 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:05:57 - INFO - __main__ - 
+ID text: bengali--8260793280894408063-14
+03/25/2024 15:07:20 - INFO - __main__ - mean loss: 0.6993190050125122
+03/25/2024 15:07:20 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:07:20 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:07:20 - INFO - __main__ - 
+ID text: bengali-8313009204852557186-4
+03/25/2024 15:08:44 - INFO - __main__ - mean loss: 0.6688345074653625
+03/25/2024 15:08:44 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:08:44 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:08:44 - INFO - __main__ - 
+ID text: bengali--415964033364840061-0
+03/25/2024 15:10:07 - INFO - __main__ - mean loss: 0.7103685140609741
+03/25/2024 15:10:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:10:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:10:07 - INFO - __main__ - 
+ID text: bengali--4696865548928858824-5
+03/25/2024 15:11:31 - INFO - __main__ - mean loss: 0.6920951008796692
+03/25/2024 15:11:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:11:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:11:31 - INFO - __main__ - 
+ID text: bengali-6505224142472931712-1
+03/25/2024 15:12:56 - INFO - __main__ - mean loss: 0.6973418593406677
+03/25/2024 15:12:56 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:12:56 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:12:56 - INFO - __main__ - 
+ID text: bengali-599666913917674019-13
+03/25/2024 15:14:19 - INFO - __main__ - mean loss: 0.6897209286689758
+03/25/2024 15:14:19 - INFO - __main__ - 
+######## Language: telugu ######## 
+
+03/25/2024 15:14:19 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:14:19 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:14:19 - INFO - __main__ - 
+ID text: telugu--3977923017846260053-0
+03/25/2024 15:15:43 - INFO - __main__ - mean loss: 0.7540408968925476
+03/25/2024 15:15:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:15:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:15:43 - INFO - __main__ - 
+ID text: telugu-2254198842560317781-0
+03/25/2024 15:17:08 - INFO - __main__ - mean loss: 0.7600383758544922
+03/25/2024 15:17:08 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:17:08 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:17:08 - INFO - __main__ - 
+ID text: telugu-5435080895440121384-0
+03/25/2024 15:18:32 - INFO - __main__ - mean loss: 0.7782576084136963
+03/25/2024 15:18:32 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:18:32 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:18:32 - INFO - __main__ - 
+ID text: telugu--1182505954974481191-2
+03/25/2024 15:19:57 - INFO - __main__ - mean loss: 0.7692939043045044
+03/25/2024 15:19:57 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:19:57 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:19:57 - INFO - __main__ - 
+ID text: telugu-119276511844068401-0
+03/25/2024 15:21:22 - INFO - __main__ - mean loss: 0.7874142527580261
+03/25/2024 15:21:23 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:21:23 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:21:23 - INFO - __main__ - 
+ID text: telugu--4111208545071789922-0
+03/25/2024 15:22:47 - INFO - __main__ - mean loss: 0.7762355208396912
+03/25/2024 15:22:48 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:22:48 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:22:48 - INFO - __main__ - 
+ID text: telugu--5922002196428211484-132
+03/25/2024 15:24:12 - INFO - __main__ - mean loss: 0.7410687804222107
+03/25/2024 15:24:12 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:24:12 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:24:12 - INFO - __main__ - 
+ID text: telugu--1817004721681155192-3
+03/25/2024 15:25:35 - INFO - __main__ - mean loss: 0.7666693925857544
+03/25/2024 15:25:35 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:25:35 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:25:35 - INFO - __main__ - 
+ID text: telugu-1602214480303968359-1
+03/25/2024 15:26:59 - INFO - __main__ - mean loss: 0.7190362811088562
+03/25/2024 15:26:59 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:26:59 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:26:59 - INFO - __main__ - 
+ID text: telugu--6495674712575945374-0
+03/25/2024 15:28:22 - INFO - __main__ - mean loss: 0.7658345103263855
+03/25/2024 15:28:22 - INFO - __main__ - 
+######## Language: finnish ######## 
+
+03/25/2024 15:28:22 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:28:22 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:28:22 - INFO - __main__ - 
+ID text: finnish-6987763079741579998-0
+03/25/2024 15:29:44 - INFO - __main__ - mean loss: 0.5820909738540649
+03/25/2024 15:29:44 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:29:44 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:29:44 - INFO - __main__ - 
+ID text: finnish--8516625414052383903-0
+03/25/2024 15:31:07 - INFO - __main__ - mean loss: 0.5247732400894165
+03/25/2024 15:31:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:31:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:31:07 - INFO - __main__ - 
+ID text: finnish-4168898766124519517-0
+03/25/2024 15:32:31 - INFO - __main__ - mean loss: 0.5361203551292419
+03/25/2024 15:32:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:32:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:32:31 - INFO - __main__ - 
+ID text: finnish-783166898848672321-4
+03/25/2024 15:33:52 - INFO - __main__ - mean loss: 0.3830653131008148
+03/25/2024 15:33:52 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:33:52 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:33:52 - INFO - __main__ - 
+ID text: finnish-2208556840820233322-0
+03/25/2024 15:35:13 - INFO - __main__ - mean loss: 0.32918184995651245
+03/25/2024 15:35:13 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:35:13 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:35:13 - INFO - __main__ - 
+ID text: finnish--1981034637152391615-58
+03/25/2024 15:36:33 - INFO - __main__ - mean loss: 0.5335017442703247
+03/25/2024 15:36:33 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:36:33 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:36:33 - INFO - __main__ - 
+ID text: finnish-8689148941295949475-9
+03/25/2024 15:37:53 - INFO - __main__ - mean loss: 0.5394650101661682
+03/25/2024 15:37:53 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:37:53 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:37:53 - INFO - __main__ - 
+ID text: finnish-6900867945323517614-2
+03/25/2024 15:39:13 - INFO - __main__ - mean loss: 0.5205653309822083
+03/25/2024 15:39:13 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:39:13 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:39:13 - INFO - __main__ - 
+ID text: finnish-8023130170017405987-1
+03/25/2024 15:40:35 - INFO - __main__ - mean loss: 0.530190646648407
+03/25/2024 15:40:35 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:40:35 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:40:35 - INFO - __main__ - 
+ID text: finnish-5001457972111781248-0
+03/25/2024 15:41:56 - INFO - __main__ - mean loss: 0.5367411971092224
+03/25/2024 15:41:56 - INFO - __main__ - 
+######## Language: swahili ######## 
+
+03/25/2024 15:41:56 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:41:56 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:41:56 - INFO - __main__ - 
+ID text: swahili-7146838206539641546-10
+03/25/2024 15:43:18 - INFO - __main__ - mean loss: 0.3591797947883606
+03/25/2024 15:43:18 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:43:18 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:43:18 - INFO - __main__ - 
+ID text: swahili-7655634199707176439-0
+03/25/2024 15:44:40 - INFO - __main__ - mean loss: 0.3875903785228729
+03/25/2024 15:44:40 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:44:40 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:44:40 - INFO - __main__ - 
+ID text: swahili--4427180714267750534-1
+03/25/2024 15:46:02 - INFO - __main__ - mean loss: 0.4989362061023712
+03/25/2024 15:46:02 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:46:02 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:46:02 - INFO - __main__ - 
+ID text: swahili-4141779435061573138-0
+03/25/2024 15:47:24 - INFO - __main__ - mean loss: 0.4675940275192261
+03/25/2024 15:47:24 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:47:24 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:47:24 - INFO - __main__ - 
+ID text: swahili--5424518593960879661-0
+03/25/2024 15:48:47 - INFO - __main__ - mean loss: 0.509170651435852
+03/25/2024 15:48:47 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:48:47 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:48:47 - INFO - __main__ - 
+ID text: swahili-4281845253405461584-0
+03/25/2024 15:50:09 - INFO - __main__ - mean loss: 0.3313554525375366
+03/25/2024 15:50:09 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:50:09 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:50:09 - INFO - __main__ - 
+ID text: swahili-4899164839984299762-2
+03/25/2024 15:51:31 - INFO - __main__ - mean loss: 0.510715126991272
+03/25/2024 15:51:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:51:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:51:31 - INFO - __main__ - 
+ID text: swahili-1288750786498500530-0
+03/25/2024 15:52:54 - INFO - __main__ - mean loss: 0.5231438279151917
+03/25/2024 15:52:54 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:52:54 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:52:54 - INFO - __main__ - 
+ID text: swahili--2671134792844015228-3
+03/25/2024 15:54:16 - INFO - __main__ - mean loss: 0.5363524556159973
+03/25/2024 15:54:16 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:54:16 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:54:16 - INFO - __main__ - 
+ID text: swahili-4873225622490039485-2
+03/25/2024 15:55:37 - INFO - __main__ - mean loss: 0.5469971299171448
+03/25/2024 15:55:37 - INFO - __main__ - 
+######## Language: korean ######## 
+
+03/25/2024 15:55:37 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:55:37 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:55:37 - INFO - __main__ - 
+ID text: korean--2869472392602314906-0
+03/25/2024 15:56:59 - INFO - __main__ - mean loss: 0.8806861042976379
+03/25/2024 15:56:59 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:56:59 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:56:59 - INFO - __main__ - 
+ID text: korean-4375199563921600155-0
+03/25/2024 15:58:21 - INFO - __main__ - mean loss: 0.8491649031639099
+03/25/2024 15:58:21 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:58:21 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:58:21 - INFO - __main__ - 
+ID text: korean--1715118423211755607-13
+03/25/2024 15:59:43 - INFO - __main__ - mean loss: 0.7990348935127258
+03/25/2024 15:59:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 15:59:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 15:59:43 - INFO - __main__ - 
+ID text: korean--8028977936696142934-9
+03/25/2024 16:01:04 - INFO - __main__ - mean loss: 0.8617907762527466
+03/25/2024 16:01:04 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:01:04 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:01:04 - INFO - __main__ - 
+ID text: korean-2807245034690443837-5
+03/25/2024 16:02:25 - INFO - __main__ - mean loss: 0.896929144859314
+03/25/2024 16:02:25 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:02:25 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:02:25 - INFO - __main__ - 
+ID text: korean-3862451817164408576-0
+03/25/2024 16:03:47 - INFO - __main__ - mean loss: 0.7668939232826233
+03/25/2024 16:03:47 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:03:47 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:03:47 - INFO - __main__ - 
+ID text: korean-148115504649351135-0
+03/25/2024 16:05:09 - INFO - __main__ - mean loss: 0.8468090891838074
+03/25/2024 16:05:09 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:05:09 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:05:09 - INFO - __main__ - 
+ID text: korean--2885837157239647036-2
+03/25/2024 16:06:31 - INFO - __main__ - mean loss: 0.8525311350822449
+03/25/2024 16:06:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:06:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:06:31 - INFO - __main__ - 
+ID text: korean--1743220297777040002-22
+03/25/2024 16:07:51 - INFO - __main__ - mean loss: 0.890354335308075
+03/25/2024 16:07:51 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:07:51 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:07:51 - INFO - __main__ - 
+ID text: korean-3268522368206106332-0
+03/25/2024 16:09:12 - INFO - __main__ - mean loss: 0.8948284983634949
+03/25/2024 16:09:12 - INFO - __main__ - 
+######## Language: indonesian ######## 
+
+03/25/2024 16:09:12 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:09:12 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:09:12 - INFO - __main__ - 
+ID text: indonesian-9141868818310916091-0
+03/25/2024 16:10:33 - INFO - __main__ - mean loss: 0.38020873069763184
+03/25/2024 16:10:33 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:10:33 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:10:33 - INFO - __main__ - 
+ID text: indonesian-4609394337632433932-1
+03/25/2024 16:11:54 - INFO - __main__ - mean loss: 0.5180578827857971
+03/25/2024 16:11:54 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:11:54 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:11:54 - INFO - __main__ - 
+ID text: indonesian-2763468883290577923-0
+03/25/2024 16:13:14 - INFO - __main__ - mean loss: 0.37152886390686035
+03/25/2024 16:13:14 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:13:14 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:13:14 - INFO - __main__ - 
+ID text: indonesian-5633590583948933406-0
+03/25/2024 16:14:33 - INFO - __main__ - mean loss: 0.42661696672439575
+03/25/2024 16:14:33 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:14:33 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:14:33 - INFO - __main__ - 
+ID text: indonesian--5961409780035435015-0
+03/25/2024 16:15:53 - INFO - __main__ - mean loss: 0.5532752275466919
+03/25/2024 16:15:53 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:15:53 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:15:53 - INFO - __main__ - 
+ID text: indonesian-6274547934693326697-0
+03/25/2024 16:17:12 - INFO - __main__ - mean loss: 0.4301738739013672
+03/25/2024 16:17:12 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:17:12 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:17:12 - INFO - __main__ - 
+ID text: indonesian--2516321763567853082-0
+03/25/2024 16:18:32 - INFO - __main__ - mean loss: 0.5459892749786377
+03/25/2024 16:18:32 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:18:32 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:18:32 - INFO - __main__ - 
+ID text: indonesian-2048796427556239759-4
+03/25/2024 16:19:52 - INFO - __main__ - mean loss: 0.5281306505203247
+03/25/2024 16:19:52 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:19:52 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:19:52 - INFO - __main__ - 
+ID text: indonesian-6246592469157278547-2
+03/25/2024 16:21:11 - INFO - __main__ - mean loss: 0.44985640048980713
+03/25/2024 16:21:11 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:21:11 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:21:11 - INFO - __main__ - 
+ID text: indonesian--3724318458930736973-1
+03/25/2024 16:22:30 - INFO - __main__ - mean loss: 0.5128164887428284
+03/25/2024 16:22:30 - INFO - __main__ - 
+######## Language: english ######## 
+
+03/25/2024 16:22:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:22:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:22:31 - INFO - __main__ - 
+ID text: english-2852412434797041176-6
+03/25/2024 16:23:50 - INFO - __main__ - mean loss: 0.37833598256111145
+03/25/2024 16:23:50 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:23:50 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:23:50 - INFO - __main__ - 
+ID text: english--1463732605740571606-0
+03/25/2024 16:25:10 - INFO - __main__ - mean loss: 0.12126299738883972
+03/25/2024 16:25:10 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:25:10 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:25:10 - INFO - __main__ - 
+ID text: english-5441411281255470421-0
+03/25/2024 16:26:28 - INFO - __main__ - mean loss: 0.19287985563278198
+03/25/2024 16:26:28 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:26:28 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:26:28 - INFO - __main__ - 
+ID text: english-7294054492486093447-1
+03/25/2024 16:27:51 - INFO - __main__ - mean loss: 0.1998915672302246
+03/25/2024 16:27:51 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:27:51 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:27:51 - INFO - __main__ - 
+ID text: english-8820750127045023244-0
+03/25/2024 16:29:13 - INFO - __main__ - mean loss: 0.19431543350219727
+03/25/2024 16:29:13 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:29:13 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:29:13 - INFO - __main__ - 
+ID text: english--506693546683012611-2
+03/25/2024 16:30:31 - INFO - __main__ - mean loss: 0.06225904822349548
+03/25/2024 16:30:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:30:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:30:31 - INFO - __main__ - 
+ID text: english-745411798111651115-0
+03/25/2024 16:31:49 - INFO - __main__ - mean loss: 0.2035323679447174
+03/25/2024 16:31:49 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:31:49 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:31:49 - INFO - __main__ - 
+ID text: english-7740772185887912651-0
+03/25/2024 16:33:09 - INFO - __main__ - mean loss: 0.12646251916885376
+03/25/2024 16:33:09 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:33:09 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:33:09 - INFO - __main__ - 
+ID text: english-383873188776267137-19
+03/25/2024 16:34:28 - INFO - __main__ - mean loss: 0.02587355673313141
+03/25/2024 16:34:28 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:34:28 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:34:28 - INFO - __main__ - 
+ID text: english--8277537578703156284-0
+03/25/2024 16:35:46 - INFO - __main__ - mean loss: 0.11301232129335403
+03/25/2024 16:35:46 - INFO - __main__ - 
+######## Computing Loss for task: glue ########
+03/25/2024 16:35:46 - INFO - __main__ - 
+######## Language: cola ######## 
+
+03/25/2024 16:35:46 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:35:46 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:35:46 - INFO - __main__ - 
+ID text: cola_228
+03/25/2024 16:37:05 - INFO - __main__ - mean loss: 0.5282819867134094
+03/25/2024 16:37:05 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:37:05 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:37:05 - INFO - __main__ - 
+ID text: cola_51
+03/25/2024 16:38:23 - INFO - __main__ - mean loss: 0.6633365154266357
+03/25/2024 16:38:23 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:38:23 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:38:23 - INFO - __main__ - 
+ID text: cola_563
+03/25/2024 16:39:43 - INFO - __main__ - mean loss: 0.7075615525245667
+03/25/2024 16:39:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:39:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:39:43 - INFO - __main__ - 
+ID text: cola_501
+03/25/2024 16:41:01 - INFO - __main__ - mean loss: 0.3413578271865845
+03/25/2024 16:41:01 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:41:01 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:41:01 - INFO - __main__ - 
+ID text: cola_457
+03/25/2024 16:42:21 - INFO - __main__ - mean loss: 0.33449625968933105
+03/25/2024 16:42:21 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:42:21 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:42:21 - INFO - __main__ - 
+ID text: cola_285
+03/25/2024 16:43:39 - INFO - __main__ - mean loss: 0.22352461516857147
+03/25/2024 16:43:39 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:43:39 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:43:39 - INFO - __main__ - 
+ID text: cola_209
+03/25/2024 16:44:57 - INFO - __main__ - mean loss: 0.06364493817090988
+03/25/2024 16:44:57 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:44:57 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:44:57 - INFO - __main__ - 
+ID text: cola_178
+03/25/2024 16:46:15 - INFO - __main__ - mean loss: 0.041707590222358704
+03/25/2024 16:46:15 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:46:15 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:46:15 - INFO - __main__ - 
+ID text: cola_864
+03/25/2024 16:47:33 - INFO - __main__ - mean loss: 0.07731364667415619
+03/25/2024 16:47:33 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:47:33 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:47:33 - INFO - __main__ - 
+ID text: cola_65
+03/25/2024 16:48:50 - INFO - __main__ - mean loss: 0.10780654847621918
+03/25/2024 16:48:50 - INFO - __main__ - 
+######## Language: mnli ######## 
+
+03/25/2024 16:48:50 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:48:50 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:48:50 - INFO - __main__ - 
+ID text: mnli_488
+03/25/2024 16:50:05 - INFO - __main__ - mean loss: 0.03194199502468109
+03/25/2024 16:50:05 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:50:05 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:50:05 - INFO - __main__ - 
+ID text: mnli_1535
+03/25/2024 16:51:20 - INFO - __main__ - mean loss: 0.1056906059384346
+03/25/2024 16:51:20 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:51:20 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:51:20 - INFO - __main__ - 
+ID text: mnli_3582
+03/25/2024 16:52:39 - INFO - __main__ - mean loss: 0.022001473233103752
+03/25/2024 16:52:39 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:52:39 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:52:39 - INFO - __main__ - 
+ID text: mnli_3811
+03/25/2024 16:54:02 - INFO - __main__ - mean loss: 0.16540193557739258
+03/25/2024 16:54:02 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:54:02 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:54:02 - INFO - __main__ - 
+ID text: mnli_8279
+03/25/2024 16:55:23 - INFO - __main__ - mean loss: 0.11227479577064514
+03/25/2024 16:55:23 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:55:23 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:55:23 - INFO - __main__ - 
+ID text: mnli_434
+03/25/2024 16:56:45 - INFO - __main__ - mean loss: 0.08894938230514526
+03/25/2024 16:56:45 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:56:45 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:56:45 - INFO - __main__ - 
+ID text: mnli_9195
+03/25/2024 16:58:07 - INFO - __main__ - mean loss: 0.6513471007347107
+03/25/2024 16:58:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:58:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:58:07 - INFO - __main__ - 
+ID text: mnli_3257
+03/25/2024 16:59:29 - INFO - __main__ - mean loss: 0.10099543631076813
+03/25/2024 16:59:29 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 16:59:29 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 16:59:29 - INFO - __main__ - 
+ID text: mnli_8928
+03/25/2024 17:00:50 - INFO - __main__ - mean loss: 0.1861526370048523
+03/25/2024 17:00:50 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:00:50 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:00:50 - INFO - __main__ - 
+ID text: mnli_6873
+03/25/2024 17:02:12 - INFO - __main__ - mean loss: 0.25233399868011475
+03/25/2024 17:02:12 - INFO - __main__ - 
+######## Language: mrpc ######## 
+
+03/25/2024 17:02:12 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:02:12 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:02:12 - INFO - __main__ - 
+ID text: mrpc_451
+03/25/2024 17:03:34 - INFO - __main__ - mean loss: 0.07171587646007538
+03/25/2024 17:03:34 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:03:34 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:03:34 - INFO - __main__ - 
+ID text: mrpc_919
+03/25/2024 17:04:57 - INFO - __main__ - mean loss: 0.10015983879566193
+03/25/2024 17:04:57 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:04:57 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:04:57 - INFO - __main__ - 
+ID text: mrpc_1206
+03/25/2024 17:06:19 - INFO - __main__ - mean loss: 0.1988360583782196
+03/25/2024 17:06:19 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:06:19 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:06:19 - INFO - __main__ - 
+ID text: mrpc_569
+03/25/2024 17:07:40 - INFO - __main__ - mean loss: 0.10130436718463898
+03/25/2024 17:07:40 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:07:40 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:07:40 - INFO - __main__ - 
+ID text: mrpc_1657
+03/25/2024 17:09:01 - INFO - __main__ - mean loss: 0.19276607036590576
+03/25/2024 17:09:01 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:09:01 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:09:01 - INFO - __main__ - 
+ID text: mrpc_13
+03/25/2024 17:10:22 - INFO - __main__ - mean loss: 0.27856966853141785
+03/25/2024 17:10:22 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:10:22 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:10:22 - INFO - __main__ - 
+ID text: mrpc_1554
+03/25/2024 17:11:43 - INFO - __main__ - mean loss: 0.28038302063941956
+03/25/2024 17:11:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:11:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:11:43 - INFO - __main__ - 
+ID text: mrpc_1650
+03/25/2024 17:13:05 - INFO - __main__ - mean loss: 0.23518268764019012
+03/25/2024 17:13:05 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:13:05 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:13:05 - INFO - __main__ - 
+ID text: mrpc_326
+03/25/2024 17:14:26 - INFO - __main__ - mean loss: 0.041349105536937714
+03/25/2024 17:14:27 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:14:27 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:14:27 - INFO - __main__ - 
+ID text: mrpc_1429
+03/25/2024 17:15:48 - INFO - __main__ - mean loss: 0.3441528081893921
+03/25/2024 17:15:48 - INFO - __main__ - 
+######## Language: qnli ######## 
+
+03/25/2024 17:15:48 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:15:48 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:15:48 - INFO - __main__ - 
+ID text: qnli_3462
+03/25/2024 17:17:09 - INFO - __main__ - mean loss: 0.15811565518379211
+03/25/2024 17:17:09 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:17:09 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:17:09 - INFO - __main__ - 
+ID text: qnli_2787
+03/25/2024 17:18:30 - INFO - __main__ - mean loss: 0.13953614234924316
+03/25/2024 17:18:30 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:18:30 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:18:30 - INFO - __main__ - 
+ID text: qnli_2276
+03/25/2024 17:19:51 - INFO - __main__ - mean loss: 0.3000916540622711
+03/25/2024 17:19:51 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:19:51 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:19:51 - INFO - __main__ - 
+ID text: qnli_1273
+03/25/2024 17:21:12 - INFO - __main__ - mean loss: 0.1521887481212616
+03/25/2024 17:21:12 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:21:12 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:21:12 - INFO - __main__ - 
+ID text: qnli_1763
+03/25/2024 17:22:34 - INFO - __main__ - mean loss: 0.09268247336149216
+03/25/2024 17:22:34 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:22:34 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:22:34 - INFO - __main__ - 
+ID text: qnli_2757
+03/25/2024 17:23:55 - INFO - __main__ - mean loss: 0.1020500585436821
+03/25/2024 17:23:55 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:23:55 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:23:55 - INFO - __main__ - 
+ID text: qnli_837
+03/25/2024 17:25:16 - INFO - __main__ - mean loss: 0.27820730209350586
+03/25/2024 17:25:16 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:25:16 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:25:16 - INFO - __main__ - 
+ID text: qnli_759
+03/25/2024 17:26:37 - INFO - __main__ - mean loss: 0.12916751205921173
+03/25/2024 17:26:37 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:26:37 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:26:37 - INFO - __main__ - 
+ID text: qnli_3112
+03/25/2024 17:27:58 - INFO - __main__ - mean loss: 0.07792474329471588
+03/25/2024 17:27:58 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:27:58 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:27:58 - INFO - __main__ - 
+ID text: qnli_792
+03/25/2024 17:29:19 - INFO - __main__ - mean loss: 0.1891869753599167
+03/25/2024 17:29:19 - INFO - __main__ - 
+######## Language: qqp ######## 
+
+03/25/2024 17:29:20 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:29:20 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:29:20 - INFO - __main__ - 
+ID text: qqp_188208
+03/25/2024 17:30:41 - INFO - __main__ - mean loss: 0.029841428622603416
+03/25/2024 17:30:41 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:30:41 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:30:41 - INFO - __main__ - 
+ID text: qqp_180331
+03/25/2024 17:32:02 - INFO - __main__ - mean loss: 0.20579864084720612
+03/25/2024 17:32:02 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:32:02 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:32:02 - INFO - __main__ - 
+ID text: qqp_316526
+03/25/2024 17:33:23 - INFO - __main__ - mean loss: 0.15109802782535553
+03/25/2024 17:33:23 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:33:23 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:33:23 - INFO - __main__ - 
+ID text: qqp_138685
+03/25/2024 17:34:43 - INFO - __main__ - mean loss: 0.04256575554609299
+03/25/2024 17:34:43 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:34:43 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:34:43 - INFO - __main__ - 
+ID text: qqp_22780
+03/25/2024 17:36:04 - INFO - __main__ - mean loss: 0.28466689586639404
+03/25/2024 17:36:04 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:36:04 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:36:04 - INFO - __main__ - 
+ID text: qqp_382589
+03/25/2024 17:37:25 - INFO - __main__ - mean loss: 0.46894383430480957
+03/25/2024 17:37:25 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:37:25 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:37:25 - INFO - __main__ - 
+ID text: qqp_240870
+03/25/2024 17:38:46 - INFO - __main__ - mean loss: 0.0306331105530262
+03/25/2024 17:38:46 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:38:46 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:38:46 - INFO - __main__ - 
+ID text: qqp_281137
+03/25/2024 17:40:07 - INFO - __main__ - mean loss: 0.5196027755737305
+03/25/2024 17:40:07 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:40:07 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:40:07 - INFO - __main__ - 
+ID text: qqp_65444
+03/25/2024 17:41:27 - INFO - __main__ - mean loss: 0.33560898900032043
+03/25/2024 17:41:27 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:41:27 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:41:27 - INFO - __main__ - 
+ID text: qqp_198461
+03/25/2024 17:42:47 - INFO - __main__ - mean loss: 0.4260672628879547
+03/25/2024 17:42:47 - INFO - __main__ - 
+######## Language: rte ######## 
+
+03/25/2024 17:42:47 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:42:47 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:42:47 - INFO - __main__ - 
+ID text: rte_322
+03/25/2024 17:44:08 - INFO - __main__ - mean loss: 0.1282690018415451
+03/25/2024 17:44:08 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:44:08 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:44:08 - INFO - __main__ - 
+ID text: rte_2261
+03/25/2024 17:45:29 - INFO - __main__ - mean loss: 0.30875563621520996
+03/25/2024 17:45:29 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:45:29 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:45:29 - INFO - __main__ - 
+ID text: rte_1200
+03/25/2024 17:46:50 - INFO - __main__ - mean loss: 0.17846333980560303
+03/25/2024 17:46:50 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:46:50 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:46:50 - INFO - __main__ - 
+ID text: rte_2574
+03/25/2024 17:48:11 - INFO - __main__ - mean loss: 0.22469457983970642
+03/25/2024 17:48:11 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:48:11 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:48:11 - INFO - __main__ - 
+ID text: rte_2533
+03/25/2024 17:49:31 - INFO - __main__ - mean loss: 0.151784747838974
+03/25/2024 17:49:31 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:49:31 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:49:31 - INFO - __main__ - 
+ID text: rte_1481
+03/25/2024 17:50:52 - INFO - __main__ - mean loss: 0.19586412608623505
+03/25/2024 17:50:52 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:50:52 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:50:52 - INFO - __main__ - 
+ID text: rte_2364
+03/25/2024 17:52:12 - INFO - __main__ - mean loss: 0.14007426798343658
+03/25/2024 17:52:12 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:52:12 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:52:12 - INFO - __main__ - 
+ID text: rte_787
+03/25/2024 17:53:33 - INFO - __main__ - mean loss: 0.11833292245864868
+03/25/2024 17:53:33 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:53:33 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:53:33 - INFO - __main__ - 
+ID text: rte_2885
+03/25/2024 17:54:54 - INFO - __main__ - mean loss: 0.26273372769355774
+03/25/2024 17:54:54 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:54:54 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:54:54 - INFO - __main__ - 
+ID text: rte_284
+03/25/2024 17:56:14 - INFO - __main__ - mean loss: 0.26664090156555176
+03/25/2024 17:56:14 - INFO - __main__ - 
+######## Language: sst2 ######## 
+
+03/25/2024 17:56:14 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:56:14 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:56:14 - INFO - __main__ - 
+ID text: sst2_93
+03/25/2024 17:57:35 - INFO - __main__ - mean loss: 0.5284311175346375
+03/25/2024 17:57:35 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:57:35 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:57:35 - INFO - __main__ - 
+ID text: sst2_1354
+03/25/2024 17:58:56 - INFO - __main__ - mean loss: 0.35464611649513245
+03/25/2024 17:58:56 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 17:58:56 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 17:58:56 - INFO - __main__ - 
+ID text: sst2_466
+03/25/2024 18:00:17 - INFO - __main__ - mean loss: 0.4697984457015991
+03/25/2024 18:00:17 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:00:17 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:00:17 - INFO - __main__ - 
+ID text: sst2_1583
+03/25/2024 18:01:38 - INFO - __main__ - mean loss: 0.2896267771720886
+03/25/2024 18:01:38 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:01:38 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:01:38 - INFO - __main__ - 
+ID text: sst2_592
+03/25/2024 18:02:59 - INFO - __main__ - mean loss: 0.35030296444892883
+03/25/2024 18:02:59 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:02:59 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:02:59 - INFO - __main__ - 
+ID text: sst2_163
+03/25/2024 18:04:19 - INFO - __main__ - mean loss: 0.7423962354660034
+03/25/2024 18:04:19 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:04:19 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:04:19 - INFO - __main__ - 
+ID text: sst2_1751
+03/25/2024 18:05:40 - INFO - __main__ - mean loss: 0.3661244213581085
+03/25/2024 18:05:40 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:05:40 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:05:40 - INFO - __main__ - 
+ID text: sst2_476
+03/25/2024 18:07:01 - INFO - __main__ - mean loss: 0.47361496090888977
+03/25/2024 18:07:01 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:07:01 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:07:01 - INFO - __main__ - 
+ID text: sst2_1774
+03/25/2024 18:08:21 - INFO - __main__ - mean loss: 0.46382462978363037
+03/25/2024 18:08:22 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:08:22 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:08:22 - INFO - __main__ - 
+ID text: sst2_206
+03/25/2024 18:09:42 - INFO - __main__ - mean loss: 0.5257202386856079
+03/25/2024 18:09:42 - INFO - __main__ - 
+######## Language: stsb ######## 
+
+03/25/2024 18:09:42 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:09:42 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:09:42 - INFO - __main__ - 
+ID text: stsb_778
+03/25/2024 18:11:03 - INFO - __main__ - mean loss: 0.19082456827163696
+03/25/2024 18:11:03 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:11:03 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:11:03 - INFO - __main__ - 
+ID text: stsb_569
+03/25/2024 18:12:24 - INFO - __main__ - mean loss: 0.4196089804172516
+03/25/2024 18:12:24 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:12:24 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:12:24 - INFO - __main__ - 
+ID text: stsb_928
+03/25/2024 18:13:44 - INFO - __main__ - mean loss: 0.11459541320800781
+03/25/2024 18:13:44 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:13:44 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:13:44 - INFO - __main__ - 
+ID text: stsb_1301
+03/25/2024 18:15:05 - INFO - __main__ - mean loss: 0.06062953919172287
+03/25/2024 18:15:05 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:15:05 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:15:05 - INFO - __main__ - 
+ID text: stsb_747
+03/25/2024 18:16:26 - INFO - __main__ - mean loss: 0.11722774803638458
+03/25/2024 18:16:26 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:16:26 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:16:26 - INFO - __main__ - 
+ID text: stsb_333
+03/25/2024 18:17:47 - INFO - __main__ - mean loss: 0.02101471833884716
+03/25/2024 18:17:47 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:17:47 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:17:47 - INFO - __main__ - 
+ID text: stsb_758
+03/25/2024 18:19:08 - INFO - __main__ - mean loss: 0.15841299295425415
+03/25/2024 18:19:08 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:19:08 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:19:08 - INFO - __main__ - 
+ID text: stsb_727
+03/25/2024 18:20:27 - INFO - __main__ - mean loss: 0.024809520691633224
+03/25/2024 18:20:27 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:20:27 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:20:27 - INFO - __main__ - 
+ID text: stsb_429
+03/25/2024 18:21:46 - INFO - __main__ - mean loss: 0.36511680483818054
+03/25/2024 18:21:46 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:21:46 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:21:46 - INFO - __main__ - 
+ID text: stsb_1372
+03/25/2024 18:23:04 - INFO - __main__ - mean loss: 0.3603205382823944
+03/25/2024 18:23:04 - INFO - __main__ - 
+######## Language: wnli ######## 
+
+03/25/2024 18:23:04 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:23:04 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:23:04 - INFO - __main__ - 
+ID text: wnli_68
+03/25/2024 18:24:23 - INFO - __main__ - mean loss: 0.12501001358032227
+03/25/2024 18:24:23 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:24:23 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:24:23 - INFO - __main__ - 
+ID text: wnli_18
+03/25/2024 18:25:42 - INFO - __main__ - mean loss: 0.1075681671500206
+03/25/2024 18:25:42 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:25:42 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:25:42 - INFO - __main__ - 
+ID text: wnli_43
+03/25/2024 18:27:00 - INFO - __main__ - mean loss: 0.2277555912733078
+03/25/2024 18:27:00 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:27:00 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:27:00 - INFO - __main__ - 
+ID text: wnli_136
+03/25/2024 18:28:19 - INFO - __main__ - mean loss: 0.11695568263530731
+03/25/2024 18:28:19 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:28:19 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:28:19 - INFO - __main__ - 
+ID text: wnli_62
+03/25/2024 18:29:38 - INFO - __main__ - mean loss: 0.12789952754974365
+03/25/2024 18:29:38 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:29:38 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:29:38 - INFO - __main__ - 
+ID text: wnli_41
+03/25/2024 18:30:55 - INFO - __main__ - mean loss: 0.26650094985961914
+03/25/2024 18:30:55 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:30:55 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:30:55 - INFO - __main__ - 
+ID text: wnli_118
+03/25/2024 18:32:10 - INFO - __main__ - mean loss: 0.2349553257226944
+03/25/2024 18:32:11 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:32:11 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:32:11 - INFO - __main__ - 
+ID text: wnli_97
+03/25/2024 18:33:26 - INFO - __main__ - mean loss: 0.2110941857099533
+03/25/2024 18:33:26 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:33:26 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:33:26 - INFO - __main__ - 
+ID text: wnli_69
+03/25/2024 18:34:42 - INFO - __main__ - mean loss: 0.39134395122528076
+03/25/2024 18:34:42 - INFO - __main__ - Applying span masking with "max_span_length = 3" , "cumulative_span_weights = [0.0, 0.0, 1.0]"  and "spacing = span"
+03/25/2024 18:34:42 - INFO - __main__ - Masked count: 63, ratio = 0.2461
+03/25/2024 18:34:42 - INFO - __main__ - 
+ID text: wnli_142
+03/25/2024 18:35:58 - INFO - __main__ - mean loss: 0.2152201533317566
+03/25/2024 18:35:58 - INFO - __main__ - Losses per task: {'ner': {'amh': {'amh_0': 0.877295732498169, 'amh_1': 0.8478333950042725, 'amh_2': 0.8709550499916077, 'amh_3': 0.7841366529464722, 'amh_4': 0.8182365298271179, 'amh_5': 0.8595674633979797, 'amh_6': 0.848160982131958, 'amh_7': 0.8607710003852844, 'amh_8': 0.8557544946670532, 'amh_9': 0.8638675808906555}, 'conll_2003_en': {'conll_2003_en_0': 0.6602458357810974, 'conll_2003_en_1': 0.6351239085197449, 'conll_2003_en_2': 0.5358602404594421, 'conll_2003_en_3': 0.5703359842300415, 'conll_2003_en_4': 0.5382273197174072, 'conll_2003_en_5': 0.729566216468811, 'conll_2003_en_6': 1.0130867958068848, 'conll_2003_en_7': 0.6327115893363953, 'conll_2003_en_8': 0.7827881574630737, 'conll_2003_en_9': 0.4756868779659271}, 'hau': {'hau_0': 0.6129855513572693, 'hau_1': 0.6390781402587891, 'hau_2': 0.7424508929252625, 'hau_3': 0.5716868042945862, 'hau_4': 0.5630388855934143, 'hau_5': 0.6014540791511536, 'hau_6': 0.6409668922424316, 'hau_7': 0.6071845293045044, 'hau_8': 0.577182948589325, 'hau_9': 0.5400131940841675}, 'ibo': {'ibo_0': 0.6275440454483032, 'ibo_1': 0.6682066321372986, 'ibo_2': 0.6502017378807068, 'ibo_3': 0.5925619006156921, 'ibo_4': 0.6559674143791199, 'ibo_5': 0.604142963886261, 'ibo_6': 0.609627366065979, 'ibo_7': 0.6356592178344727, 'ibo_8': 0.4848884642124176, 'ibo_9': 0.5664726495742798}, 'kin': {'kin_0': 0.647967517375946, 'kin_1': 0.7617633938789368, 'kin_2': 0.5984299182891846, 'kin_3': 0.5979453325271606, 'kin_4': 0.6311178803443909, 'kin_5': 0.5324861407279968, 'kin_6': 0.6549481749534607, 'kin_7': 0.6193723678588867, 'kin_8': 0.6702947020530701, 'kin_9': 0.759570837020874}, 'lug': {'lug_0': 0.525240421295166, 'lug_1': 0.6712373495101929, 'lug_2': 0.533450186252594, 'lug_3': 0.5938951373100281, 'lug_4': 0.5478406548500061, 'lug_5': 0.6696845293045044, 'lug_6': 0.5901511907577515, 'lug_7': 0.6539783477783203, 'lug_8': 0.5711100101470947, 'lug_9': 0.622097373008728}, 'luo': {'luo_0': 0.5557202100753784, 'luo_1': 0.6514571905136108, 'luo_2': 0.5804240703582764, 'luo_3': 0.6726558208465576, 'luo_4': 0.6729668974876404, 'luo_5': 0.6205430030822754, 'luo_6': 0.5985038876533508, 'luo_7': 0.6941770911216736, 'luo_8': 0.5935196280479431, 'luo_9': 0.5896395444869995}, 'pcm': {'pcm_0': 0.609218955039978, 'pcm_1': 0.6484439373016357, 'pcm_2': 0.6350249648094177, 'pcm_3': 0.6036173105239868, 'pcm_4': 0.6111702919006348, 'pcm_5': 0.5793118476867676, 'pcm_6': 0.6366443037986755, 'pcm_7': 0.6247087121009827, 'pcm_8': 0.6898203492164612, 'pcm_9': 0.6371749043464661}, 'swa': {'swa_0': 0.5545634627342224, 'swa_1': 0.7180601358413696, 'swa_2': 0.6243101358413696, 'swa_3': 0.4980441927909851, 'swa_4': 0.5843241214752197, 'swa_5': 0.6159920692443848, 'swa_6': 0.6649854183197021, 'swa_7': 0.8021247386932373, 'swa_8': 0.6430205702781677, 'swa_9': 0.5694773197174072}, 'wol': {'wol_0': 0.6469178199768066, 'wol_1': 0.6933112144470215, 'wol_2': 0.5604663491249084, 'wol_3': 0.770119309425354, 'wol_4': 0.7261146306991577, 'wol_5': 0.689738929271698, 'wol_6': 0.7787843942642212, 'wol_7': 0.6413407325744629, 'wol_8': 0.7081230282783508, 'wol_9': 0.4884292483329773}, 'yor': {'yor_0': 0.6941531300544739, 'yor_1': 0.6686294674873352, 'yor_2': 0.7666175961494446, 'yor_3': 0.6491499543190002, 'yor_4': 0.6731624603271484, 'yor_5': 0.6297205090522766, 'yor_6': 0.6114900708198547, 'yor_7': 0.7132560014724731, 'yor_8': 0.5797324180603027, 'yor_9': 0.7648565769195557}, 'zh': {'zh_0': 0.8935188055038452, 'zh_1': 0.8451666235923767, 'zh_2': 0.8440682291984558, 'zh_3': 0.8404281735420227, 'zh_4': 0.9010740518569946, 'zh_5': 0.8697220683097839, 'zh_6': 0.8404216766357422, 'zh_7': 0.776867151260376, 'zh_8': 0.8622567653656006, 'zh_9': 0.8800640106201172}}, 'tydiqa': {'arabic': {'arabic-4449832350126320768-0': 0.8034071922302246, 'arabic--3340323169760881569-0': 0.8074585795402527, 'arabic-4544770624843559444-1': 0.8131231665611267, 'arabic-891952409566422966-0': 0.8035662174224854, 'arabic-3659291834714572527-0': 0.8794702887535095, 'arabic-9215226117011890166-0': 0.8172659873962402, 'arabic-6300896128538259469-0': 0.8435365557670593, 'arabic-2382507508588518905-0': 0.8660553097724915, 'arabic-1871632801094859741-1': 0.8484588861465454, 'arabic--7365809756232083807-0': 0.8213110566139221}, 'russian': {'russian-3457655197371763238-61': 0.5994622111320496, 'russian--1914807805318993335-49': 0.642666220664978, 'russian--3307989180606173904-1': 0.6257509589195251, 'russian--2219512001175315660-0': 0.6072207689285278, 'russian--7076080992904718941-0': 0.6295907497406006, 'russian--6565862953558739013-1': 0.6303241848945618, 'russian--5098374684590548031-42': 0.591062605381012, 'russian-3573734219967447693-1': 0.6137557625770569, 'russian--4521001374120505750-6': 0.6115943193435669, 'russian--1308382244018658424-9': 0.6399630904197693}, 'bengali': {'bengali--1199493965132146131-3': 0.6895402669906616, 'bengali-1807801556888134437-2': 0.6569199562072754, 'bengali-2113189855114052041-2': 0.6862033009529114, 'bengali--2527914488250041207-0': 0.6918964385986328, 'bengali--8260793280894408063-14': 0.6993190050125122, 'bengali-8313009204852557186-4': 0.6688345074653625, 'bengali--415964033364840061-0': 0.7103685140609741, 'bengali--4696865548928858824-5': 0.6920951008796692, 'bengali-6505224142472931712-1': 0.6973418593406677, 'bengali-599666913917674019-13': 0.6897209286689758}, 'telugu': {'telugu--3977923017846260053-0': 0.7540408968925476, 'telugu-2254198842560317781-0': 0.7600383758544922, 'telugu-5435080895440121384-0': 0.7782576084136963, 'telugu--1182505954974481191-2': 0.7692939043045044, 'telugu-119276511844068401-0': 0.7874142527580261, 'telugu--4111208545071789922-0': 0.7762355208396912, 'telugu--5922002196428211484-132': 0.7410687804222107, 'telugu--1817004721681155192-3': 0.7666693925857544, 'telugu-1602214480303968359-1': 0.7190362811088562, 'telugu--6495674712575945374-0': 0.7658345103263855}, 'finnish': {'finnish-6987763079741579998-0': 0.5820909738540649, 'finnish--8516625414052383903-0': 0.5247732400894165, 'finnish-4168898766124519517-0': 0.5361203551292419, 'finnish-783166898848672321-4': 0.3830653131008148, 'finnish-2208556840820233322-0': 0.32918184995651245, 'finnish--1981034637152391615-58': 0.5335017442703247, 'finnish-8689148941295949475-9': 0.5394650101661682, 'finnish-6900867945323517614-2': 0.5205653309822083, 'finnish-8023130170017405987-1': 0.530190646648407, 'finnish-5001457972111781248-0': 0.5367411971092224}, 'swahili': {'swahili-7146838206539641546-10': 0.3591797947883606, 'swahili-7655634199707176439-0': 0.3875903785228729, 'swahili--4427180714267750534-1': 0.4989362061023712, 'swahili-4141779435061573138-0': 0.4675940275192261, 'swahili--5424518593960879661-0': 0.509170651435852, 'swahili-4281845253405461584-0': 0.3313554525375366, 'swahili-4899164839984299762-2': 0.510715126991272, 'swahili-1288750786498500530-0': 0.5231438279151917, 'swahili--2671134792844015228-3': 0.5363524556159973, 'swahili-4873225622490039485-2': 0.5469971299171448}, 'korean': {'korean--2869472392602314906-0': 0.8806861042976379, 'korean-4375199563921600155-0': 0.8491649031639099, 'korean--1715118423211755607-13': 0.7990348935127258, 'korean--8028977936696142934-9': 0.8617907762527466, 'korean-2807245034690443837-5': 0.896929144859314, 'korean-3862451817164408576-0': 0.7668939232826233, 'korean-148115504649351135-0': 0.8468090891838074, 'korean--2885837157239647036-2': 0.8525311350822449, 'korean--1743220297777040002-22': 0.890354335308075, 'korean-3268522368206106332-0': 0.8948284983634949}, 'indonesian': {'indonesian-9141868818310916091-0': 0.38020873069763184, 'indonesian-4609394337632433932-1': 0.5180578827857971, 'indonesian-2763468883290577923-0': 0.37152886390686035, 'indonesian-5633590583948933406-0': 0.42661696672439575, 'indonesian--5961409780035435015-0': 0.5532752275466919, 'indonesian-6274547934693326697-0': 0.4301738739013672, 'indonesian--2516321763567853082-0': 0.5459892749786377, 'indonesian-2048796427556239759-4': 0.5281306505203247, 'indonesian-6246592469157278547-2': 0.44985640048980713, 'indonesian--3724318458930736973-1': 0.5128164887428284}, 'english': {'english-2852412434797041176-6': 0.37833598256111145, 'english--1463732605740571606-0': 0.12126299738883972, 'english-5441411281255470421-0': 0.19287985563278198, 'english-7294054492486093447-1': 0.1998915672302246, 'english-8820750127045023244-0': 0.19431543350219727, 'english--506693546683012611-2': 0.06225904822349548, 'english-745411798111651115-0': 0.2035323679447174, 'english-7740772185887912651-0': 0.12646251916885376, 'english-383873188776267137-19': 0.02587355673313141, 'english--8277537578703156284-0': 0.11301232129335403}}, 'glue': {'cola': {'cola_228': 0.5282819867134094, 'cola_51': 0.6633365154266357, 'cola_563': 0.7075615525245667, 'cola_501': 0.3413578271865845, 'cola_457': 0.33449625968933105, 'cola_285': 0.22352461516857147, 'cola_209': 0.06364493817090988, 'cola_178': 0.041707590222358704, 'cola_864': 0.07731364667415619, 'cola_65': 0.10780654847621918}, 'mnli': {'mnli_488': 0.03194199502468109, 'mnli_1535': 0.1056906059384346, 'mnli_3582': 0.022001473233103752, 'mnli_3811': 0.16540193557739258, 'mnli_8279': 0.11227479577064514, 'mnli_434': 0.08894938230514526, 'mnli_9195': 0.6513471007347107, 'mnli_3257': 0.10099543631076813, 'mnli_8928': 0.1861526370048523, 'mnli_6873': 0.25233399868011475}, 'mrpc': {'mrpc_451': 0.07171587646007538, 'mrpc_919': 0.10015983879566193, 'mrpc_1206': 0.1988360583782196, 'mrpc_569': 0.10130436718463898, 'mrpc_1657': 0.19276607036590576, 'mrpc_13': 0.27856966853141785, 'mrpc_1554': 0.28038302063941956, 'mrpc_1650': 0.23518268764019012, 'mrpc_326': 0.041349105536937714, 'mrpc_1429': 0.3441528081893921}, 'qnli': {'qnli_3462': 0.15811565518379211, 'qnli_2787': 0.13953614234924316, 'qnli_2276': 0.3000916540622711, 'qnli_1273': 0.1521887481212616, 'qnli_1763': 0.09268247336149216, 'qnli_2757': 0.1020500585436821, 'qnli_837': 0.27820730209350586, 'qnli_759': 0.12916751205921173, 'qnli_3112': 0.07792474329471588, 'qnli_792': 0.1891869753599167}, 'qqp': {'qqp_188208': 0.029841428622603416, 'qqp_180331': 0.20579864084720612, 'qqp_316526': 0.15109802782535553, 'qqp_138685': 0.04256575554609299, 'qqp_22780': 0.28466689586639404, 'qqp_382589': 0.46894383430480957, 'qqp_240870': 0.0306331105530262, 'qqp_281137': 0.5196027755737305, 'qqp_65444': 0.33560898900032043, 'qqp_198461': 0.4260672628879547}, 'rte': {'rte_322': 0.1282690018415451, 'rte_2261': 0.30875563621520996, 'rte_1200': 0.17846333980560303, 'rte_2574': 0.22469457983970642, 'rte_2533': 0.151784747838974, 'rte_1481': 0.19586412608623505, 'rte_2364': 0.14007426798343658, 'rte_787': 0.11833292245864868, 'rte_2885': 0.26273372769355774, 'rte_284': 0.26664090156555176}, 'sst2': {'sst2_93': 0.5284311175346375, 'sst2_1354': 0.35464611649513245, 'sst2_466': 0.4697984457015991, 'sst2_1583': 0.2896267771720886, 'sst2_592': 0.35030296444892883, 'sst2_163': 0.7423962354660034, 'sst2_1751': 0.3661244213581085, 'sst2_476': 0.47361496090888977, 'sst2_1774': 0.46382462978363037, 'sst2_206': 0.5257202386856079}, 'stsb': {'stsb_778': 0.19082456827163696, 'stsb_569': 0.4196089804172516, 'stsb_928': 0.11459541320800781, 'stsb_1301': 0.06062953919172287, 'stsb_747': 0.11722774803638458, 'stsb_333': 0.02101471833884716, 'stsb_758': 0.15841299295425415, 'stsb_727': 0.024809520691633224, 'stsb_429': 0.36511680483818054, 'stsb_1372': 0.3603205382823944}, 'wnli': {'wnli_68': 0.12501001358032227, 'wnli_18': 0.1075681671500206, 'wnli_43': 0.2277555912733078, 'wnli_136': 0.11695568263530731, 'wnli_62': 0.12789952754974365, 'wnli_41': 0.26650094985961914, 'wnli_118': 0.2349553257226944, 'wnli_97': 0.2110941857099533, 'wnli_69': 0.39134395122528076, 'wnli_142': 0.2152201533317566}}}
+03/25/2024 18:35:58 - INFO - __main__ - Saving data in loss_per_task_span_3.json
+03/25/2024 18:35:58 - INFO - __main__ - 
+LOSS
+
+03/25/2024 18:35:58 - INFO - __main__ - Mean loss per task: {'ner': {'amh': 0.8486579060554504, 'conll_2003_en': 0.6573632955551147, 'hau': 0.6096042394638062, 'ibo': 0.6095272302627563, 'kin': 0.6473895907402039, 'lug': 0.5978685617446899, 'luo': 0.6229607462882996, 'pcm': 0.6275135278701782, 'swa': 0.627490222454071, 'wol': 0.67033451795578, 'yor': 0.6750768423080444, 'zh': 0.8553587198257446}, 'tydiqa': {'arabic': 0.8303653597831726, 'russian': 0.6191390752792358, 'bengali': 0.6882240176200867, 'telugu': 0.7617889642715454, 'finnish': 0.5015696287155151, 'swahili': 0.4671034812927246, 'korean': 0.8539022207260132, 'indonesian': 0.4716653823852539, 'english': 0.16178254783153534}, 'glue': {'cola': 0.30890315771102905, 'mnli': 0.17170892655849457, 'mrpc': 0.1844419538974762, 'qnli': 0.1619151383638382, 'qqp': 0.2494826763868332, 'rte': 0.1975613385438919, 'sst2': 0.45644864439964294, 'stsb': 0.18325605988502502, 'wnli': 0.2024303376674652}}
+03/25/2024 18:35:58 - INFO - __main__ - Lowest losses:
+03/25/2024 18:35:58 - INFO - __main__ - ID: stsb_333, Loss: 0.02101471833884716
+03/25/2024 18:35:58 - INFO - __main__ - ID: mnli_3582, Loss: 0.022001473233103752
+03/25/2024 18:35:58 - INFO - __main__ - ID: stsb_727, Loss: 0.024809520691633224
+03/25/2024 18:35:58 - INFO - __main__ - ID: english-383873188776267137-19, Loss: 0.02587355673313141
+03/25/2024 18:35:58 - INFO - __main__ - ID: qqp_188208, Loss: 0.029841428622603416
+03/25/2024 18:35:58 - INFO - __main__ - Highest losses:
+03/25/2024 18:35:58 - INFO - __main__ - ID: zh_0, Loss: 0.8935188055038452
+03/25/2024 18:35:58 - INFO - __main__ - ID: korean-3268522368206106332-0, Loss: 0.8948284983634949
+03/25/2024 18:35:58 - INFO - __main__ - ID: korean-2807245034690443837-5, Loss: 0.896929144859314
+03/25/2024 18:35:58 - INFO - __main__ - ID: zh_4, Loss: 0.9010740518569946
+03/25/2024 18:35:58 - INFO - __main__ - ID: conll_2003_en_6, Loss: 1.0130867958068848
+03/25/2024 18:35:58 - INFO - __main__ - Monte Carlo samples: 100
+03/25/2024 18:35:58 - INFO - __main__ - Training mode: True
+03/25/2024 18:35:58 - INFO - __main__ - 
+######## Computing SDs for task: ner ########
+
+03/25/2024 18:35:58 - INFO - __main__ - 
+######## Language: amh ######## 
+
+Traceback (most recent call last):
+  File "/home2/s3919609/pixel-semantic/scripts/monte_carlo/monte_carlo_experiments.py", line 741, in <module>
+    if parsed_args.masking_cumulative_span_weights:
+  File "/home2/s3919609/pixel-semantic/scripts/monte_carlo/monte_carlo_experiments.py", line 688, in main
+    
+  File "/home2/s3919609/pixel-semantic/scripts/monte_carlo/monte_carlo_experiments.py", line 452, in monte_carlo_SD
+    encoding = text_renderer(text=text)
+  File "/home2/s3919609/pixel-semantic/src/pixel/data/rendering/pygame_renderer.py", line 419, in __call__
+    raise TypeError(
+TypeError: PyGameTextRenderer does not support inputs of type <class 'float'>. Supported types are [<class 'str'>, typing.Tuple[str, str], typing.List[str]]
+
+###############################################################################
+Hábrók Cluster
+Job 7717949 for user s3919609
+Finished at: Mon Mar 25 18:35:59 CET 2024
+
+Job details:
+============
+
+Job ID              : 7717949
+Name                : std_monte_carlo_span_3
+User                : s3919609
+Partition           : regularmedium
+Nodes               : node95
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : FAILED
+Submit              : 2024-03-25T12:00:58
+Start               : 2024-03-25T12:00:59
+End                 : 2024-03-25T18:35:59
+Reserved walltime   : 10:00:00
+Used walltime       : 06:35:00
+Used CPU time       : 06:31:51 (efficiency: 99.20%)
+% User (Computation): 99.88%
+% System (I/O)      :  0.12%
+Mem reserved        : 20G
+Max Mem (Node/step) : 1.38G (node95, per node)
+Full Max Mem usage  : 1.38G
+Total Disk Read     : 532.72M
+Total Disk Write    : 896.52K
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

@@ -1,0 +1,3251 @@
+Running MONTE CARLO experiment: mask_ratio
+Monte Carlo samples: 100
+Training mode: True
+
+######## Computing Loss for task: ner ########
+
+######## Language: amh ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_0
+mean loss: 0.8477362990379333
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_1
+mean loss: 0.8584532141685486
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_2
+mean loss: 0.8523764610290527
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_3
+mean loss: 0.8048253655433655
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_4
+mean loss: 0.8351183533668518
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_5
+mean loss: 0.8506631255149841
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_6
+mean loss: 0.830879807472229
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_7
+mean loss: 0.876066267490387
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_8
+mean loss: 0.7252426147460938
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: amh_9
+mean loss: 0.8418705463409424
+
+######## Language: conll_2003_en ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_0
+mean loss: 0.6983453631401062
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_1
+mean loss: 0.5164391994476318
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_2
+mean loss: 0.5218632817268372
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_3
+mean loss: 0.6758806109428406
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_4
+mean loss: 0.3224939703941345
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_5
+mean loss: 0.7565559148788452
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_6
+mean loss: 0.9474928379058838
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_7
+mean loss: 0.7045623660087585
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_8
+mean loss: 0.7063366174697876
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: conll_2003_en_9
+mean loss: 0.660156786441803
+
+######## Language: hau ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_0
+mean loss: 0.5720034241676331
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_1
+mean loss: 0.557607889175415
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_2
+mean loss: 0.45333313941955566
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_3
+mean loss: 0.6383159756660461
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_4
+mean loss: 0.5295735001564026
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_5
+mean loss: 0.5917056798934937
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_6
+mean loss: 0.7127326726913452
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_7
+mean loss: 0.6119123697280884
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_8
+mean loss: 0.6803430318832397
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: hau_9
+mean loss: 0.6162561178207397
+
+######## Language: ibo ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_0
+mean loss: 0.46875396370887756
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_1
+mean loss: 0.6587624549865723
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_2
+mean loss: 0.5101110935211182
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_3
+mean loss: 0.737160325050354
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_4
+mean loss: 0.5191960334777832
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_5
+mean loss: 0.5233374238014221
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_6
+mean loss: 0.40192925930023193
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_7
+mean loss: 0.6351661086082458
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_8
+mean loss: 0.7863137722015381
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: ibo_9
+mean loss: 0.5914710760116577
+
+######## Language: kin ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_0
+mean loss: 0.6006236672401428
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_1
+mean loss: 0.4885185956954956
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_2
+mean loss: 0.6186224222183228
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_3
+mean loss: 0.43190985918045044
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_4
+mean loss: 0.5768812894821167
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_5
+mean loss: 0.32950180768966675
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_6
+mean loss: 0.6797221302986145
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_7
+mean loss: 0.5514221787452698
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_8
+mean loss: 0.510497510433197
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: kin_9
+mean loss: 0.4835357964038849
+
+######## Language: lug ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_0
+mean loss: 0.6002270579338074
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_1
+mean loss: 0.6576059460639954
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_2
+mean loss: 0.5904332995414734
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_3
+mean loss: 0.5099945664405823
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_4
+mean loss: 0.6395033001899719
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_5
+mean loss: 0.5581768155097961
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_6
+mean loss: 0.5920414328575134
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_7
+mean loss: 0.44853416085243225
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_8
+mean loss: 0.4751737713813782
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: lug_9
+mean loss: 0.6025331616401672
+
+######## Language: luo ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_0
+mean loss: 0.6675434112548828
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_1
+mean loss: 0.771450936794281
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_2
+mean loss: 0.6323703527450562
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_3
+mean loss: 0.6405540704727173
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_4
+mean loss: 0.5576542615890503
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_5
+mean loss: 0.5493120551109314
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_6
+mean loss: 0.43734464049339294
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_7
+mean loss: 0.7747340202331543
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_8
+mean loss: 0.672529399394989
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: luo_9
+mean loss: 0.7176396250724792
+
+######## Language: pcm ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_0
+mean loss: 0.7055034637451172
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_1
+mean loss: 0.8643496036529541
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_2
+mean loss: 0.6156491637229919
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_3
+mean loss: 0.5851634740829468
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_4
+mean loss: 0.543596088886261
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_5
+mean loss: 0.7157780528068542
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_6
+mean loss: 0.5915033221244812
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_7
+mean loss: 0.6291162967681885
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_8
+mean loss: 0.4688444137573242
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: pcm_9
+mean loss: 0.2962000370025635
+
+######## Language: swa ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_0
+mean loss: 0.7503965497016907
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_1
+mean loss: 0.6473586559295654
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_2
+mean loss: 0.5315157175064087
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_3
+mean loss: 0.8893729448318481
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_4
+mean loss: 0.5528115630149841
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_5
+mean loss: 0.5666850805282593
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_6
+mean loss: 0.7216275930404663
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_7
+mean loss: 0.6654006242752075
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_8
+mean loss: 0.4474024474620819
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swa_9
+mean loss: 0.6238043308258057
+
+######## Language: wol ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_0
+mean loss: 0.6330182552337646
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_1
+mean loss: 0.6643650531768799
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_2
+mean loss: 0.5095128417015076
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_3
+mean loss: 0.6913335919380188
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_4
+mean loss: 0.5340629816055298
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_5
+mean loss: 0.6632757782936096
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_6
+mean loss: 0.732300877571106
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_7
+mean loss: 0.6521908044815063
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_8
+mean loss: 0.6731870770454407
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wol_9
+mean loss: 0.4087574779987335
+
+######## Language: yor ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_0
+mean loss: 0.6369128823280334
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_1
+mean loss: 0.6024019122123718
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_2
+mean loss: 0.4196775555610657
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_3
+mean loss: 0.6017662882804871
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_4
+mean loss: 0.6812386512756348
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_5
+mean loss: 0.6606122851371765
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_6
+mean loss: 0.6700912714004517
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_7
+mean loss: 0.6990354061126709
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_8
+mean loss: 0.5937161445617676
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: yor_9
+mean loss: 0.8050147294998169
+
+######## Language: zh ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_0
+mean loss: 0.9224099516868591
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_1
+mean loss: 0.8467320203781128
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_2
+mean loss: 0.8324359655380249
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_3
+mean loss: 0.8172829151153564
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_4
+mean loss: 0.9039514064788818
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_5
+mean loss: 0.8753656148910522
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_6
+mean loss: 0.6894338726997375
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_7
+mean loss: 0.6978294253349304
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_8
+mean loss: 0.8618828058242798
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: zh_9
+mean loss: 0.8376579284667969
+
+######## Computing Loss for task: tydiqa ########
+
+######## Language: arabic ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic-4449832350126320768-0
+mean loss: 0.9753764867782593
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic--3340323169760881569-0
+mean loss: 0.8478437662124634
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic-4544770624843559444-1
+mean loss: 0.7975564002990723
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic-891952409566422966-0
+mean loss: 0.8171234726905823
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic-3659291834714572527-0
+mean loss: 0.9076979160308838
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic-9215226117011890166-0
+mean loss: 0.904309868812561
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic-6300896128538259469-0
+mean loss: 0.8618179559707642
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic-2382507508588518905-0
+mean loss: 0.8691403865814209
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic-1871632801094859741-1
+mean loss: 0.8452474474906921
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: arabic--7365809756232083807-0
+mean loss: 0.8566409945487976
+
+######## Language: russian ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian-3457655197371763238-61
+mean loss: 0.5850670337677002
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian--1914807805318993335-49
+mean loss: 0.6588423252105713
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian--3307989180606173904-1
+mean loss: 0.6080511808395386
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian--2219512001175315660-0
+mean loss: 0.6279779076576233
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian--7076080992904718941-0
+mean loss: 0.6177657246589661
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian--6565862953558739013-1
+mean loss: 0.6469788551330566
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian--5098374684590548031-42
+mean loss: 0.5847180485725403
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian-3573734219967447693-1
+mean loss: 0.5370943546295166
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian--4521001374120505750-6
+mean loss: 0.5005915760993958
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: russian--1308382244018658424-9
+mean loss: 0.6273698806762695
+
+######## Language: bengali ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali--1199493965132146131-3
+mean loss: 0.7275676727294922
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali-1807801556888134437-2
+mean loss: 0.7471855878829956
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali-2113189855114052041-2
+mean loss: 0.6825962662696838
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali--2527914488250041207-0
+mean loss: 0.6992284655570984
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali--8260793280894408063-14
+mean loss: 0.7121383547782898
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali-8313009204852557186-4
+mean loss: 0.7308317422866821
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali--415964033364840061-0
+mean loss: 0.7093117237091064
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali--4696865548928858824-5
+mean loss: 0.7008693218231201
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali-6505224142472931712-1
+mean loss: 0.6790792942047119
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: bengali-599666913917674019-13
+mean loss: 0.6984167695045471
+
+######## Language: telugu ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu--3977923017846260053-0
+mean loss: 0.7405750155448914
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu-2254198842560317781-0
+mean loss: 0.8127591013908386
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu-5435080895440121384-0
+mean loss: 0.7570967078208923
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu--1182505954974481191-2
+mean loss: 0.7643329501152039
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu-119276511844068401-0
+mean loss: 0.7610675096511841
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu--4111208545071789922-0
+mean loss: 0.7920905947685242
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu--5922002196428211484-132
+mean loss: 0.7590174674987793
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu--1817004721681155192-3
+mean loss: 0.7632067799568176
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu-1602214480303968359-1
+mean loss: 0.7361351251602173
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: telugu--6495674712575945374-0
+mean loss: 0.8200168609619141
+
+######## Language: finnish ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish-6987763079741579998-0
+mean loss: 0.6203365325927734
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish--8516625414052383903-0
+mean loss: 0.46476122736930847
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish-4168898766124519517-0
+mean loss: 0.5809710025787354
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish-783166898848672321-4
+mean loss: 0.3607044517993927
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish-2208556840820233322-0
+mean loss: 0.44470569491386414
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish--1981034637152391615-58
+mean loss: 0.5819683074951172
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish-8689148941295949475-9
+mean loss: 0.5971404314041138
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish-6900867945323517614-2
+mean loss: 0.4688967168331146
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish-8023130170017405987-1
+mean loss: 0.49463093280792236
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: finnish-5001457972111781248-0
+mean loss: 0.4961479604244232
+
+######## Language: swahili ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili-7146838206539641546-10
+mean loss: 0.5043607354164124
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili-7655634199707176439-0
+mean loss: 0.33496570587158203
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili--4427180714267750534-1
+mean loss: 0.5323166251182556
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili-4141779435061573138-0
+mean loss: 0.3569856584072113
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili--5424518593960879661-0
+mean loss: 0.5314446091651917
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili-4281845253405461584-0
+mean loss: 0.17350797355175018
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili-4899164839984299762-2
+mean loss: 0.5340403914451599
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili-1288750786498500530-0
+mean loss: 0.46139031648635864
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili--2671134792844015228-3
+mean loss: 0.660931408405304
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: swahili-4873225622490039485-2
+mean loss: 0.4390006959438324
+
+######## Language: korean ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean--2869472392602314906-0
+mean loss: 0.8798249959945679
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean-4375199563921600155-0
+mean loss: 0.8561134934425354
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean--1715118423211755607-13
+mean loss: 0.8118448853492737
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean--8028977936696142934-9
+mean loss: 0.8561990261077881
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean-2807245034690443837-5
+mean loss: 0.8931393623352051
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean-3862451817164408576-0
+mean loss: 0.8118471503257751
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean-148115504649351135-0
+mean loss: 0.8252599835395813
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean--2885837157239647036-2
+mean loss: 0.866570234298706
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean--1743220297777040002-22
+mean loss: 0.9056860208511353
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: korean-3268522368206106332-0
+mean loss: 0.8924487829208374
+
+######## Language: indonesian ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian-9141868818310916091-0
+mean loss: 0.3768466114997864
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian-4609394337632433932-1
+mean loss: 0.5008280277252197
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian-2763468883290577923-0
+mean loss: 0.4483606815338135
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian-5633590583948933406-0
+mean loss: 0.536996066570282
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian--5961409780035435015-0
+mean loss: 0.45709383487701416
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian-6274547934693326697-0
+mean loss: 0.5678865909576416
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian--2516321763567853082-0
+mean loss: 0.4751712381839752
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian-2048796427556239759-4
+mean loss: 0.40855157375335693
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian-6246592469157278547-2
+mean loss: 0.391959011554718
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: indonesian--3724318458930736973-1
+mean loss: 0.530066192150116
+
+######## Language: english ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english-2852412434797041176-6
+mean loss: 0.4069483280181885
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english--1463732605740571606-0
+mean loss: 0.11515794694423676
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english-5441411281255470421-0
+mean loss: 0.16042383015155792
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english-7294054492486093447-1
+mean loss: 0.36786505579948425
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english-8820750127045023244-0
+mean loss: 0.1405421793460846
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english--506693546683012611-2
+mean loss: 0.5352628231048584
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english-745411798111651115-0
+mean loss: 0.21107570827007294
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english-7740772185887912651-0
+mean loss: 0.1033230796456337
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english-383873188776267137-19
+mean loss: 0.2641102075576782
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: english--8277537578703156284-0
+mean loss: 0.3285123407840729
+
+######## Computing Loss for task: glue ########
+
+######## Language: cola ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_228
+mean loss: 0.7483896613121033
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_51
+mean loss: 0.05312269553542137
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_563
+mean loss: 0.8078386187553406
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_501
+mean loss: 0.6775490045547485
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_457
+mean loss: 0.11853576451539993
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_285
+mean loss: 0.032538022845983505
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_209
+mean loss: 0.061299048364162445
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_178
+mean loss: 0.5786296725273132
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_864
+mean loss: 0.7075013518333435
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: cola_65
+mean loss: 0.6092686653137207
+
+######## Language: mnli ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_488
+mean loss: 0.012455277144908905
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_1535
+mean loss: 0.003979125991463661
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_3582
+mean loss: 0.24239376187324524
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_3811
+mean loss: 0.03521617501974106
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_8279
+mean loss: 0.33716881275177
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_434
+mean loss: 0.26919370889663696
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_9195
+mean loss: 0.608440637588501
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_3257
+mean loss: 0.31814244389533997
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_8928
+mean loss: 0.29894065856933594
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mnli_6873
+mean loss: 0.18095171451568604
+
+######## Language: mrpc ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_451
+mean loss: 0.17240865528583527
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_919
+mean loss: 0.006475809030234814
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_1206
+mean loss: 0.015398404560983181
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_569
+mean loss: 0.004582798574119806
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_1657
+mean loss: 0.19633075594902039
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_13
+mean loss: 0.026214634999632835
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_1554
+mean loss: 0.45169010758399963
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_1650
+mean loss: 0.48740142583847046
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_326
+mean loss: 0.00436829449608922
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: mrpc_1429
+mean loss: 0.0977904349565506
+
+######## Language: qnli ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_3462
+mean loss: 0.003925637807697058
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_2787
+mean loss: 0.002525095595046878
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_2276
+mean loss: 0.3671380877494812
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_1273
+mean loss: 0.013817448168992996
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_1763
+mean loss: 0.3167315423488617
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_2757
+mean loss: 0.0028024271596223116
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_837
+mean loss: 0.5662567019462585
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_759
+mean loss: 0.46293872594833374
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_3112
+mean loss: 0.3099467158317566
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qnli_792
+mean loss: 0.23155350983142853
+
+######## Language: qqp ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_188208
+mean loss: 0.020710008218884468
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_180331
+mean loss: 0.43930938839912415
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_316526
+mean loss: 0.44006186723709106
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_138685
+mean loss: 0.13055919110774994
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_22780
+mean loss: 0.10420025885105133
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_382589
+mean loss: 0.023341836407780647
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_240870
+mean loss: 0.20273862779140472
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_281137
+mean loss: 0.5274661183357239
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_65444
+mean loss: 0.05017064884305
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: qqp_198461
+mean loss: 0.6208764910697937
+
+######## Language: rte ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_322
+mean loss: 0.3224652409553528
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_2261
+mean loss: 0.34444743394851685
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_1200
+mean loss: 0.32217562198638916
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_2574
+mean loss: 0.23060813546180725
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_2533
+mean loss: 0.08372948318719864
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_1481
+mean loss: 0.10966790467500687
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_2364
+mean loss: 0.05158711597323418
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_787
+mean loss: 0.1673128455877304
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_2885
+mean loss: 0.05534146726131439
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: rte_284
+mean loss: 0.36474496126174927
+
+######## Language: sst2 ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_93
+mean loss: 0.481941819190979
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_1354
+mean loss: 0.614001989364624
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_466
+mean loss: 0.754099428653717
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_1583
+mean loss: 0.38288483023643494
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_592
+mean loss: 0.468435674905777
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_163
+mean loss: 0.7188676595687866
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_1751
+mean loss: 0.7629991769790649
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_476
+mean loss: 0.5145514011383057
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_1774
+mean loss: 0.06478596478700638
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: sst2_206
+mean loss: 0.5689993500709534
+
+######## Language: stsb ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_778
+mean loss: 0.5539065599441528
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_569
+mean loss: 0.014719891361892223
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_928
+mean loss: 0.19465909898281097
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_1301
+mean loss: 0.11142414808273315
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_747
+mean loss: 0.026175476610660553
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_333
+mean loss: 0.1354455053806305
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_758
+mean loss: 0.016000492498278618
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_727
+mean loss: 0.02751905843615532
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_429
+mean loss: 0.03510723635554314
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: stsb_1372
+mean loss: 0.04450104758143425
+
+######## Language: wnli ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_68
+mean loss: 0.007884946651756763
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_18
+mean loss: 0.017853202298283577
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_43
+mean loss: 0.014820465818047523
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_136
+mean loss: 0.30030444264411926
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_62
+mean loss: 0.007859679870307446
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_41
+mean loss: 0.3710925579071045
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_118
+mean loss: 0.17188340425491333
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_97
+mean loss: 0.2609202563762665
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_69
+mean loss: 0.3443949222564697
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+
+ID text: wnli_142
+mean loss: 0.23583287000656128
+Losses per task: {'ner': {'amh': {'amh_0': 0.8477362990379333, 'amh_1': 0.8584532141685486, 'amh_2': 0.8523764610290527, 'amh_3': 0.8048253655433655, 'amh_4': 0.8351183533668518, 'amh_5': 0.8506631255149841, 'amh_6': 0.830879807472229, 'amh_7': 0.876066267490387, 'amh_8': 0.7252426147460938, 'amh_9': 0.8418705463409424}, 'conll_2003_en': {'conll_2003_en_0': 0.6983453631401062, 'conll_2003_en_1': 0.5164391994476318, 'conll_2003_en_2': 0.5218632817268372, 'conll_2003_en_3': 0.6758806109428406, 'conll_2003_en_4': 0.3224939703941345, 'conll_2003_en_5': 0.7565559148788452, 'conll_2003_en_6': 0.9474928379058838, 'conll_2003_en_7': 0.7045623660087585, 'conll_2003_en_8': 0.7063366174697876, 'conll_2003_en_9': 0.660156786441803}, 'hau': {'hau_0': 0.5720034241676331, 'hau_1': 0.557607889175415, 'hau_2': 0.45333313941955566, 'hau_3': 0.6383159756660461, 'hau_4': 0.5295735001564026, 'hau_5': 0.5917056798934937, 'hau_6': 0.7127326726913452, 'hau_7': 0.6119123697280884, 'hau_8': 0.6803430318832397, 'hau_9': 0.6162561178207397}, 'ibo': {'ibo_0': 0.46875396370887756, 'ibo_1': 0.6587624549865723, 'ibo_2': 0.5101110935211182, 'ibo_3': 0.737160325050354, 'ibo_4': 0.5191960334777832, 'ibo_5': 0.5233374238014221, 'ibo_6': 0.40192925930023193, 'ibo_7': 0.6351661086082458, 'ibo_8': 0.7863137722015381, 'ibo_9': 0.5914710760116577}, 'kin': {'kin_0': 0.6006236672401428, 'kin_1': 0.4885185956954956, 'kin_2': 0.6186224222183228, 'kin_3': 0.43190985918045044, 'kin_4': 0.5768812894821167, 'kin_5': 0.32950180768966675, 'kin_6': 0.6797221302986145, 'kin_7': 0.5514221787452698, 'kin_8': 0.510497510433197, 'kin_9': 0.4835357964038849}, 'lug': {'lug_0': 0.6002270579338074, 'lug_1': 0.6576059460639954, 'lug_2': 0.5904332995414734, 'lug_3': 0.5099945664405823, 'lug_4': 0.6395033001899719, 'lug_5': 0.5581768155097961, 'lug_6': 0.5920414328575134, 'lug_7': 0.44853416085243225, 'lug_8': 0.4751737713813782, 'lug_9': 0.6025331616401672}, 'luo': {'luo_0': 0.6675434112548828, 'luo_1': 0.771450936794281, 'luo_2': 0.6323703527450562, 'luo_3': 0.6405540704727173, 'luo_4': 0.5576542615890503, 'luo_5': 0.5493120551109314, 'luo_6': 0.43734464049339294, 'luo_7': 0.7747340202331543, 'luo_8': 0.672529399394989, 'luo_9': 0.7176396250724792}, 'pcm': {'pcm_0': 0.7055034637451172, 'pcm_1': 0.8643496036529541, 'pcm_2': 0.6156491637229919, 'pcm_3': 0.5851634740829468, 'pcm_4': 0.543596088886261, 'pcm_5': 0.7157780528068542, 'pcm_6': 0.5915033221244812, 'pcm_7': 0.6291162967681885, 'pcm_8': 0.4688444137573242, 'pcm_9': 0.2962000370025635}, 'swa': {'swa_0': 0.7503965497016907, 'swa_1': 0.6473586559295654, 'swa_2': 0.5315157175064087, 'swa_3': 0.8893729448318481, 'swa_4': 0.5528115630149841, 'swa_5': 0.5666850805282593, 'swa_6': 0.7216275930404663, 'swa_7': 0.6654006242752075, 'swa_8': 0.4474024474620819, 'swa_9': 0.6238043308258057}, 'wol': {'wol_0': 0.6330182552337646, 'wol_1': 0.6643650531768799, 'wol_2': 0.5095128417015076, 'wol_3': 0.6913335919380188, 'wol_4': 0.5340629816055298, 'wol_5': 0.6632757782936096, 'wol_6': 0.732300877571106, 'wol_7': 0.6521908044815063, 'wol_8': 0.6731870770454407, 'wol_9': 0.4087574779987335}, 'yor': {'yor_0': 0.6369128823280334, 'yor_1': 0.6024019122123718, 'yor_2': 0.4196775555610657, 'yor_3': 0.6017662882804871, 'yor_4': 0.6812386512756348, 'yor_5': 0.6606122851371765, 'yor_6': 0.6700912714004517, 'yor_7': 0.6990354061126709, 'yor_8': 0.5937161445617676, 'yor_9': 0.8050147294998169}, 'zh': {'zh_0': 0.9224099516868591, 'zh_1': 0.8467320203781128, 'zh_2': 0.8324359655380249, 'zh_3': 0.8172829151153564, 'zh_4': 0.9039514064788818, 'zh_5': 0.8753656148910522, 'zh_6': 0.6894338726997375, 'zh_7': 0.6978294253349304, 'zh_8': 0.8618828058242798, 'zh_9': 0.8376579284667969}}, 'tydiqa': {'arabic': {'arabic-4449832350126320768-0': 0.9753764867782593, 'arabic--3340323169760881569-0': 0.8478437662124634, 'arabic-4544770624843559444-1': 0.7975564002990723, 'arabic-891952409566422966-0': 0.8171234726905823, 'arabic-3659291834714572527-0': 0.9076979160308838, 'arabic-9215226117011890166-0': 0.904309868812561, 'arabic-6300896128538259469-0': 0.8618179559707642, 'arabic-2382507508588518905-0': 0.8691403865814209, 'arabic-1871632801094859741-1': 0.8452474474906921, 'arabic--7365809756232083807-0': 0.8566409945487976}, 'russian': {'russian-3457655197371763238-61': 0.5850670337677002, 'russian--1914807805318993335-49': 0.6588423252105713, 'russian--3307989180606173904-1': 0.6080511808395386, 'russian--2219512001175315660-0': 0.6279779076576233, 'russian--7076080992904718941-0': 0.6177657246589661, 'russian--6565862953558739013-1': 0.6469788551330566, 'russian--5098374684590548031-42': 0.5847180485725403, 'russian-3573734219967447693-1': 0.5370943546295166, 'russian--4521001374120505750-6': 0.5005915760993958, 'russian--1308382244018658424-9': 0.6273698806762695}, 'bengali': {'bengali--1199493965132146131-3': 0.7275676727294922, 'bengali-1807801556888134437-2': 0.7471855878829956, 'bengali-2113189855114052041-2': 0.6825962662696838, 'bengali--2527914488250041207-0': 0.6992284655570984, 'bengali--8260793280894408063-14': 0.7121383547782898, 'bengali-8313009204852557186-4': 0.7308317422866821, 'bengali--415964033364840061-0': 0.7093117237091064, 'bengali--4696865548928858824-5': 0.7008693218231201, 'bengali-6505224142472931712-1': 0.6790792942047119, 'bengali-599666913917674019-13': 0.6984167695045471}, 'telugu': {'telugu--3977923017846260053-0': 0.7405750155448914, 'telugu-2254198842560317781-0': 0.8127591013908386, 'telugu-5435080895440121384-0': 0.7570967078208923, 'telugu--1182505954974481191-2': 0.7643329501152039, 'telugu-119276511844068401-0': 0.7610675096511841, 'telugu--4111208545071789922-0': 0.7920905947685242, 'telugu--5922002196428211484-132': 0.7590174674987793, 'telugu--1817004721681155192-3': 0.7632067799568176, 'telugu-1602214480303968359-1': 0.7361351251602173, 'telugu--6495674712575945374-0': 0.8200168609619141}, 'finnish': {'finnish-6987763079741579998-0': 0.6203365325927734, 'finnish--8516625414052383903-0': 0.46476122736930847, 'finnish-4168898766124519517-0': 0.5809710025787354, 'finnish-783166898848672321-4': 0.3607044517993927, 'finnish-2208556840820233322-0': 0.44470569491386414, 'finnish--1981034637152391615-58': 0.5819683074951172, 'finnish-8689148941295949475-9': 0.5971404314041138, 'finnish-6900867945323517614-2': 0.4688967168331146, 'finnish-8023130170017405987-1': 0.49463093280792236, 'finnish-5001457972111781248-0': 0.4961479604244232}, 'swahili': {'swahili-7146838206539641546-10': 0.5043607354164124, 'swahili-7655634199707176439-0': 0.33496570587158203, 'swahili--4427180714267750534-1': 0.5323166251182556, 'swahili-4141779435061573138-0': 0.3569856584072113, 'swahili--5424518593960879661-0': 0.5314446091651917, 'swahili-4281845253405461584-0': 0.17350797355175018, 'swahili-4899164839984299762-2': 0.5340403914451599, 'swahili-1288750786498500530-0': 0.46139031648635864, 'swahili--2671134792844015228-3': 0.660931408405304, 'swahili-4873225622490039485-2': 0.4390006959438324}, 'korean': {'korean--2869472392602314906-0': 0.8798249959945679, 'korean-4375199563921600155-0': 0.8561134934425354, 'korean--1715118423211755607-13': 0.8118448853492737, 'korean--8028977936696142934-9': 0.8561990261077881, 'korean-2807245034690443837-5': 0.8931393623352051, 'korean-3862451817164408576-0': 0.8118471503257751, 'korean-148115504649351135-0': 0.8252599835395813, 'korean--2885837157239647036-2': 0.866570234298706, 'korean--1743220297777040002-22': 0.9056860208511353, 'korean-3268522368206106332-0': 0.8924487829208374}, 'indonesian': {'indonesian-9141868818310916091-0': 0.3768466114997864, 'indonesian-4609394337632433932-1': 0.5008280277252197, 'indonesian-2763468883290577923-0': 0.4483606815338135, 'indonesian-5633590583948933406-0': 0.536996066570282, 'indonesian--5961409780035435015-0': 0.45709383487701416, 'indonesian-6274547934693326697-0': 0.5678865909576416, 'indonesian--2516321763567853082-0': 0.4751712381839752, 'indonesian-2048796427556239759-4': 0.40855157375335693, 'indonesian-6246592469157278547-2': 0.391959011554718, 'indonesian--3724318458930736973-1': 0.530066192150116}, 'english': {'english-2852412434797041176-6': 0.4069483280181885, 'english--1463732605740571606-0': 0.11515794694423676, 'english-5441411281255470421-0': 0.16042383015155792, 'english-7294054492486093447-1': 0.36786505579948425, 'english-8820750127045023244-0': 0.1405421793460846, 'english--506693546683012611-2': 0.5352628231048584, 'english-745411798111651115-0': 0.21107570827007294, 'english-7740772185887912651-0': 0.1033230796456337, 'english-383873188776267137-19': 0.2641102075576782, 'english--8277537578703156284-0': 0.3285123407840729}}, 'glue': {'cola': {'cola_228': 0.7483896613121033, 'cola_51': 0.05312269553542137, 'cola_563': 0.8078386187553406, 'cola_501': 0.6775490045547485, 'cola_457': 0.11853576451539993, 'cola_285': 0.032538022845983505, 'cola_209': 0.061299048364162445, 'cola_178': 0.5786296725273132, 'cola_864': 0.7075013518333435, 'cola_65': 0.6092686653137207}, 'mnli': {'mnli_488': 0.012455277144908905, 'mnli_1535': 0.003979125991463661, 'mnli_3582': 0.24239376187324524, 'mnli_3811': 0.03521617501974106, 'mnli_8279': 0.33716881275177, 'mnli_434': 0.26919370889663696, 'mnli_9195': 0.608440637588501, 'mnli_3257': 0.31814244389533997, 'mnli_8928': 0.29894065856933594, 'mnli_6873': 0.18095171451568604}, 'mrpc': {'mrpc_451': 0.17240865528583527, 'mrpc_919': 0.006475809030234814, 'mrpc_1206': 0.015398404560983181, 'mrpc_569': 0.004582798574119806, 'mrpc_1657': 0.19633075594902039, 'mrpc_13': 0.026214634999632835, 'mrpc_1554': 0.45169010758399963, 'mrpc_1650': 0.48740142583847046, 'mrpc_326': 0.00436829449608922, 'mrpc_1429': 0.0977904349565506}, 'qnli': {'qnli_3462': 0.003925637807697058, 'qnli_2787': 0.002525095595046878, 'qnli_2276': 0.3671380877494812, 'qnli_1273': 0.013817448168992996, 'qnli_1763': 0.3167315423488617, 'qnli_2757': 0.0028024271596223116, 'qnli_837': 0.5662567019462585, 'qnli_759': 0.46293872594833374, 'qnli_3112': 0.3099467158317566, 'qnli_792': 0.23155350983142853}, 'qqp': {'qqp_188208': 0.020710008218884468, 'qqp_180331': 0.43930938839912415, 'qqp_316526': 0.44006186723709106, 'qqp_138685': 0.13055919110774994, 'qqp_22780': 0.10420025885105133, 'qqp_382589': 0.023341836407780647, 'qqp_240870': 0.20273862779140472, 'qqp_281137': 0.5274661183357239, 'qqp_65444': 0.05017064884305, 'qqp_198461': 0.6208764910697937}, 'rte': {'rte_322': 0.3224652409553528, 'rte_2261': 0.34444743394851685, 'rte_1200': 0.32217562198638916, 'rte_2574': 0.23060813546180725, 'rte_2533': 0.08372948318719864, 'rte_1481': 0.10966790467500687, 'rte_2364': 0.05158711597323418, 'rte_787': 0.1673128455877304, 'rte_2885': 0.05534146726131439, 'rte_284': 0.36474496126174927}, 'sst2': {'sst2_93': 0.481941819190979, 'sst2_1354': 0.614001989364624, 'sst2_466': 0.754099428653717, 'sst2_1583': 0.38288483023643494, 'sst2_592': 0.468435674905777, 'sst2_163': 0.7188676595687866, 'sst2_1751': 0.7629991769790649, 'sst2_476': 0.5145514011383057, 'sst2_1774': 0.06478596478700638, 'sst2_206': 0.5689993500709534}, 'stsb': {'stsb_778': 0.5539065599441528, 'stsb_569': 0.014719891361892223, 'stsb_928': 0.19465909898281097, 'stsb_1301': 0.11142414808273315, 'stsb_747': 0.026175476610660553, 'stsb_333': 0.1354455053806305, 'stsb_758': 0.016000492498278618, 'stsb_727': 0.02751905843615532, 'stsb_429': 0.03510723635554314, 'stsb_1372': 0.04450104758143425}, 'wnli': {'wnli_68': 0.007884946651756763, 'wnli_18': 0.017853202298283577, 'wnli_43': 0.014820465818047523, 'wnli_136': 0.30030444264411926, 'wnli_62': 0.007859679870307446, 'wnli_41': 0.3710925579071045, 'wnli_118': 0.17188340425491333, 'wnli_97': 0.2609202563762665, 'wnli_69': 0.3443949222564697, 'wnli_142': 0.23583287000656128}}}
+Saving data in loss_per_task_mask_0.1.json
+
+LOSS
+
+Mean loss per task: {'ner': {'amh': 0.8323231935501099, 'conll_2003_en': 0.6510127186775208, 'hau': 0.5963783860206604, 'ibo': 0.5832201242446899, 'kin': 0.5271235108375549, 'lug': 0.5674223303794861, 'luo': 0.6421133279800415, 'pcm': 0.6015704274177551, 'swa': 0.6396375894546509, 'wol': 0.6162004470825195, 'yor': 0.6370466947555542, 'zh': 0.8284982442855835}, 'tydiqa': {'arabic': 0.8682754635810852, 'russian': 0.5994457006454468, 'bengali': 0.7087224721908569, 'telugu': 0.7706297636032104, 'finnish': 0.5110263228416443, 'swahili': 0.452894389629364, 'korean': 0.8598934412002563, 'indonesian': 0.46937599778175354, 'english': 0.2633221745491028}, 'glue': {'cola': 0.43946725130081177, 'mnli': 0.230688214302063, 'mrpc': 0.1462661325931549, 'qnli': 0.2277635782957077, 'qqp': 0.2559434473514557, 'rte': 0.20520801842212677, 'sst2': 0.53315669298172, 'stsb': 0.11594586074352264, 'wnli': 0.17328467965126038}}
+Lowest losses:
+ID: qnli_2787, Loss: 0.002525095595046878
+ID: qnli_2757, Loss: 0.0028024271596223116
+ID: qnli_3462, Loss: 0.003925637807697058
+ID: mnli_1535, Loss: 0.003979125991463661
+ID: mrpc_326, Loss: 0.00436829449608922
+Highest losses:
+ID: korean--1743220297777040002-22, Loss: 0.9056860208511353
+ID: arabic-3659291834714572527-0, Loss: 0.9076979160308838
+ID: zh_0, Loss: 0.9224099516868591
+ID: conll_2003_en_6, Loss: 0.9474928379058838
+ID: arabic-4449832350126320768-0, Loss: 0.9753764867782593
+Monte Carlo samples: 100
+Training mode: True
+
+######## Computing SDs for task: ner ########
+
+
+######## Language: amh ######## 
+
+Running MONTE CARLO experiment: mask_ratio
+Loading data from loss_per_task_mask_0.1.json
+
+LOSS
+
+Mean loss per task: {'ner': {'amh': 0.8323231935501099, 'conll_2003_en': 0.6510127186775208, 'hau': 0.5963783860206604, 'ibo': 0.5832201242446899, 'kin': 0.5271235108375549, 'lug': 0.5674223303794861, 'luo': 0.6421133279800415, 'pcm': 0.6015704274177551, 'swa': 0.6396375894546509, 'wol': 0.6162004470825195, 'yor': 0.6370466947555542, 'zh': 0.8284982442855835}, 'tydiqa': {'arabic': 0.8682754635810852, 'russian': 0.5994457006454468, 'bengali': 0.7087224721908569, 'telugu': 0.7706297636032104, 'finnish': 0.5110263228416443, 'swahili': 0.452894389629364, 'korean': 0.8598934412002563, 'indonesian': 0.46937599778175354, 'english': 0.2633221745491028}, 'glue': {'cola': 0.43946725130081177, 'mnli': 0.230688214302063, 'mrpc': 0.1462661325931549, 'qnli': 0.2277635782957077, 'qqp': 0.2559434473514557, 'rte': 0.20520801842212677, 'sst2': 0.53315669298172, 'stsb': 0.11594586074352264, 'wnli': 0.17328467965126038}}
+Lowest losses:
+ID: qnli_2787, Loss: 0.002525095595046878
+ID: qnli_2757, Loss: 0.0028024271596223116
+ID: qnli_3462, Loss: 0.003925637807697058
+ID: mnli_1535, Loss: 0.003979125991463661
+ID: mrpc_326, Loss: 0.00436829449608922
+Highest losses:
+ID: korean--1743220297777040002-22, Loss: 0.9056860208511353
+ID: arabic-3659291834714572527-0, Loss: 0.9076979160308838
+ID: zh_0, Loss: 0.9224099516868591
+ID: conll_2003_en_6, Loss: 0.9474928379058838
+ID: arabic-4449832350126320768-0, Loss: 0.9753764867782593
+Monte Carlo samples: 100
+Training mode: True
+
+######## Computing SDs for task: ner ########
+
+
+######## Language: amh ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_0
+Mean variance for amh_0: 0.16254977881908417
+Mean std for for amh_0: 0.355273962020874
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_1
+Mean variance for amh_1: 0.14082686603069305
+Mean std for for amh_1: 0.32860246300697327
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_2
+Mean variance for amh_2: 0.15886490046977997
+Mean std for for amh_2: 0.3497699499130249
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_3
+Mean variance for amh_3: 0.15204650163650513
+Mean std for for amh_3: 0.34145548939704895
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_4
+Mean variance for amh_4: 0.16134865581989288
+Mean std for for amh_4: 0.35251906514167786
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_5
+Mean variance for amh_5: 0.17929743230342865
+Mean std for for amh_5: 0.3752812445163727
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_6
+Mean variance for amh_6: 0.14951853454113007
+Mean std for for amh_6: 0.33838972449302673
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_7
+Mean variance for amh_7: 0.1681535243988037
+Mean std for for amh_7: 0.36079490184783936
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_8
+Mean variance for amh_8: 0.16192825138568878
+Mean std for for amh_8: 0.35263779759407043
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: amh_9
+Mean variance for amh_9: 0.1593482345342636
+Mean std for for amh_9: 0.3503474295139313
+
+######## Language: conll_2003_en ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_0
+Mean variance for conll_2003_en_0: 0.15618357062339783
+Mean std for for conll_2003_en_0: 0.35025355219841003
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_1
+Mean variance for conll_2003_en_1: 0.04775857552886009
+Mean std for for conll_2003_en_1: 0.19227178394794464
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_2
+Mean variance for conll_2003_en_2: 0.04609702527523041
+Mean std for for conll_2003_en_2: 0.17006154358386993
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_3
+Mean variance for conll_2003_en_3: 0.04665127769112587
+Mean std for for conll_2003_en_3: 0.18122746050357819
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_4
+Mean variance for conll_2003_en_4: 0.06321700662374496
+Mean std for for conll_2003_en_4: 0.22371572256088257
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_5
+Mean variance for conll_2003_en_5: 0.1606784164905548
+Mean std for for conll_2003_en_5: 0.35698267817497253
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_6
+Mean variance for conll_2003_en_6: 0.12908922135829926
+Mean std for for conll_2003_en_6: 0.3247637450695038
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_7
+Mean variance for conll_2003_en_7: 0.1703179031610489
+Mean std for for conll_2003_en_7: 0.3727990686893463
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_8
+Mean variance for conll_2003_en_8: 0.1752316951751709
+Mean std for for conll_2003_en_8: 0.37742698192596436
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: conll_2003_en_9
+Mean variance for conll_2003_en_9: 0.04129466414451599
+Mean std for for conll_2003_en_9: 0.16721807420253754
+
+######## Language: hau ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_0
+Mean variance for hau_0: 0.03720424696803093
+Mean std for for hau_0: 0.15139415860176086
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_1
+Mean variance for hau_1: 0.0399930365383625
+Mean std for for hau_1: 0.17080694437026978
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_2
+Mean variance for hau_2: 0.1678178757429123
+Mean std for for hau_2: 0.3668600618839264
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_3
+Mean variance for hau_3: 0.01974044181406498
+Mean std for for hau_3: 0.1123800203204155
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_4
+Mean variance for hau_4: 0.04281749203801155
+Mean std for for hau_4: 0.1645900458097458
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_5
+Mean variance for hau_5: 0.036328110843896866
+Mean std for for hau_5: 0.14964143931865692
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_6
+Mean variance for hau_6: 0.05267524719238281
+Mean std for for hau_6: 0.1850888878107071
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_7
+Mean variance for hau_7: 0.042533114552497864
+Mean std for for hau_7: 0.16198158264160156
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_8
+Mean variance for hau_8: 0.03172915056347847
+Mean std for for hau_8: 0.14056231081485748
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: hau_9
+Mean variance for hau_9: 0.053156014531850815
+Mean std for for hau_9: 0.1851205825805664
+
+######## Language: ibo ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_0
+Mean variance for ibo_0: 0.049688417464494705
+Mean std for for ibo_0: 0.18315081298351288
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_1
+Mean variance for ibo_1: 0.04703294858336449
+Mean std for for ibo_1: 0.17523330450057983
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_2
+Mean variance for ibo_2: 0.04146488383412361
+Mean std for for ibo_2: 0.1622161567211151
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_3
+Mean variance for ibo_3: 0.05017593875527382
+Mean std for for ibo_3: 0.19664299488067627
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_4
+Mean variance for ibo_4: 0.05246217921376228
+Mean std for for ibo_4: 0.18725381791591644
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_5
+Mean variance for ibo_5: 0.04442783072590828
+Mean std for for ibo_5: 0.1768622249364853
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_6
+Mean variance for ibo_6: 0.052052583545446396
+Mean std for for ibo_6: 0.1873357743024826
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_7
+Mean variance for ibo_7: 0.042672887444496155
+Mean std for for ibo_7: 0.16450616717338562
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_8
+Mean variance for ibo_8: 0.043320972472429276
+Mean std for for ibo_8: 0.17970949411392212
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: ibo_9
+Mean variance for ibo_9: 0.05029270425438881
+Mean std for for ibo_9: 0.18180209398269653
+
+######## Language: kin ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_0
+Mean variance for kin_0: 0.04781493917107582
+Mean std for for kin_0: 0.17397594451904297
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_1
+Mean variance for kin_1: 0.055662889033555984
+Mean std for for kin_1: 0.19148433208465576
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_2
+Mean variance for kin_2: 0.036931026726961136
+Mean std for for kin_2: 0.170949324965477
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_3
+Mean variance for kin_3: 0.05178403854370117
+Mean std for for kin_3: 0.1809362918138504
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_4
+Mean variance for kin_4: 0.048631321638822556
+Mean std for for kin_4: 0.17274993658065796
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_5
+Mean variance for kin_5: 0.044194936752319336
+Mean std for for kin_5: 0.18107479810714722
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_6
+Mean variance for kin_6: 0.030561847612261772
+Mean std for for kin_6: 0.13928037881851196
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_7
+Mean variance for kin_7: 0.046046480536460876
+Mean std for for kin_7: 0.1725839376449585
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_8
+Mean variance for kin_8: 0.04940427467226982
+Mean std for for kin_8: 0.1892814040184021
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: kin_9
+Mean variance for kin_9: 0.04394061863422394
+Mean std for for kin_9: 0.17490261793136597
+
+######## Language: lug ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_0
+Mean variance for lug_0: 0.04080014303326607
+Mean std for for lug_0: 0.15855655074119568
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_1
+Mean variance for lug_1: 0.04966356232762337
+Mean std for for lug_1: 0.1771904081106186
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_2
+Mean variance for lug_2: 0.018500952050089836
+Mean std for for lug_2: 0.11151542514562607
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_3
+Mean variance for lug_3: 0.03423507139086723
+Mean std for for lug_3: 0.14650332927703857
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_4
+Mean variance for lug_4: 0.03470730409026146
+Mean std for for lug_4: 0.1522044688463211
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_5
+Mean variance for lug_5: 0.045328471809625626
+Mean std for for lug_5: 0.16622859239578247
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_6
+Mean variance for lug_6: 0.0449911393225193
+Mean std for for lug_6: 0.16932517290115356
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_7
+Mean variance for lug_7: 0.05363984778523445
+Mean std for for lug_7: 0.18583083152770996
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_8
+Mean variance for lug_8: 0.06608549505472183
+Mean std for for lug_8: 0.20537720620632172
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: lug_9
+Mean variance for lug_9: 0.04815930500626564
+Mean std for for lug_9: 0.17448747158050537
+
+######## Language: luo ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_0
+Mean variance for luo_0: 0.02967127226293087
+Mean std for for luo_0: 0.13648851215839386
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_1
+Mean variance for luo_1: 0.041164331138134
+Mean std for for luo_1: 0.1693582683801651
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_2
+Mean variance for luo_2: 0.04585351049900055
+Mean std for for luo_2: 0.17042946815490723
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_3
+Mean variance for luo_3: 0.03118150122463703
+Mean std for for luo_3: 0.14065207540988922
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_4
+Mean variance for luo_4: 0.04369072988629341
+Mean std for for luo_4: 0.1728147715330124
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_5
+Mean variance for luo_5: 0.04927356168627739
+Mean std for for luo_5: 0.1827724725008011
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_6
+Mean variance for luo_6: 0.04611317440867424
+Mean std for for luo_6: 0.16878663003444672
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_7
+Mean variance for luo_7: 0.048138100653886795
+Mean std for for luo_7: 0.18774177134037018
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_8
+Mean variance for luo_8: 0.04855726286768913
+Mean std for for luo_8: 0.1783057302236557
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: luo_9
+Mean variance for luo_9: 0.04492040351033211
+Mean std for for luo_9: 0.18773216009140015
+
+######## Language: pcm ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_0
+Mean variance for pcm_0: 0.04037003591656685
+Mean std for for pcm_0: 0.1628836989402771
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_1
+Mean variance for pcm_1: 0.040484022349119186
+Mean std for for pcm_1: 0.17487655580043793
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_2
+Mean variance for pcm_2: 0.05046268180012703
+Mean std for for pcm_2: 0.1873488426208496
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_3
+Mean variance for pcm_3: 0.04623076692223549
+Mean std for for pcm_3: 0.17241539061069489
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_4
+Mean variance for pcm_4: 0.048013463616371155
+Mean std for for pcm_4: 0.17356014251708984
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_5
+Mean variance for pcm_5: 0.035707756876945496
+Mean std for for pcm_5: 0.16621066629886627
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_6
+Mean variance for pcm_6: 0.04342344403266907
+Mean std for for pcm_6: 0.16778962314128876
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_7
+Mean variance for pcm_7: 0.04537798464298248
+Mean std for for pcm_7: 0.1720910519361496
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_8
+Mean variance for pcm_8: 0.04204452037811279
+Mean std for for pcm_8: 0.16709931194782257
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: pcm_9
+Mean variance for pcm_9: 0.04030827805399895
+Mean std for for pcm_9: 0.1701781302690506
+
+######## Language: swa ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_0
+Mean variance for swa_0: 0.04790448769927025
+Mean std for for swa_0: 0.17181025445461273
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_1
+Mean variance for swa_1: 0.04778386652469635
+Mean std for for swa_1: 0.17618604004383087
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_2
+Mean variance for swa_2: 0.04483959078788757
+Mean std for for swa_2: 0.16891439259052277
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_3
+Mean variance for swa_3: 0.05107763037085533
+Mean std for for swa_3: 0.18818633258342743
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_4
+Mean variance for swa_4: 0.033551931381225586
+Mean std for for swa_4: 0.14402328431606293
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_5
+Mean variance for swa_5: 0.035035885870456696
+Mean std for for swa_5: 0.14592474699020386
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_6
+Mean variance for swa_6: 0.03478009253740311
+Mean std for for swa_6: 0.14669005572795868
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_7
+Mean variance for swa_7: 0.055833667516708374
+Mean std for for swa_7: 0.21057528257369995
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_8
+Mean variance for swa_8: 0.038903553038835526
+Mean std for for swa_8: 0.16186632215976715
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swa_9
+Mean variance for swa_9: 0.05324866250157356
+Mean std for for swa_9: 0.18891535699367523
+
+######## Language: wol ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_0
+Mean variance for wol_0: 0.04356104135513306
+Mean std for for wol_0: 0.1649368852376938
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_1
+Mean variance for wol_1: 0.04864092543721199
+Mean std for for wol_1: 0.1793079376220703
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_2
+Mean variance for wol_2: 0.04588590934872627
+Mean std for for wol_2: 0.17548762261867523
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_3
+Mean variance for wol_3: 0.07609837502241135
+Mean std for for wol_3: 0.2496144324541092
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_4
+Mean variance for wol_4: 0.05312485620379448
+Mean std for for wol_4: 0.2022579461336136
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_5
+Mean variance for wol_5: 0.04980701580643654
+Mean std for for wol_5: 0.1842067390680313
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_6
+Mean variance for wol_6: 0.15645234286785126
+Mean std for for wol_6: 0.34909141063690186
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_7
+Mean variance for wol_7: 0.038785774260759354
+Mean std for for wol_7: 0.16188420355319977
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_8
+Mean variance for wol_8: 0.0317130945622921
+Mean std for for wol_8: 0.15468357503414154
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wol_9
+Mean variance for wol_9: 0.04655562713742256
+Mean std for for wol_9: 0.1842513531446457
+
+######## Language: yor ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_0
+Mean variance for yor_0: 0.14453426003456116
+Mean std for for yor_0: 0.33383414149284363
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_1
+Mean variance for yor_1: 0.140716552734375
+Mean std for for yor_1: 0.3236294686794281
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_2
+Mean variance for yor_2: 0.058651477098464966
+Mean std for for yor_2: 0.19576086103916168
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_3
+Mean variance for yor_3: 0.041371554136276245
+Mean std for for yor_3: 0.16023866832256317
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_4
+Mean variance for yor_4: 0.1502864807844162
+Mean std for for yor_4: 0.34056392312049866
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_5
+Mean variance for yor_5: 0.10965654999017715
+Mean std for for yor_5: 0.2828632891178131
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_6
+Mean variance for yor_6: 0.04272416606545448
+Mean std for for yor_6: 0.17141146957874298
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_7
+Mean variance for yor_7: 0.13553546369075775
+Mean std for for yor_7: 0.3170619606971741
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_8
+Mean variance for yor_8: 0.0464799739420414
+Mean std for for yor_8: 0.16944684088230133
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: yor_9
+Mean variance for yor_9: 0.14008007943630219
+Mean std for for yor_9: 0.32297053933143616
+
+######## Language: zh ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_0
+Mean variance for zh_0: 0.1679769903421402
+Mean std for for zh_0: 0.3696688115596771
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_1
+Mean variance for zh_1: 0.13060502707958221
+Mean std for for zh_1: 0.3100058436393738
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_2
+Mean variance for zh_2: 0.14000679552555084
+Mean std for for zh_2: 0.32342612743377686
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_3
+Mean variance for zh_3: 0.16156835854053497
+Mean std for for zh_3: 0.35638824105262756
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_4
+Mean variance for zh_4: 0.17609524726867676
+Mean std for for zh_4: 0.3775726854801178
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_5
+Mean variance for zh_5: 0.17165546119213104
+Mean std for for zh_5: 0.3733426332473755
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_6
+Mean variance for zh_6: 0.14094270765781403
+Mean std for for zh_6: 0.32512733340263367
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_7
+Mean variance for zh_7: 0.1401243358850479
+Mean std for for zh_7: 0.3283890187740326
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_8
+Mean variance for zh_8: 0.1563318967819214
+Mean std for for zh_8: 0.34316572546958923
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: zh_9
+Mean variance for zh_9: 0.15322110056877136
+Mean std for for zh_9: 0.339413046836853
+
+######## Computing SDs for task: tydiqa ########
+
+
+######## Language: arabic ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic-4449832350126320768-0
+Mean variance for arabic-4449832350126320768-0: 0.10474175214767456
+Mean std for for arabic-4449832350126320768-0: 0.2780359089374542
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic--3340323169760881569-0
+Mean variance for arabic--3340323169760881569-0: 0.04744299128651619
+Mean std for for arabic--3340323169760881569-0: 0.17424792051315308
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic-4544770624843559444-1
+Mean variance for arabic-4544770624843559444-1: 0.04360020533204079
+Mean std for for arabic-4544770624843559444-1: 0.1731065958738327
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic-891952409566422966-0
+Mean variance for arabic-891952409566422966-0: 0.04211513325572014
+Mean std for for arabic-891952409566422966-0: 0.1717292070388794
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic-3659291834714572527-0
+Mean variance for arabic-3659291834714572527-0: 0.13034097850322723
+Mean std for for arabic-3659291834714572527-0: 0.31421589851379395
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic-9215226117011890166-0
+Mean variance for arabic-9215226117011890166-0: 0.04327106475830078
+Mean std for for arabic-9215226117011890166-0: 0.1724962592124939
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic-6300896128538259469-0
+Mean variance for arabic-6300896128538259469-0: 0.055261850357055664
+Mean std for for arabic-6300896128538259469-0: 0.19519640505313873
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic-2382507508588518905-0
+Mean variance for arabic-2382507508588518905-0: 0.040790241211652756
+Mean std for for arabic-2382507508588518905-0: 0.16637612879276276
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic-1871632801094859741-1
+Mean variance for arabic-1871632801094859741-1: 0.03794746845960617
+Mean std for for arabic-1871632801094859741-1: 0.16125836968421936
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: arabic--7365809756232083807-0
+Mean variance for arabic--7365809756232083807-0: 0.04007291421294212
+Mean std for for arabic--7365809756232083807-0: 0.16614122688770294
+
+######## Language: russian ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian-3457655197371763238-61
+Mean variance for russian-3457655197371763238-61: 0.020543618127703667
+Mean std for for russian-3457655197371763238-61: 0.11698494106531143
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian--1914807805318993335-49
+Mean variance for russian--1914807805318993335-49: 0.05050867423415184
+Mean std for for russian--1914807805318993335-49: 0.17808805406093597
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian--3307989180606173904-1
+Mean variance for russian--3307989180606173904-1: 0.019977761432528496
+Mean std for for russian--3307989180606173904-1: 0.11615685373544693
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian--2219512001175315660-0
+Mean variance for russian--2219512001175315660-0: 0.020609401166439056
+Mean std for for russian--2219512001175315660-0: 0.11818766593933105
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian--7076080992904718941-0
+Mean variance for russian--7076080992904718941-0: 0.02084929682314396
+Mean std for for russian--7076080992904718941-0: 0.11927594989538193
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian--6565862953558739013-1
+Mean variance for russian--6565862953558739013-1: 0.02145068347454071
+Mean std for for russian--6565862953558739013-1: 0.12055718153715134
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian--5098374684590548031-42
+Mean variance for russian--5098374684590548031-42: 0.052004482597112656
+Mean std for for russian--5098374684590548031-42: 0.19114424288272858
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian-3573734219967447693-1
+Mean variance for russian-3573734219967447693-1: 0.021751901134848595
+Mean std for for russian-3573734219967447693-1: 0.12137734144926071
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian--4521001374120505750-6
+Mean variance for russian--4521001374120505750-6: 0.05386878922581673
+Mean std for for russian--4521001374120505750-6: 0.1868705004453659
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: russian--1308382244018658424-9
+Mean variance for russian--1308382244018658424-9: 0.022377008572220802
+Mean std for for russian--1308382244018658424-9: 0.1227894127368927
+
+######## Language: bengali ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali--1199493965132146131-3
+Mean variance for bengali--1199493965132146131-3: 0.09258376806974411
+Mean std for for bengali--1199493965132146131-3: 0.26152071356773376
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali-1807801556888134437-2
+Mean variance for bengali-1807801556888134437-2: 0.08783897757530212
+Mean std for for bengali-1807801556888134437-2: 0.25438061356544495
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali-2113189855114052041-2
+Mean variance for bengali-2113189855114052041-2: 0.09402614086866379
+Mean std for for bengali-2113189855114052041-2: 0.26345109939575195
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali--2527914488250041207-0
+Mean variance for bengali--2527914488250041207-0: 0.09404060244560242
+Mean std for for bengali--2527914488250041207-0: 0.2632611095905304
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali--8260793280894408063-14
+Mean variance for bengali--8260793280894408063-14: 0.10135804861783981
+Mean std for for bengali--8260793280894408063-14: 0.2734798192977905
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali-8313009204852557186-4
+Mean variance for bengali-8313009204852557186-4: 0.09547365456819534
+Mean std for for bengali-8313009204852557186-4: 0.26498910784721375
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali--415964033364840061-0
+Mean variance for bengali--415964033364840061-0: 0.08795566111803055
+Mean std for for bengali--415964033364840061-0: 0.254745215177536
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali--4696865548928858824-5
+Mean variance for bengali--4696865548928858824-5: 0.09402430802583694
+Mean std for for bengali--4696865548928858824-5: 0.2631429135799408
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali-6505224142472931712-1
+Mean variance for bengali-6505224142472931712-1: 0.09443216770887375
+Mean std for for bengali-6505224142472931712-1: 0.2646435797214508
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: bengali-599666913917674019-13
+Mean variance for bengali-599666913917674019-13: 0.13506945967674255
+Mean std for for bengali-599666913917674019-13: 0.31986770033836365
+
+######## Language: telugu ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu--3977923017846260053-0
+Mean variance for telugu--3977923017846260053-0: 0.048506930470466614
+Mean std for for telugu--3977923017846260053-0: 0.18165241181850433
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu-2254198842560317781-0
+Mean variance for telugu-2254198842560317781-0: 0.03751249983906746
+Mean std for for telugu-2254198842560317781-0: 0.15749302506446838
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu-5435080895440121384-0
+Mean variance for telugu-5435080895440121384-0: 0.034773752093315125
+Mean std for for telugu-5435080895440121384-0: 0.15158160030841827
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu--1182505954974481191-2
+Mean variance for telugu--1182505954974481191-2: 0.05859845504164696
+Mean std for for telugu--1182505954974481191-2: 0.20057596266269684
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu-119276511844068401-0
+Mean variance for telugu-119276511844068401-0: 0.040821779519319534
+Mean std for for telugu-119276511844068401-0: 0.16596390306949615
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu--4111208545071789922-0
+Mean variance for telugu--4111208545071789922-0: 0.03536830097436905
+Mean std for for telugu--4111208545071789922-0: 0.15378797054290771
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu--5922002196428211484-132
+Mean variance for telugu--5922002196428211484-132: 0.12715460360050201
+Mean std for for telugu--5922002196428211484-132: 0.30693140625953674
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu--1817004721681155192-3
+Mean variance for telugu--1817004721681155192-3: 0.03389472886919975
+Mean std for for telugu--1817004721681155192-3: 0.14876176416873932
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu-1602214480303968359-1
+Mean variance for telugu-1602214480303968359-1: 0.04852786287665367
+Mean std for for telugu-1602214480303968359-1: 0.18340478837490082
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: telugu--6495674712575945374-0
+Mean variance for telugu--6495674712575945374-0: 0.03751460835337639
+Mean std for for telugu--6495674712575945374-0: 0.15646903216838837
+
+######## Language: finnish ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish-6987763079741579998-0
+Mean variance for finnish-6987763079741579998-0: 0.046648476272821426
+Mean std for for finnish-6987763079741579998-0: 0.1698555201292038
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish--8516625414052383903-0
+Mean variance for finnish--8516625414052383903-0: 0.051260605454444885
+Mean std for for finnish--8516625414052383903-0: 0.17604100704193115
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish-4168898766124519517-0
+Mean variance for finnish-4168898766124519517-0: 0.0654965415596962
+Mean std for for finnish-4168898766124519517-0: 0.22201943397521973
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish-783166898848672321-4
+Mean variance for finnish-783166898848672321-4: 0.05972479283809662
+Mean std for for finnish-783166898848672321-4: 0.18976740539073944
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish-2208556840820233322-0
+Mean variance for finnish-2208556840820233322-0: 0.047942865639925
+Mean std for for finnish-2208556840820233322-0: 0.17204749584197998
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish--1981034637152391615-58
+Mean variance for finnish--1981034637152391615-58: 0.0178416408598423
+Mean std for for finnish--1981034637152391615-58: 0.1103912815451622
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish-8689148941295949475-9
+Mean variance for finnish-8689148941295949475-9: 0.014209914021193981
+Mean std for for finnish-8689148941295949475-9: 0.1006864532828331
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish-6900867945323517614-2
+Mean variance for finnish-6900867945323517614-2: 0.06502825766801834
+Mean std for for finnish-6900867945323517614-2: 0.2225935459136963
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish-8023130170017405987-1
+Mean variance for finnish-8023130170017405987-1: 0.03683779761195183
+Mean std for for finnish-8023130170017405987-1: 0.15032605826854706
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: finnish-5001457972111781248-0
+Mean variance for finnish-5001457972111781248-0: 0.014812816865742207
+Mean std for for finnish-5001457972111781248-0: 0.10418438911437988
+
+######## Language: swahili ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili-7146838206539641546-10
+Mean variance for swahili-7146838206539641546-10: 0.058288440108299255
+Mean std for for swahili-7146838206539641546-10: 0.19242917001247406
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili-7655634199707176439-0
+Mean variance for swahili-7655634199707176439-0: 0.016448691487312317
+Mean std for for swahili-7655634199707176439-0: 0.10901374369859695
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili--4427180714267750534-1
+Mean variance for swahili--4427180714267750534-1: 0.0436459481716156
+Mean std for for swahili--4427180714267750534-1: 0.16396941244602203
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili-4141779435061573138-0
+Mean variance for swahili-4141779435061573138-0: 0.016300015151500702
+Mean std for for swahili-4141779435061573138-0: 0.10746780782938004
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili--5424518593960879661-0
+Mean variance for swahili--5424518593960879661-0: 0.019404323771595955
+Mean std for for swahili--5424518593960879661-0: 0.1133253201842308
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili-4281845253405461584-0
+Mean variance for swahili-4281845253405461584-0: 0.057356785982847214
+Mean std for for swahili-4281845253405461584-0: 0.19152873754501343
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili-4899164839984299762-2
+Mean variance for swahili-4899164839984299762-2: 0.046072255820035934
+Mean std for for swahili-4899164839984299762-2: 0.16844181716442108
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili-1288750786498500530-0
+Mean variance for swahili-1288750786498500530-0: 0.052473247051239014
+Mean std for for swahili-1288750786498500530-0: 0.18046309053897858
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili--2671134792844015228-3
+Mean variance for swahili--2671134792844015228-3: 0.02874007262289524
+Mean std for for swahili--2671134792844015228-3: 0.13294845819473267
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: swahili-4873225622490039485-2
+Mean variance for swahili-4873225622490039485-2: 0.02244112826883793
+Mean std for for swahili-4873225622490039485-2: 0.12007095664739609
+
+######## Language: korean ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean--2869472392602314906-0
+Mean variance for korean--2869472392602314906-0: 0.09723362326622009
+Mean std for for korean--2869472392602314906-0: 0.26778969168663025
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean-4375199563921600155-0
+Mean variance for korean-4375199563921600155-0: 0.03748977556824684
+Mean std for for korean-4375199563921600155-0: 0.16044215857982635
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean--1715118423211755607-13
+Mean variance for korean--1715118423211755607-13: 0.026404470205307007
+Mean std for for korean--1715118423211755607-13: 0.13255195319652557
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean--8028977936696142934-9
+Mean variance for korean--8028977936696142934-9: 0.04555879905819893
+Mean std for for korean--8028977936696142934-9: 0.1756662279367447
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean-2807245034690443837-5
+Mean variance for korean-2807245034690443837-5: 0.13271470367908478
+Mean std for for korean-2807245034690443837-5: 0.31295356154441833
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean-3862451817164408576-0
+Mean variance for korean-3862451817164408576-0: 0.041645027697086334
+Mean std for for korean-3862451817164408576-0: 0.16320867836475372
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean-148115504649351135-0
+Mean variance for korean-148115504649351135-0: 0.07973968982696533
+Mean std for for korean-148115504649351135-0: 0.2356840968132019
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean--2885837157239647036-2
+Mean variance for korean--2885837157239647036-2: 0.1303229182958603
+Mean std for for korean--2885837157239647036-2: 0.3109489977359772
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean--1743220297777040002-22
+Mean variance for korean--1743220297777040002-22: 0.14001911878585815
+Mean std for for korean--1743220297777040002-22: 0.3214337229728699
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: korean-3268522368206106332-0
+Mean variance for korean-3268522368206106332-0: 0.15084664523601532
+Mean std for for korean-3268522368206106332-0: 0.3423648178577423
+
+######## Language: indonesian ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian-9141868818310916091-0
+Mean variance for indonesian-9141868818310916091-0: 0.015040560625493526
+Mean std for for indonesian-9141868818310916091-0: 0.10496842861175537
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian-4609394337632433932-1
+Mean variance for indonesian-4609394337632433932-1: 0.0626559928059578
+Mean std for for indonesian-4609394337632433932-1: 0.218375563621521
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian-2763468883290577923-0
+Mean variance for indonesian-2763468883290577923-0: 0.019409343600273132
+Mean std for for indonesian-2763468883290577923-0: 0.11382165551185608
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian-5633590583948933406-0
+Mean variance for indonesian-5633590583948933406-0: 0.034747060388326645
+Mean std for for indonesian-5633590583948933406-0: 0.14645807445049286
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian--5961409780035435015-0
+Mean variance for indonesian--5961409780035435015-0: 0.015358511358499527
+Mean std for for indonesian--5961409780035435015-0: 0.1057477667927742
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian-6274547934693326697-0
+Mean variance for indonesian-6274547934693326697-0: 0.023131927475333214
+Mean std for for indonesian-6274547934693326697-0: 0.12087274342775345
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian--2516321763567853082-0
+Mean variance for indonesian--2516321763567853082-0: 0.014617785811424255
+Mean std for for indonesian--2516321763567853082-0: 0.10336308926343918
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian-2048796427556239759-4
+Mean variance for indonesian-2048796427556239759-4: 0.05309038236737251
+Mean std for for indonesian-2048796427556239759-4: 0.17854146659374237
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian-6246592469157278547-2
+Mean variance for indonesian-6246592469157278547-2: 0.0313972644507885
+Mean std for for indonesian-6246592469157278547-2: 0.13684777915477753
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: indonesian--3724318458930736973-1
+Mean variance for indonesian--3724318458930736973-1: 0.015004524029791355
+Mean std for for indonesian--3724318458930736973-1: 0.10367075353860855
+
+######## Language: english ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english-2852412434797041176-6
+Mean variance for english-2852412434797041176-6: 0.06856947392225266
+Mean std for for english-2852412434797041176-6: 0.22802339494228363
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english--1463732605740571606-0
+Mean variance for english--1463732605740571606-0: 0.018480198457837105
+Mean std for for english--1463732605740571606-0: 0.11297718435525894
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english-5441411281255470421-0
+Mean variance for english-5441411281255470421-0: 0.016126392409205437
+Mean std for for english-5441411281255470421-0: 0.10743442922830582
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english-7294054492486093447-1
+Mean variance for english-7294054492486093447-1: 0.0169887226074934
+Mean std for for english-7294054492486093447-1: 0.10898343473672867
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english-8820750127045023244-0
+Mean variance for english-8820750127045023244-0: 0.0453261137008667
+Mean std for for english-8820750127045023244-0: 0.16663271188735962
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english--506693546683012611-2
+Mean variance for english--506693546683012611-2: 0.060393285006284714
+Mean std for for english--506693546683012611-2: 0.19339050352573395
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english-745411798111651115-0
+Mean variance for english-745411798111651115-0: 0.015454134903848171
+Mean std for for english-745411798111651115-0: 0.10571524500846863
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english-7740772185887912651-0
+Mean variance for english-7740772185887912651-0: 0.016087228432297707
+Mean std for for english-7740772185887912651-0: 0.10735347121953964
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english-383873188776267137-19
+Mean variance for english-383873188776267137-19: 0.017621269449591637
+Mean std for for english-383873188776267137-19: 0.10960298031568527
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: english--8277537578703156284-0
+Mean variance for english--8277537578703156284-0: 0.01645037904381752
+Mean std for for english--8277537578703156284-0: 0.1066063866019249
+
+######## Computing SDs for task: glue ########
+
+
+######## Language: cola ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_228
+Mean variance for cola_228: 0.050390537828207016
+Mean std for for cola_228: 0.19293636083602905
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_51
+Mean variance for cola_51: 0.04747730866074562
+Mean std for for cola_51: 0.18959689140319824
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_563
+Mean variance for cola_563: 0.142342209815979
+Mean std for for cola_563: 0.33953288197517395
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_501
+Mean variance for cola_501: 0.040568236261606216
+Mean std for for cola_501: 0.173301100730896
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_457
+Mean variance for cola_457: 0.07533726841211319
+Mean std for for cola_457: 0.24196195602416992
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_285
+Mean variance for cola_285: 0.07557765394449234
+Mean std for for cola_285: 0.24207977950572968
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_209
+Mean variance for cola_209: 0.04891815409064293
+Mean std for for cola_209: 0.1927403211593628
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_178
+Mean variance for cola_178: 0.04286619648337364
+Mean std for for cola_178: 0.1827794462442398
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_864
+Mean variance for cola_864: 0.046142980456352234
+Mean std for for cola_864: 0.1916838139295578
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: cola_65
+Mean variance for cola_65: 0.04078361392021179
+Mean std for for cola_65: 0.17069965600967407
+
+######## Language: mnli ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_488
+Mean variance for mnli_488: 0.06387864053249359
+Mean std for for mnli_488: 0.19814373552799225
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_1535
+Mean variance for mnli_1535: 0.07002080231904984
+Mean std for for mnli_1535: 0.20766909420490265
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_3582
+Mean variance for mnli_3582: 0.04989590868353844
+Mean std for for mnli_3582: 0.18374986946582794
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_3811
+Mean variance for mnli_3811: 0.05265452340245247
+Mean std for for mnli_3811: 0.186834916472435
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_8279
+Mean variance for mnli_8279: 0.05619749426841736
+Mean std for for mnli_8279: 0.19969843327999115
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_434
+Mean variance for mnli_434: 0.04001118242740631
+Mean std for for mnli_434: 0.15694428980350494
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_9195
+Mean variance for mnli_9195: 0.06107664108276367
+Mean std for for mnli_9195: 0.21905456483364105
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_3257
+Mean variance for mnli_3257: 0.04504377022385597
+Mean std for for mnli_3257: 0.17339833080768585
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_8928
+Mean variance for mnli_8928: 0.058226313441991806
+Mean std for for mnli_8928: 0.189119353890419
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mnli_6873
+Mean variance for mnli_6873: 0.06006708741188049
+Mean std for for mnli_6873: 0.19022493064403534
+
+######## Language: mrpc ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_451
+Mean variance for mrpc_451: 0.06622772663831711
+Mean std for for mrpc_451: 0.2015538215637207
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_919
+Mean variance for mrpc_919: 0.06390997022390366
+Mean std for for mrpc_919: 0.19979886710643768
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_1206
+Mean variance for mrpc_1206: 0.06781131774187088
+Mean std for for mrpc_1206: 0.2107025533914566
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_569
+Mean variance for mrpc_569: 0.06632676720619202
+Mean std for for mrpc_569: 0.20537857711315155
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_1657
+Mean variance for mrpc_1657: 0.05185520648956299
+Mean std for for mrpc_1657: 0.17866025865077972
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_13
+Mean variance for mrpc_13: 0.07195769995450974
+Mean std for for mrpc_13: 0.21562351286411285
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_1554
+Mean variance for mrpc_1554: 0.0468188039958477
+Mean std for for mrpc_1554: 0.16909591853618622
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_1650
+Mean variance for mrpc_1650: 0.1315772980451584
+Mean std for for mrpc_1650: 0.31373706459999084
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_326
+Mean variance for mrpc_326: 0.06908782571554184
+Mean std for for mrpc_326: 0.20916591584682465
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: mrpc_1429
+Mean variance for mrpc_1429: 0.06193731352686882
+Mean std for for mrpc_1429: 0.19852495193481445
+
+######## Language: qnli ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_3462
+Mean variance for qnli_3462: 0.07147582620382309
+Mean std for for qnli_3462: 0.21143411099910736
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_2787
+Mean variance for qnli_2787: 0.05433056131005287
+Mean std for for qnli_2787: 0.18036140501499176
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_2276
+Mean variance for qnli_2276: 0.05253523588180542
+Mean std for for qnli_2276: 0.17847412824630737
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_1273
+Mean variance for qnli_1273: 0.06335940212011337
+Mean std for for qnli_1273: 0.1958693116903305
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_1763
+Mean variance for qnli_1763: 0.06113038957118988
+Mean std for for qnli_1763: 0.19497419893741608
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_2757
+Mean variance for qnli_2757: 0.06416426599025726
+Mean std for for qnli_2757: 0.1994238644838333
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_837
+Mean variance for qnli_837: 0.05727565661072731
+Mean std for for qnli_837: 0.1902022361755371
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_759
+Mean variance for qnli_759: 0.01756838895380497
+Mean std for for qnli_759: 0.11008390039205551
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_3112
+Mean variance for qnli_3112: 0.06285374611616135
+Mean std for for qnli_3112: 0.19997525215148926
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qnli_792
+Mean variance for qnli_792: 0.056442465633153915
+Mean std for for qnli_792: 0.18312792479991913
+
+######## Language: qqp ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_188208
+Mean variance for qqp_188208: 0.05470168963074684
+Mean std for for qqp_188208: 0.19507522881031036
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_180331
+Mean variance for qqp_180331: 0.04869646951556206
+Mean std for for qqp_180331: 0.18029038608074188
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_316526
+Mean variance for qqp_316526: 0.056956883519887924
+Mean std for for qqp_316526: 0.19346022605895996
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_138685
+Mean variance for qqp_138685: 0.04187125340104103
+Mean std for for qqp_138685: 0.15932101011276245
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_22780
+Mean variance for qqp_22780: 0.05778809264302254
+Mean std for for qqp_22780: 0.20360803604125977
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_382589
+Mean variance for qqp_382589: 0.06049720570445061
+Mean std for for qqp_382589: 0.19782346487045288
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_240870
+Mean variance for qqp_240870: 0.05520922318100929
+Mean std for for qqp_240870: 0.1946878284215927
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_281137
+Mean variance for qqp_281137: 0.05676833167672157
+Mean std for for qqp_281137: 0.1919565349817276
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_65444
+Mean variance for qqp_65444: 0.05824446305632591
+Mean std for for qqp_65444: 0.20272523164749146
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: qqp_198461
+Mean variance for qqp_198461: 0.05657598748803139
+Mean std for for qqp_198461: 0.19260358810424805
+
+######## Language: rte ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_322
+Mean variance for rte_322: 0.05912819504737854
+Mean std for for rte_322: 0.1945621520280838
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_2261
+Mean variance for rte_2261: 0.0441499762237072
+Mean std for for rte_2261: 0.1766253262758255
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_1200
+Mean variance for rte_1200: 0.040875423699617386
+Mean std for for rte_1200: 0.15674203634262085
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_2574
+Mean variance for rte_2574: 0.014367546886205673
+Mean std for for rte_2574: 0.10333526134490967
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_2533
+Mean variance for rte_2533: 0.01782418042421341
+Mean std for for rte_2533: 0.11084335297346115
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_1481
+Mean variance for rte_1481: 0.05731634795665741
+Mean std for for rte_1481: 0.18683302402496338
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_2364
+Mean variance for rte_2364: 0.057310327887535095
+Mean std for for rte_2364: 0.1856391429901123
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_787
+Mean variance for rte_787: 0.056239787489175797
+Mean std for for rte_787: 0.1830376833677292
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_2885
+Mean variance for rte_2885: 0.018376735970377922
+Mean std for for rte_2885: 0.11259317398071289
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: rte_284
+Mean variance for rte_284: 0.051381874829530716
+Mean std for for rte_284: 0.18305081129074097
+
+######## Language: sst2 ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_93
+Mean variance for sst2_93: 0.04711015522480011
+Mean std for for sst2_93: 0.17595408856868744
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_1354
+Mean variance for sst2_1354: 0.034145474433898926
+Mean std for for sst2_1354: 0.16176028549671173
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_466
+Mean variance for sst2_466: 0.05404207110404968
+Mean std for for sst2_466: 0.20416636765003204
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_1583
+Mean variance for sst2_1583: 0.05685221031308174
+Mean std for for sst2_1583: 0.19047115743160248
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_592
+Mean variance for sst2_592: 0.05775890126824379
+Mean std for for sst2_592: 0.18894053995609283
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_163
+Mean variance for sst2_163: 0.07779338210821152
+Mean std for for sst2_163: 0.2497635930776596
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_1751
+Mean variance for sst2_1751: 0.03621314838528633
+Mean std for for sst2_1751: 0.16536085307598114
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_476
+Mean variance for sst2_476: 0.042596738785505295
+Mean std for for sst2_476: 0.16691391170024872
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_1774
+Mean variance for sst2_1774: 0.05140171945095062
+Mean std for for sst2_1774: 0.183892622590065
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: sst2_206
+Mean variance for sst2_206: 0.043652039021253586
+Mean std for for sst2_206: 0.17261244356632233
+
+######## Language: stsb ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_778
+Mean variance for stsb_778: 0.04934108629822731
+Mean std for for stsb_778: 0.18490386009216309
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_569
+Mean variance for stsb_569: 0.05062316730618477
+Mean std for for stsb_569: 0.19193153083324432
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_928
+Mean variance for stsb_928: 0.04077062010765076
+Mean std for for stsb_928: 0.15727369487285614
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_1301
+Mean variance for stsb_1301: 0.051738206297159195
+Mean std for for stsb_1301: 0.18747089803218842
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_747
+Mean variance for stsb_747: 0.07081101089715958
+Mean std for for stsb_747: 0.21600019931793213
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_333
+Mean variance for stsb_333: 0.05044831708073616
+Mean std for for stsb_333: 0.18426847457885742
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_758
+Mean variance for stsb_758: 0.06396300345659256
+Mean std for for stsb_758: 0.20217783749103546
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_727
+Mean variance for stsb_727: 0.05699228122830391
+Mean std for for stsb_727: 0.20351040363311768
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_429
+Mean variance for stsb_429: 0.05307973548769951
+Mean std for for stsb_429: 0.19454169273376465
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: stsb_1372
+Mean variance for stsb_1372: 0.0482199527323246
+Mean std for for stsb_1372: 0.18040581047534943
+
+######## Language: wnli ######## 
+
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_68
+Mean variance for wnli_68: 0.05945306643843651
+Mean std for for wnli_68: 0.19163323938846588
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_18
+Mean variance for wnli_18: 0.04321831464767456
+Mean std for for wnli_18: 0.16019660234451294
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_43
+Mean variance for wnli_43: 0.06734310835599899
+Mean std for for wnli_43: 0.20358049869537354
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_136
+Mean variance for wnli_136: 0.060203853994607925
+Mean std for for wnli_136: 0.19223397970199585
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_62
+Mean variance for wnli_62: 0.06385613977909088
+Mean std for for wnli_62: 0.20080481469631195
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_41
+Mean variance for wnli_41: 0.06134191155433655
+Mean std for for wnli_41: 0.19478730857372284
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_118
+Mean variance for wnli_118: 0.06447528302669525
+Mean std for for wnli_118: 0.20498961210250854
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_97
+Mean variance for wnli_97: 0.037683095782995224
+Mean std for for wnli_97: 0.15173029899597168
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_69
+Mean variance for wnli_69: 0.046799302101135254
+Mean std for for wnli_69: 0.17628931999206543
+Applying span masking with "max_span_length = 6" , "cumulative_span_weights = [0.2, 0.4, 0.6, 0.8, 0.9, 1.0]"  and "spacing = span"
+Masked count: 26, ratio = 0.1016
+ID text: wnli_142
+Mean variance for wnli_142: 0.043207455426454544
+Mean std for for wnli_142: 0.16201645135879517
+SD per task: {'ner': {'amh': {'amh_0': 0.16254977881908417, 'amh_1': 0.14082686603069305, 'amh_2': 0.15886490046977997, 'amh_3': 0.15204650163650513, 'amh_4': 0.16134865581989288, 'amh_5': 0.17929743230342865, 'amh_6': 0.14951853454113007, 'amh_7': 0.1681535243988037, 'amh_8': 0.16192825138568878, 'amh_9': 0.1593482345342636}, 'conll_2003_en': {'conll_2003_en_0': 0.15618357062339783, 'conll_2003_en_1': 0.04775857552886009, 'conll_2003_en_2': 0.04609702527523041, 'conll_2003_en_3': 0.04665127769112587, 'conll_2003_en_4': 0.06321700662374496, 'conll_2003_en_5': 0.1606784164905548, 'conll_2003_en_6': 0.12908922135829926, 'conll_2003_en_7': 0.1703179031610489, 'conll_2003_en_8': 0.1752316951751709, 'conll_2003_en_9': 0.04129466414451599}, 'hau': {'hau_0': 0.03720424696803093, 'hau_1': 0.0399930365383625, 'hau_2': 0.1678178757429123, 'hau_3': 0.01974044181406498, 'hau_4': 0.04281749203801155, 'hau_5': 0.036328110843896866, 'hau_6': 0.05267524719238281, 'hau_7': 0.042533114552497864, 'hau_8': 0.03172915056347847, 'hau_9': 0.053156014531850815}, 'ibo': {'ibo_0': 0.049688417464494705, 'ibo_1': 0.04703294858336449, 'ibo_2': 0.04146488383412361, 'ibo_3': 0.05017593875527382, 'ibo_4': 0.05246217921376228, 'ibo_5': 0.04442783072590828, 'ibo_6': 0.052052583545446396, 'ibo_7': 0.042672887444496155, 'ibo_8': 0.043320972472429276, 'ibo_9': 0.05029270425438881}, 'kin': {'kin_0': 0.04781493917107582, 'kin_1': 0.055662889033555984, 'kin_2': 0.036931026726961136, 'kin_3': 0.05178403854370117, 'kin_4': 0.048631321638822556, 'kin_5': 0.044194936752319336, 'kin_6': 0.030561847612261772, 'kin_7': 0.046046480536460876, 'kin_8': 0.04940427467226982, 'kin_9': 0.04394061863422394}, 'lug': {'lug_0': 0.04080014303326607, 'lug_1': 0.04966356232762337, 'lug_2': 0.018500952050089836, 'lug_3': 0.03423507139086723, 'lug_4': 0.03470730409026146, 'lug_5': 0.045328471809625626, 'lug_6': 0.0449911393225193, 'lug_7': 0.05363984778523445, 'lug_8': 0.06608549505472183, 'lug_9': 0.04815930500626564}, 'luo': {'luo_0': 0.02967127226293087, 'luo_1': 0.041164331138134, 'luo_2': 0.04585351049900055, 'luo_3': 0.03118150122463703, 'luo_4': 0.04369072988629341, 'luo_5': 0.04927356168627739, 'luo_6': 0.04611317440867424, 'luo_7': 0.048138100653886795, 'luo_8': 0.04855726286768913, 'luo_9': 0.04492040351033211}, 'pcm': {'pcm_0': 0.04037003591656685, 'pcm_1': 0.040484022349119186, 'pcm_2': 0.05046268180012703, 'pcm_3': 0.04623076692223549, 'pcm_4': 0.048013463616371155, 'pcm_5': 0.035707756876945496, 'pcm_6': 0.04342344403266907, 'pcm_7': 0.04537798464298248, 'pcm_8': 0.04204452037811279, 'pcm_9': 0.04030827805399895}, 'swa': {'swa_0': 0.04790448769927025, 'swa_1': 0.04778386652469635, 'swa_2': 0.04483959078788757, 'swa_3': 0.05107763037085533, 'swa_4': 0.033551931381225586, 'swa_5': 0.035035885870456696, 'swa_6': 0.03478009253740311, 'swa_7': 0.055833667516708374, 'swa_8': 0.038903553038835526, 'swa_9': 0.05324866250157356}, 'wol': {'wol_0': 0.04356104135513306, 'wol_1': 0.04864092543721199, 'wol_2': 0.04588590934872627, 'wol_3': 0.07609837502241135, 'wol_4': 0.05312485620379448, 'wol_5': 0.04980701580643654, 'wol_6': 0.15645234286785126, 'wol_7': 0.038785774260759354, 'wol_8': 0.0317130945622921, 'wol_9': 0.04655562713742256}, 'yor': {'yor_0': 0.14453426003456116, 'yor_1': 0.140716552734375, 'yor_2': 0.058651477098464966, 'yor_3': 0.041371554136276245, 'yor_4': 0.1502864807844162, 'yor_5': 0.10965654999017715, 'yor_6': 0.04272416606545448, 'yor_7': 0.13553546369075775, 'yor_8': 0.0464799739420414, 'yor_9': 0.14008007943630219}, 'zh': {'zh_0': 0.1679769903421402, 'zh_1': 0.13060502707958221, 'zh_2': 0.14000679552555084, 'zh_3': 0.16156835854053497, 'zh_4': 0.17609524726867676, 'zh_5': 0.17165546119213104, 'zh_6': 0.14094270765781403, 'zh_7': 0.1401243358850479, 'zh_8': 0.1563318967819214, 'zh_9': 0.15322110056877136}}, 'tydiqa': {'arabic': {'arabic-4449832350126320768-0': 0.10474175214767456, 'arabic--3340323169760881569-0': 0.04744299128651619, 'arabic-4544770624843559444-1': 0.04360020533204079, 'arabic-891952409566422966-0': 0.04211513325572014, 'arabic-3659291834714572527-0': 0.13034097850322723, 'arabic-9215226117011890166-0': 0.04327106475830078, 'arabic-6300896128538259469-0': 0.055261850357055664, 'arabic-2382507508588518905-0': 0.040790241211652756, 'arabic-1871632801094859741-1': 0.03794746845960617, 'arabic--7365809756232083807-0': 0.04007291421294212}, 'russian': {'russian-3457655197371763238-61': 0.020543618127703667, 'russian--1914807805318993335-49': 0.05050867423415184, 'russian--3307989180606173904-1': 0.019977761432528496, 'russian--2219512001175315660-0': 0.020609401166439056, 'russian--7076080992904718941-0': 0.02084929682314396, 'russian--6565862953558739013-1': 0.02145068347454071, 'russian--5098374684590548031-42': 0.052004482597112656, 'russian-3573734219967447693-1': 0.021751901134848595, 'russian--4521001374120505750-6': 0.05386878922581673, 'russian--1308382244018658424-9': 0.022377008572220802}, 'bengali': {'bengali--1199493965132146131-3': 0.09258376806974411, 'bengali-1807801556888134437-2': 0.08783897757530212, 'bengali-2113189855114052041-2': 0.09402614086866379, 'bengali--2527914488250041207-0': 0.09404060244560242, 'bengali--8260793280894408063-14': 0.10135804861783981, 'bengali-8313009204852557186-4': 0.09547365456819534, 'bengali--415964033364840061-0': 0.08795566111803055, 'bengali--4696865548928858824-5': 0.09402430802583694, 'bengali-6505224142472931712-1': 0.09443216770887375, 'bengali-599666913917674019-13': 0.13506945967674255}, 'telugu': {'telugu--3977923017846260053-0': 0.048506930470466614, 'telugu-2254198842560317781-0': 0.03751249983906746, 'telugu-5435080895440121384-0': 0.034773752093315125, 'telugu--1182505954974481191-2': 0.05859845504164696, 'telugu-119276511844068401-0': 0.040821779519319534, 'telugu--4111208545071789922-0': 0.03536830097436905, 'telugu--5922002196428211484-132': 0.12715460360050201, 'telugu--1817004721681155192-3': 0.03389472886919975, 'telugu-1602214480303968359-1': 0.04852786287665367, 'telugu--6495674712575945374-0': 0.03751460835337639}, 'finnish': {'finnish-6987763079741579998-0': 0.046648476272821426, 'finnish--8516625414052383903-0': 0.051260605454444885, 'finnish-4168898766124519517-0': 0.0654965415596962, 'finnish-783166898848672321-4': 0.05972479283809662, 'finnish-2208556840820233322-0': 0.047942865639925, 'finnish--1981034637152391615-58': 0.0178416408598423, 'finnish-8689148941295949475-9': 0.014209914021193981, 'finnish-6900867945323517614-2': 0.06502825766801834, 'finnish-8023130170017405987-1': 0.03683779761195183, 'finnish-5001457972111781248-0': 0.014812816865742207}, 'swahili': {'swahili-7146838206539641546-10': 0.058288440108299255, 'swahili-7655634199707176439-0': 0.016448691487312317, 'swahili--4427180714267750534-1': 0.0436459481716156, 'swahili-4141779435061573138-0': 0.016300015151500702, 'swahili--5424518593960879661-0': 0.019404323771595955, 'swahili-4281845253405461584-0': 0.057356785982847214, 'swahili-4899164839984299762-2': 0.046072255820035934, 'swahili-1288750786498500530-0': 0.052473247051239014, 'swahili--2671134792844015228-3': 0.02874007262289524, 'swahili-4873225622490039485-2': 0.02244112826883793}, 'korean': {'korean--2869472392602314906-0': 0.09723362326622009, 'korean-4375199563921600155-0': 0.03748977556824684, 'korean--1715118423211755607-13': 0.026404470205307007, 'korean--8028977936696142934-9': 0.04555879905819893, 'korean-2807245034690443837-5': 0.13271470367908478, 'korean-3862451817164408576-0': 0.041645027697086334, 'korean-148115504649351135-0': 0.07973968982696533, 'korean--2885837157239647036-2': 0.1303229182958603, 'korean--1743220297777040002-22': 0.14001911878585815, 'korean-3268522368206106332-0': 0.15084664523601532}, 'indonesian': {'indonesian-9141868818310916091-0': 0.015040560625493526, 'indonesian-4609394337632433932-1': 0.0626559928059578, 'indonesian-2763468883290577923-0': 0.019409343600273132, 'indonesian-5633590583948933406-0': 0.034747060388326645, 'indonesian--5961409780035435015-0': 0.015358511358499527, 'indonesian-6274547934693326697-0': 0.023131927475333214, 'indonesian--2516321763567853082-0': 0.014617785811424255, 'indonesian-2048796427556239759-4': 0.05309038236737251, 'indonesian-6246592469157278547-2': 0.0313972644507885, 'indonesian--3724318458930736973-1': 0.015004524029791355}, 'english': {'english-2852412434797041176-6': 0.06856947392225266, 'english--1463732605740571606-0': 0.018480198457837105, 'english-5441411281255470421-0': 0.016126392409205437, 'english-7294054492486093447-1': 0.0169887226074934, 'english-8820750127045023244-0': 0.0453261137008667, 'english--506693546683012611-2': 0.060393285006284714, 'english-745411798111651115-0': 0.015454134903848171, 'english-7740772185887912651-0': 0.016087228432297707, 'english-383873188776267137-19': 0.017621269449591637, 'english--8277537578703156284-0': 0.01645037904381752}}, 'glue': {'cola': {'cola_228': 0.050390537828207016, 'cola_51': 0.04747730866074562, 'cola_563': 0.142342209815979, 'cola_501': 0.040568236261606216, 'cola_457': 0.07533726841211319, 'cola_285': 0.07557765394449234, 'cola_209': 0.04891815409064293, 'cola_178': 0.04286619648337364, 'cola_864': 0.046142980456352234, 'cola_65': 0.04078361392021179}, 'mnli': {'mnli_488': 0.06387864053249359, 'mnli_1535': 0.07002080231904984, 'mnli_3582': 0.04989590868353844, 'mnli_3811': 0.05265452340245247, 'mnli_8279': 0.05619749426841736, 'mnli_434': 0.04001118242740631, 'mnli_9195': 0.06107664108276367, 'mnli_3257': 0.04504377022385597, 'mnli_8928': 0.058226313441991806, 'mnli_6873': 0.06006708741188049}, 'mrpc': {'mrpc_451': 0.06622772663831711, 'mrpc_919': 0.06390997022390366, 'mrpc_1206': 0.06781131774187088, 'mrpc_569': 0.06632676720619202, 'mrpc_1657': 0.05185520648956299, 'mrpc_13': 0.07195769995450974, 'mrpc_1554': 0.0468188039958477, 'mrpc_1650': 0.1315772980451584, 'mrpc_326': 0.06908782571554184, 'mrpc_1429': 0.06193731352686882}, 'qnli': {'qnli_3462': 0.07147582620382309, 'qnli_2787': 0.05433056131005287, 'qnli_2276': 0.05253523588180542, 'qnli_1273': 0.06335940212011337, 'qnli_1763': 0.06113038957118988, 'qnli_2757': 0.06416426599025726, 'qnli_837': 0.05727565661072731, 'qnli_759': 0.01756838895380497, 'qnli_3112': 0.06285374611616135, 'qnli_792': 0.056442465633153915}, 'qqp': {'qqp_188208': 0.05470168963074684, 'qqp_180331': 0.04869646951556206, 'qqp_316526': 0.056956883519887924, 'qqp_138685': 0.04187125340104103, 'qqp_22780': 0.05778809264302254, 'qqp_382589': 0.06049720570445061, 'qqp_240870': 0.05520922318100929, 'qqp_281137': 0.05676833167672157, 'qqp_65444': 0.05824446305632591, 'qqp_198461': 0.05657598748803139}, 'rte': {'rte_322': 0.05912819504737854, 'rte_2261': 0.0441499762237072, 'rte_1200': 0.040875423699617386, 'rte_2574': 0.014367546886205673, 'rte_2533': 0.01782418042421341, 'rte_1481': 0.05731634795665741, 'rte_2364': 0.057310327887535095, 'rte_787': 0.056239787489175797, 'rte_2885': 0.018376735970377922, 'rte_284': 0.051381874829530716}, 'sst2': {'sst2_93': 0.04711015522480011, 'sst2_1354': 0.034145474433898926, 'sst2_466': 0.05404207110404968, 'sst2_1583': 0.05685221031308174, 'sst2_592': 0.05775890126824379, 'sst2_163': 0.07779338210821152, 'sst2_1751': 0.03621314838528633, 'sst2_476': 0.042596738785505295, 'sst2_1774': 0.05140171945095062, 'sst2_206': 0.043652039021253586}, 'stsb': {'stsb_778': 0.04934108629822731, 'stsb_569': 0.05062316730618477, 'stsb_928': 0.04077062010765076, 'stsb_1301': 0.051738206297159195, 'stsb_747': 0.07081101089715958, 'stsb_333': 0.05044831708073616, 'stsb_758': 0.06396300345659256, 'stsb_727': 0.05699228122830391, 'stsb_429': 0.05307973548769951, 'stsb_1372': 0.0482199527323246}, 'wnli': {'wnli_68': 0.05945306643843651, 'wnli_18': 0.04321831464767456, 'wnli_43': 0.06734310835599899, 'wnli_136': 0.060203853994607925, 'wnli_62': 0.06385613977909088, 'wnli_41': 0.06134191155433655, 'wnli_118': 0.06447528302669525, 'wnli_97': 0.037683095782995224, 'wnli_69': 0.046799302101135254, 'wnli_142': 0.043207455426454544}}}
+Saving data in SD_per_task_mask_0.1.json
+Saving data in var_per_task_mask_0.1.json
+
+UNCERTAINTY (SD)
+
+Mean loss per task: {'ner': {'amh': 0.15938827395439148, 'conll_2003_en': 0.10365194082260132, 'hau': 0.05239947512745857, 'ibo': 0.04735913872718811, 'kin': 0.04549723118543625, 'lug': 0.043611131608486176, 'luo': 0.04285638406872749, 'pcm': 0.04324229806661606, 'swa': 0.04429593309760094, 'wol': 0.05906249210238457, 'yor': 0.10100366920232773, 'zh': 0.15385279059410095}, 'tydiqa': {'arabic': 0.05855845659971237, 'russian': 0.030394162982702255, 'bengali': 0.09768027812242508, 'telugu': 0.05026734992861748, 'finnish': 0.04198037460446358, 'swahili': 0.03611708804965019, 'korean': 0.0881974846124649, 'indonesian': 0.02844533696770668, 'english': 0.029149720445275307}, 'glue': {'cola': 0.06104040890932083, 'mnli': 0.055707238614559174, 'mrpc': 0.06975099444389343, 'qnli': 0.0561135932803154, 'qqp': 0.05473095923662186, 'rte': 0.04169704392552376, 'sst2': 0.05015658587217331, 'stsb': 0.053598739206790924, 'wnli': 0.05475815013051033}}

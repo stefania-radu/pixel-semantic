@@ -41,7 +41,7 @@ import torchvision.utils as vutils
 import matplotlib.pyplot as plt
 
 logger = logging.getLogger(__name__)
-file_handler = logging.FileHandler('std_outputs.txt')
+file_handler = logging.FileHandler('std_outputs_mask_0.1.txt')
 logger.addHandler(file_handler)
 
 random.seed(42)
@@ -666,7 +666,7 @@ def main(args: argparse.Namespace):
 
     logger.info(f"Running MONTE CARLO experiment: {args.experiment_type}")
 
-    input_data_path = r"scripts\data\uncertainty\test_data_try.json"
+    input_data_path = r"scripts/data/uncertainty/test_data_ner_tydiqa_glue_small.json"
     # input_data_path = r"scripts\data\uncertainty\test_data_ner_tydiqa_glue_small.json"
 
     # get small dataset with 10 examples per language/subtask
@@ -685,6 +685,11 @@ def main(args: argparse.Namespace):
     extreme_losses_dict = find_extreme_loss_ids(loss_scores, 5) # keys: low, high, lowest, highest
 
     if args.do_std:
+
+        # maybe this will fix the float error and I can run both loss and std flags at the same time
+        with open(input_data_path, 'r', encoding='utf-8') as f:
+            input_data = json.load(f)
+            
         SD_scores = monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict)
 
         logger.info("\nUNCERTAINTY (SD)\n")
