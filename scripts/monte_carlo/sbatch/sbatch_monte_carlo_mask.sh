@@ -3,8 +3,8 @@
 #SBATCH --partition=regular
 #SBATCH --nodes=1
 #SBATCH --mem=20GB
-#SBATCH --job-name=std_monte_carlo_mask_0.1
-#SBATCH --output=std_outputs_mask_0.1.out
+#SBATCH --job-name=std_monte_carlo_mask_0.2
+#SBATCH --output=std_outputs_mask_0.2.out
 
 # CHANGE LINE: file_handler = logging.FileHandler('std_outputs_mask_0.1.txt')
 
@@ -18,8 +18,7 @@ python scripts/monte_carlo/monte_carlo_experiments.py \
   --model_name_or_path="Team-PIXEL/pixel-base" \
   --experiment_type="mask_ratio" \
   --do_std \
-  --mask_ratio=0.1\
-  --masking_spacing=0 \
+  --mask_ratio=0.2\
   --masking_max_span_length=6 \
   --masking_cumulative_span_weights="0.2,0.4,0.6,0.8,0.9,1" \
   --span_mask \

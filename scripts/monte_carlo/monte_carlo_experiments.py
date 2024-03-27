@@ -41,8 +41,8 @@ import torchvision.utils as vutils
 import matplotlib.pyplot as plt
 
 logger = logging.getLogger(__name__)
-file_handler = logging.FileHandler('std_outputs_mask_0.1.txt')
-logger.addHandler(file_handler)
+# file_handler = logging.FileHandler('std_outputs_span_1.txt')
+# logger.addHandler(file_handler)
 
 random.seed(42)
 

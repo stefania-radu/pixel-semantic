@@ -17,7 +17,6 @@ conda activate pixel-sem-env2
 python scripts/monte_carlo/monte_carlo_experiments.py \
   --model_name_or_path="Team-PIXEL/pixel-base" \
   --experiment_type="span" \
-  --do_loss \
   --do_std \
   --mask_ratio=0.25 \
   --masking_max_span_length=6 \
