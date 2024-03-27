@@ -87,7 +87,6 @@ def plot_lineplot_experiments(folder_path, across='tasks', measure="Loss", exper
                             mean_loss = calculate_mean_measure({"temp_task": {lang: text_data}})
                             data_list.append({'Category': full_language_name, 'Mean Measure': mean_loss, 'Mask Ratio': mask_ratio})
 
-    # Convert data_list to DataFrame
     df = pd.DataFrame(data_list)
 
     # For languages, calculate the mean for English categories
@@ -112,8 +111,6 @@ def plot_lineplot_experiments(folder_path, across='tasks', measure="Loss", exper
         legend_title = "Language"
         ax = sns.lineplot(data=df, x='Mask Ratio', y='Mean Measure', hue='Category',  marker='o', hue_order=unique_categories, linewidth=2, errorbar=None)
 
-    # ax.set(xlabel='Mask ratio' if experiment=="Mask" else "Span length", ylabel=f"Mean {measure}")
-    # ax.legend_.remove()
 
     lines = ax.get_lines()
     labels = df['Category'].unique()

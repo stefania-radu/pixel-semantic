@@ -107,7 +107,7 @@ def plot_loss_vs_mask_ratio(folder_path, across='tasks', measure="Loss", experim
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
     
-# Be sure to update 'path_to_folder' with the actual path to your data files
+
 path_to_folder = "scripts/monte_carlo/results/mask_experiment/loss_scores"
 plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
 plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Loss", experiment="Mask")
