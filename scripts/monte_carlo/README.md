@@ -28,9 +28,20 @@ Inputs:
 [Outputs](results/mask_experiment):
 - line plot for loss in terms of mask ratio, where each line is a language/dataset (mean values are computed)
 
+Interpretation: 
+
+- Loss increases with the mask ratio because the model was trained to reconstruct the image with a ratio of 0.25. 
+- GLUE contains only English data which the model was pretrained on, so the loss is lower
+
 <p align="middle">
  <img src="results/mask_experiment/Mask_Loss_tasks_line_plot.png" width="800" height="400"></img>
 </p>
+
+
+Interpretation: 
+
+- The languages with the highest loss also have a very different script from English: Korean, Arabic and Chinese
+- English has the lowest loss, followed by Indonesian which has a Latin script too
 
 
 <p align="middle">
@@ -40,10 +51,19 @@ Inputs:
 
 - line plot for uncertainty (SD) in terms of mask ratio, where each line is a language/dataset (mean values are computed)
 
+Interpretation: 
+
+- Lowest uncertainty/high confidence for a 0.5 mask ratio
+- uptick in confidence for mask ratio around 0.6, 0.7
+
+
 <p align="middle">
  <img src="results/mask_experiment/Mask_Uncertainty_tasks_line_plot.png" width="800" height="400"></img>
 </p>
 
+Interpretation: 
+
+- uncertainty decreases with mask ratio but the loss is increasing -> poor calibration
 
 <p align="middle">
  <img src="results/mask_experiment/Mask_Uncertainty_languages_line_plot.png" width="800" height="400"></img>
@@ -87,6 +107,10 @@ Inputs:
 [Outputs](results/span_experiment):
 - line plot for loss in terms of span length, where each line is a language/dataset (mean values are computed)
 
+Interpretation: 
+
+- Loss increases with the span length, because the reconstruction area becomes larger
+
 <p align="middle">
  <img src="results/span_experiment/Span_Loss_tasks_line_plot.png" width="800" height="400"></img>
 </p>
@@ -99,10 +123,15 @@ Inputs:
 
 - line plot for uncertainty (SD) in terms of span length, where each line is a language/dataset (mean values are computed)
 
+
 <p align="middle">
  <img src="results/span_experiment/Span_Uncertainty_tasks_line_plot.png" width="800" height="400"></img>
 </p>
 
+Interpretation: 
+
+- Low uncertainty langauges: English etc
+- High uncertainty: Korean, different script
 
 <p align="middle">
  <img src="results/span_experiment/Span_Uncertainty_languages_line_plot.png" width="800" height="400"></img>
@@ -154,6 +183,10 @@ Outputs:
 - [plots](results/base_experiment/images) with the original, original + SD and predictions + SD for the examples with the lowest and highest loss values (5 for each)
 
 Images are shown in the increasing order of the loss for both plots.
+
+Interpretation: 
+- Good performers: English because of pretraining
+- Challenges: Korean, Chinese and English (but the image only has numbers which were probably not very common in the dataset)
 
 <p align="middle">
  <img src="results/base_experiment/images/base_lowest.png" width="400" height="600"></img>
