@@ -146,7 +146,7 @@ class ModelArguments:
         metadata={"help": "The specific model version to use (can be a branch name, tag name or commit id)."},
     )
     feature_extractor_name: str = field(default=None, metadata={"help": "Name or path of preprocessor config."})
-    use_auth_token: str = field(
+    token: str = field(
         default=False,
         metadata={
             "help": "Will use the token generated when running `transformers-cli login` (necessary to use this script "
@@ -265,14 +265,13 @@ def main(config_dict: Dict[str, Any] = None):
                 f"Checkpoint detected, resuming training at {last_checkpoint}. To avoid this behavior, change "
                 "the `--output_dir` or add `--overwrite_output_dir` to train from scratch."
             )
-
     # Initialize our datasets
     train_datasets = [
         load_dataset(
             d_name,
             d_config,
             split=d_split,
-            use_auth_token=model_args.use_auth_token,
+            token=True,
             streaming=data_args.streaming,
             cache_dir=d_cache,
         )
@@ -301,21 +300,13 @@ def main(config_dict: Dict[str, Any] = None):
             f"sampling probability = {d_sampling_prob:.3f}, cache = {d_cache}"
         )
 
-    train_test_ratio = 0.9  # 90% for training, which implicitly leaves 10% for validation
-    dataset = train_dataset.train_test_split(train_size=train_test_ratio, seed=training_args.seed)
-
-    # Extract the newly created train and validation datasets
-    train_dataset = dataset['train']
-    validation_dataset = dataset['test']
-
-    # Log the results
-    logger.info(f"New training dataset size: {len(train_dataset)}")
-    logger.info(f"Validation dataset size: {len(validation_dataset)}")
+    validation_dataset = load_dataset(
+        data_args.validation_dataset_name, split=data_args.validation_split, token=True, streaming=True)
 
     config_kwargs = {
         "cache_dir": model_args.cache_dir,
         "revision": model_args.model_revision,
-        "use_auth_token": model_args.use_auth_token,
+        "token": model_args.token,
     }
     logger.info(f"Using dropout with probability {model_args.dropout_prob}")
 
@@ -460,27 +451,35 @@ def main(config_dict: Dict[str, Any] = None):
             train_dataset = train_dataset.with_format("torch")
             train_dataset = train_dataset.shuffle(training_args.seed, buffer_size=10000)
         # Filter out examples that are less than one row long in the squared input image
-        train_dataset = train_dataset.filter(lambda x: (x["num_patches"] >= 22))
 
-        # added by me 
-        if data_args.max_train_samples is not None:
-            train_dataset = train_dataset.shuffle(seed=training_args.seed).select(
-                range(data_args.max_train_samples)
-            )
+        train_dataset = train_dataset.filter(lambda x: (x["num_patches"] >= 22))
         
         # Set training transforms
         if data_args.streaming:
             train_dataset = train_dataset.map(preprocess_images, batched=True, batch_size=10000)
         else:
+            # DOES NOT WORK WITH STREAMING AND ITERABLE DATASETS
+            if data_args.max_train_samples is not None:
+                train_dataset = train_dataset.shuffle(seed=training_args.seed).select(
+                    range(data_args.max_train_samples)
+                )
+                
             train_dataset.set_transform(preprocess_images)
 
+
     if training_args.do_eval:
-        if data_args.max_eval_samples is not None:
-            validation_dataset = validation_dataset.shuffle(seed=training_args.seed).select(
-                range(data_args.max_eval_samples)
-            )
         # Set the validation transforms
-        validation_dataset.set_transform(preprocess_images)
+        if data_args.streaming:
+            validation_dataset = validation_dataset.with_format("torch")
+            validation_dataset = validation_dataset.shuffle(training_args.seed, buffer_size=10000)
+            validation_dataset = validation_dataset.map(preprocess_images, batched=True, batch_size=10000)
+        else:
+            # DOES NOT WORK WITH STREAMING AND ITERABLE DATASETS
+            if data_args.max_eval_samples is not None:
+                validation_dataset = validation_dataset.shuffle(seed=training_args.seed).select(
+                    range(data_args.max_eval_samples)
+                )
+            validation_dataset.set_transform(preprocess_images)
 
     # Compute absolute learning rate
     total_train_batch_size = (

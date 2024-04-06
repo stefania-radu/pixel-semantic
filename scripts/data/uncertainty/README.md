@@ -57,3 +57,15 @@ Data has this format:
             "conll_2003_en_9": "with\nthe\nUnited\nStates\nand\nwith\nthe\nfirst\nwoman\never\nto\nhold\nthe\nposition\nof\nSecretary\nof\nState\n."
         },
 ```
+
+
+# For 1000 elements:
+
+## NER
+Counts: {'amh': 500, 'conll_2003_en': 1000, 'hau': 552, 'ibo': 638, 'kin': 605, 'lug': 407, 'luo': 186, 'pcm': 600, 'swa': 604, 'wol': 539, 'yor': 645, 'zh': 1000}
+
+## Tydiqa
+Counts: {'arabic': 921, 'russian': 812, 'bengali': 113, 'telugu': 669, 'finnish': 782, 'swahili': 499, 'korean': 276, 'indonesian': 565, 'english': 440}
+
+## GLUE
+Counts: {'cola': 1000, 'mnli': 1000, 'mrpc': 1000, 'qnli': 1000, 'qqp': 1000, 'rte': 1000, 'sst2': 1000, 'stsb': 1000, 'wnli': 146}

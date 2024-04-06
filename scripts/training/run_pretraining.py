@@ -146,7 +146,7 @@ class ModelArguments:
         metadata={"help": "The specific model version to use (can be a branch name, tag name or commit id)."},
     )
     feature_extractor_name: str = field(default=None, metadata={"help": "Name or path of preprocessor config."})
-    use_auth_token: str = field(
+    token: str = field(
         default=False,
         metadata={
             "help": "Will use the token generated when running `transformers-cli login` (necessary to use this script "
@@ -272,7 +272,7 @@ def main(config_dict: Dict[str, Any] = None):
             d_name,
             d_config,
             split=d_split,
-            use_auth_token=model_args.use_auth_token,
+            token=True,
             streaming=data_args.streaming,
             cache_dir=d_cache,
         )
@@ -302,13 +302,12 @@ def main(config_dict: Dict[str, Any] = None):
         )
 
     validation_dataset = load_dataset(
-        data_args.validation_dataset_name, split=data_args.validation_split, use_auth_token=model_args.use_auth_token
-    )
+        data_args.validation_dataset_name, split=data_args.validation_split, token=True, streaming=True)
 
     config_kwargs = {
         "cache_dir": model_args.cache_dir,
         "revision": model_args.model_revision,
-        "use_auth_token": model_args.use_auth_token,
+        "token": model_args.token,
     }
     logger.info(f"Using dropout with probability {model_args.dropout_prob}")
 
@@ -438,6 +437,8 @@ def main(config_dict: Dict[str, Any] = None):
     def preprocess_images(examples):
         """Preprocess a batch of images by applying transforms."""
 
+        print("in processing")
+
         examples["pixel_values"] = [transforms(image) for image in examples[image_column_name]]
         examples["attention_mask"] = [get_attention_mask(num_patches) for num_patches in examples["num_patches"]]
         if model_args.span_masking:
@@ -460,13 +461,13 @@ def main(config_dict: Dict[str, Any] = None):
         else:
             train_dataset.set_transform(preprocess_images)
 
-    if training_args.do_eval:
-        if data_args.max_eval_samples is not None:
-            validation_dataset = validation_dataset.shuffle(seed=training_args.seed).select(
-                range(data_args.max_eval_samples)
-            )
-        # Set the validation transforms
-        validation_dataset.set_transform(preprocess_images)
+    # if training_args.do_eval:
+    #     if data_args.max_eval_samples is not None:
+    #         validation_dataset = validation_dataset.shuffle(seed=training_args.seed).select(
+    #             range(data_args.max_eval_samples)
+    #         )
+    #     # Set the validation transforms
+    #     validation_dataset.set_transform(preprocess_images)
 
     # Compute absolute learning rate
     total_train_batch_size = (

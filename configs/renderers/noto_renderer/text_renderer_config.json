@@ -8,5 +8,5 @@
   "pad_size": 3,
   "pixels_per_patch": 16,
   "text_renderer_type": "TextRenderer",
-  "rgb": true
+  "rgb": false
 }

@@ -266,11 +266,13 @@ def save_multi_image(id_text, images, titles, final_img_name, mask_rate=0.1):
 def dump_data(args, data_dict, name_start):
     
     if args.experiment_type == "mask_ratio":
-            name_end = f"mask_{args.mask_ratio}"
+        folder = "scripts/monte_carlo/results/mask_experiment_1000"
+        name_end = f"mask_{args.mask_ratio}"
     elif args.experiment_type == "span":
+        folder = "scripts/monte_carlo/results/span_experiment_1000"
         name_end = f"span_{args.masking_max_span_length}"
 
-    name = f'{name_start}_{name_end}.json'
+    name = f'{folder}/{name_start}_{name_end}.json'
 
     logger.info(f"Saving data in {name}")
         
@@ -322,6 +324,27 @@ def compute_attention(all_attentions, id_text_attention, mask, text_renderer, ro
     # save example images from the grid at given layer and head
     for row, col in zip(rows_to_save, cols_to_save):
         save_attention_image(all_layers_attentions, id_text_attention, row, col)
+
+
+def gaussian_negative_loss(input, target, var, eps=1e-06, reduction="mean"):
+
+    # normalize loss
+    mean_target = target.mean(dim=-1, keepdim=True)
+    var_target = target.var(dim=-1, keepdim=True)
+    target = (target - mean_target) / (var_target + eps) ** 0.5
+
+    if input.shape != target.shape:
+        target = target.view(input.size())
+
+    eps_tensor = torch.full_like(var, eps)
+    
+    loss = ((input - target) ** 2) / torch.max(var, eps_tensor)
+    loss = 0.5 * loss + eps
+
+    if reduction == "mean":
+        return loss.mean()
+
+    return loss
 
 
 def monte_carlo_loss(args, data, model, text_renderer):
@@ -418,7 +441,7 @@ def monte_carlo_loss(args, data, model, text_renderer):
     return losses_per_task
 
 
-def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict):
+def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict={}):
 
     num_samples = 100  # Number of Monte Carlo samples
     logger.info(f"Monte Carlo samples: {num_samples}")
@@ -427,16 +450,22 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
     logger.info(f"Training mode: {model.training}") 
 
     SDs_per_task = input_data.copy()
-    var_per_task = input_data.copy()
+    losses_per_task = input_data.copy()
+    gnl_per_task = input_data.copy()
 
-    lowest_id = next(iter(extreme_losses_dict["lowest"]), None)
-    highest_id = next(iter(extreme_losses_dict["highest"]), None)
+    lowest_id = next(iter(extreme_losses_dict["lowest"]), None) if extreme_losses_dict else -1
+    highest_id = next(iter(extreme_losses_dict["highest"]), None) if extreme_losses_dict else -1
 
     for task, lang_dict in input_data.items():
         logger.info(f"\n######## Computing SDs for task: {task} ########\n")
         
         for lang, id_dict in lang_dict.items():
+
             logger.info(f"\n######## Language: {lang} ######## \n")
+
+            # skipping some English data to make things faster
+            if lang in ['mnli', 'mrpc', 'qnli', 'qqp', 'rte', 'sst2', 'stsb', 'wnli']:
+                continue
             
             for id_text, text in id_dict.items():
 
@@ -477,11 +506,11 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                         spacing=args.masking_spacing if args.masking_spacing else "span",
                         cumulative_span_weights=args.masking_cumulative_span_weights,
                     )
-                    logger.info(
-                        f'Applying span masking with "max_span_length = {args.masking_max_span_length}" '
-                        f', "cumulative_span_weights = {args.masking_cumulative_span_weights}" '
-                        f' and "spacing = {args.masking_spacing if args.masking_spacing else "span"}"'
-                    )
+                    # logger.info(
+                    #     f'Applying span masking with "max_span_length = {args.masking_max_span_length}" '
+                    #     f', "cumulative_span_weights = {args.masking_cumulative_span_weights}" '
+                    #     f' and "spacing = {args.masking_spacing if args.masking_spacing else "span"}"'
+                    # )
                     mask = torch.tensor(mask_generator(num_text_patches=(encoding.num_text_patches + 1))).unsqueeze(0)
                 else:
                     logger.info("Using random masking")
@@ -489,23 +518,23 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
 
                 if mask is not None:
                     masked_count = torch.count_nonzero(mask != 0, dim=1)[0]
-                    logger.info(f"Masked count: {masked_count}, ratio = {(masked_count / text_renderer.max_seq_length):0.4f}")
+                    # logger.info(f"Masked count: {masked_count}, ratio = {(masked_count / text_renderer.max_seq_length):0.4f}")
                     inputs.update({"patch_mask": mask})
-                else:
-                    logger.info(f"Masked count: {math.ceil(mask_ratio * text_renderer.max_seq_length)}, ratio = {mask_ratio:0.2f}")
-
-
-                logger.info(f"ID text: {id_text}")
+                # else:
+                #     logger.info(f"Masked count: {math.ceil(mask_ratio * text_renderer.max_seq_length)}, ratio = {mask_ratio:0.2f}")
                 
                 all_predictions = []
                 all_attentions = []
+                all_losses = []
 
                 for _ in range(num_samples):
                     with torch.inference_mode():  # Disable gradient computation
                         outputs = model(**inputs)
                         
                         predictions = model.unpatchify(outputs["logits"]).detach().cpu().squeeze() # (batch_size, patch_size ** 2 * num_channels)
-                        all_predictions.append(predictions)
+                        loss = outputs["loss"].detach().cpu()
+                        all_predictions.append(predictions)       
+                        all_losses.append(loss)
 
                         if in_attention:
                             id_text_attention = id_text
@@ -517,10 +546,18 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                 if all_attentions:
                     all_attentions = torch.stack(all_attentions)
 
-                # Calculate mean, variance and standard deviation, dim0 = 100
+                all_losses = torch.stack(all_losses)
+
+                # Calculate mean and standard deviation, dim0 = 100
                 mean_predictions = all_predictions.mean(dim=0)
                 std_predictions = all_predictions.std(dim=0)
+
+                # gaussina negative loss
                 var_predictions = all_predictions.var(dim=0)
+                input_predictions = all_predictions.mean(dim=0)
+                target_img = model.patchify(img)
+
+                gnl = gaussian_negative_loss(input_predictions, target_img, var_predictions)
 
                 # mask
                 mask = outputs["mask"].detach().cpu()  
@@ -533,16 +570,16 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                 # masked image
                 im_masked = original_img * mask * attention_mask
 
-                # mean variance per image
-                mean_variance_value = var_predictions.mean().item()
-                logger.info(f"Mean variance for {id_text}: {mean_variance_value}")
-
                 # mean SD per image
                 mean_std_value = std_predictions.mean().item()
-                logger.info(f"Mean std for for {id_text}: {mean_std_value}")
+                # mean loss per image
+                mean_loss = all_losses.mean(dim=0).item()
+                
+                logger.info(f"ID text: {id_text} - STD: {mean_std_value} - GNL: {gnl.item()} - Loss: {mean_loss}")
 
                 SDs_per_task[task][lang][id_text] = mean_std_value
-                var_per_task[task][lang][id_text] = mean_variance_value
+                losses_per_task[task][lang][id_text] = mean_loss
+                gnl_per_task[task][lang][id_text] = gnl.item()
 
                 # compute std per each patch
                 std_predictions_per_patch = create_mean_map(std_predictions, mask, text_renderer.pixels_per_patch) # black is 0,  torch.Size([3, 368, 368])
@@ -557,28 +594,33 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                     compute_attention(all_attentions, id_text_attention, mask, text_renderer, rows_to_save=[1, 10], cols_to_save=[2, 4])
 
                 # save plots for the 5 images with the lowest and highest losses
-                if id_text in extreme_losses_dict["low"] or id_text in extreme_losses_dict["high"]:
-    
-                    # save individual images: original, original+SD, predicitons+SD
-                    save_image(im_masked, title=f'Original \n {id_text}', img_name=f"{id_text}_original")
-                    save_image(std_predictions_per_patch_with_original, title=f'Original + Patch Uncertainty (SD) \n {id_text}', img_name=f"{id_text}_original_SD_m{args.mask_ratio}")
-                    save_image(std_reconstruction_per_patch, title=f'Mean Prediction + SD \n {id_text}', img_name=f"{id_text}_predictions_SD_m{args.mask_ratio}")
+                if extreme_losses_dict:
+                    if id_text in extreme_losses_dict["low"] or id_text in extreme_losses_dict["high"]:
+        
+                        # save individual images: original, original+SD, predicitons+SD
+                        save_image(im_masked, title=f'Original \n {id_text}', img_name=f"{id_text}_original")
+                        save_image(std_predictions_per_patch_with_original, title=f'Original + Patch Uncertainty (SD) \n {id_text}', img_name=f"{id_text}_original_SD_m{args.mask_ratio}")
+                        save_image(std_reconstruction_per_patch, title=f'Mean Prediction + SD \n {id_text}', img_name=f"{id_text}_predictions_SD_m{args.mask_ratio}")
 
-                    # make triplets of images
-                    images = [im_masked, std_predictions_per_patch_with_original, std_reconstruction_per_patch]
-                    titles = [f"Original", "Original + SD", "Mean Prediction + SD"]
-                    multi_image_name = f"{id_text}_triplet_m{args.mask_ratio}"
+                        # make triplets of images
+                        images = [im_masked, std_predictions_per_patch_with_original, std_reconstruction_per_patch]
+                        titles = [f"Original", "Original + SD", "Mean Prediction + SD"]
+                        multi_image_name = f"{id_text}_triplet_m{args.mask_ratio}"
 
-                    save_multi_image(id_text, images, titles, multi_image_name, args.mask_ratio)
+                        save_multi_image(id_text, images, titles, multi_image_name, args.mask_ratio)
             
 
     logger.info(f"SD per task: {SDs_per_task}")
+    logger.info(f"Loss per task: {losses_per_task}")
+    logger.info(f"GNL per task: {gnl_per_task}")
 
     # Save SD 
     dump_data(args, SDs_per_task, "SD_per_task")
-    dump_data(args, mean_variance_value, "var_per_task")
+    # Save loss
+    dump_data(args, losses_per_task, "loss_per_task")
+    dump_data(args, gnl_per_task, "gnl_per_task")
         
-    return SDs_per_task
+    return SDs_per_task, losses_per_task
 
 
 def find_extreme_loss_ids(losses_per_task, value=5):
@@ -657,6 +699,7 @@ def main(args: argparse.Namespace):
 
     mask_ratio = args.mask_ratio if not args.manual_mask else len(args.manual_mask) / text_renderer.max_seq_length
     config.update({"mask_ratio": mask_ratio})
+    config.update({"ngram_size": args.ngram_size})
 
     model = PIXELForPreTraining.from_pretrained(args.model_name_or_path, config=config, **config_kwargs)
 
@@ -665,41 +708,49 @@ def main(args: argparse.Namespace):
     truncate_decoder_pos_embeddings(model, text_renderer.max_seq_length)
 
     logger.info(f"Running MONTE CARLO experiment: {args.experiment_type}")
+    logger.info(f"Mask ratio: {mask_ratio}")
+    logger.info(f"Span length: {args.masking_max_span_length}")
 
-    input_data_path = r"scripts/data/uncertainty/test_data_ner_tydiqa_glue_small.json"
+    input_data_path = args.input_data_path
     # input_data_path = r"scripts\data\uncertainty\test_data_ner_tydiqa_glue_small.json"
 
-    # get small dataset with 10 examples per language/subtask
-    with open(input_data_path, 'r', encoding='utf-8') as f:
-        input_data = json.load(f)
+    # # get small dataset with 10 examples per language/subtask
+    # with open(input_data_path, 'r', encoding='utf-8') as f:
+    #     input_data = json.load(f)
 
-    if args.do_loss:
-        loss_scores = monte_carlo_loss(args, input_data, model, text_renderer)
-    else:
-        loss_scores = load_loss(args)
+    # if args.do_loss:
+    #     loss_scores = monte_carlo_loss(args, input_data, model, text_renderer)
+    # else:
+    #     loss_scores = load_loss(args)
 
-    logger.info("\nLOSS\n")
-    compute_means_per_task(loss_scores)
+    # logger.info("\nLOSS\n")
+    # compute_means_per_task(loss_scores)
 
-    # find the 5 entries with the lowest loss and 5 with highest
-    extreme_losses_dict = find_extreme_loss_ids(loss_scores, 5) # keys: low, high, lowest, highest
+    # # find the 5 entries with the lowest loss and 5 with highest
+    # extreme_losses_dict = find_extreme_loss_ids(loss_scores, 5) # keys: low, high, lowest, highest
 
     if args.do_std:
 
         # maybe this will fix the float error and I can run both loss and std flags at the same time
         with open(input_data_path, 'r', encoding='utf-8') as f:
             input_data = json.load(f)
-            
-        SD_scores = monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict)
+
+        extreme_losses_dict={}
+        SD_scores, loss_scores = monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict)
 
         logger.info("\nUNCERTAINTY (SD)\n")
         compute_means_per_task(SD_scores)
+
+        logger.info("\nLOSS\n")
+        compute_means_per_task(loss_scores)
 
 
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--input_data_path", type=str, default="scripts/data/uncertainty/test_data_ner_tydiqa_glue_1000.json", help="Path to input data")
+    parser.add_argument("--ngram_size", type=int, default=1, help="Type of embeddings")
     parser.add_argument("--model_name_or_path", type=str, help="Path to pretrained model")
     parser.add_argument("--renderer_name_or_path", type=str, default=None, help="Path to pretrained renderer")
     parser.add_argument("--auth_token", type=str, default="", help="HuggingFace auth token")

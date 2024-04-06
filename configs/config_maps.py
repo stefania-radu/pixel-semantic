@@ -4,5 +4,6 @@ MODEL_PROTOTYPE_CONFIGS = {
 
 TRAINING_CONFIGS = {
     "fp16_apex_bs32": "configs/training/fp16_apex_bs32.json",
-    "fp16_apex_bs32_multilingual": "configs/training/fp16_apex_bs32_multilingual.json"
+    "fp16_apex_bs32_multilingual": "configs/training/fp16_apex_bs32_multilingual.json",
+    "fp16_apex_bs32_multilingual_test": "configs/training/fp16_apex_bs32_multilingual_test.json"
 }

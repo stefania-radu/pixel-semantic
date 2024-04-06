@@ -1,52 +1,5 @@
-# import json
-# from datasets import load_dataset
-
-# dataset_name = "tydiqa"
-# dataset_config_name = "secondary_task"
-
-# raw_datasets = load_dataset(
-#             dataset_name,
-#             dataset_config_name,
-#             use_auth_token=None,
-#             ignore_verifications=True,
-#         )
-
-# column_names = raw_datasets["validation"].column_names
-
-# question_column_name = "question" if "question" in column_names else column_names[0]
-# context_column_name = "context" if "context" in column_names else column_names[1]
-
-# # Initialize an empty dictionary
-# concatenated_texts = {}
-
-# # Iterate through the validation dataset
-# for example in raw_datasets["validation"]:
-#     # Concatenate question and context
-#     concatenated_text = example[question_column_name] + '\n' + example[context_column_name]
-#     # Use the id as the key and the concatenated text as the value
-#     concatenated_texts[example['id']] = concatenated_text
-
-# # The concatenated_texts dictionary now contains the desired mapping
-# print(f"Number of entries in the dictionary: {len(concatenated_texts)}")
-
-# # Optionally, to display a few entries
-# for idx, (key, value) in enumerate(concatenated_texts.items()):
-#     print(f"ID: {key}, Text: {value[:100]}")  # Displaying only the first 100 characters for brevity
-#     if idx == 5:  # Limit to showing first few entries
-#         break
-
-# # File name according to the specified format
-# file_name = f"{dataset_name}_test_data_for_rendering.json"
-
-# # Saving the dictionary to a JSON file
-# with open(file_name, 'w', encoding='utf-8') as f:
-#     json.dump(concatenated_texts, f, ensure_ascii=False, indent=4)
-
-# print(f"Dictionary saved to {file_name}")
-
-
 ########### Save only N random examples #############
-# python scripts\data\uncertainty\gather_test_data_tydiqa.py 10
+# python scripts/data/uncertainty/gather_test_data_tydiqa.py 1000 test_data_for_rendering_tydiqa_1000.json
 
 import json
 import argparse
@@ -57,9 +10,11 @@ random.seed(42)
 
 parser = argparse.ArgumentParser(description='Process TyDi QA data.')
 parser.add_argument('N', type=int, help='Number of random examples per language')
+parser.add_argument('file_name', type=str, default="test_data_for_rendering_tydiqa_1000.json", help='name of file to be saved')
 args = parser.parse_args()
 
 N = args.N
+file_name = args.file_name
 
 dataset_name = "tydiqa"
 dataset_config_name = "secondary_task"
@@ -96,7 +51,9 @@ for language, texts in concatenated_texts_by_language.items():
     for id, text in selected_texts:
         final_selection[language][id] = text
 
-file_name = f"test_data_for_rendering_{dataset_name}.json"
+element_counts = {key: len(value) for key, value in final_selection.items()}
+print(f"Counts: {element_counts}") # Counts: {'arabic': 921, 'russian': 812, 'bengali': 113, 'telugu': 669, 'finnish': 782, 'swahili': 499, 'korean': 276, 'indonesian': 565, 'english': 440}
+
 with open(file_name, 'w', encoding='utf-8') as f:
     json.dump(final_selection, f, ensure_ascii=False, indent=4)
 

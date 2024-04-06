@@ -10,6 +10,7 @@ Example run for mask_ratio = 0.9. The experiment type is mask_ratio.
 
 ```bash
 python scripts/monte_carlo/monte_carlo_experiments.py \
+  --input_data_path="scripts/data/uncertainty/test_data_ner_tydiqa_glue_1000.json" \
   --model_name_or_path="Team-PIXEL/pixel-base" \
   --experiment_type="mask_ratio" \
   --do_loss \

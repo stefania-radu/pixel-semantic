@@ -100,7 +100,7 @@ class PIXELConfig(PretrainedConfig):
     def __init__(
         self,
         output_attentions=True,
-        ngram_size=2,
+        ngram_size=1,
         hidden_size=768, # multiply with ngram_size if you want to use ngram patches
         num_hidden_layers=12,
         num_attention_heads=12,

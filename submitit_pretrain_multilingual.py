@@ -11,12 +11,7 @@ from configs.config_maps import MODEL_PROTOTYPE_CONFIGS, TRAINING_CONFIGS
 
 
 # example run
-# python submitit_pretrain_multilingual.py   
-#       --job_dir=../experiments   
-#       --prototype_config_name=scratch_noto_span0.25-dropout   
-#       --training_config_name=fp16_apex_bs32_multilingual   
-#       --ngpus 4   
-#       --partition gpu
+# python submitit_pretrain_multilingual.py --job_dir=/home2/s3919609/pixel-semantic/scripts/pretraining/test_experiments   --prototype_config_name=scratch_noto_span0.25-dropout   --training_config_name=fp16_apex_bs32_multilingual   --ngpus 4   --partition gpu --timeout=10
 
 @dataclass
 class SubmititTrainingArguments:
@@ -177,9 +172,7 @@ def main():
         nodes=nodes,
         timeout_min=timeout_min,  # max is 60 * 72,
         slurm_setup=[
-            "#SBATCH --time=0-00:10:00",
             "#SBATCH --job-name=pretraining_multilingual_short",
-            "#SBATCH --output=pretraining_multilingual_short.out",
             "module purge",
             "module load Anaconda3/2023.03-1",
             "conda activate pixel-sem-env2",
