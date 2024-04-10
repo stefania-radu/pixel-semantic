@@ -1,0 +1,24 @@
+Language: english
+{"exact_match": 51.36363636363637, "f1": 60.344698565332635}
+Language: arabic
+{"exact_match": 35.504885993485345, "f1": 60.69666515660027}
+Language: bengali
+{"exact_match": 23.008849557522122, "f1": 33.42815002107038}
+Language: finnish
+{"exact_match": 41.687979539641944, "f1": 59.21440087383547}
+Language: indonesian
+{"exact_match": 51.50442477876106, "f1": 65.99832423167992}
+Language: swahili
+{"exact_match": 59.71943887775551, "f1": 67.85670487442452}
+Language: korean
+{"exact_match": 18.840579710144926, "f1": 26.36955190038144}
+Language: russian
+{"exact_match": 40.14778325123153, "f1": 53.521206997498915}
+Language: telugu
+{"exact_match": 43.64723467862481, "f1": 63.21477301533948}
+To obtain an overall score, average all *non-English* languages.
+
+Average exact match: 39.3%
+Average F1: 53.8%
+
+**When reporting results, please include the label 'TyDiQA-GoldP' in your results table to avoid confusion with TyDi QA's primary tasks.**
