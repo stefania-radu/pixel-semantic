@@ -54,8 +54,6 @@ from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version
 from transformers.utils.versions import require_version
 
-import pyarrow
-pyarrow.PyExtensionType.set_auto_load(True) # Fix for ValueError: Arrow type extension<arrow.py_extension_type<pyarrow.lib.UnknownExtensionType>> does not have a datasets dtype equivalent.
 
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.17.0")
@@ -704,8 +702,9 @@ def main():
         raw_datasets = load_dataset(
             data_args.dataset_name,
             data_args.dataset_config_name,
+            streaming=True,
             cache_dir=model_args.cache_dir,
-            use_auth_token=model_args.use_auth_token if model_args.use_auth_token else None,
+            token=model_args.use_auth_token if model_args.use_auth_token else None,
             ignore_verifications=True,
         )
     else:
@@ -720,7 +719,7 @@ def main():
         if data_args.test_file is not None:
             data_files["test"] = data_args.test_file
             extension = data_args.test_file.split(".")[-1]
-        raw_datasets = load_dataset(extension, data_files=data_files, field="data", cache_dir=model_args.cache_dir)
+        raw_datasets = load_dataset(extension, data_files=data_files, field="data", streaming=True)
 
     # Preprocessing the datasets.
     # Preprocessing is slightly different for training and evaluation.
@@ -803,14 +802,11 @@ def main():
                 eval_dataset = eval_examples.map(
                     eval_preprocess_fn,
                     batched=True,
-                    num_proc=data_args.preprocessing_num_workers,
                     remove_columns=column_names,
-                    load_from_cache_file=not data_args.overwrite_cache,
-                    desc="Running renderer on validation dataset",
                     features=features,
                 )
             eval_dataset = eval_dataset.with_format(
-                "numpy", columns=["pixel_values", "attention_mask"], output_all_columns=True
+                "numpy"
             )
         else:
             with training_args.main_process_first(desc="validation dataset map pre-processing"):

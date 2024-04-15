@@ -226,6 +226,26 @@ Outputs:
 
 Run: run script from before with do-attention flag
 
+## Calibration plots across tasks and languages for the original pixel model
+
+Script:
+
+```
+python scripts/monte_carlo/calibration_plots_experiments.py
+```
+
+<p align="middle">
+ <img src="results/calibration_plots/calibration_plot_languages_0.25_kde.png" width="800" height="400"></img>
+  <img src="results/calibration_plots/calibration_plot_tasks_0.25_kde.png" width="800" height="400"></img>
+</p>
+
+<p align="middle">
+ <img src="results/calibration_plots/calibration_plot_languages_0.25.png" width="800" height="400"></img>
+</p>
+
+<p align="middle">
+ <img src="results/calibration_plots/calibration_plot_0.25_hex.png" width="400" height="400"></img>
+</p>
 
 
 ## Data

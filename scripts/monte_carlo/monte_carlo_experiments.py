@@ -530,7 +530,8 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                 for _ in range(num_samples):
                     with torch.inference_mode():  # Disable gradient computation
                         outputs = model(**inputs)
-                        
+
+                        # change these logits with calibration and then compute the loss again
                         predictions = model.unpatchify(outputs["logits"]).detach().cpu().squeeze() # (batch_size, patch_size ** 2 * num_channels)
                         loss = outputs["loss"].detach().cpu()
                         all_predictions.append(predictions)       
@@ -610,9 +611,9 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                         save_multi_image(id_text, images, titles, multi_image_name, args.mask_ratio)
             
 
-    logger.info(f"SD per task: {SDs_per_task}")
-    logger.info(f"Loss per task: {losses_per_task}")
-    logger.info(f"GNL per task: {gnl_per_task}")
+    # logger.info(f"SD per task: {SDs_per_task}")
+    # logger.info(f"Loss per task: {losses_per_task}")
+    # logger.info(f"GNL per task: {gnl_per_task}")
 
     # Save SD 
     dump_data(args, SDs_per_task, "SD_per_task")

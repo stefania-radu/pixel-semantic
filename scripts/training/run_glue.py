@@ -634,9 +634,9 @@ def main():
         compute_metrics=compute_metrics,
         tokenizer=processor,
         data_collator=get_collator(training_args, processor, modality, is_regression=is_regression),
-        callbacks=[EarlyStoppingCallback(early_stopping_patience=training_args.early_stopping_patience)]
-        if training_args.early_stopping
-        else None,
+        # callbacks=[EarlyStoppingCallback(early_stopping_patience=training_args.early_stopping_patience)]
+        # if training_args.early_stopping
+        # else None,
     )
 
     # Training
@@ -663,6 +663,8 @@ def main():
     if training_args.do_eval:
         logger.info("*** Evaluate ***")
 
+        logger.info(torch.cuda.get_device_properties(0).total_memory)
+
         # Loop to handle MNLI double evaluation (matched, mis-matched)
         tasks = [data_args.task_name]
         eval_datasets = [eval_dataset]
@@ -678,10 +680,16 @@ def main():
             mismatched_eval_dataset.set_transform(preprocess_fn)
             eval_datasets.append(mismatched_eval_dataset)
 
+        logger.info(f"len eval_dataset {len(eval_dataset)}")
+
         for eval_dataset, eval_examples, task in zip(eval_datasets, eval_examples_l, tasks):
             logger.info(f"Task name is {task}")
             outputs = trainer.predict(test_dataset=eval_dataset, metric_key_prefix=f"eval_{task}")
             metrics = outputs.metrics
+
+            print(f"len(outputs.predictions) {len(outputs.predictions)}")
+            logits, _ = outputs.predictions
+            print(f"logits {logits.shape}")
 
             # Log predictions
             if training_args.log_predictions:
@@ -689,7 +697,7 @@ def main():
                     training_args=training_args,
                     features=eval_dataset,
                     examples=eval_examples,
-                    predictions=outputs.predictions,
+                    predictions=logits,
                     sentence1_key=sentence1_key,
                     sentence2_key=sentence2_key,
                     modality=modality,

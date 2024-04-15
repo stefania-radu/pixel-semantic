@@ -185,6 +185,10 @@ class ModelArguments:
         default=0.1, metadata={"help": "Dropout probability for attention blocks"}
     )
 
+    ngram_size: int = field(
+        default=1, metadata={"help": "The number of patches that form a patch embedding"}
+    )
+
     def __post_init__(self):
         if self.masking_cumulative_span_weights is not None:
             self.masking_cumulative_span_weights = [float(w) for w in self.masking_cumulative_span_weights.split(",")]
@@ -307,6 +311,7 @@ def main(config_dict: Dict[str, Any] = None):
         "cache_dir": model_args.cache_dir,
         "revision": model_args.model_revision,
         "token": model_args.token,
+        "ngram_size": model_args.ngram_size,
     }
     logger.info(f"Using dropout with probability {model_args.dropout_prob}")
 

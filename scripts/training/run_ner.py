@@ -167,6 +167,9 @@ def log_predictions(args: argparse.Namespace, eval_dataset: NERDataset, outputs:
             ex_mask = np.not_equal(outputs.label_ids[ex_id], np.full_like(outputs.label_ids[ex_id], -100))
             ex_labels = outputs.label_ids[ex_id][ex_mask].tolist()
             ex_preds = [np.argmax(pred) for pred in outputs.predictions[ex_id][ex_mask]]
+            predictions_probs = [pred for pred in outputs.predictions[ex_id][ex_mask]]
+
+            print(predictions_probs)
 
             if len(example.words) != len(ex_labels):
                 logger.warning(f"Fewer labels than words in example {ex_id}: {' '.join(example.words)}")

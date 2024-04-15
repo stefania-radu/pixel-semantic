@@ -13,6 +13,11 @@ The `eval_nbest_predictions.json` contains all possible predictions for an examp
 
 Note: model 101 was not used because of its low performance so there are 4 models in total
 
+What what changed in the configurations:
+- batch size
+- learning rate
+- dropout prob
+
 ### Create ensemble model
 
 Create enseble model using the previous predictions:
