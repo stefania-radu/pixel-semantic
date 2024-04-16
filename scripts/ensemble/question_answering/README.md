@@ -5,7 +5,7 @@
 
 ### Finetuning models with different configurations
 
-Bash scripts for 5 models: [habrok/ensemble_config/QA/tydiqa](../habrok/ensemble_config/QA/tydiqa)
+Bash scripts for 4 models: [habrok/ensemble_config/QA/tydiqa](../habrok/ensemble_config/QA/tydiqa)
 
 Results saved in: [results_small/tydiqa](../results_small/tydiqa)
 
@@ -31,6 +31,8 @@ results_small/tydiqa scripts/ensemble/results 4
 Output folder: scripts/ensemble/results
 
 Script: [scripts/ensemble/run_ensemble_qa.py](run_ensemble_qa.py )
+
+The QA model outputs (start and end) logits for each token in the input sequnce. They we apply the softmax and get the first 20 start and end candidates with the highst probability. The answer is then then the slice between the start and end token.
 
 Idea: Each example has its own set of candidate answers (20 candidates), which differ between models. In a regular approach, there is one model and you pick the candidate with the highest probability for each example. The current approach:
 

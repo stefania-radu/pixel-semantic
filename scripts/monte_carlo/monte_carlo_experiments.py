@@ -458,6 +458,10 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
 
     for task, lang_dict in input_data.items():
         logger.info(f"\n######## Computing SDs for task: {task} ########\n")
+
+        # this is already done
+        if task == "ner":
+            continue
         
         for lang, id_dict in lang_dict.items():
 
@@ -465,6 +469,10 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
 
             # skipping some English data to make things faster
             if lang in ['mnli', 'mrpc', 'qnli', 'qqp', 'rte', 'sst2', 'stsb', 'wnli']:
+                continue
+
+            # these languages are done in tydiqa
+            if lang in ["arabic", "russian", "bengali", "telugu"]:
                 continue
             
             for id_text, text in id_dict.items():

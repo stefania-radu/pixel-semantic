@@ -663,8 +663,6 @@ def main():
     if training_args.do_eval:
         logger.info("*** Evaluate ***")
 
-        logger.info(torch.cuda.get_device_properties(0).total_memory)
-
         # Loop to handle MNLI double evaluation (matched, mis-matched)
         tasks = [data_args.task_name]
         eval_datasets = [eval_dataset]
