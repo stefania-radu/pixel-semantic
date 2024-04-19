@@ -23,6 +23,8 @@ def parse_output_file(file_path):
             language_match = language_pattern.search(line)
             if language_match:
                 current_language = language_match.group(1)
+                if current_language in ['mnli', 'mrpc', 'qnli', 'qqp', 'rte', 'sst2', 'stsb', 'wnli']:
+                    continue
                 results[current_task][current_language] = {}
                 continue
 
@@ -51,22 +53,41 @@ def save_json(results, metric, output_folder, mask, experiment):
                              for lang, lang_data in task_data.items()} 
                       for task, task_data in results.items()}
 
+    # Check if file already exists and read existing data
+    if os.path.exists(output_file_path):
+        with open(output_file_path, 'r') as json_file:
+            existing_data = json.load(json_file)
+            # Update existing data with new results
+            for task, langs in metric_results.items():
+                if task in existing_data:
+                    for lang, ids in langs.items():
+                        if lang in existing_data[task]:
+                            existing_data[task][lang].update(ids)
+                        else:
+                            existing_data[task][lang] = ids
+                else:
+                    existing_data[task] = langs
+            metric_results = existing_data
+
+    # Write updated or new data to the file
     with open(output_file_path, 'w') as json_file:
         json.dump(metric_results, json_file, indent=4)
     print(f"File saved: {output_file_path}")
 
+
 def main():
 
-    experiment = "base" # CHANGE HERE
+    experiment = "span" # CHANGE HERE
 
-    list_values = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9] if experiment == "mask" else [1, 2, 3, 4, 5, 6]
+    # script was not run for mask 0.1, 0.4 and 0.5
+    list_values = [0.4, 0.5] if experiment == "mask" else [1, 2, 3, 4, 5, 6]
 
     if experiment == "base":
         list_values = [0.25]
 
     for mask in list_values:
         mask = str(mask)
-        input_file = f"scripts/monte_carlo/results/{experiment}_experiment_1000/std_outputs_{experiment}_{mask}.out"
+        input_file = f"scripts/monte_carlo/results/{experiment}_experiment_1000/std_outputs_{experiment}_final_{mask}.out"
         results = parse_output_file(input_file)
 
         # Save JSON files for each metric

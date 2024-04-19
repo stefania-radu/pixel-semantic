@@ -152,6 +152,8 @@ def log_predictions(args: argparse.Namespace, eval_dataset: NERDataset, outputs:
     if not args.do_train:
         wandb.init(reinit=False)
 
+    logits, _ = outputs.predictions
+
     # Uses default labels
     labels = get_ner_labels("")
 
@@ -161,15 +163,15 @@ def log_predictions(args: argparse.Namespace, eval_dataset: NERDataset, outputs:
 
     out_file = os.path.join(args.output_dir, f"{prefix}_predictions.csv")
     with open(out_file, "w", encoding="utf-8") as f:
-        f.write("word\tlabel\tpred\n")
+        f.write("word\tlabel\tpred\tpredictions_probs\n")
         for ex_id, example in enumerate(eval_dataset.examples):
 
             ex_mask = np.not_equal(outputs.label_ids[ex_id], np.full_like(outputs.label_ids[ex_id], -100))
             ex_labels = outputs.label_ids[ex_id][ex_mask].tolist()
-            ex_preds = [np.argmax(pred) for pred in outputs.predictions[ex_id][ex_mask]]
-            predictions_probs = [pred for pred in outputs.predictions[ex_id][ex_mask]]
+            ex_preds = [np.argmax(pred) for pred in logits[ex_id][ex_mask]]
+            predictions_probs = [pred for pred in logits[ex_id][ex_mask]]
 
-            print(predictions_probs)
+            # print(f"predictions_probs: {predictions_probs}")
 
             if len(example.words) != len(ex_labels):
                 logger.warning(f"Fewer labels than words in example {ex_id}: {' '.join(example.words)}")
@@ -180,16 +182,17 @@ def log_predictions(args: argparse.Namespace, eval_dataset: NERDataset, outputs:
                     continue
 
                 pred = label_map[ex_preds.pop(0)]
+                pred_prob = predictions_probs.pop(0)
                 label = label_map[ex_labels.pop(0)]
 
-                data.append([word, label, pred])
-                f.write(f"{word}\t{label}\t{pred}\n")
+                data.append([word, label, pred, pred_prob])
+                f.write(f"{word}\t{label}\t{pred}\t{pred_prob}\n")
             f.write("\n")
 
     logger.info(f"Saved predictions and labels to {out_file}")
     logger.info(f"Logging as table to wandb")
 
-    preds_table = wandb.Table(columns=["word", "label", "pred"], data=data)
+    preds_table = wandb.Table(columns=["word", "label", "pred", "pred_probs"], data=data)
     wandb.log({f"{prefix}_outputs": preds_table})
 
 
@@ -381,6 +384,12 @@ def main():
     )
 
     def align_predictions(predictions: np.ndarray, label_ids: np.ndarray) -> Tuple[List[int], List[int]]:
+
+        # print(f" predictons logist {predictions.logits}")
+        # logits, bla = predictions
+        # print(f"predictions shape {logits.shape}")
+        # print(f"bla len {len(bla)}")
+        
         preds = np.argmax(predictions, axis=2)
 
         batch_size, seq_len = preds.shape
@@ -397,7 +406,8 @@ def main():
         return preds_list, out_label_list
 
     def compute_metrics(p: EvalPrediction) -> Dict:
-        preds_list, out_label_list = align_predictions(p.predictions, p.label_ids)
+        logits, _ = p.predictions
+        preds_list, out_label_list = align_predictions(logits, p.label_ids)
         return {
             "accuracy_score": accuracy_score(out_label_list, preds_list),
             "precision": precision_score(out_label_list, preds_list),
@@ -459,8 +469,10 @@ def main():
     # Predict
     if training_args.do_predict:
         outputs = trainer.predict(test_dataset)
-        print(outputs.predictions)
-        preds_list, out_label_list = align_predictions(outputs.predictions, outputs.label_ids)
+
+        logits, _ = outputs.predictions
+
+        preds_list, out_label_list = align_predictions(logits, outputs.label_ids)
         metrics = outputs.metrics
         metrics["test_samples"] = len(test_dataset)
 
