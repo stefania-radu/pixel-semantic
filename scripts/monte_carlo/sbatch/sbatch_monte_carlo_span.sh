@@ -3,8 +3,8 @@
 #SBATCH --partition=regular
 #SBATCH --nodes=1
 #SBATCH --mem=20GB
-#SBATCH --job-name=std_monte_carlo_span_6
-#SBATCH --output=/home2/s3919609/pixel-semantic/scripts/monte_carlo/results/span_experiment_1000/std_outputs_span_cola_6.out
+#SBATCH --job-name=std_monte_carlo_span_4
+#SBATCH --output=/home2/s3919609/pixel-semantic/scripts/monte_carlo/results/span_experiment_1000/std_outputs_span_cola_4.out
 
 module purge
 module load Anaconda3/2023.09-0
@@ -18,7 +18,7 @@ python scripts/monte_carlo/monte_carlo_experiments.py \
   --ngram_size=1 \
   --do_std \
   --mask_ratio=0.25 \
-  --masking_max_span_length=6 \
-  --masking_cumulative_span_weights="0,0,0,0,0,1" \
+  --masking_max_span_length=4 \
+  --masking_cumulative_span_weights="0,0,0,1" \
   --span_mask \
   --max_seq_length=256 \

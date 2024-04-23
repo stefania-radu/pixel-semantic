@@ -80,14 +80,14 @@ def main():
     experiment = "span" # CHANGE HERE
 
     # script was not run for mask 0.1, 0.4 and 0.5
-    list_values = [0.4, 0.5] if experiment == "mask" else [1, 2, 3, 4, 5, 6]
+    list_values = [0.4, 0.5] if experiment == "mask" else [4]
 
     if experiment == "base":
         list_values = [0.25]
 
     for mask in list_values:
         mask = str(mask)
-        input_file = f"scripts/monte_carlo/results/{experiment}_experiment_1000/std_outputs_{experiment}_final_{mask}.out"
+        input_file = f"scripts/monte_carlo/results/{experiment}_experiment_1000/std_outputs_{experiment}_cola_{mask}.out"
         results = parse_output_file(input_file)
 
         # Save JSON files for each metric

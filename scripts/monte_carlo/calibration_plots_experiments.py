@@ -82,12 +82,14 @@ def plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='tasks'):
             for (lang, text_data_loss), (lang, text_data_sd) in zip(task_data_loss.items(), task_data_sd.items()):
                 for (_, value_loss), (_, value_sd) in zip(text_data_loss.items(), text_data_sd.items()):
                     dataset_name = task_codes.get(task_loss)
+                    value_loss = value_loss ** 0.5 # get RMSE
                     data_list.append({'Category': dataset_name, 'Loss': value_loss, 'Uncertainty': value_sd, 'Mask Ratio': mask_ratio})
     else:
         for (task_loss, task_data_loss), (task_sd, task_data_sd) in zip(loss_data.items(), SD_data.items()):
             for (lang, text_data_loss), (lang, text_data_sd) in zip(task_data_loss.items(), task_data_sd.items()):
                 full_language_name = language_codes.get(lang)
                 for (_, value_loss), (_, value_sd) in zip(text_data_loss.items(), text_data_sd.items()):
+                    value_loss = value_loss ** 0.5 # get RMSE
                     data_list.append({'Category': full_language_name, 'Loss': value_loss, 'Uncertainty': value_sd, 'Mask Ratio': mask_ratio})
 
     df = pd.DataFrame(data_list)
@@ -109,14 +111,14 @@ def plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='tasks'):
 
     # kdeplot sns
     
-    sns.kdeplot(data=df, x='Uncertainty', y='Loss', fill=True, thresh=0.05, color="#4CB391")
+    sns.kdeplot(data=df, x='Uncertainty', y='Loss', fill=True, thresh=0.01, color="#4CB391")
     sns.scatterplot(data=df, x='Uncertainty', y='Loss', color='red', hue='Category', style='Category')
 
     plt.xlabel('Uncertainty (SD)', fontsize=18)
-    plt.ylabel('Loss', fontsize=18)
+    plt.ylabel('Loss (RMSE)', fontsize=18)
     plt.legend(title=legend_title, fontsize=14, title_fontsize=16, loc='center left', bbox_to_anchor=(1, 0.5))
 
-    img_name = f"calibration_plot_{across}_{mask_ratio}_kde.png"
+    img_name = f"calibration_plot_{across}_{mask_ratio}_kde.pdf"
     plt.savefig(img_name, bbox_inches='tight')
     plt.clf()
 
@@ -125,18 +127,18 @@ def plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='tasks'):
     
     sns.jointplot(df, x='Uncertainty', y='Loss', kind="hex", color="#4CB391", height=7)
     # add line for perfect calibration
-    plt.plot(np.linspace(0, df['Uncertainty'].max(), 10), np.linspace(0, df['Loss'].max(), 10), 'r--')
-
+    plt.plot(np.linspace(0.07, df['Uncertainty'].max(), 10), np.linspace(0, df['Loss'].max(), 10), 'r--')
+    plt.gcf().axes[0].set_xlim(left=0.07)
     plt.xlabel('Uncertainty (SD)', fontsize=18)
-    plt.ylabel('Loss', fontsize=18)
+    plt.ylabel('Loss (RMSE)', fontsize=18)
     
-    img_name = f"calibration_plot_{mask_ratio}_hex.png"
+    img_name = f"calibration_plot_{mask_ratio}_hex.pdf"
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
     
 
-path_to_loss = "scripts/monte_carlo/results/base_experiment/loss_per_task_mask_0.25.json"
-path_to_SD = "scripts/monte_carlo/results/base_experiment/SD_per_task_mask_0.25.json"
+path_to_loss = "scripts/monte_carlo/results/base_experiment_1000/loss_scores/loss_per_task_base_0.25.json"
+path_to_SD = "scripts/monte_carlo/results/base_experiment_1000/std_scores/std_per_task_base_0.25.json"
 
 plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='tasks')
 plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='languages')

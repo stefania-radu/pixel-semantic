@@ -39,6 +39,40 @@ language_codes = {
     "wnli": "English"
 }
 
+language_scripts = {
+    "amh": "Ge'ez",
+    "conll_2003_en": "Latin",
+    "hau": "Latin",
+    "ibo": "Latin",
+    "kin": "Latin",
+    "lug": "Latin",
+    "luo": "Latin",
+    "pcm": "Latin",
+    "swa": "Latin",
+    "wol": "Latin",
+    "yor": "Latin",
+    "zh": "Chinese characters",
+    "arabic": "Arabic",
+    "russian": "Cyrillic",
+    "bengali": "Bengali",
+    "telugu": "Telugu",
+    "finnish": "Latin",
+    "swahili": "Latin",
+    "korean": "Korean",
+    "indonesian": "Latin",
+    "english": "Latin",
+    "cola": "Latin",
+    "mnli": "Latin",
+    "mrpc": "Latin",
+    "qnli": "Latin",
+    "qqp": "Latin",
+    "rte": "Latin",
+    "sst2": "Latin",
+    "stsb": "Latin",
+    "wnli": "Latin"
+}
+
+
 task_codes = {"ner": "MasakhaNER",
               "tydiqa": "TyDiQA-GoldP",
               "glue": "GLUE"}
@@ -79,14 +113,22 @@ def plot_loss_vs_mask_ratio(folder_path, across='tasks', measure="Loss", experim
                     for task, task_data in data.items():
                         for lang, text_data in task_data.items():
                             for _, value in text_data.items():
-                                dataset_name = task_codes.get(task, task)
+                                dataset_name = task_codes.get(task)
                                 data_list.append({'Category': dataset_name, 'Measure': value, 'Mask Ratio': mask_ratio})
-                else:
+                                
+                elif across == 'languages':
                     for task, lang_data in data.items():
                         for lang, text_data in lang_data.items():
-                            full_language_name = language_codes.get(lang, lang)
+                            full_language_name = language_codes.get(lang)
                             for _, value in text_data.items():
                                 data_list.append({'Category': full_language_name, 'Measure': value, 'Mask Ratio': mask_ratio})
+
+                elif across == 'scripts':
+                    for task, lang_data in data.items():
+                        for lang, text_data in lang_data.items():
+                            script_name = language_scripts.get(lang)
+                            for _, value in text_data.items():
+                                data_list.append({'Category': script_name, 'Measure': value, 'Mask Ratio': mask_ratio})
 
     df = pd.DataFrame(data_list)
 
@@ -94,13 +136,15 @@ def plot_loss_vs_mask_ratio(folder_path, across='tasks', measure="Loss", experim
     
     if across == 'tasks':
         legend_title = "Dataset"
-    else:
+    elif across == 'languages':
         legend_title = "Language"
+    elif across == 'scripts':
+        legend_title = "Script"
     
     sns.violinplot(data=df, x='Mask Ratio', y='Measure', hue='Category', split=False, inner='quart', linewidth=1.5)
 
     plt.xlabel('Mask Ratio' if experiment == "Mask" else "Span Length", fontsize=16)
-    plt.ylabel(f"Mean {measure}", fontsize=16)
+    plt.ylabel(f"{measure}", fontsize=16)
     plt.legend(title=legend_title, fontsize=12, title_fontsize=16, loc='center left', bbox_to_anchor=(1, 0.5))
     
     img_name = f"{experiment}_{measure}_{across}_violin_plot.png"
@@ -108,18 +152,20 @@ def plot_loss_vs_mask_ratio(folder_path, across='tasks', measure="Loss", experim
     plt.close()
     
 
-path_to_folder = "scripts/monte_carlo/results/mask_experiment/loss_scores"
-plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
-plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Loss", experiment="Mask")
+# path_to_folder = "scripts/monte_carlo/results/mask_experiment/loss_scores"
+# plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
+# plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Loss", experiment="Mask")
 
-path_to_folder = "scripts/monte_carlo/results/mask_experiment/std_scores"
-plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Uncertainty", experiment="Mask")
-plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Uncertainty", experiment="Mask")
+# path_to_folder = "scripts/monte_carlo/results/mask_experiment/std_scores"
+# plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Uncertainty", experiment="Mask")
+# plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Uncertainty", experiment="Mask")
 
-path_to_folder = "scripts/monte_carlo/results/span_experiment/loss_scores"
+path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/loss_scores"
 plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Loss", experiment="Span")
 plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Loss", experiment="Span")
+plot_loss_vs_mask_ratio(path_to_folder, across='scripts', measure="Loss", experiment="Span")
 
-path_to_folder = "scripts/monte_carlo/results/span_experiment/std_scores"
+path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/std_scores"
 plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Uncertainty", experiment="Span")
 plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Uncertainty", experiment="Span")
+plot_loss_vs_mask_ratio(path_to_folder, across='scripts', measure="Uncertainty", experiment="Span")

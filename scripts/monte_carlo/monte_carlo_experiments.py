@@ -460,15 +460,15 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
         logger.info(f"\n######## Computing SDs for task: {task} ########\n")
 
         # this is already done
-        if task in ["ner", "tydiqa"]:
+        if task in ["ner", "glue"]:
             continue
         
         for lang, id_dict in lang_dict.items():
 
             logger.info(f"\n######## Language: {lang} ######## \n")
 
-            # skipping some English data to make things faster, do just cola
-            if lang in ['mnli', 'mrpc', 'qnli', 'qqp', 'rte', 'sst2', 'stsb', 'wnli']:
+            # skipping some English data to make things faster, do just cola ['swahili', 'finnish', 'telugu', 'russian', 'arabic', 'bengali', 'mnli', 'mrpc', 'qnli', 'qqp', 'rte', 'sst2', 'stsb', 'wnli']:
+            if lang not in ['bengali', 'telugu']:
                 continue
             
             for id_text, text in id_dict.items():
@@ -620,10 +620,10 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
     # logger.info(f"GNL per task: {gnl_per_task}")
 
     # Save SD 
-    dump_data(args, SDs_per_task, "SD_per_task")
-    # Save loss
-    dump_data(args, losses_per_task, "loss_per_task")
-    dump_data(args, gnl_per_task, "gnl_per_task")
+    # dump_data(args, SDs_per_task, "SD_per_task")
+    # # Save loss
+    # dump_data(args, losses_per_task, "loss_per_task")
+    # dump_data(args, gnl_per_task, "gnl_per_task")
         
     return SDs_per_task, losses_per_task
 

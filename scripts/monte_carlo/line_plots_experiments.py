@@ -38,6 +38,39 @@ language_codes = {
     "wnli": "English"
 }
 
+language_scripts = {
+    "amh": "Ge'ez",
+    "conll_2003_en": "Latin",
+    "hau": "Latin",
+    "ibo": "Latin",
+    "kin": "Latin",
+    "lug": "Latin",
+    "luo": "Latin",
+    "pcm": "Latin",
+    "swa": "Latin",
+    "wol": "Latin",
+    "yor": "Latin",
+    "zh": "Chinese characters",
+    "arabic": "Arabic",
+    "russian": "Cyrillic",
+    "bengali": "Bengali",
+    "telugu": "Telugu",
+    "finnish": "Latin",
+    "swahili": "Latin",
+    "korean": "Korean",
+    "indonesian": "Latin",
+    "english": "Latin",
+    "cola": "Latin",
+    "mnli": "Latin",
+    "mrpc": "Latin",
+    "qnli": "Latin",
+    "qqp": "Latin",
+    "rte": "Latin",
+    "sst2": "Latin",
+    "stsb": "Latin",
+    "wnli": "Latin"
+}
+
 task_codes = {"ner": "MasakhaNER",
               "tydiqa": "TyDiQA-GoldP",
               "glue": "GLUE"}
@@ -78,14 +111,22 @@ def plot_lineplot_experiments(folder_path, across='tasks', measure="Loss", exper
                 if across == 'tasks':
                     for task, task_data in data.items():
                         mean_measure = calculate_mean_measure({task: task_data})
-                        dataset_name = task_codes.get(task, task)
+                        dataset_name = task_codes.get(task)
                         data_list.append({'Category': dataset_name, 'Mean Measure': mean_measure, 'Mask Ratio': mask_ratio})
-                else:
+                        
+                elif across == 'languages':
                     for task, lang_data in data.items():
                         for lang, text_data in lang_data.items():
-                            full_language_name = language_codes.get(lang, lang)
+                            full_language_name = language_codes.get(lang)
                             mean_loss = calculate_mean_measure({"temp_task": {lang: text_data}})
                             data_list.append({'Category': full_language_name, 'Mean Measure': mean_loss, 'Mask Ratio': mask_ratio})
+
+                elif across == 'scripts':
+                    for task, lang_data in data.items():
+                        for lang, text_data in lang_data.items():
+                            script_name = language_scripts.get(lang)
+                            mean_loss = calculate_mean_measure({"temp_task": {lang: text_data}})
+                            data_list.append({'Category': script_name, 'Mean Measure': mean_loss, 'Mask Ratio': mask_ratio})
 
     df = pd.DataFrame(data_list)
 
@@ -104,13 +145,15 @@ def plot_lineplot_experiments(folder_path, across='tasks', measure="Loss", exper
 
     # Plotting
     plt.figure(figsize=(10, 6))
+    
     if across == 'tasks':
         legend_title = "Dataset"
-        ax = sns.lineplot(data=df, x='Mask Ratio', y='Mean Measure', hue='Category', marker='o', hue_order=unique_categories, linewidth=2, errorbar=None)
-    else:
+    elif across == 'languages':
         legend_title = "Language"
-        ax = sns.lineplot(data=df, x='Mask Ratio', y='Mean Measure', hue='Category',  marker='o', hue_order=unique_categories, linewidth=2, errorbar=None)
+    elif across == 'scripts':
+        legend_title = "Script"
 
+    ax = sns.lineplot(data=df, x='Mask Ratio', y='Mean Measure', hue='Category',  marker='o', hue_order=unique_categories, linewidth=2, errorbar=None)
 
     lines = ax.get_lines()
     labels = df['Category'].unique()
@@ -129,23 +172,25 @@ def plot_lineplot_experiments(folder_path, across='tasks', measure="Loss", exper
     # plt.title(what.replace("_", " ").title(), fontsize=18)
     # plt.grid()
 
-    img_name = f"{experiment}_{measure}_{across}_line_plot.png"
+    img_name = f"{experiment}_{measure}_{across}_line_plot.pdf"
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
 
 
-path_to_folder = "scripts/monte_carlo/results/mask_experiment/loss_scores"
-plot_lineplot_experiments(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
-plot_lineplot_experiments(path_to_folder, across='languages', measure="Loss", experiment="Mask")
+# path_to_folder = "scripts/monte_carlo/results/mask_experiment_1000/loss_scores"
+# plot_lineplot_experiments(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
+# plot_lineplot_experiments(path_to_folder, across='languages', measure="Loss", experiment="Mask")
 
-path_to_folder = "scripts/monte_carlo/results/mask_experiment/std_scores"
-plot_lineplot_experiments(path_to_folder, across='tasks', measure="Uncertainty", experiment="Mask")
-plot_lineplot_experiments(path_to_folder, across='languages', measure="Uncertainty", experiment="Mask")
+# path_to_folder = "scripts/monte_carlo/results/mask_experiment_1000/std_scores"
+# plot_lineplot_experiments(path_to_folder, across='tasks', measure="Uncertainty", experiment="Mask")
+# plot_lineplot_experiments(path_to_folder, across='languages', measure="Uncertainty", experiment="Mask")
 
-path_to_folder = "scripts/monte_carlo/results/span_experiment/loss_scores"
+path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/loss_scores"
 plot_lineplot_experiments(path_to_folder, across='tasks', measure="Loss", experiment="Span")
 plot_lineplot_experiments(path_to_folder, across='languages', measure="Loss", experiment="Span")
+plot_lineplot_experiments(path_to_folder, across='scripts', measure="Loss", experiment="Span")
 
-path_to_folder = "scripts/monte_carlo/results/span_experiment/std_scores"
+path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/std_scores"
 plot_lineplot_experiments(path_to_folder, across='tasks', measure="Uncertainty", experiment="Span")
 plot_lineplot_experiments(path_to_folder, across='languages', measure="Uncertainty", experiment="Span")
+plot_lineplot_experiments(path_to_folder, across='scripts', measure="Uncertainty", experiment="Span")

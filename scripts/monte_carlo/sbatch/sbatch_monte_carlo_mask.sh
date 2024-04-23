@@ -3,8 +3,8 @@
 #SBATCH --partition=regular
 #SBATCH --nodes=1
 #SBATCH --mem=20GB
-#SBATCH --job-name=std_monte_carlo_mask_0.4
-#SBATCH --output=/home2/s3919609/pixel-semantic/scripts/monte_carlo/results/mask_experiment_1000/std_outputs_mask_cola_0.4.out
+#SBATCH --job-name=std_monte_carlo_mask_0.1
+#SBATCH --output=/home2/s3919609/pixel-semantic/scripts/monte_carlo/results/mask_experiment_1000/std_outputs_mask_cola_0.1.out
 
 # remember to change the masking spacing   --masking_spacing=0 \
 
@@ -19,7 +19,7 @@ python scripts/monte_carlo/monte_carlo_experiments.py \
   --experiment_type="mask_ratio" \
   --ngram_size=1 \
   --do_std \
-  --mask_ratio=0.4 \
+  --mask_ratio=0.1 \
   --masking_max_span_length=6 \
   --masking_cumulative_span_weights="0.2,0.4,0.6,0.8,0.9,1" \
   --span_mask \
