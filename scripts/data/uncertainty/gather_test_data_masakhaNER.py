@@ -16,7 +16,7 @@ args = parser.parse_args()
 N = args.N 
 file_name = args.file_name
 
-base_path = 'data/masakhane-ner/data'
+base_path = '/scratch/s3919609/data/masakhane-ner/data'
 
 elements_dict = {}
 

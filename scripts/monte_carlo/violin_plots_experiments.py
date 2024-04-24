@@ -132,7 +132,7 @@ def plot_loss_vs_mask_ratio(folder_path, across='tasks', measure="Loss", experim
 
     df = pd.DataFrame(data_list)
 
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(20, 7))
     
     if across == 'tasks':
         legend_title = "Dataset"
@@ -147,25 +147,27 @@ def plot_loss_vs_mask_ratio(folder_path, across='tasks', measure="Loss", experim
     plt.ylabel(f"{measure}", fontsize=16)
     plt.legend(title=legend_title, fontsize=12, title_fontsize=16, loc='center left', bbox_to_anchor=(1, 0.5))
     
-    img_name = f"{experiment}_{measure}_{across}_violin_plot.png"
+    img_name = f"{experiment}_{measure}_{across}_violin_plot.pdf"
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
     
 
-# path_to_folder = "scripts/monte_carlo/results/mask_experiment/loss_scores"
-# plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
-# plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Loss", experiment="Mask")
+path_to_folder = "scripts/monte_carlo/results/mask_experiment/loss_scores"
+plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
+plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Loss", experiment="Mask")
+plot_loss_vs_mask_ratio(path_to_folder, across='scripts', measure="Loss", experiment="Mask")
 
-# path_to_folder = "scripts/monte_carlo/results/mask_experiment/std_scores"
-# plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Uncertainty", experiment="Mask")
-# plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Uncertainty", experiment="Mask")
+path_to_folder = "scripts/monte_carlo/results/mask_experiment/std_scores"
+plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Uncertainty", experiment="Mask")
+plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Uncertainty", experiment="Mask")
+plot_loss_vs_mask_ratio(path_to_folder, across='scripts', measure="Uncertainty", experiment="Mask")
 
-path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/loss_scores"
-plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Loss", experiment="Span")
-plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Loss", experiment="Span")
-plot_loss_vs_mask_ratio(path_to_folder, across='scripts', measure="Loss", experiment="Span")
+# path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/loss_scores"
+# plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Loss", experiment="Span")
+# plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Loss", experiment="Span")
+# plot_loss_vs_mask_ratio(path_to_folder, across='scripts', measure="Loss", experiment="Span")
 
-path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/std_scores"
-plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Uncertainty", experiment="Span")
-plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Uncertainty", experiment="Span")
-plot_loss_vs_mask_ratio(path_to_folder, across='scripts', measure="Uncertainty", experiment="Span")
+# path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/std_scores"
+# plot_loss_vs_mask_ratio(path_to_folder, across='tasks', measure="Uncertainty", experiment="Span")
+# plot_loss_vs_mask_ratio(path_to_folder, across='languages', measure="Uncertainty", experiment="Span")
+# plot_loss_vs_mask_ratio(path_to_folder, across='scripts', measure="Uncertainty", experiment="Span")

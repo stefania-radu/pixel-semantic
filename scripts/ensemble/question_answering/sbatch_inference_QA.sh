@@ -16,7 +16,7 @@ conda activate pixel-sem-env2
 export DATASET_NAME="tydiqa"
 export DATASET_CONFIG_NAME="secondary_task"
 export MODEL="Team-PIXEL/pixel-base-finetuned-tydiqa-goldp"
-export FALLBACK_FONTS_DIR="data/fallback_fonts"  # let's say this is where we downloaded the fonts to
+export FALLBACK_FONTS_DIR="/scratch/s3919609/data/fallback_fonts"  # let's say this is where we downloaded the fonts to
 
 python scripts/training/run_qa.py \
   --model_name_or_path=${MODEL} \

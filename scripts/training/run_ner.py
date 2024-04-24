@@ -222,7 +222,7 @@ def get_dataset(
         })
 
 
-    data_dir_to_use = "data/masakhane-ner/data/zul" if do_calibrate else data_args.data_dir
+    data_dir_to_use = "/scratch/s3919609/data/masakhane-ner/data/zul" if do_calibrate else data_args.data_dir
         
     return NERDataset(
         data_dir=data_dir_to_use,
@@ -384,11 +384,6 @@ def main():
     )
 
     def align_predictions(predictions: np.ndarray, label_ids: np.ndarray) -> Tuple[List[int], List[int]]:
-
-        # print(f" predictons logist {predictions.logits}")
-        # logits, bla = predictions
-        # print(f"predictions shape {logits.shape}")
-        # print(f"bla len {len(bla)}")
         
         preds = np.argmax(predictions, axis=2)
 
@@ -407,7 +402,7 @@ def main():
 
     def compute_metrics(p: EvalPrediction) -> Dict:
         logits, _ = p.predictions
-        preds_list, out_label_list = align_predictions(logits, p.label_ids)
+        preds_list, out_label_list = align_predictions(logits, p.label_ids) # list with all predicted labels
         return {
             "accuracy_score": accuracy_score(out_label_list, preds_list),
             "precision": precision_score(out_label_list, preds_list),

@@ -77,10 +77,10 @@ def save_json(results, metric, output_folder, mask, experiment):
 
 def main():
 
-    experiment = "span" # CHANGE HERE
+    experiment = "mask" # CHANGE HERE
 
     # script was not run for mask 0.1, 0.4 and 0.5
-    list_values = [0.4, 0.5] if experiment == "mask" else [4]
+    list_values = [0.1] if experiment == "mask" else [4]
 
     if experiment == "base":
         list_values = [0.25]

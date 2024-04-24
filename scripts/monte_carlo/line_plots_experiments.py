@@ -172,25 +172,27 @@ def plot_lineplot_experiments(folder_path, across='tasks', measure="Loss", exper
     # plt.title(what.replace("_", " ").title(), fontsize=18)
     # plt.grid()
 
-    img_name = f"{experiment}_{measure}_{across}_line_plot.pdf"
+    img_name = f"{experiment}_{measure}_{across}_line_plot.png"
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
 
 
-# path_to_folder = "scripts/monte_carlo/results/mask_experiment_1000/loss_scores"
-# plot_lineplot_experiments(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
-# plot_lineplot_experiments(path_to_folder, across='languages', measure="Loss", experiment="Mask")
+path_to_folder = "scripts/monte_carlo/results/mask_experiment_1000/loss_scores"
+plot_lineplot_experiments(path_to_folder, across='tasks', measure="Loss", experiment="Mask")
+plot_lineplot_experiments(path_to_folder, across='languages', measure="Loss", experiment="Mask")
+plot_lineplot_experiments(path_to_folder, across='scripts', measure="Loss", experiment="Mask")
 
-# path_to_folder = "scripts/monte_carlo/results/mask_experiment_1000/std_scores"
-# plot_lineplot_experiments(path_to_folder, across='tasks', measure="Uncertainty", experiment="Mask")
-# plot_lineplot_experiments(path_to_folder, across='languages', measure="Uncertainty", experiment="Mask")
+path_to_folder = "scripts/monte_carlo/results/mask_experiment_1000/std_scores"
+plot_lineplot_experiments(path_to_folder, across='tasks', measure="Uncertainty", experiment="Mask")
+plot_lineplot_experiments(path_to_folder, across='languages', measure="Uncertainty", experiment="Mask")
+plot_lineplot_experiments(path_to_folder, across='scripts', measure="Uncertainty", experiment="Mask")
 
-path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/loss_scores"
-plot_lineplot_experiments(path_to_folder, across='tasks', measure="Loss", experiment="Span")
-plot_lineplot_experiments(path_to_folder, across='languages', measure="Loss", experiment="Span")
-plot_lineplot_experiments(path_to_folder, across='scripts', measure="Loss", experiment="Span")
+# path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/loss_scores"
+# plot_lineplot_experiments(path_to_folder, across='tasks', measure="Loss", experiment="Span")
+# plot_lineplot_experiments(path_to_folder, across='languages', measure="Loss", experiment="Span")
+# plot_lineplot_experiments(path_to_folder, across='scripts', measure="Loss", experiment="Span")
 
-path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/std_scores"
-plot_lineplot_experiments(path_to_folder, across='tasks', measure="Uncertainty", experiment="Span")
-plot_lineplot_experiments(path_to_folder, across='languages', measure="Uncertainty", experiment="Span")
-plot_lineplot_experiments(path_to_folder, across='scripts', measure="Uncertainty", experiment="Span")
+# path_to_folder = "scripts/monte_carlo/results/span_experiment_1000/std_scores"
+# plot_lineplot_experiments(path_to_folder, across='tasks', measure="Uncertainty", experiment="Span")
+# plot_lineplot_experiments(path_to_folder, across='languages', measure="Uncertainty", experiment="Span")
+# plot_lineplot_experiments(path_to_folder, across='scripts', measure="Uncertainty", experiment="Span")

@@ -18,6 +18,7 @@ import argparse
 import logging
 import math
 import sys
+import re
 import numpy as np
 
 import torch
@@ -453,27 +454,24 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
     losses_per_task = input_data.copy()
     gnl_per_task = input_data.copy()
 
-    lowest_id = next(iter(extreme_losses_dict["lowest"]), None) if extreme_losses_dict else -1
-    highest_id = next(iter(extreme_losses_dict["highest"]), None) if extreme_losses_dict else -1
+    # lowest_id = next(iter(extreme_losses_dict["lowest"]), None) if extreme_losses_dict else -1
+    # highest_id = next(iter(extreme_losses_dict["highest"]), None) if extreme_losses_dict else -1
 
     for task, lang_dict in input_data.items():
         logger.info(f"\n######## Computing SDs for task: {task} ########\n")
-
-        # this is already done
-        if task in ["ner", "glue"]:
-            continue
         
         for lang, id_dict in lang_dict.items():
 
             logger.info(f"\n######## Language: {lang} ######## \n")
 
             # skipping some English data to make things faster, do just cola ['swahili', 'finnish', 'telugu', 'russian', 'arabic', 'bengali', 'mnli', 'mrpc', 'qnli', 'qqp', 'rte', 'sst2', 'stsb', 'wnli']:
-            if lang not in ['bengali', 'telugu']:
-                continue
             
             for id_text, text in id_dict.items():
 
-                in_attention = (id_text == lowest_id or id_text == highest_id)
+                if id_text not in extreme_losses_dict:
+                    continue
+
+                # in_attention = (id_text == lowest_id or id_text == highest_id)
 
                 # Get transformations
                 transforms = get_transforms(
@@ -541,10 +539,10 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                         all_predictions.append(predictions)       
                         all_losses.append(loss)
 
-                        if in_attention:
-                            id_text_attention = id_text
-                            attentions = torch.cat(outputs["attentions"])
-                            all_attentions.append(attentions)
+                        # if in_attention:
+                        #     id_text_attention = id_text
+                        #     attentions = torch.cat(outputs["attentions"])
+                        #     all_attentions.append(attentions)
 
                 # Convert list of outputs to a tensor
                 all_predictions = torch.stack(all_predictions)
@@ -595,25 +593,24 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                 # Mean predictions with SD-per-patch on top
                 std_reconstruction_per_patch = clip(mean_predictions * std_predictions_per_patch * mask * attention_mask)
 
-                if args.do_attention and in_attention:
-                    compute_attention(all_attentions, id_text_attention, mask, text_renderer, rows_to_save=[1, 10], cols_to_save=[2, 4])
+                # if args.do_attention and in_attention:
+                #     compute_attention(all_attentions, id_text_attention, mask, text_renderer, rows_to_save=[1, 10], cols_to_save=[2, 4])
 
                 # save plots for the 5 images with the lowest and highest losses
                 if extreme_losses_dict:
-                    if id_text in extreme_losses_dict["low"] or id_text in extreme_losses_dict["high"]:
         
-                        # save individual images: original, original+SD, predicitons+SD
-                        save_image(im_masked, title=f'Original \n {id_text}', img_name=f"{id_text}_original")
-                        save_image(std_predictions_per_patch_with_original, title=f'Original + Patch Uncertainty (SD) \n {id_text}', img_name=f"{id_text}_original_SD_m{args.mask_ratio}")
-                        save_image(std_reconstruction_per_patch, title=f'Mean Prediction + SD \n {id_text}', img_name=f"{id_text}_predictions_SD_m{args.mask_ratio}")
+                    # save individual images: original, original+SD, predicitons+SD
+                    save_image(im_masked, title=f'Original \n {id_text}', img_name=f"{id_text}_original")
+                    save_image(std_predictions_per_patch_with_original, title=f'Original + Patch Uncertainty (SD) \n {id_text}', img_name=f"{id_text}_original_SD_m{args.mask_ratio}")
+                    save_image(std_reconstruction_per_patch, title=f'Mean Prediction + SD \n {id_text}', img_name=f"{id_text}_predictions_SD_m{args.mask_ratio}")
 
-                        # make triplets of images
-                        images = [im_masked, std_predictions_per_patch_with_original, std_reconstruction_per_patch]
-                        titles = [f"Original", "Original + SD", "Mean Prediction + SD"]
-                        multi_image_name = f"{id_text}_triplet_m{args.mask_ratio}"
+                    # make triplets of images
+                    images = [im_masked, std_predictions_per_patch_with_original, std_reconstruction_per_patch]
+                    titles = [f"Original", "Original + SD", "Mean Prediction + SD"]
+                    multi_image_name = f"{id_text}_triplet_m{args.mask_ratio}"
 
-                        save_multi_image(id_text, images, titles, multi_image_name, args.mask_ratio)
-            
+                    save_multi_image(id_text, images, titles, multi_image_name, args.mask_ratio)
+        
 
     # logger.info(f"SD per task: {SDs_per_task}")
     # logger.info(f"Loss per task: {losses_per_task}")
@@ -672,6 +669,24 @@ def compute_means_per_task(losses_per_task):
     logger.info(f"Mean loss per task: {mean_losses_per_task}")
     
     return mean_losses_per_task
+
+
+def read_ids_and_losses_from_file(file_path):
+    # Regular expression to capture the ID and the loss from the line
+    id_loss_pattern = re.compile(r"ID: (\w+_\d+), Loss: ([\d.]+)")
+    id_loss_dict = {}
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            # Search for the pattern in each line
+            match = id_loss_pattern.search(line)
+            if match:
+                # Extract the ID and loss from the matched pattern
+                id_value = match.group(1)
+                loss_value = float(match.group(2))
+                id_loss_dict[id_value] = loss_value
+
+    return id_loss_dict
 
 
 def main(args: argparse.Namespace):
@@ -740,7 +755,9 @@ def main(args: argparse.Namespace):
         with open(input_data_path, 'r', encoding='utf-8') as f:
             input_data = json.load(f)
 
-        extreme_losses_dict={}
+        top5_file_path = "scripts/monte_carlo/results/base_experiment_1000/uncertainty_top5.txt"
+        extreme_losses_dict = read_ids_and_losses_from_file(top5_file_path)
+        print(extreme_losses_dict)
         SD_scores, loss_scores = monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict)
 
         logger.info("\nUNCERTAINTY (SD)\n")

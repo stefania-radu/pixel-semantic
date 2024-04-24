@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --time=10-00:00:00
+#SBATCH --time=00-10:00:00
 #SBATCH --partition=regular
 #SBATCH --nodes=1
 #SBATCH --mem=20GB
-#SBATCH --job-name=std_monte_carlo_base_0.25
-#SBATCH --output=/home2/s3919609/pixel-semantic/scripts/monte_carlo/results/base_experiment_1000/std_outputs_mask_final_0.25.out
+#SBATCH --job-name=std_monte_carlo_base_top5
+#SBATCH --output=/home2/s3919609/pixel-semantic/scripts/monte_carlo/results/base_experiment_1000/top5.out
 
 
 module purge
