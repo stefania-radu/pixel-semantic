@@ -1,7 +1,7 @@
 import json
 
-def find_extreme_loss_ids(value=5):
-    file_path = 'scripts/monte_carlo/results/base_experiment_1000/loss_scores/loss_per_task_base_0.25.json'
+def find_extreme_loss_ids(value=1):
+    file_path = 'scripts/monte_carlo/results/base_experiment_1000/std_scores/std_per_task_base_0.25.json'
 
 
     with open(file_path, 'r') as file:
@@ -30,14 +30,14 @@ def find_extreme_loss_ids(value=5):
     overall_lowest_losses = sorted(overall_lowest_losses, key=lambda x: x[1])[:value]
     overall_highest_losses = sorted(overall_highest_losses, key=lambda x: x[1], reverse=True)[:value]
 
-    for lang in losses_dict:
-        print(f"Language: {lang}")
-        print("Lowest losses:")
-        for id_text, loss in losses_dict[lang]['low'].items():
-            print(f"ID: {id_text}, Loss: {loss}")
-        print("Highest losses:")
-        for id_text, loss in losses_dict[lang]['high'].items():
-            print(f"ID: {id_text}, Loss: {loss}")
+    # for lang in losses_dict:
+    #     print(f"Language: {lang}")
+    #     print("Lowest losses:")
+    #     for id_text, loss in losses_dict[lang]['low'].items():
+    #         print(f"ID: {id_text}, Loss: {loss}")
+    #     print("Highest losses:")
+    #     for id_text, loss in losses_dict[lang]['high'].items():
+    #         print(f"ID: {id_text}, Loss: {loss}")
 
     print("\nOverall lowest losses:")
     for id_text, loss in overall_lowest_losses:

@@ -1,0 +1,202 @@
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) 2023.01   2) StdEnv
+04/30/2024 10:27:55 - INFO - pixel.data.rendering.rendering_utils - loading text renderer configuration file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/text_renderer_config.json from cache at /home2/s3919609/.cache/huggingface/transformers/892d6a02d7c441000de399de59ed70d943a81f7b0f536523b4af1111677a8508.e332b34c9c05756dd4aa51d8fa33461dbd79604752296d185f03f8004db30700
+04/30/2024 10:27:55 - INFO - pixel.data.rendering.rendering_utils - loading font file https://huggingface.co/Team-PIXEL/pixel-base/resolve/main/GoNotoCurrent.ttf from cache at /home2/s3919609/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+04/30/2024 10:27:55 - INFO - pixel.data.rendering.pygame_renderer - Loading font from /home2/s3919609/.cache/huggingface/transformers/49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58
+04/30/2024 10:27:55 - INFO - pixel.data.rendering.rendering_utils - Text renderer PyGameTextRenderer {
+  "background_color": "white",
+  "dpi": 120,
+  "font_color": "black",
+  "font_file": "49e6dc219d1a1a1c9236acaf05a48b542002016a6dc877ee72baab085a84257b.3f28e7f4b38e1efe1b6da4a3732404c19d4c6a614ff32dce90a251e293d4ce58",
+  "font_size": 8,
+  "max_seq_length": 256,
+  "pad_size": 3,
+  "pixels_per_patch": 16,
+  "text_renderer_type": "PyGameTextRenderer"
+}
+
+04/30/2024 10:27:56 - INFO - pixel.models.pixel.modeling_pixel - position_embeddings: torch.Size([1, 530, 768])
+04/30/2024 10:27:57 - INFO - pixel.utils.modeling - Truncating position embeddings to 256
+04/30/2024 10:27:57 - INFO - pixel.utils.modeling - Truncating decoder position embeddings to 256
+04/30/2024 10:27:57 - INFO - __main__ - Running MONTE CARLO experiment: mask_ratio
+04/30/2024 10:27:57 - INFO - __main__ - Mask ratio: 0.25
+04/30/2024 10:27:57 - INFO - __main__ - Span length: 6
+04/30/2024 10:27:57 - INFO - __main__ - Monte Carlo samples: 100
+04/30/2024 10:27:57 - INFO - __main__ - Training mode: True
+04/30/2024 10:27:57 - INFO - __main__ - 
+######## Computing SDs for task: ner ########
+
+04/30/2024 10:27:57 - INFO - __main__ - 
+######## Language: amh ######## 
+
+04/30/2024 10:27:57 - INFO - __main__ - 
+######## Language: conll_2003_en ######## 
+
+04/30/2024 10:27:57 - INFO - __main__ - 
+######## Language: hau ######## 
+
+04/30/2024 10:27:57 - INFO - __main__ - 
+######## Language: ibo ######## 
+
+04/30/2024 10:29:02 - INFO - __main__ - ID text: ibo_1 - STD: 0.16389207541942596 - GNL: 47.99637985229492 - Loss: 0.8762120008468628
+04/30/2024 10:29:02 - INFO - __main__ - in attention
+Computing attention for ID: ibo_1
+all_layers_attentions: torch.Size([12, 12, 256, 256])
+attention_grid: torch.Size([1, 3098, 3098])
+np image in save grid (3098, 3098)
+04/30/2024 10:30:10 - INFO - __main__ - ID text: ibo_13 - STD: 0.16682608425617218 - GNL: 64.90013885498047 - Loss: 0.7165018320083618
+04/30/2024 10:30:10 - INFO - __main__ - in attention
+Computing attention for ID: ibo_13
+all_layers_attentions: torch.Size([12, 12, 256, 256])
+attention_grid: torch.Size([1, 3098, 3098])
+np image in save grid (3098, 3098)
+04/30/2024 10:31:14 - INFO - __main__ - ID text: ibo_132 - STD: 0.2454514503479004 - GNL: 17.74408721923828 - Loss: 1.0067650079727173
+04/30/2024 10:31:14 - INFO - __main__ - in attention
+Computing attention for ID: ibo_132
+all_layers_attentions: torch.Size([12, 12, 256, 256])
+attention_grid: torch.Size([1, 3098, 3098])
+np image in save grid (3098, 3098)
+04/30/2024 10:31:17 - INFO - __main__ - 
+######## Language: kin ######## 
+
+04/30/2024 10:31:17 - INFO - __main__ - 
+######## Language: lug ######## 
+
+04/30/2024 10:31:17 - INFO - __main__ - 
+######## Language: luo ######## 
+
+04/30/2024 10:31:17 - INFO - __main__ - 
+######## Language: pcm ######## 
+
+04/30/2024 10:32:19 - INFO - __main__ - ID text: pcm_1 - STD: 0.15439903736114502 - GNL: 93.20340728759766 - Loss: 0.6569052934646606
+04/30/2024 10:32:19 - INFO - __main__ - in attention
+Computing attention for ID: pcm_1
+all_layers_attentions: torch.Size([12, 12, 256, 256])
+attention_grid: torch.Size([1, 3098, 3098])
+np image in save grid (3098, 3098)
+04/30/2024 10:33:23 - INFO - __main__ - ID text: pcm_17 - STD: 0.1490614265203476 - GNL: 180.2247772216797 - Loss: 0.603242039680481
+04/30/2024 10:33:23 - INFO - __main__ - in attention
+Computing attention for ID: pcm_17
+all_layers_attentions: torch.Size([12, 12, 256, 256])
+attention_grid: torch.Size([1, 3098, 3098])
+np image in save grid (3098, 3098)
+04/30/2024 10:34:27 - INFO - __main__ - ID text: pcm_178 - STD: 0.15435202419757843 - GNL: 102.50159454345703 - Loss: 0.5457760095596313
+04/30/2024 10:34:27 - INFO - __main__ - in attention
+Computing attention for ID: pcm_178
+all_layers_attentions: torch.Size([12, 12, 256, 256])
+attention_grid: torch.Size([1, 3098, 3098])
+np image in save grid (3098, 3098)
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: swa ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: wol ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: yor ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: zh ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Computing SDs for task: tydiqa ########
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: arabic ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: russian ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: bengali ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: telugu ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: finnish ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: swahili ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: korean ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: indonesian ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: english ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Computing SDs for task: glue ########
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: cola ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: mnli ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: mrpc ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: qnli ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: qqp ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: rte ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: sst2 ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: stsb ######## 
+
+04/30/2024 10:34:30 - INFO - __main__ - 
+######## Language: wnli ######## 
+
+
+###############################################################################
+Hábrók Cluster
+Job 8599357 for user s3919609
+Finished at: Tue Apr 30 10:34:37 CEST 2024
+
+Job details:
+============
+
+Job ID              : 8599357
+Name                : std_monte_carlo_base_attention
+User                : s3919609
+Partition           : regularshort
+Nodes               : node97
+Number of Nodes     : 1
+Cores               : 1
+Number of Tasks     : 1
+State               : RUNNING
+Submit              : 2024-04-30T10:24:24
+Start               : 2024-04-30T10:25:42
+End                 : --
+Reserved walltime   : 01:00:00
+Used walltime       : 00:08:55
+Used CPU time       : --
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 20G
+Max Mem (Node/step) : 0.00  (Node unknown, N/A)
+Full Max Mem usage  : 0.00  (Until last completed step)
+Total Disk Read     : 0.00  (Until last completed step)
+Total Disk Write    : 0.00  (Until last completed step)
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

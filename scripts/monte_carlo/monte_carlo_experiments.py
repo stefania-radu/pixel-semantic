@@ -161,6 +161,8 @@ def save_grid(grid, id_text_attention, layers, heads):
     if np_image.shape[-1] == 1:  # For grayscale images, if there's a single channel
         np_image = np_image.squeeze(-1)
 
+    print(f"np image in save grid {np_image.shape}")
+
     fig, ax = plt.subplots(figsize=(12, 12))
     im = ax.imshow(np_image, cmap='viridis')
 
@@ -298,7 +300,7 @@ def load_loss(args):
 
 def compute_attention(all_attentions, id_text_attention, mask, text_renderer, rows_to_save=[1, 10], cols_to_save=[2, 4]):
 
-    logger.info(f"Computing attention for ID: {id_text_attention}")
+    print(f"Computing attention for ID: {id_text_attention}")
     
     all_attentions_mean = all_attentions.mean(dim=0).squeeze(0)
 
@@ -310,12 +312,12 @@ def compute_attention(all_attentions, id_text_attention, mask, text_renderer, ro
 
     all_layers_attentions = torch.stack(all_layers_attentions)
 
-    logger.info(f"all_layers_attentions: {all_layers_attentions.shape}")
+    print(f"all_layers_attentions: {all_layers_attentions.shape}")
 
     attention_grid = get_attention_grid(all_layers_attentions)
     attention_grid = torch.mean(attention_grid, dim=0, keepdim=True)
 
-    logger.info(f"attention_grid: {attention_grid.shape}")
+    print(f"attention_grid: {attention_grid.shape}")
 
     # save attention weights grid with all layers and heads - all channels are the same
     # save_grid(attention_grid[0:1, :, :], layers=all_layers_attentions.size(0), heads=all_layers_attentions.size(1))
@@ -454,8 +456,7 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
     losses_per_task = input_data.copy()
     gnl_per_task = input_data.copy()
 
-    # lowest_id = next(iter(extreme_losses_dict["lowest"]), None) if extreme_losses_dict else -1
-    # highest_id = next(iter(extreme_losses_dict["highest"]), None) if extreme_losses_dict else -1
+    ids_for_attention = "pcm_178, ibo_132"
 
     for task, lang_dict in input_data.items():
         logger.info(f"\n######## Computing SDs for task: {task} ########\n")
@@ -468,10 +469,13 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
             
             for id_text, text in id_dict.items():
 
-                if id_text not in extreme_losses_dict:
+                # if id_text not in extreme_losses_dict:
+                #     continue
+
+                if id_text not in ids_for_attention:
                     continue
 
-                # in_attention = (id_text == lowest_id or id_text == highest_id)
+                in_attention = True
 
                 # Get transformations
                 transforms = get_transforms(
@@ -539,10 +543,10 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                         all_predictions.append(predictions)       
                         all_losses.append(loss)
 
-                        # if in_attention:
-                        #     id_text_attention = id_text
-                        #     attentions = torch.cat(outputs["attentions"])
-                        #     all_attentions.append(attentions)
+                        if in_attention:
+                            id_text_attention = id_text
+                            attentions = torch.cat(outputs["attentions"])
+                            all_attentions.append(attentions)
 
                 # Convert list of outputs to a tensor
                 all_predictions = torch.stack(all_predictions)
@@ -593,8 +597,9 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
                 # Mean predictions with SD-per-patch on top
                 std_reconstruction_per_patch = clip(mean_predictions * std_predictions_per_patch * mask * attention_mask)
 
-                # if args.do_attention and in_attention:
-                #     compute_attention(all_attentions, id_text_attention, mask, text_renderer, rows_to_save=[1, 10], cols_to_save=[2, 4])
+                if args.do_attention and in_attention:
+                    logger.info("in attention")
+                    compute_attention(all_attentions, id_text_attention, mask, text_renderer, rows_to_save=[1, 10], cols_to_save=[2, 4])
 
                 # save plots for the 5 images with the lowest and highest losses
                 if extreme_losses_dict:
@@ -755,16 +760,16 @@ def main(args: argparse.Namespace):
         with open(input_data_path, 'r', encoding='utf-8') as f:
             input_data = json.load(f)
 
-        top5_file_path = "scripts/monte_carlo/results/base_experiment_1000/uncertainty_top5.txt"
-        extreme_losses_dict = read_ids_and_losses_from_file(top5_file_path)
-        print(extreme_losses_dict)
-        SD_scores, loss_scores = monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_losses_dict)
+        # top5_file_path = "scripts/monte_carlo/results/base_experiment_1000/uncertainty_top5.txt"
+        # extreme_losses_dict = read_ids_and_losses_from_file(top5_file_path)
+        # print(extreme_losses_dict)
+        SD_scores, loss_scores = monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio)
 
-        logger.info("\nUNCERTAINTY (SD)\n")
-        compute_means_per_task(SD_scores)
+        # logger.info("\nUNCERTAINTY (SD)\n")
+        # compute_means_per_task(SD_scores)
 
-        logger.info("\nLOSS\n")
-        compute_means_per_task(loss_scores)
+        # logger.info("\nLOSS\n")
+        # compute_means_per_task(loss_scores)
 
 
 
