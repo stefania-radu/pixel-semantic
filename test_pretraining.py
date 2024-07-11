@@ -49,6 +49,8 @@ def get_config_dict(args: TrainingArguments) -> Dict[str, Any]:
         training_config = load_json(TRAINING_CONFIGS[args.training_config_name])
         config_dict.update(training_config)
 
+    print(config_dict)
+
     return config_dict
 
 class Trainer:

@@ -10,8 +10,8 @@ export TRANSFORMERS_CACHE="/scratch/.cache/huggingface/models"
 
 # Settings
 export LANG="hau"
-export DATA_DIR="data/masakhane-ner/data/${LANG}"
-export FALLBACK_FONTS_DIR="data/fallback_fonts"  # let's say this is where we downloaded the fonts to
+export DATA_DIR="/scratch/s3919609/data/masakhane-ner/data/${LANG}"
+export FALLBACK_FONTS_DIR="/scratch/s3919609/data/fallback_fonts"  # let's say this is where we downloaded the fonts to
 export MODEL="Team-PIXEL/pixel-base" # also works with "bert-base-cased", "roberta-base", etc.
 export SEQ_LEN=196
 export BSZ=64

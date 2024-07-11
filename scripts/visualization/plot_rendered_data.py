@@ -26,7 +26,6 @@ transforms = get_transforms(
 )
 
 
-# Define the languages for which to plot images
 languages_dict = {
     "am": "Amharic",
     "ar": "Arabic",
@@ -44,8 +43,7 @@ languages_dict = {
     "yo": "Yorùbá"
 }
 
-# Setup figure for plotting
-fig, axs = plt.subplots(2, 7, figsize=(20, 7))  # Adjust the grid size if necessary
+fig, axs = plt.subplots(2, 7, figsize=(20, 7))
 axs = axs.flatten() 
 
 
@@ -80,9 +78,7 @@ for i, (lang_key, lang_value) in enumerate(languages_dict.items()):
     axs[i].axis('off')  # Hide axis for clarity
     axs[i].set_title(f"{lang_value.upper()} - Patches: {num_patches}", fontsize=12)
 
-# Adjust layout to prevent overlap
 plt.tight_layout()
 
-# Show the plot
 plt.savefig("rendered.pdf")
 plt.show()

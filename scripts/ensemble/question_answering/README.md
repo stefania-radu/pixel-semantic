@@ -11,9 +11,8 @@ Results saved in: [results_small/tydiqa](../results_small/tydiqa)
 
 The `eval_nbest_predictions.json` contains all possible predictions for an example (model predicts 20 candidates). Each candidate has a predicted text and a probability (which I treat as confidence) and also start and end logits for the answers.
 
-Note: model 101 was not used because of its low performance so there are 4 models in total
 
-What what changed in the configurations:
+What was changed in the configurations:
 - batch size
 - learning rate
 - dropout prob
@@ -73,3 +72,30 @@ bash scripts/ensemble/eval_gold_passage_baseline.sh
  <img src="results/plots/scatter_plot_qa.png" width="800" height="600"></img>
 </p>
 
+## Task: Named Entity Recognition, Dataset: MasakhaNER
+
+### Finetuning models with different configurations
+
+Bash scripts for 5 models: [habrok/ensemble_config/NER](../habrok/ensemble_config/NER)
+
+Results saved in: [NER_results](../NER_results)
+
+What was changed in the configurations:
+- batch size
+- learning rate
+- dropout prob
+
+#### F1 score comparison with PIXEL
+
+
+|       | AMH  | HAU  | IBO  | KIN  | LUG  | LUO  | PCM  | SWA  | WOL  | YOR  | AVG  |
+|-------|------|------|------|------|------|------|------|------|------|------|------|
+| PIXEL | 47.7 | 82.4 | 79.9 | 64.2 | 76.5 | 66.6 | 78.7 | 79.8 | 59.7 | 70.7 | 70.7 |
+| Ensemble | 90.2 | 97.1 | 96.1 | 93.9 | 95.5 | 93.1 | 97.1 | 96.1 | 95.8 | 95.2 | 95   |
+
+
+<p align="middle">
+ <img src="results/plots/scatter_plot_qa.png" width="800" height="600"></img>
+</p>
+
+scripts/ensemble/ner/confidences_ner.png

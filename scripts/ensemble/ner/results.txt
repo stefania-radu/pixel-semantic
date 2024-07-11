@@ -1,0 +1,25 @@
+F1 scores:
+
+{'Amharic': 0.9026171347162267, 'Hausa': 0.9717136958337771, 'Igbo': 0.9610687838521563, 'Kinyarwanda': 0.9399908250743467, 'Ganda': 0.9558197139034778, 'Luo': 0.9314825627966328, 'Nigerian Pidgin': 0.9713401268911594, 'Swahili': 0.9614468387963724, 'Wolof': 0.9587337279366652, 'Yoruba': 0.9521308592429573, 'avg': 0.9506344269043773}
+
+Label Counts
+Amharic
+{'O': 6431, 'B-LOC': 227, 'I-DATE': 163, 'B-PER': 142, 'I-ORG': 114, 'I-PER': 109, 'B-DATE': 106, 'B-ORG': 83, 'I-LOC': 74}
+Hausa
+{'O': 14890, 'B-LOC': 508, 'B-PER': 336, 'I-DATE': 295, 'I-PER': 177, 'I-ORG': 170, 'B-DATE': 162, 'B-ORG': 132, 'I-LOC': 94}
+Igbo
+{'O': 10821, 'B-ORG': 351, 'B-PER': 345, 'B-LOC': 338, 'I-PER': 226, 'I-DATE': 194, 'B-DATE': 145, 'I-ORG': 126, 'I-LOC': 99}
+Kinyarwanda
+{'O': 12556, 'B-LOC': 374, 'B-ORG': 257, 'I-ORG': 246, 'B-PER': 207, 'I-DATE': 166, 'I-PER': 136, 'B-DATE': 130, 'I-LOC': 124}
+Ganda
+{'O': 8402, 'B-PER': 379, 'I-PER': 222, 'B-LOC': 209, 'B-ORG': 153, 'I-DATE': 143, 'B-DATE': 113, 'I-ORG': 113, 'I-LOC': 86}
+Luo
+{'O': 4281, 'I-LOC': 164, 'B-PER': 142, 'B-LOC': 128, 'I-ORG': 107, 'I-PER': 103, 'I-DATE': 74, 'B-DATE': 69, 'B-ORG': 66}
+Nigerian Pidgin
+{'O': 14016, 'I-ORG': 292, 'B-PER': 267, 'B-LOC': 258, 'B-ORG': 210, 'I-DATE': 200, 'I-PER': 193, 'B-DATE': 184, 'I-LOC': 111}
+Swahili
+{'O': 13591, 'B-LOC': 463, 'B-PER': 331, 'B-ORG': 221, 'I-ORG': 212, 'I-PER': 186, 'B-DATE': 160, 'I-LOC': 136, 'I-DATE': 47}
+Wolof
+{'O': 10798, 'B-LOC': 211, 'I-PER': 193, 'B-PER': 176, 'I-DATE': 153, 'B-DATE': 70, 'B-ORG': 55, 'I-ORG': 13, 'I-LOC': 4}
+Yoruba
+{'O': 17410, 'I-DATE': 661, 'B-LOC': 471, 'I-ORG': 337, 'B-PER': 250, 'B-ORG': 224, 'I-PER': 191, 'B-DATE': 187, 'I-LOC': 165}

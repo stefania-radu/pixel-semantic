@@ -48,16 +48,13 @@ def save_json(results, metric, output_folder, mask, experiment):
     os.makedirs(output_folder, exist_ok=True)
     output_file_path = os.path.join(output_folder, f'{metric}_per_task_{experiment}_{mask}.json')
 
-    # Extract specific metric and reformat results
     metric_results = {task: {lang: {id_text: data[metric] for id_text, data in lang_data.items()} 
                              for lang, lang_data in task_data.items()} 
                       for task, task_data in results.items()}
 
-    # Check if file already exists and read existing data
     if os.path.exists(output_file_path):
         with open(output_file_path, 'r') as json_file:
             existing_data = json.load(json_file)
-            # Update existing data with new results
             for task, langs in metric_results.items():
                 if task in existing_data:
                     for lang, ids in langs.items():
@@ -69,7 +66,6 @@ def save_json(results, metric, output_folder, mask, experiment):
                     existing_data[task] = langs
             metric_results = existing_data
 
-    # Write updated or new data to the file
     with open(output_file_path, 'w') as json_file:
         json.dump(metric_results, json_file, indent=4)
     print(f"File saved: {output_file_path}")

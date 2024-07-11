@@ -104,12 +104,10 @@ def plot_images_for_ids(ids, folders, output_file, plot_title, languages, langua
         for col, img in enumerate(id_images, start=1):
             im = axs[row, col].imshow(np.array(img), cmap='viridis', vmin=min_val, vmax=max_val)
     
-    plt.tight_layout(rect=[0, 0.03, 0.95, 0.97])  # Adjust layout to make room for colorbar
+    plt.tight_layout(rect=[0, 0.03, 0.95, 0.97])
 
-    # Create a fake ScalarMappable for the colorbar
     sm = ScalarMappable(cmap='viridis', norm=Normalize(vmin=min_val / 250, vmax=max_val / 250))
     sm.set_array([])
-    # Add colorbar to the right side of the plot
     cbar = fig.colorbar(sm, ax=axs[:, -1], location='right', aspect=50)
 
     plt.savefig(output_file, format='pdf')

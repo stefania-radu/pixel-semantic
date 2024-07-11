@@ -21,7 +21,7 @@ export WANDB_PROJECT="pixel-experiments-QA"
 export DATASET_NAME="tydiqa"
 export DATASET_CONFIG_NAME="secondary_task"
 export MODEL="Team-PIXEL/pixel-base" # also works with "bert-base-cased", etc.
-export FALLBACK_FONTS_DIR="data/fallback_fonts"  # let's say this is where we downloaded the fonts to
+export FALLBACK_FONTS_DIR="/scratch/s3919609/data/fallback_fonts"  # let's say this is where we downloaded the fonts to
   
 export RUN_NAME="${DATASET_NAME}-$(basename ${MODEL})-${SEQ_LEN}-${BSZ}-${GRAD_ACCUM}-${LR}-${NUM_STEPS}-${SEED}"
 

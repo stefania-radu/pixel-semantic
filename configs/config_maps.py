@@ -1,5 +1,6 @@
 MODEL_PROTOTYPE_CONFIGS = {
-    "scratch_noto_span0.25-dropout": "configs/models/scratch_noto_span0.25-dropout.json"
+    "scratch_noto_span0.25-dropout": "configs/models/scratch_noto_span0.25-dropout.json",
+    "scratch_noto_span0.25-dropout_ngram2": "configs/models/scratch_noto_span0.25-dropout_ngram2.json"
 }
 
 TRAINING_CONFIGS = {

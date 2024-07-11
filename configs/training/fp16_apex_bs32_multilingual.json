@@ -28,10 +28,11 @@
     "remove_unused_columns": false,
     "fp16": true,
     "half_precision_backend": "apex",
-    "streaming": false,
+    "streaming": true,
     "report_to": "wandb",
     "push_to_hub": true,
-    "hub_model_id": "stefania-radu/pixel-multilingual",
+    "hub_model_id": "stefania-radu/PIXEL-semantic",
     "hub_strategy": "checkpoint",
-    "hub_private_repo": true
+    "hub_private_repo": true,
+    "resume_from_checkpoint":"/home2/s3919609/pixel-semantic/experiments/pretraining/last_model/model/checkpoint-400000"
 }

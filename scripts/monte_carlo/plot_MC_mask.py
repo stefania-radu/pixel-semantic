@@ -7,13 +7,12 @@ from pdf2image import convert_from_path
 
 
 def plot_MC_mask_experiment(original_path, original_sd_path, predictions_sd_path):
-     # Convert the original PDF image to PNG
     original_images = convert_from_path(original_path)
-    original_image = original_images[0].convert('L')  # Assume the first page and convert to grayscale
+    original_image = original_images[0].convert('L') 
     
     def convert_and_load_image(path):
         images = convert_from_path(path)
-        return images[0].convert('L')  # Assume the first page and convert to grayscale
+        return images[0].convert('L')
     
     original_sd_files = sorted(os.listdir(original_sd_path), key=lambda x: float(x.split('_s')[1].replace('.pdf', ''))) # # change to m for mask experiment
     predictions_sd_files = sorted(os.listdir(predictions_sd_path), key=lambda x: float(x.split('_s')[1].replace('.pdf', ''))) # change to m for mask experiment
@@ -84,8 +83,6 @@ original_sd_path = "results_plots/MC_uncertainty/mask_span_experiment/original_S
 predictions_sd_path = "results_plots/MC_uncertainty/mask_span_experiment/predictions_SD"
 experiments_path = "results_plots/MC_uncertainty/mask_span_experiment/experiments.csv"
 
-# plot the mask ratio comparision between image triplets
 plot_MC_mask_experiment(original_path, original_sd_path, predictions_sd_path)
 
-# plot std vs mask ratio line graph
 plot_line_graph(experiments_path)

@@ -188,23 +188,14 @@ def get_attention_grid(attention_tensor):
     return grid
 
 def save_grid(grid, layers, heads):
-    """
-    Save the attention grid with labels for axes to a PDF file without re-normalizing the whole grid.
 
-    Parameters:
-    - grid: The image tensor representing the grid of all attention maps.
-    - layers: The number of layers in the attention tensor.
-    - heads: The number of heads in the attention tensor.
-    """
-    # Convert grid to numpy array
     np_image = grid.detach().cpu().numpy().transpose(1, 2, 0)
-    if np_image.shape[-1] == 1:  # For grayscale images, if there's a single channel
+    if np_image.shape[-1] == 1:
         np_image = np_image.squeeze(-1)
 
     fig, ax = plt.subplots(figsize=(12, 12))
     im = ax.imshow(np_image, cmap='viridis')
 
-    # Adjusted calculation for ticks based on the single height (H) and width (W) of the grid image
     xticks_positions = [i * np_image.shape[1] / heads + (np_image.shape[1] / heads / 2) for i in range(heads)]
     yticks_positions = [i * np_image.shape[0] / layers + (np_image.shape[0] / layers / 2) for i in range(layers)]
 
@@ -233,21 +224,11 @@ def normalize_array(np_image):
 
 
 def save_attention_image(all_layers_attentions, layer_index, head_index):
-    """
-    Save a single attention map image from the specified layer and head with the 'viridis' colormap.
 
-    Parameters:
-    - all_layers_attentions: A 4D tensor of shape [layers, heads, height, width].
-    - layer_index: The index of the layer to visualize.
-    - head_index: The index of the head to visualize.
-    - filename: The name of the file to save the image to.
-    """
-    # Validate indices
     layers, heads, _, _ = all_layers_attentions.shape
     if layer_index >= layers or head_index >= heads:
         raise ValueError("Layer index or head index is out of bounds.")
     
-    # Extract the specific attention map
     attention_map = all_layers_attentions[layer_index, head_index, :, :].detach().cpu().numpy()
 
     # Normalize attention map between 0 and 1
@@ -261,7 +242,6 @@ def save_attention_image(all_layers_attentions, layer_index, head_index):
     plt.axis('off')  # Optionally, turn off the axis for a cleaner image
 
     img_name = f'attention_image_{layer_index+1}_{head_index+1}'
-    # Save the figure
     plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
 
     log_image_from_path(f'{img_name}.pdf', img_name)
@@ -282,7 +262,6 @@ def save_image(image_tensor, title, img_name): # shape: (3, 256, 256)
     # plt.title(title, fontsize=20)
     plt.axis('off')  # Optionally, turn off the axis for a cleaner image
 
-    # Save the figure
     plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
 
     log_image_from_path(f'{img_name}.pdf', img_name)
@@ -293,33 +272,25 @@ def save_image(image_tensor, title, img_name): # shape: (3, 256, 256)
 def save_multi_image(images, titles, final_img_name, mask_rate=0.1):  # shapes: [(3, 256, 256), (3, 256, 256), (3, 256, 256)]
     assert len(images) == 3 and len(titles) == 3, "There must be exactly 3 images and 3 titles"
 
-    # Create a figure and a set of subplots
-    fig, axs = plt.subplots(1, 3, figsize=(18, 6))  # Adjusted for equal size images including colorbar space
+    fig, axs = plt.subplots(1, 3, figsize=(18, 6)) 
 
     for i, (image_tensor, title) in enumerate(zip(images, titles)):
-        # Convert the PyTorch tensor to a NumPy array and normalize
-        image_tensor = image_tensor.mean(dim=0, keepdim=True)  # Convert to grayscale for demonstration
-        np_image = image_tensor.detach().cpu().numpy().squeeze()  # Assuming the input is PyTorch tensor
+        image_tensor = image_tensor.mean(dim=0, keepdim=True)
+        np_image = image_tensor.detach().cpu().numpy().squeeze()
         np_image = (np_image - np_image.min()) / (np_image.max() - np_image.min())  # Normalize
 
-        # Plotting each image in its subplot
         im = axs[i].imshow(np_image, cmap='viridis')
         axs[i].set_title(title, fontsize=24)
-        axs[i].axis('off')  # Optionally, turn off the axis for a cleaner image
+        axs[i].axis('off')
 
-    # Adjust layout to be tight and allocate space for colorbar
     plt.tight_layout(pad=2.0)
 
-    # fig.suptitle(f'Mask Ratio = {int(mask_rate*100)}%', fontsize=26, y=1.1) # for mask ratio experiment
-    fig.suptitle(f'Mask Span = {mask_rate}', fontsize=26, y=1.1) # for mask span experiment
+    fig.suptitle(f'Mask Span = {mask_rate}', fontsize=26, y=1.1)
 
-    # Create an axes on the right side of axs[-1]. The width of cax can be controlled by the horizontal size, here set to 0.015
     cbar_ax = fig.add_axes([axs[-1].get_position().x1 + 0.01, axs[-1].get_position().y0, 0.02, axs[-1].get_position().height])
     
-    # Add colorbar to the newly created axis
     fig.colorbar(im, cax=cbar_ax)
 
-    # Save the figure
     plt.savefig(f'{final_img_name}.pdf', bbox_inches='tight')
     plt.close()
 

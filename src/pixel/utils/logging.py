@@ -30,9 +30,9 @@ def log_sequence_classification_predictions(
     out_file = os.path.join(training_args.output_dir, f"{prefix}_outputs.csv")
     with open(out_file, "w", encoding="utf-8") as f:
         if sentence2_key:
-            f.write(f"sentence1\tsentence2\tlabel\tprediction\tlength\n")
+            f.write(f"sentence1\tsentence2\tlabel\tprediction\tpredictions_probs\tlength\n")
         else:
-            f.write(f"sentence\tlabel\tprediction\tlength\n")
+            f.write(f"sentence\tlabel\tprediction\tpredictions_probs\tlength\n")
         for feature, example, prediction in zip(features, examples, predictions):
             sentence1 = example[sentence1_key]
             if sentence2_key:
@@ -48,17 +48,18 @@ def log_sequence_classification_predictions(
                 raise ValueError(f"Modality {modality} not supported.")
 
             label = example["label"]
+            predictions_probs = prediction  # for cola, should be like [0.7, 0.8]
             prediction = np.argmax(prediction)
             seq_len = len(sentence1) + len(sentence2)
 
-            data.append([sentence1, sentence2, processed_input, label, prediction, seq_len])
+            data.append([sentence1, sentence2, processed_input, label, prediction, predictions_probs, seq_len])
 
-            f.write(f"{sentence1}\t{sentence2}\t{label}\t{prediction}\t{seq_len}\n")
+            f.write(f"{sentence1}\t{sentence2}\t{label}\t{prediction}\t{predictions_probs}\t{seq_len}\n")
 
     logger.info(f"Saved predictions outputs to {out_file}")
     logger.info(f"Logging as table to wandb")
 
     preds_table = wandb.Table(
-        columns=["sentence1", "sentence2", "processed_input", "label", "prediction", "length"], data=data
+        columns=["sentence1", "sentence2", "processed_input", "label", "prediction", "predictions_probs", "length"], data=data
     )
     wandb.log({f"{prefix}_outputs": preds_table})

@@ -1,8 +1,9 @@
 data/*
 wandb/*
 results/*
-results_small/*
 amh-pixel-base-196-64-1-5e-5-15000-42
 *.pyc
 .PC-env
+experiments/*
+GLUE-results/*
 

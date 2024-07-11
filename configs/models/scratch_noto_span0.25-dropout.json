@@ -1,5 +1,5 @@
 {
-  "config_name": "stefania-radu/PIXEL-semantic",
+  "config_name": "Team-PIXEL/pixel-base",
   "text_renderer_name_or_path": "configs/renderers/noto_renderer",
   "mask_ratio": 0.25,
   "span_masking": true,

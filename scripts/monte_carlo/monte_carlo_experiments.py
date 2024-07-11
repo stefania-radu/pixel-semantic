@@ -113,8 +113,12 @@ def create_mean_map(variance_image, mask, patch_size):
 def visualize_attention(attentions, mask, patch_size):
     attentions = attentions.detach().cpu().squeeze()
 
-    nr_heads, _, _ = attentions.shape
+    nr_heads, height, width = attentions.shape
+
     num_channels, height, width = mask.shape
+
+    print(f"height attention: {height}")
+    print(f"width attention: {width}")
 
     num_patches_x = width // patch_size
     num_patches_y = height // patch_size
@@ -126,14 +130,13 @@ def visualize_attention(attentions, mask, patch_size):
                 
         for i in range(num_patches_y):
             for j in range(num_patches_x):
-                if mask[:, i*patch_size, j*patch_size].any() == 0:
-                    attention_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = head[i, j]
+                # if mask[:, i*patch_size, j*patch_size].any() == 0:
+                attention_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = head[i, j]
                 # else:
                 #     attention_map[i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size] = 1
 
         all_heads_attentions[head_idx] = attention_map 
 
-    # logger.info(f"all_heads_attentions.shape: {all_heads_attentions.shape}")
 
     return all_heads_attentions
 
@@ -158,7 +161,7 @@ def get_attention_grid(attention_tensor):
 def save_grid(grid, id_text_attention, layers, heads):
 
     np_image = grid.detach().cpu().numpy().transpose(1, 2, 0)
-    if np_image.shape[-1] == 1:  # For grayscale images, if there's a single channel
+    if np_image.shape[-1] == 1:
         np_image = np_image.squeeze(-1)
 
     print(f"np image in save grid {np_image.shape}")
@@ -166,7 +169,6 @@ def save_grid(grid, id_text_attention, layers, heads):
     fig, ax = plt.subplots(figsize=(12, 12))
     im = ax.imshow(np_image, cmap='viridis')
 
-    # Adjusted calculation for ticks based on the single height (H) and width (W) of the grid image
     xticks_positions = [i * np_image.shape[1] / heads + (np_image.shape[1] / heads / 2) for i in range(heads)]
     yticks_positions = [i * np_image.shape[0] / layers + (np_image.shape[0] / layers / 2) for i in range(layers)]
 
@@ -312,12 +314,12 @@ def compute_attention(all_attentions, id_text_attention, mask, text_renderer, ro
 
     all_layers_attentions = torch.stack(all_layers_attentions)
 
-    print(f"all_layers_attentions: {all_layers_attentions.shape}")
+    print(f"all_layers_attentions: {all_layers_attentions.shape}") #all_layers_attentions: torch.Size([12, 12, 256, 256])
 
     attention_grid = get_attention_grid(all_layers_attentions)
     attention_grid = torch.mean(attention_grid, dim=0, keepdim=True)
 
-    print(f"attention_grid: {attention_grid.shape}")
+    print(f"attention_grid: {attention_grid.shape}") #torch.Size([1, 3098, 3098])
 
     # save attention weights grid with all layers and heads - all channels are the same
     # save_grid(attention_grid[0:1, :, :], layers=all_layers_attentions.size(0), heads=all_layers_attentions.size(1))
@@ -456,7 +458,7 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
     losses_per_task = input_data.copy()
     gnl_per_task = input_data.copy()
 
-    ids_for_attention = "pcm_178, ibo_132"
+    ids_for_attention = ["pcm_178", "ibo_132"]
 
     for task, lang_dict in input_data.items():
         logger.info(f"\n######## Computing SDs for task: {task} ########\n")
@@ -573,6 +575,8 @@ def monte_carlo_SD(args, input_data, model, text_renderer, mask_ratio, extreme_l
 
                 # original image
                 original_img = model.unpatchify(model.patchify(img)).squeeze()
+                print(id_text, text)
+                save_image(original_img, title=f'Original', img_name=f"original_{id_text}")
 
                 # masked image
                 im_masked = original_img * mask * attention_mask
@@ -686,7 +690,7 @@ def read_ids_and_losses_from_file(file_path):
             # Search for the pattern in each line
             match = id_loss_pattern.search(line)
             if match:
-                # Extract the ID and loss from the matched pattern
+                # Extract the ID and loss from the pattern
                 id_value = match.group(1)
                 loss_value = float(match.group(2))
                 id_loss_dict[id_value] = loss_value

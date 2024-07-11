@@ -2,9 +2,9 @@
 #SBATCH --time=00-01:00:00
 #SBATCH --partition=regular
 #SBATCH --nodes=1
-#SBATCH --mem=20GB
+#SBATCH --mem=50GB
 #SBATCH --job-name=std_monte_carlo_base_attention
-#SBATCH --output=/home2/s3919609/pixel-semantic/scripts/monte_carlo/results/base_experiment_1000/attention.out
+#SBATCH --output=/home2/s3919609/pixel-semantic/attention.out
 
 module purge
 module load Anaconda3/2023.09-0
@@ -12,7 +12,6 @@ module load Anaconda3/2023.09-0
 conda activate pixel-sem-env2
 
 python scripts/monte_carlo/monte_carlo_experiments.py \
-  --input_data_path="scripts/data/uncertainty/test_data_ner_tydiqa_glue_1000.json" \
   --model_name_or_path="Team-PIXEL/pixel-base" \
   --experiment_type="mask_ratio" \
   --ngram_size=1 \

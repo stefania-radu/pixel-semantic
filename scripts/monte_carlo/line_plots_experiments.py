@@ -77,7 +77,6 @@ task_codes = {"ner": "MasakhaNER",
 
 
 def extract_x_value(filename):
-    """Extract mask ratio from file name."""
     try:
         basename = os.path.basename(filename)
         mask_ratio_str = os.path.splitext(basename)[0].split('_')[-1]
@@ -86,7 +85,6 @@ def extract_x_value(filename):
         return None
 
 def calculate_mean_measure(data):
-    """Calculate the mean loss from a nested dictionary."""
     total_value = 0
     count = 0
     for task in data.values():
@@ -97,7 +95,6 @@ def calculate_mean_measure(data):
     return total_value / count if count > 0 else 0
 
 def plot_lineplot_experiments(folder_path, across='tasks', measure="Loss", experiment="Mask"):
-    """Plot loss versus mask ratio."""
     mask_ratios = []
     data_list = []
 
@@ -136,14 +133,11 @@ def plot_lineplot_experiments(folder_path, across='tasks', measure="Loss", exper
         english_mean = english_df.groupby('Mask Ratio')['Mean Measure'].mean().reset_index()
         english_mean['Category'] = 'English (Mean)'
 
-        # Append English mean to the main DataFrame and remove individual English entries
         df = df[df['Category'] != 'English']
         df = pd.concat([df, english_mean])
 
     unique_categories = df['Category'].unique()
-    # palette = sns.color_palette("husl", len(unique_categories))
 
-    # Plotting
     plt.figure(figsize=(10, 6))
     
     if across == 'tasks':

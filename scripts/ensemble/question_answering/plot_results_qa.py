@@ -33,13 +33,12 @@ def plot_hex_calibration(df):
     plt.figure(figsize=(10, 8))
 
     sns.jointplot(df, x='Confidence', y='F1 score', kind="hex", color="#4CB391", height=7)
-    # add line for perfect calibration
     plt.plot(np.linspace(0, df['Confidence'].max(), 10), np.linspace(0, df['F1 score'].max(), 10), 'r--')
 
     plt.xlabel('Confidence', fontsize=18)
     plt.ylabel('F1 score', fontsize=18)
     
-    img_name = f"scripts/ensemble/results/calibration_plot_qa_hex.png"
+    img_name = f"scripts/ensemble/question_answering/results/calibration_plot_qa_hex.png"
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
 
@@ -48,13 +47,13 @@ def plot_violin(df):
 
     plt.figure(figsize=(10, 6))
 
-    sns.violinplot(df, x='Language', y='Confidence', split=False, inner='quart', linewidth=1.5, color="#4CB391")
+    sns.violinplot(df, x='Language', y='Confidence', split=False, inner='quart', linewidth=1.5, color="#4CB391", cut=0)
 
     plt.xlabel('Language', fontsize=18)
     plt.ylabel('Confidence', fontsize=18)
     plt.title("Validation Uncertainty in TyDiQA-GoldP", fontsize=20)
     
-    img_name = f"scripts/ensemble/results/violin_plot_qa.pdf"
+    img_name = f"scripts/ensemble/question_answering/results/violin_plot_qa.pdf"
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
 
@@ -99,13 +98,13 @@ def scatter_calibration():
     ax = sns.scatterplot(data=df, x="Confidence", y="F1 Score", color="#4CB391", marker="o", s=110)
 
     adjustments = {
-        "Indonesian": {"dx": 0.02, "dy": 0.02},  # Shift right and up
-        "Swahili": {"dx": -0.08, "dy": -0.02}    # Shift left and down
+        "Indonesian": {"dx": 0.02, "dy": 0.02},
+        "Swahili": {"dx": -0.08, "dy": -0.02}
     }
 
     for i, row in df.iterrows():
-        dx = adjustments.get(row["Language"], {}).get("dx", 0.01)  # Default shift right
-        dy = adjustments.get(row["Language"], {}).get("dy", 0)     # Default no vertical shift
+        dx = adjustments.get(row["Language"], {}).get("dx", 0.01)
+        dy = adjustments.get(row["Language"], {}).get("dy", 0)
         
         ax.text(row["Confidence"] + dx, row["F1 Score"] + dy, 
                 row["Language"], horizontalalignment='left', 
@@ -117,16 +116,16 @@ def scatter_calibration():
     plt.xlabel("Confidence", fontsize=18)
     plt.ylabel("F1 Score", fontsize=18)
     
-    img_name = f"scripts/ensemble/results/scatter_plot_qa.png"
+    img_name = f"scripts/ensemble/question_answering/results/scatter_plot_qa.png"
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
 
 
-path_f1_scores = "scripts/ensemble/results/f1_scores/f1_scores.json"
-path_probability_scores = "scripts/ensemble/results/eval_common_predictions_best.json"
+path_f1_scores = "scripts/ensemble/question_answering/results/f1_scores/f1_scores.json"
+path_probability_scores = "scripts/ensemble/question_answering/results/eval_common_predictions_best.json"
 
 df = get_data(path_f1_scores, path_probability_scores)
 
-# plot_violin(df)
-scatter_calibration()
+plot_violin(df)
+# scatter_calibration()
 # plot_hex_calibration(df)

@@ -21,6 +21,9 @@ export TRANSFORMERS_CACHE="/scratch/.cache/huggingface/models"
 #     "wnli": ("sentence1", "sentence2"),
 # }
 
+
+
+
 python scripts/training/run_glue.py   \
     --model_name_or_path="Team-PIXEL/pixel-base-finetuned-cola" \
     --task_name="cola" \
@@ -31,15 +34,15 @@ python scripts/training/run_glue.py   \
     --overwrite_cache
 
 
-# NER - CoNLL2003 + MasakhaneNER (data is in data/masakhane-ner)
+# NER - CoNLL2003 + MasakhaneNER (data is in /scratch/s3919609/data/masakhane-ner)
 
 # evaluation the model on CoNLL2003
 # change the model/data based on the language (conll_2003_en)
 python scripts/training/run_ner.py \
     --model_name_or_path="Team-PIXEL/pixel-base-finetuned-masakhaner-amh" \
-    --data_dir data/masakhane-ner/data/amh \
+    --data_dir /scratch/s3919609/data/masakhane-ner/data/amh \
     --remove_unused_columns=False \
-    --output_dir="sanity_check_ner" \
+    --output_dir="test_ner" \
     --do_predict \
     --do_calibrate \
     --max_seq_length=256 
@@ -56,4 +59,5 @@ python scripts/training/run_qa.py \
     --remove_unused_columns=False  \
     --output_dir="sanity_check_qa"  \
     --do_eval  \
-    --max_seq_length=256 cd .
+    --max_seq_length=256
+

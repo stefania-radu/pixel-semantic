@@ -3,7 +3,6 @@ import json
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-import numpy as np
 
 sns.set_theme(style="darkgrid")
 
@@ -46,7 +45,6 @@ task_codes = {"ner": "MasakhaNER",
 
 
 def extract_x_value(filename):
-    """Extract mask ratio from file name."""
     try:
         basename = os.path.basename(filename)
         mask_ratio_str = os.path.splitext(basename)[0].split('_')[-1]
@@ -55,7 +53,6 @@ def extract_x_value(filename):
         return None
 
 def calculate_mean_measure(data):
-    """Calculate the mean loss from a nested dictionary."""
     total_value = 0
     count = 0
     for task in data.values():
@@ -66,7 +63,6 @@ def calculate_mean_measure(data):
     return total_value / count if count > 0 else 0
 
 def plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='tasks'):
-    """Plot measure distributions for each mask ratio."""
     data_list = []
 
     mask_ratio = extract_x_value(path_to_loss)
@@ -100,15 +96,6 @@ def plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='tasks'):
         legend_title = "Dataset"
     else:
         legend_title = "Language"
-
-
-    # sns.scatterplot(data=df, x='Uncertainty', y='Loss', hue='Category', style='Category', s=100)
-
-    # hexplot with pyplot
-    # plt.hexbin(df['Uncertainty'], df['Loss'], gridsize=30, cmap='Blues', mincnt=1)
-    # plt.colorbar(label='Count in bin')
-
-
     # kdeplot sns
     
     sns.kdeplot(data=df, x='Uncertainty', y='Loss', fill=True, thresh=0.01, color="#4CB391")
@@ -127,12 +114,12 @@ def plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='tasks'):
     
     sns.jointplot(df, x='Uncertainty', y='Loss', kind="hex", color="#4CB391", height=7)
     # add line for perfect calibration
-    plt.plot(np.linspace(0.07, df['Uncertainty'].max(), 10), np.linspace(0, df['Loss'].max(), 10), 'r--')
+    # plt.plot(np.linspace(0.07, df['Uncertainty'].max(), 10), np.linspace(0, df['Loss'].max(), 10), 'r--')
     plt.gcf().axes[0].set_xlim(left=0.07)
     plt.xlabel('Uncertainty (SD)', fontsize=18)
     plt.ylabel('Loss (RMSE)', fontsize=18)
     
-    img_name = f"calibration_plot_{mask_ratio}_hex.pdf"
+    img_name = f"calibration_plot_{mask_ratio}_hex.png"
     plt.savefig(img_name, bbox_inches='tight')
     plt.close()
     
@@ -141,4 +128,4 @@ path_to_loss = "scripts/monte_carlo/results/base_experiment_1000/loss_scores/los
 path_to_SD = "scripts/monte_carlo/results/base_experiment_1000/std_scores/std_per_task_base_0.25.json"
 
 plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='tasks')
-plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='languages')
+# plot_loss_vs_mask_ratio(path_to_loss, path_to_SD, across='languages')

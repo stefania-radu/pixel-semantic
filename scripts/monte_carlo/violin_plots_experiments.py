@@ -79,7 +79,6 @@ task_codes = {"ner": "MasakhaNER",
 
 
 def extract_x_value(filename):
-    """Extract mask ratio from file name."""
     try:
         basename = os.path.basename(filename)
         mask_ratio_str = os.path.splitext(basename)[0].split('_')[-1]
@@ -88,7 +87,6 @@ def extract_x_value(filename):
         return None
 
 def calculate_mean_measure(data):
-    """Calculate the mean loss from a nested dictionary."""
     total_value = 0
     count = 0
     for task in data.values():
@@ -99,7 +97,6 @@ def calculate_mean_measure(data):
     return total_value / count if count > 0 else 0
 
 def plot_loss_vs_mask_ratio(folder_path, across='tasks', measure="Loss", experiment="Mask"):
-    """Plot measure distributions for each mask ratio."""
     data_list = []
 
     for filename in os.listdir(folder_path):
