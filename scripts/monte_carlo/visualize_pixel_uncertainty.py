@@ -18,6 +18,7 @@ tasks is also affected." \
   --mask_ratio=0.25 \
   --max_seq_length=256 \
 
+
 """
 
 import argparse
@@ -74,20 +75,7 @@ def create_mean_map(variance_image, mask, patch_size):
     """
     Create a map where each value in a patch equals the mean of values in that patch,
     only for patches where the mask is 1. Other patches are set to black.
-
-    Parameters:
-    variance_image (torch.Tensor): The original 3-channel variance image. It can also be the std image
-    mask (np.array or torch.Tensor): A binary mask indicating which patches to process.
-    patch_size (int): The size of each square patch.
-
-    Returns:
-    np.array: Mean variance map.
     """
-    # Average across channels
-    # if len(variance_image.shape) == 3 and variance_image.shape[0] == 3:
-    #     variance_image = variance_image.mean(dim=0)
-
-    # Convert to numpy if they are tensors
     if isinstance(variance_image, torch.Tensor):
         variance_image = variance_image.numpy()
     if isinstance(mask, torch.Tensor):
@@ -107,7 +95,6 @@ def create_mean_map(variance_image, mask, patch_size):
         # Iterate over each patch
         for i in range(num_patches_y):
             for j in range(num_patches_x):
-                # Check the corresponding value in the mask
                 if mask[0][i*patch_size, j*patch_size] != 0:
                     # Extract the patch
                     patch = variance_image[c, i*patch_size:(i+1)*patch_size, j*patch_size:(j+1)*patch_size]
@@ -162,12 +149,6 @@ def visualize_attention(attentions, mask, patch_size):
 def get_attention_grid(attention_tensor):
     """
     Combine all attention maps into a single image grid.
-
-    Parameters:
-    - attention_tensor: A 4D tensor with shape [layers, heads, pixels, pixels].
-
-    Returns:
-    - A single image tensor representing the grid of all attention maps.
     """
     # Validate input tensor shape
     if len(attention_tensor.shape) != 4:
@@ -175,14 +156,8 @@ def get_attention_grid(attention_tensor):
 
     layers, heads, pixels, _ = attention_tensor.shape
 
-    # Reshape the tensor to treat layers and heads as separate batches,
-    # this way, each attention map is treated as an individual image
-    # [layers*heads, 1, pixels, pixels] for grayscale images
     attention_tensor_reshaped = attention_tensor.view(layers*heads, 1, pixels, pixels)
 
-    # Use torchvision's make_grid to combine these images into a grid
-    # Set the number of images in each row to the number of heads
-    # This creates a grid where each row corresponds to a layer
     grid = vutils.make_grid(attention_tensor_reshaped, nrow=heads, padding=2, normalize=True, scale_each=True)
 
     return grid
@@ -209,7 +184,7 @@ def save_grid(grid, layers, heads):
     ax.set_xlabel("Layers", fontsize=20)
     ax.set_ylabel("Heads", fontsize=20)
 
-    fig.colorbar(im, ax=ax)  # Optional: Adds a colorbar
+    fig.colorbar(im, ax=ax)
 
     img_name = "grid"
 
@@ -234,12 +209,11 @@ def save_attention_image(all_layers_attentions, layer_index, head_index):
     # Normalize attention map between 0 and 1
     attention_map = normalize_array(attention_map)
     
-    # Plotting
     plt.figure(figsize=(10, 10))
     img = plt.imshow(attention_map, cmap='viridis')
     plt.colorbar(img)
     plt.title(f'Layer {layer_index + 1}, Head {head_index + 1}', fontsize=20)
-    plt.axis('off')  # Optionally, turn off the axis for a cleaner image
+    plt.axis('off')
 
     img_name = f'attention_image_{layer_index+1}_{head_index+1}'
     plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
@@ -255,12 +229,9 @@ def save_image(image_tensor, title, img_name): # shape: (3, 256, 256)
 
     np_image = normalize_array(np_image)
 
-    # Plotting
     plt.figure(figsize=(10, 10))
     img = plt.imshow(np_image, cmap='viridis')
-    # plt.colorbar(img)
-    # plt.title(title, fontsize=20)
-    plt.axis('off')  # Optionally, turn off the axis for a cleaner image
+    plt.axis('off')
 
     plt.savefig(f'{img_name}.pdf', bbox_inches='tight')
 
@@ -285,7 +256,7 @@ def save_multi_image(images, titles, final_img_name, mask_rate=0.1):  # shapes: 
 
     plt.tight_layout(pad=2.0)
 
-    fig.suptitle(f'Mask Span = {mask_rate}', fontsize=26, y=1.1)
+    fig.suptitle(f'Hausa', fontsize=26, y=1.1)
 
     cbar_ax = fig.add_axes([axs[-1].get_position().x1 + 0.01, axs[-1].get_position().y0, 0.02, axs[-1].get_position().height])
     
@@ -435,30 +406,30 @@ def main(args: argparse.Namespace):
 
 
     # make the attention weights grid plot
-    all_layers_attentions = []
-    for layer_idx, layer in enumerate(all_attentions_mean):
-        all_heads_attentions_image = visualize_attention(layer, mask, text_renderer.pixels_per_patch)
-        all_layers_attentions.append(all_heads_attentions_image)
-        print(f"all_heads_attentions_image: {all_heads_attentions_image.shape}")
+    # all_layers_attentions = []
+    # for layer_idx, layer in enumerate(all_attentions_mean):
+    #     all_heads_attentions_image = visualize_attention(layer, mask, text_renderer.pixels_per_patch)
+    #     all_layers_attentions.append(all_heads_attentions_image)
+    #     print(f"all_heads_attentions_image: {all_heads_attentions_image.shape}")
 
-    all_layers_attentions = torch.stack(all_layers_attentions)
+    # all_layers_attentions = torch.stack(all_layers_attentions)
 
-    print(f"all_layers_attentions: {all_layers_attentions.shape}")
+    # print(f"all_layers_attentions: {all_layers_attentions.shape}")
 
-    # save example images from the grid at given layer and head
-    save_attention_image(all_layers_attentions, 1, 2)
-    save_attention_image(all_layers_attentions, 10, 4)
+    # # save example images from the grid at given layer and head
+    # # save_attention_image(all_layers_attentions, 1, 2)
+    # # save_attention_image(all_layers_attentions, 10, 4)
 
-    attention_grid = get_attention_grid(all_layers_attentions)
-    print(f"attention_grid: {attention_grid.shape}")
-    print(f"attention_grid 0 : {attention_grid[0]}")
-    print(f"attention_grid 1 : {attention_grid[1]}")
-    are_different = (attention_grid[0] != attention_grid[1]).any()
-    print(f"Are the channels different? {are_different}")
+    # attention_grid = get_attention_grid(all_layers_attentions)
+    # print(f"attention_grid: {attention_grid.shape}")
+    # print(f"attention_grid 0 : {attention_grid[0]}")
+    # print(f"attention_grid 1 : {attention_grid[1]}")
+    # are_different = (attention_grid[0] != attention_grid[1]).any()
+    # print(f"Are the channels different? {are_different}")
 
-    # save attention weights grid with all layers and heads - all channels are the same
-    save_grid(attention_grid[0:1, :, :], layers=all_layers_attentions.size(0), heads=all_layers_attentions.size(1))
-    log_image(attention_grid, "attention_grid", do_clip=False)
+    # # save attention weights grid with all layers and heads - all channels are the same
+    # save_grid(attention_grid[0:1, :, :], layers=all_layers_attentions.size(0), heads=all_layers_attentions.size(1))
+    # log_image(attention_grid, "attention_grid", do_clip=False)
 
 
     # Log attention mask - where the renderer is looking
